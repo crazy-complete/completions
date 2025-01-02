@@ -1,0 +1,5 @@
+name: "go-sendxmpp"
+description: "Completions for go-sendxmpp"
+bash_args: ["--include-file", "include.bash", "go-sendxmpp.yaml"]
+fish_args: ["--include-file", "include.fish", "go-sendxmpp.yaml"]
+zsh_args:  ["--include-file", "include.zsh",  "go-sendxmpp.yaml"]

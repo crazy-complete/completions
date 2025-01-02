@@ -1,0 +1,5 @@
+name: "amixer"
+description: "Completions for amixer (alsa-utils)"
+bash_args: ["--include-file", "amixer.bash", "amixer.yaml"]
+fish_args: ["--include-file", "amixer.fish", "amixer.yaml"]
+zsh_args:  ["--include-file", "amixer.zsh",  "amixer.yaml"]

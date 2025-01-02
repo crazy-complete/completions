@@ -1,0 +1,5 @@
+name: "fpm"
+description: "Completions for fpm (Effing package management)"
+bash_args: ["fpm.yaml"]
+fish_args: ["fpm.yaml"] # --repeatable-options=True
+zsh_args:  ["fpm.yaml"]

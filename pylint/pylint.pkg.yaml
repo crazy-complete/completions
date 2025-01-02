@@ -1,0 +1,5 @@
+name: "pylint"
+description: "Completions for pylint"
+bash_args: ["pylint.yaml"]
+fish_args: ["--repeatable-options=True", "pylint.yaml"]
+zsh_args:  ["pylint.yaml"]

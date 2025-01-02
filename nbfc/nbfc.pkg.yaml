@@ -1,0 +1,5 @@
+name: "nbfc"
+description: "Completions for nbfc (nbfc-linux)"
+bash_args: ["nbfc.yaml"]
+fish_args: ["nbfc.yaml"]
+zsh_args:  ["nbfc.yaml"]

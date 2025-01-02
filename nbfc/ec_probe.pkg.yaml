@@ -1,0 +1,5 @@
+name: "ec_probe"
+description: "Completions for ec_probe (nbfc-linux)"
+bash_args: ["ec_probe.yaml"]
+fish_args: ["ec_probe.yaml"]
+zsh_args:  ["ec_probe.yaml"]

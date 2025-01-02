@@ -1,0 +1,5 @@
+name: "alsamixer"
+description: "Completions for alsamixer (alsa-utils)"
+bash_args: ["--include-file", "alsamixer.bash", "alsamixer.yaml"]
+fish_args: ["--include-file", "alsamixer.fish", "alsamixer.yaml"]
+zsh_args:  ["--include-file", "alsamixer.zsh",  "alsamixer.yaml"]

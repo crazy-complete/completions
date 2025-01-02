@@ -1,0 +1,8 @@
+- "alsa/amixer.pkg.yaml"
+- "alsa/alsamixer.pkg.yaml"
+- "fpm/fpm.pkg.yaml"
+- "go-sendxmpp/go-sendxmpp.pkg.yaml"
+- "nbfc/ec_probe.pkg.yaml"
+- "nbfc/nbfc_service.pkg.yaml"
+- "nbfc/nbfc.pkg.yaml"
+- "pylint/pylint.pkg.yaml"

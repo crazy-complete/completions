@@ -1,0 +1,176 @@
+prog: "firefox"
+
+# TODO: aliases for firefox-esr iceweasel mozilla-firefox
+
+options:
+# X11 options
+  - option_strings: ["--display"]
+    metavar: "DISPLAY"
+    help: "X display to use"
+    complete: ["none"]
+
+  - option_strings: ["--sync"]
+    help: "Make X calls synchronous"
+
+  - option_strings: ["--g-fatal-warnings"]
+    help: "Make all warnings fatal"
+
+# Firefox options
+  - option_strings: ["-h", "--help"]
+    help: "Print help message"
+
+  - option_strings: ["-v", "--version"]
+    help: "Print Firefox version"
+
+  - option_strings: ["--full-version"]
+    help: "Print Firefox version, build and platform build ids"
+
+  - option_strings: ["-P"]
+    metavar: "profile"
+    help: "Start with <profile>"
+    complete: ["exec", "_firefox_profiles"]
+
+  - option_strings: ["--profile"]
+    metavar: "path"
+    help: "Start with profile at <path>"
+    complete: ["file"]
+
+  - option_strings: ["--migration"]
+    help: "Start with migration wizard"
+
+  - option_strings: ["--ProfileManager"]
+    help: "Start with ProfileManager"
+
+  - option_strings: ["--origin-to-force-quic-on"]
+    metavar: "origin"
+    help: "Force to use QUIC for the specified origin"
+    complete: ["none"]
+
+  - option_strings: ["--new-instance"]
+    help: "Open new instance, not a new window in running instance"
+
+  - option_strings: ["--safe-mode"]
+    help: "Disables extensions and themes for this session"
+
+  - option_strings: ["--allow-downgrade"]
+    help: "Allows downgrading a profile"
+
+  - option_strings: ["--MOZ_LOG"]
+    metavar: "modules"
+    help: "Treated as MOZ_LOG=<modules> environment variable, overrides it"
+    complete: ["none"]
+
+  - option_strings: ["--MOZ_LOG_FILE"]
+    metavar: "file"
+    help: "Treated as MOZ_LOG_FILE=<file> environment variable, overrides it. If MOZ_LOG_FILE is not specified as an argument or as an environment variable, logging will be written to stdout"
+    complete: ["file"]
+
+  - option_strings: ["--headless"]
+    help: "Run without a GUI"
+
+  - option_strings: ["--dbus-service"]
+    metavar: "launcher"
+    help: "Run as DBus service for org.freedesktop.Application and set a launcher (usually /usr/bin/appname script) for it"
+    complete: ["none"]
+
+  - option_strings: ["--browser"]
+    help: "Open a browser window"
+
+  - option_strings: ["--new-window"]
+    metavar: "url"
+    optional_arg: true
+    help: "Open <url> in a new window"
+    complete: ["file"]
+
+  - option_strings: ["--new-tab"]
+    metavar: "url"
+    optional_arg: true
+    help: "Open <url> in a new tab"
+    complete: ["file"]
+
+  - option_strings: ["--private-window"]
+    metavar: "url"
+    optional_arg: true
+    help: "Open <url> in a new private window"
+    complete: ["file"]
+
+  - option_strings: ["--preferences"]
+    help: "Open Preferences dialog"
+
+  - option_strings: ["--screenshot"]
+    metavar: "path"
+    optional_arg: true
+    help: "Save screenshot to <path> or in working directory"
+    complete: ["file"]
+
+  - option_strings: ["--window-size"]
+    metavar: "width[,height]"
+    help: "Width and optionally height of screenshot"
+    complete: ["none"]
+
+  - option_strings: ["--search"]
+    metavar: "term"
+    help: "Search <term> with your default search engine"
+    complete: ["none"]
+
+  - option_strings: ["--setDefaultBrowser"]
+    help: "Set this app as the default browser"
+
+  - option_strings: ["--first-startup"]
+    help: "Run post-install actions before opening a new window"
+
+  - option_strings: ["--kiosk"]
+    help: "Start the browser in kiosk mode"
+
+  - option_strings: ["--kiosk-monitor"]
+    metavar: "num"
+    help: "Place kiosk browser window on given monitor"
+    complete: ["none"]
+
+  - option_strings: ["--disable-pinch"]
+    help: "Disable touch-screen and touch-pad pinch gestures"
+
+  - option_strings: ["--jsconsole"]
+    help: "Open the Browser Console"
+
+  - option_strings: ["--devtools"]
+    help: "Open DevTools on initial load"
+
+  - option_strings: ["--jsdebugger"]
+    metavar: "path"
+    optional_arg: true
+    help: "Open the Browser Toolbox. Defaults to the local build but can be overridden by a firefox path"
+    complete: ["file"]
+
+  - option_strings: ["--wait-for-jsdebugger"]
+    help: "Spin event loop until JS debugger connects. Enables debugging (some) application startup code paths. Only has an effect when `--jsdebugger` is also supplied"
+
+  - option_strings: ["--start-debugger-server"]
+    metavar: "[ws:][<port>|<path>]"
+    help: "Start the devtools server on a TCP port or Unix domain socket path. Defaults to TCP port 6000. Use WebSocket protocol if ws: prefix is specified"
+    complete: ["none"]
+
+  - option_strings: ["--marionette"]
+    help: "Enable remote control server"
+
+  - option_strings: ["--remote-debugging-port"]
+    metavar: "port"
+    optional_arg: true
+    help: "Start the Firefox Remote Agent, which is a low-level remote debugging interface used for WebDriver BiDi and CDP. Defaults to port 9222"
+    complete: ["none"]
+
+  - option_strings: ["--remote-allow-hosts"]
+    metavar: "hosts"
+    help: "Values of the Host header to allow for incoming requests"
+    complete: ["none"]
+
+  - option_strings: ["--remote-allow-origins"]
+    metavar: "origins"
+    help: "Values of the Origin header to allow for incoming requests"
+    complete: ["none"]
+
+positionals:
+  - number: 1
+    metavar: "URL"
+    repeatable: true
+    complete: ["file"]

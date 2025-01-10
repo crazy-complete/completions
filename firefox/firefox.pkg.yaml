@@ -1,0 +1,5 @@
+name: "firefox"
+description: "Completions for firefox"
+bash_args: ["--include-file", "firefox.sh",   "firefox.yaml"]
+fish_args: ["--include-file", "firefox.fish", "firefox.yaml"]
+zsh_args:  ["--include-file", "firefox.sh",   "firefox.yaml"]

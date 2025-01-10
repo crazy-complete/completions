@@ -1,0 +1,5 @@
+name: python
+description: "Completions for python"
+bash_args: ["--include-file", "python.sh",   "python.yaml"]
+fish_args: ["--include-file", "python.fish", "python.yaml"]
+zsh_args:  ["--include-file", "python.sh",   "python.yaml"]

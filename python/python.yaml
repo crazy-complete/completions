@@ -1,0 +1,113 @@
+prog: "python"
+
+# TODO: aliases for ???
+
+options:
+  - option_strings: ["-b"]
+    help: "issue warnings about converting bytes/bytearray to str and comparing bytes/bytearray with str or bytes with int"
+
+  - option_strings: ["-bb"]
+    help: "issue errors about converting bytes/bytearray to str and comparing bytes/bytearray with str or bytes with int"
+
+  - option_strings: ["-B"]
+    help: "don't write .pyc files on import"
+
+  - option_strings: ["-c"] # TODO: terminate option list
+    metavar: "cmd"
+    help: "program passed in as string (terminates option list)"
+    complete: ["none"]
+    final: true
+
+  - option_strings: ["-d"]
+    help: "turn on parser debugging output (for experts only, only works on debug builds)"
+
+  - option_strings: ["-E"]
+    help: "ignore PYTHON* environment variables (such as PYTHONPATH)"
+
+  - option_strings: ["-h", "--help"] # TODO: "-?"
+    help: "print help message and exit" 
+
+  - option_strings: ["--help-env"]
+    help: "print help about Python environment variables and exit"
+
+  - option_strings: ["--help-xoptions"]
+    help: "print help about implementation-specific -X options and exit"
+
+  - option_strings: ["--help-all"]
+    help: "print complete help information and exit"
+
+  - option_strings: ["-i"]
+    help: "inspect interactively after running script; forces a prompt even if stdin does not appear to be a terminal"
+
+  - option_strings: ["-I"]
+    help: "isolate Python from the user's environment (implies -E and -s)"
+
+  - option_strings: ["-m"] # TODO: terminate option list
+    metavar: "mod"
+    help: "run library module as a script (terminates option list)"
+    complete: ["exec", "_python_modules"]
+    final: true
+
+  - option_strings: ["-O"]
+    help: "remove assert and __debug__-dependent statements; add .opt-1 before .pyc extension"
+
+  - option_strings: ["-OO"]
+    help: "do -O changes and also discard docstrings; add .opt-2 before .pyc extension"
+
+  - option_strings: ["-P"]
+    help: "don't prepend a potentially unsafe path to sys.path"
+
+  - option_strings: ["-q"]
+    help: "don't print version and copyright messages on interactive startup"
+
+  - option_strings: ["-s"]
+    help: "don't add user site directory to sys.path"
+
+  - option_strings: ["-S"]
+    help: "don't imply 'import site' on initialization"
+
+  - option_strings: ["-u"]
+    help: "force the stdout and stderr streams to be unbuffered; this option has no effect on stdin"
+
+  - option_strings: ["-v"]
+    help: "verbose (trace import statements); can be supplied multiple times to increase verbosity"
+
+  - option_strings: ["-V"]
+    help: "print the Python version number and exit (also --version) when given twice, print more information about the build"
+    repeatable: true
+
+  - option_strings: ["-W"]
+    metavar: "arg"
+    help: "warning control; arg is action:message:category:module:lineno"
+    complete: ["choices", ["always", "default", "error", "ignore", "module", "once"]]
+
+  - option_strings: ["-x"]
+    help: "skip first line of source, allowing use of non-Unix forms of #!cmd"
+
+  - option_strings: ["-X"]
+    metavar: "opt"
+    help: "set implementation-specific option"
+    complete: ["choices", {
+      "dev":              "enable Python Development Mode",
+      "faulthandler":     "dump the Python traceback on fatal errors",
+      "frozen_modules=":  'whether to use frozen modules; the default is "on" for installed Python and "off" for a local build',
+      "importtime":       "show how long each import takes",
+      "int_max_str_digits=": "limit the size of int<->str conversions; 0 disables the limit",
+      "no_debug_ranges":  "don't include extra location information in code objects",
+      "perf":             'support the Linux "perf" profiler',
+      "pycache_prefix=":  "write .pyc files to a parallel tree instead of to the code tree",
+      "showrefcount":     "output the total reference count and number of used memory blocks when the program finishes or after each statement in the interactive interpreter; only works on debug builds",
+      "tracemalloc=":     "trace Python memory allocations; N sets a traceback limit of N frames (default: 1)",
+      "utf8=":            "enable (1) or disable (0) UTF-8 mode",
+      "warn_default_encoding": "enable opt-in EncodingWarning for 'encoding=None'"
+    }]
+
+  - option_strings: ["--check-hash-based-pycs"]
+    help: "control how Python invalidates hash-based .pyc files"
+    complete: ["choices", ["always", "default", "never"]]
+    # TODO: only --check-hash-based-pycs never, not --check-hash-based-pycs=never
+
+positionals:
+  - number: 1
+    repeatable: true
+    complete: ["file"]

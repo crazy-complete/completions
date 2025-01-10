@@ -1,0 +1,5 @@
+name: "mkfs.exfat"
+description: "Completions for mkfs.exfat"
+bash_args: ["mkfs.exfat.yaml"]
+fish_args: ["mkfs.exfat.yaml"]
+zsh_args:  ["mkfs.exfat.yaml"]

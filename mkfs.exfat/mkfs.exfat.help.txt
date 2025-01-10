@@ -1,0 +1,12 @@
+Usage: mkfs.exfat
+	-L | --volume-label=label                              Set volume label
+	-U | --volume-guid=guid                                Set volume GUID
+	-s | --sector-size=size(or suffixed by 'K')            Specify sector size
+	-c | --cluster-size=size(or suffixed by 'K' or 'M')    Specify cluster size
+	-b | --boundary-align=size(or suffixed by 'K' or 'M')  Specify boundary alignment
+	     --pack-bitmap                                     Move bitmap into FAT segment
+	-f | --full-format                                     Full format
+	-V | --version                                         Show version
+	-q | --quiet                                           Print only errors
+	-v | --verbose                                         Print debug
+	-h | --help                                            Show help

@@ -1,0 +1,49 @@
+prog: "mkfs.exfat"
+options:
+  - option_strings: ["-L", "--volume-label"]
+    metavar: "LABEL"
+    help: "Set volume label"
+    complete: ["none"]
+
+  - option_strings: ["-U", "--volume-guid"]
+    metavar: "GUID"
+    help: "Set volume GUID"
+    complete: ["none"]
+
+  - option_strings: ["-s", "--sector-size"]
+    metavar: "SIZE (maybe suffixed by 'K')"
+    help: "Specify sector size"
+    complete: ["none"]
+
+  - option_strings: ["-c", "--cluster-size"]
+    metavar: "SIZE (maybe suffixed by 'K' or 'M')"
+    help: "Specify cluster size"
+    complete: ["none"]
+
+  - option_strings: ["-b", "--boundary-align"]
+    metavar: "SIZE (maybe suffixed by 'K' or 'M')"
+    help: "Specify boundary alignment"
+    complete: ["none"]
+
+  - option_strings: ["--pack-bitmap"]
+    help: "Move bitmap into FAT segment"
+
+  - option_strings: ["-f", "--full-format"]
+    help: "Full format"
+
+  - option_strings: ["-V", "--version"]
+    help: "Show version"
+
+  - option_strings: ["-q", "--quiet"]
+    help: "Print only errors"
+
+  - option_strings: ["-v", "--verbose"]
+    help: "Print debug"
+
+  - option_strings: ["-h", "--help"]
+    help: "Show help"
+
+positionals:
+  - number: 1
+    metavar: "DEVICE"
+    complete: ["file"]

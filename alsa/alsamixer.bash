@@ -1,6 +1,6 @@
-_alsamixer_list_devices() {
+_alsamixer_list_cards() {
   local card
-  aplay -l | grep -Eo '^card [0-9]+: [^,]+' | uniq | while read card; do
+  command aplay -l | grep -Eo '^card [0-9]+: [^,]+' | uniq | while read card; do
     card="${card#card }"
     local id="${card%%: *}"
     echo "$id"

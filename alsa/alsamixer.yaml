@@ -7,12 +7,12 @@ options:
   - option_strings: ["-c", "--card"]
     metavar: "NUMBER"
     help: "sound card number or id"
-    complete: ["exec", "_alsamixer_list_devices"]
+    complete: ["exec", "_alsamixer_list_cards"]
 
   - option_strings: ["-D", "--device"]
     metavar: "DEVICE"
     help: "mixer device name"
-    complete: ["none"]
+    complete: ["none"] # TODO
 
   - option_strings: ["-m", "--mouse"]
     help: "enable mouse"
@@ -29,7 +29,7 @@ options:
     help: "do not load configuration file"
 
   - option_strings: ["-V", "--view"]
-    metavar: "view"
+    metavar: "VIEW"
     help: "starting view mode"
     complete: ["choices", ["playback", "capture", "all"]]
 
@@ -40,6 +40,6 @@ options:
     help: "toggle using of colors"
 
   - option_strings: ["-a", "--abstraction"]
-    metavar: "abstraction"
+    metavar: "ABSTRACTION"
     help: "mixer abstraction level"
     complete: ["choices", ["none", "basic"]]

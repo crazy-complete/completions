@@ -7,7 +7,7 @@ options:
   - option_strings: ["-c", "--card"]
     metavar: "NUMBER"
     help: "sound card number or id"
-    complete: ["exec", "_amixer_list_devices"]
+    complete: ["exec", "_alsamixer_list_cards"]
 
   - option_strings: ["-D", "--device"]
     metavar: "DEVICE"

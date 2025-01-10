@@ -1,7 +1,7 @@
 _amixer_list_simple_mixer_control() {
-  amixer scontrols | sed 's/Simple mixer control //' | tr -d "'"
+  command amixer scontrols | command sed 's/Simple mixer control //' | command tr -d "'"
 }
 
 _amixer_list_mixer_control() {
-  amixer controls | tr -d "'"
+  command amixer controls | command tr -d "'"
 }

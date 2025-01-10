@@ -1,7 +1,7 @@
-function _alsamixer_list_devices
+function _alsamixer_list_cards
   set -l card
 
-  for card in (aplay -l | string match -r '^card [0-9]+: [^,]+')
+  for card in (command aplay -l | string match -r '^card [0-9]+: [^,]+')
     set card (string replace 'card ' '' $card)
     set -l split (string split ': ' $card)
 

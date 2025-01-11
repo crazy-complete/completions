@@ -6,3 +6,6 @@
 - "nbfc/nbfc_service.pkg.yaml"
 - "nbfc/nbfc.pkg.yaml"
 - "pylint/pylint.pkg.yaml"
+- "firefox/firefox.pkg.yaml"
+- "python/python.pkg.yaml"
+- "mkfs.exfat/mkfs.exfat.pkg.yaml"

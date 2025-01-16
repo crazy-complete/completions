@@ -1,0 +1,49 @@
+prog: "arecordmidi"
+options:
+  - option_strings: ["-h", "--help"]
+    help: "show help"
+
+  - option_strings: ["-V", "--version"]
+    help: "show version"
+
+  - option_strings: ["-l", "--list"]
+    help: "list input ports"
+
+  - option_strings: ["-p", "--port"]
+    metavar: "client:port"
+    help: "source port(s)"
+    complete: ["exec", "_aplaymidi_list_ports"]
+    # TODO: this is actually a comma separated list
+
+  - option_strings: ["-b", "--bpm"]
+    metavar: "beats"
+    help: "tempo in beats per minute"
+    complete: ["none"]
+
+  - option_strings: ["-f", "--fps"]
+    metavar: "frames"
+    help: "resolution in frames per second (SMPTE)"
+    complete: ["none"]
+
+  - option_strings: ["-t", "--ticks"]
+    metavar: "ticks"
+    help: "resolution in ticks per beat or frame"
+    complete: ["none"]
+
+  - option_strings: ["-s", "--split-channels"]
+    help: "create a track for each channel"
+
+  - option_strings: ["-m", "--metronome"]
+    metavar: "client:port"
+    help: "play a metronome signal"
+    complete: ["exec", "_aplaymidi_list_ports"]
+
+  - option_strings: ["-i", "--timesig"]
+    metavar: "nn:dd"
+    help: "time signature"
+    complete: ["none"]
+
+  - option_strings: ["-n", "--num-events"]
+    metavar: "events"
+    help: "fixed number of events to record, then exit"
+    complete: ["none"]

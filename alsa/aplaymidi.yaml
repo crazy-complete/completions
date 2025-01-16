@@ -1,0 +1,28 @@
+prog: "aplaymidi"
+
+options:
+  - option_strings: ["-h", "--help"]
+    help: "print help"
+
+  - option_strings: ["-V", "--version"]
+    help: "print current version"
+
+  - option_strings: ["-l", "--list"]
+    help: "list all possible output ports"
+
+  - option_strings: ["-p", "--port"]
+    metavar: "client:port"
+    help: "set port(s) to play to"
+    complete: ["exec", "_aplaymidi_list_ports"]
+    # TODO: this is actually comma separated a list!
+
+  - option_strings: ["-u", "--ump"]
+    metavar: "version"
+    help: "UMP output (only version=1 is supported)"
+    complete: ["choices", ["1"]]
+
+  - option_strings: ["-d", "--delay"]
+    metavar: "seconds"
+    help: "delay after song ends"
+    complete: ["none"]
+

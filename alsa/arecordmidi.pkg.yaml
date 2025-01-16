@@ -1,0 +1,5 @@
+name: "arecordmidi"
+description: "Completions for arecordmidi (alsa-utils)"
+bash_args: ["--include-file", "inc/aplaymidi.bash", "arecordmidi.yaml"]
+fish_args: ["--include-file", "inc/aplaymidi.fish", "arecordmidi.yaml"]
+zsh_args:  ["--include-file", "inc/aplaymidi.zsh",  "arecordmidi.yaml"]

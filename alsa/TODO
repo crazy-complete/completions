@@ -1,0 +1,25 @@
+-h|--help: unified message
+-v|--version: unified message
+
+alsa-utils /usr/bin/aconnect          
+alsa-utils /usr/bin/alsa-info.sh      
+alsa-utils /usr/bin/alsabat           
+alsa-utils /usr/bin/alsabat-test.sh   
+alsa-utils /usr/bin/alsactl           DONE
+alsa-utils /usr/bin/alsaloop          
+alsa-utils /usr/bin/alsamixer         DONE
+alsa-utils /usr/bin/alsatplg          
+alsa-utils /usr/bin/alsaucm           
+alsa-utils /usr/bin/amidi             
+alsa-utils /usr/bin/amixer            DONE
+alsa-utils /usr/bin/aplay             
+alsa-utils /usr/bin/aplaymidi         DONE
+alsa-utils /usr/bin/arecord           
+alsa-utils /usr/bin/arecordmidi       DONE
+alsa-utils /usr/bin/aseqdump          
+alsa-utils /usr/bin/aseqnet           
+alsa-utils /usr/bin/aseqsend          
+alsa-utils /usr/bin/axfer             
+alsa-utils /usr/bin/iecset            
+alsa-utils /usr/bin/nhlt-dmic-info    TODO
+alsa-utils /usr/bin/speaker-test      TODO

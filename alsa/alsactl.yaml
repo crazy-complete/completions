@@ -1,0 +1,218 @@
+prog: "alsactl"
+options:
+
+# TODO: state options only for state commands
+
+# global options:
+  - option_strings: ["-h", "--help"]
+    help: "show help"
+
+  - option_strings: ["-d", "--debug"]
+    help: "debug mode"
+
+  - option_strings: ["-v", "--version"]
+    help: "print version of this program"
+
+# Available state options:
+  - option_strings: ["-f", "--file"]
+    metavar: "file"
+    help: "configuration file (default /var/lib/alsa/asound.state)"
+    complete: ["file"]
+
+  - option_strings: ["-a", "--config-dir"]
+    metavar: "dir"
+    help: "boot / hotplug configuration directory (default /var/lib/alsa)"
+    complete: ["directory"]
+
+  - option_strings: ["-l", "--lock"]
+    help: "use file locking to serialize concurrent access"
+
+  - option_strings: ["-L", "--no-lock"]
+    help: "do not use file locking to serialize concurrent access"
+
+  - option_strings: ["-K", "--lock-dir"]
+    metavar: "dir"
+    help: "lock path (default /var/lock)"
+    complete: ["directory"]
+
+  - option_strings: ["-O", "--lock-state-file"]
+    metavar: "file"
+    help: "state lock file path (default asound.state.lock)"
+    complete: ["file"]
+
+  - option_strings: ["-F", "--force"]
+    help: "try to restore the matching controls as much as possible (default mode)"
+
+  - option_strings: ["-g", "--ignore"]
+    help: "ignore 'No soundcards found' error"
+
+  - option_strings: ["-P", "--pedantic"]
+    help: "do not restore mismatching controls (old default)"
+
+  - option_strings: ["-I", "--no-init-fallback"]
+    help: "don't initialize even if restore fails"
+
+  - option_strings: ["-r", "--runstate"]
+    metavar: "file"
+    help: "save restore and init state to this file (only errors) default settings is 'no file set'"
+    complete: ["file"]
+
+  - option_strings: ["-R", "--remove"]
+    help: "remove runstate file at first, otherwise append errors"
+
+  - option_strings: ["-p", "--period"]
+    metavar: "seconds"
+    help: "store period in seconds for the daemon command"
+    complete: ["none"] # int
+
+  - option_strings: ["-e", "--pid-file"]
+    metavar: "file"
+    help: "pathname for the process id (daemon mode)"
+    complete: ["file"]
+
+# Available init options:
+  - option_strings: ["-E", "--env"]
+    metavar: "environment"
+    help: "set environment variable for init phase (NAME=VALUE)"
+    complete: ["environment"]
+
+  - option_strings: ["-i", "--initfile"]
+    metavar: "file"
+    help: "main configuation file for init phase (default /usr/share/alsa/init/00main)"
+    complete: ["file"]
+
+  - option_strings: ["-b", "--background"]
+    help: "run daemon in background"
+
+  - option_strings: ["-s", "--syslog"]
+    help: "use syslog for messages"
+
+  - option_strings: ["-n", "--nice"]
+    metavar: "priority"
+    help: "set the process priority (see 'man nice')"
+    complete: ["range", -20, 19]
+
+  - option_strings: ["-c", "--sched-idle"]
+    help: "set the process scheduling policy to idle (SCHED_IDLE)"
+
+  - option_strings: ["-D", "--ucm-defaults"]
+    help: "execute also the UCM 'defaults' section"
+
+  - option_strings: ["-U", "--no-ucm"]
+    help: "don't init with UCM"
+
+  - option_strings: ["-X", "--ucm-nodev"]
+    help: "show UCM no device errors"
+
+---
+
+# Available commands:
+prog: "alsactl store"
+help: "save current driver setup for one or each soundcards"
+inherit_options: true
+positionals:
+  - number: 1
+    metavar: "card"
+    complete: ["exec", "_alsa_utils_list_cards"]
+
+---
+
+prog: "alsactl restore"
+help: "load current driver setup for one or each soundcards from configuration file"
+inherit_options: true
+positionals:
+  - number: 1
+    metavar: "card"
+    complete: ["exec", "_alsa_utils_list_cards"]
+
+---
+
+prog: "alsactl nrestore"
+help: "like restore, but notify the daemon to rescan soundcards"
+inherit_options: true
+positionals:
+  - number: 1
+    metavar: "card"
+    complete: ["exec", "_alsa_utils_list_cards"]
+
+---
+
+prog: "alsactl init"
+help: "initialize driver to a default state"
+inherit_options: true
+positionals:
+  - number: 1
+    metavar: "card"
+    complete: ["exec", "_alsa_utils_list_cards"]
+
+---
+
+prog: "alsactl daemon"
+help: "store state periodically for one or each soundcards"
+inherit_options: true
+positionals:
+  - number: 1
+    metavar: "card"
+    complete: ["exec", "_alsa_utils_list_cards"]
+
+---
+
+prog: "alsactl rdaemon"
+help: "like daemon but do the state restore at first"
+inherit_options: true
+positionals:
+  - number: 1
+    metavar: "card"
+    complete: ["exec", "_alsa_utils_list_cards"]
+
+---
+
+prog: "alsactl kill"
+help: "notify daemon to quit, rescan or save_and_quit"
+inherit_options: true
+positionals:
+  - number: 1
+    metavar: "card"
+    complete: ["choices", ["quit", "rescan", "save_and_quit"]]
+
+---
+
+prog: "alsactl monitor"
+help: "monitor control events"
+inherit_options: true
+positionals:
+  - number: 1
+    metavar: "card"
+    complete: ["exec", "_alsa_utils_list_cards"]
+
+---
+
+prog: "alsactl info"
+help: "general information"
+inherit_options: true
+positionals:
+  - number: 1
+    metavar: "card"
+    complete: ["exec", "_alsa_utils_list_cards"]
+
+---
+
+prog: "alsactl clean"
+help: "clean application controls"
+inherit_options: true
+positionals:
+  - number: 1
+    metavar: "card"
+    complete: ["exec", "_alsa_utils_list_cards"]
+
+---
+
+prog: "alsactl dump-state"
+help: "dump the state (for all cards)"
+inherit_options: true
+
+---
+
+prog: "alsactl dump-cfg"
+help: "dump the configuration (expanded, for all cards)"
+inherit_options: true

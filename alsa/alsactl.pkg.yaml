@@ -1,0 +1,5 @@
+name: "alsactl"
+description: "Completions for alsactl (alsa-utils)"
+bash_args: ["--include-file", "inc/alsa-utils.bash", "alsactl.yaml"]
+fish_args: ["--include-file", "inc/alsa-utils.fish", "alsactl.yaml"]
+zsh_args:  ["--include-file", "inc/alsa-utils.zsh",  "alsactl.yaml"]

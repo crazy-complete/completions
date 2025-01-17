@@ -1,0 +1,5 @@
+name: "amidi"
+description: "Completions for amidi (alsa-utils)"
+bash_args: ["--include-file", "inc/amidi.bash", "amidi.yaml"]
+fish_args: ["--include-file", "inc/amidi.fish", "amidi.yaml"]
+zsh_args:  ["--include-file", "inc/amidi.zsh",  "amidi.yaml"]

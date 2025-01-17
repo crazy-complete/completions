@@ -1,6 +1,10 @@
 -h|--help: unified message
 -v|--version: unified message
 
+aplayrecord --help doesn't write to stdout
+
+amidi: -p: Does the direction matter?
+
 alsa-utils /usr/bin/aconnect          
 alsa-utils /usr/bin/alsa-info.sh      
 alsa-utils /usr/bin/alsabat           
@@ -10,7 +14,7 @@ alsa-utils /usr/bin/alsaloop
 alsa-utils /usr/bin/alsamixer         DONE
 alsa-utils /usr/bin/alsatplg          
 alsa-utils /usr/bin/alsaucm           
-alsa-utils /usr/bin/amidi             
+alsa-utils /usr/bin/amidi             DONE
 alsa-utils /usr/bin/amixer            DONE
 alsa-utils /usr/bin/aplay             
 alsa-utils /usr/bin/aplaymidi         DONE

@@ -1,0 +1,57 @@
+prog: "amidi"
+options:
+  - option_strings: ["-h", "--help"]
+    help: "show help"
+
+  - option_strings: ["-V", "--version"]
+    help: "print current version"
+
+  - option_strings: ["-l", "--list-devices"]
+    help: "list all hardware ports"
+
+  - option_strings: ["-L", "--list-rawmidis"]
+    help: "list all RawMIDI definitions"
+
+  - option_strings: ["-p", "--port"]
+    metavar: "name"
+    help: "select port by name"
+    complete: ["exec", "_amidi_list_ports"]
+
+  - option_strings: ["-s", "--send"]
+    metavar: "file"
+    help: "send the contents of a (.syx) file"
+    complete: ["file"]
+
+  - option_strings: ["-r", "--receive"]
+    metavar: "file"
+    help: "write received data into a file"
+    complete: ["file"]
+
+  - option_strings: ["-S", "--send-hex"]
+    metavar: "hex"
+    help: "send hexadecimal bytes"
+    complete: ["none"]
+
+  - option_strings: ["-d", "--dump"]
+    help: "print received data as hexadecimal bytes"
+
+  - option_strings: ["-T", "--timestamp"]
+    metavar: "type"
+    help: "adds a timestamp in front of each dumped message"
+    complete: ["choices", ["realtime", "monotonic", "raw"]]
+
+  - option_strings: ["-t", "--timeout"]
+    metavar: "seconds"
+    help: "exits when no data has been received for the specified duration (seconds)"
+    complete: ["none"]
+
+  - option_strings: ["-a", "--active-sensing"]
+    help: "include active sensing bytes"
+
+  - option_strings: ["-c", "--clock"]
+    help: "include clock bytes"
+
+  - option_strings: ["-i", "--sysex-interval"]
+    metavar: "mseconds"
+    help: "delay in between each SysEx message (milliseconds)"
+    complete: ["none"]

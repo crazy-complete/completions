@@ -31,6 +31,6 @@ alsa-utils /usr/bin/aseqdump
 alsa-utils /usr/bin/aseqnet           
 alsa-utils /usr/bin/aseqsend          
 alsa-utils /usr/bin/axfer             
-alsa-utils /usr/bin/iecset            
+alsa-utils /usr/bin/iecset            DONE
 alsa-utils /usr/bin/nhlt-dmic-info    DONE
 alsa-utils /usr/bin/speaker-test      DONE

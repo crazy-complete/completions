@@ -1,0 +1,5 @@
+name: "iecset"
+description: "Completions for iecset (alsa-utils)"
+bash_args: ["--include-file", "inc/alsa-utils.bash", "iecset.yaml"]
+fish_args: ["--include-file", "inc/alsa-utils.fish", "iecset.yaml"]
+zsh_args:  ["--include-file", "inc/alsa-utils.zsh",  "iecset.yaml"]

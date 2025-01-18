@@ -1,0 +1,115 @@
+prog: "iecset"
+
+# TODO: iecset supports multiple commands on commandline
+
+options:
+  - option_strings: ["-D"]
+    metavar: "device"
+    help: "specifies the control device to use"
+    complete: ["exec", "_alsa_utils_list_devices"]
+
+  - option_strings: ["-c"]
+    metavar: "card"
+    help: "specifies the card number to use (equiv. with -Dhw:#)"
+    complete: ["exec", "_alsa_utils_list_cards"]
+
+  - option_strings: ["-n"]
+    metavar: "number"
+    help: "specifies the control index number (default = 0)"
+    complete: ["none"]
+
+  - option_strings: ["-x"]
+    help: "dump the dump the AESx hex code for IEC958 PCM parameters"
+
+  - option_strings: ["-i"]
+    help: "read commands from stdin"
+
+---
+
+prog: "iecset professional"
+help: "(professional and consumer mode)"
+positionals:
+  - number: 1
+    metavar: "bool"
+    complete: ["choices", {"on": "professional mode", "off": "consumer mode"}]
+
+---
+
+prog: "iecset audio"
+help: "(professional and consumer mode)"
+positionals:
+  - number: 1
+    metavar: "bool"
+    complete: ["choices", {"on": "audio mode", "off": "non-audio mode"}]
+
+---
+
+prog: "iecset rate"
+help: "(professional and consumer mode)"
+positionals:
+  - number: 1
+    metavar: "rate"
+    complete: ["none"]
+
+---
+
+prog: "iecset emphasis"
+help: "(professional and consumer mode)"
+positionals:
+  - number: 1
+    metavar: "emphasis"
+    complete: ["choices", {"0": "none", "1": "50/15us", "2": "CCITT"}]
+
+---
+
+prog: "iecset lock"
+help: "(professional mode only)"
+positionals:
+  - number: 1
+    metavar: "bool"
+    complete: ["choices", {"on": "rate locked", "off": "rate unlocked"}]
+
+---
+
+prog: "iecset sbits"
+help: "(professional mode only)"
+positionals:
+  - number: 1
+    metavar: "sbits"
+    complete: ["choices", {"2": "20bit", "4": "24bit", "6": "undef"}]
+
+---
+
+prog: "iecset wordlength"
+help: "(professional mode only)"
+positionals:
+  - number: 1
+    metavar: "wordlength"
+    complete: ["choices", {"0":"no", "2":"22-18bit", "4":"23-19bit", "5":"24-20bit", "6":"20-16bit"}]
+
+---
+
+prog: "iecset category"
+help: "(consumer mode only)"
+positionals:
+  - number: 1
+    metavar: "category"
+    complete: ["none"] # TODO: 0-0x7f
+
+---
+
+prog: "iecset copyright"
+help: "(consumer mode only)"
+positionals:
+  - number: 1
+    metavar: "copyright"
+    complete: ["choices", {"on": "copyright", "off": "non-copyright"}]
+
+---
+
+prog: "iecset original"
+help: "(consumer mode only)"
+positionals:
+  - number: 1
+    metavar: "original"
+    complete: ["choices", {"on": "original", "off": "1st-gen"}]

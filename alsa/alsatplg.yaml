@@ -1,0 +1,68 @@
+prog: "alsatplg"
+options:
+  - option_strings: ["-h", "--help"]
+    help: "show help"
+
+  - option_strings: ["-c", "--compile"]
+    metavar: "FILE"
+    help: "compile configuration file"
+    complete: ["file"]
+
+  - option_strings: ["-p", "--pre-process"]
+    help: "pre-process Topology2.0 configuration file before compilation"
+
+  - option_strings: ["-P", "--pre-process"]
+    metavar: "FILE"
+    help: "pre-process Topology2.0 configuration file"
+    complete: ["file"]
+
+  - option_strings: ["-d", "--decode"]
+    metavar: "FILE"
+    help: "decode binary topology file"
+    complete: ["file"]
+
+  - option_strings: ["-n", "--normalize"]
+    metavar: "FILE"
+    help: "normalize configuration file"
+    complete: ["file"]
+
+  - option_strings: ["-u", "--dump"]
+    metavar: "FILE"
+    help: "dump (reparse) configuration file"
+    complete: ["file"]
+
+  - option_strings: ["-v", "--verbose"]
+    metavar: "LEVEL"
+    help: "set verbosity level"
+    complete: ["choices", ["0", "1"]]
+
+  - option_strings: ["-o", "--output"]
+    metavar: "FILE"
+    help: "set output file"
+    complete: ["file"]
+
+  - option_strings: ["-D", "--define"]
+    metavar: "VAR=VAL1[,VAR2=VAL2]..."
+    help: "define variables (may be used multiple times)"
+    complete: ["none"]
+    repeatable: true
+
+  - option_strings: ["-I", "--inc-dir"]
+    metavar: "DIR"
+    help: "set include path"
+    complete: ["directory"]
+
+  - option_strings: ["-s", "--sort"]
+    help: "sort the identifiers in the normalized output"
+
+  - option_strings: ["-g", "--group"]
+    help: "save configuration by group indexes"
+
+  - option_strings: ["-x", "--nocheck"]
+    help: "save configuration without additional integrity checks"
+
+  - option_strings: ["-z", "--dapm-nosort"]
+    help: "do not sort the DAPM widgets"
+
+  - option_strings: ["-V", "--version"]
+    help: "print version"

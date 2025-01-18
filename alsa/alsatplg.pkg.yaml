@@ -1,0 +1,5 @@
+name: "alsatplg"
+description: "Completions for alsatplg (alsa-utils)"
+bash_args: ["alsatplg.yaml"]
+fish_args: ["alsatplg.yaml"]
+zsh_args:  ["alsatplg.yaml"]

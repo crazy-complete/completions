@@ -1,0 +1,5 @@
+name: "aseqdump"
+description: "Completions for aseqdump (alsa-utils)"
+bash_args: ["--include-file", "inc/aseq_list_ports.bash", "aseqdump.yaml"]
+fish_args: ["--include-file", "inc/aseq_list_ports.fish", "aseqdump.yaml"]
+zsh_args:  ["--include-file", "inc/aseq_list_ports.zsh",  "aseqdump.yaml"]

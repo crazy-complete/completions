@@ -1,0 +1,33 @@
+prog: "aseqdump"
+options:
+  - option_strings: ["-h", "--help"]
+    help: "show help"
+
+  - option_strings: ["-V", "--version"]
+    help: "show version"
+
+  - option_strings: ["-l", "--list"]
+    help: "list input ports"
+
+  - option_strings: ["-N", "--normalized-view"]
+    help: "show normalized values"
+
+  - option_strings: ["-P", "--percent-view"]
+    help: "show percent values"
+
+  - option_strings: ["-R", "--raw-view"]
+    help: "show raw values (default)"
+
+  - option_strings: ["-u", "--ump"]
+    metavar: "version"
+    help: "set client MIDI version"
+    complete: ["choices", {"0": "legacy", "1": "UMP MIDI 1.0", "2": "UMP MIDI 2.0"}]
+
+  - option_strings: ["-r", "--raw"]
+    help: "do not convert UMP and legacy events"
+
+  - option_strings: ["-p", "--port"]
+    metavar: "client:port"
+    help: "source port(s)"
+    complete: ["exec", "_aseq_list_ports"]
+    # TODO: this is actually a list

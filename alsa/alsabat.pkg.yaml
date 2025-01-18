@@ -1,0 +1,5 @@
+name: "alsabat"
+description: "Completions for alsabat (alsa-utils)"
+bash_args: ["--include-file", "inc/list_pcm_devices.bash", "alsabat.yaml"]
+fish_args: ["--include-file", "inc/list_pcm_devices.fish", "alsabat.yaml"]
+zsh_args:  ["--include-file", "inc/list_pcm_devices.zsh",  "alsabat.yaml"]

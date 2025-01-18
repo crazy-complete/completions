@@ -1,0 +1,106 @@
+prog: "alsabat"
+options:
+  - option_strings: ["-h", "--help"]
+    help: "show help"
+
+  - option_strings: ["-D"]
+    metavar: "device"
+    help: "pcm device for both playback and capture"
+    complete: ["exec", "_alsa_utils_list_pcm_devices"] # TODO: is this right?
+
+  - option_strings: ["-P"]
+    metavar: "device"
+    help: "pcm device for playback"
+    complete: ["exec", "_alsa_utils_list_pcm_devices"] # TODO: is this right?
+
+  - option_strings: ["-C"]
+    metavar: "device"
+    help: "pcm device for capture"
+    complete: ["exec", "_alsa_utils_list_pcm_devices"] # TODO: is this right?
+
+  - option_strings: ["-f"]
+    metavar: "format"
+    help: "sample format"
+    complete: ["choices", ["cd","dat","U8","S16_LE","S24_3LE","S32_LE"]] # TODO is this right?
+
+  - option_strings: ["-c"]
+    metavar: "channels"
+    help: "number of channels"
+    # taken from alsa-utils/bat/common.h (MIN_CHANNELS, MAX_CHANNELS)
+    complete: ["choices", ["1", "2"]]
+
+  - option_strings: ["-r"]
+    metavar: "rate"
+    help: "sampling rate"
+    complete: ["none"]
+
+  - option_strings: ["-n"]
+    metavar: "frames"
+    help: "frames to playback or capture"
+    complete: ["none"]
+
+  - option_strings: ["-k"]
+    metavar: "threshold"
+    help: "parameter for frequency detecting threshold"
+    complete: ["none"]
+
+  - option_strings: ["-F"]
+    metavar: "frequency"
+    help: "target frequency"
+    complete: ["none"]
+
+  - option_strings: ["-p"]
+    metavar: "periods"
+    help: "total number of periods to play/capture"
+    complete: ["none"]
+
+  - option_strings: ["-B"]
+    metavar: "size"
+    help: "buffer size in frames"
+    complete: ["none"]
+
+  - option_strings: ["-E"]
+    metavar: "size"
+    help: "period size in frames"
+    complete: ["none"]
+
+  - option_strings: ["--log"]
+    metavar: "file"
+    help: "file that both stdout and strerr redirecting to"
+    complete: ["file"]
+
+  - option_strings: ["--file"]
+    metavar: "file"
+    help: "file for playback"
+    complete: ["file"]
+
+  - option_strings: ["--saveplay"]
+    metavar: "file"
+    help: "file that storing playback content, for debug"
+    complete: ["file"]
+
+  - option_strings: ["--readcapture"]
+    metavar: "file"
+    help: "file with previously captured content. File data is used for analysis instead of capturing it"
+    complete: ["file"]
+
+  - option_strings: ["--local"]
+    help: "internal loop, set to bypass pcm hardware devices"
+
+  - option_strings: ["--standalone"]
+    help: "standalone mode, to bypass analysis"
+
+  - option_strings: ["--roundtriplatency"]
+    help: "round trip latency mode"
+
+  - option_strings: ["--snr-db"]
+    metavar: "threshold"
+    help: "noise detect threshold, in SNR(dB)"
+    # taken from alsa-utils/bat/common.h (SNR_DB_MIN, SNR_DB_MAX)
+    complete: ["range", 0, 200]
+
+  - option_strings: ["--snr-pc"]
+    metavar: "threshold (percent)"
+    help: "noise detect threshold, in noise percentage(%)"
+    # taken from alsa-utils/bat/bat.c (get_snr_thd_pc())
+    complete: ["range", 1, 99]

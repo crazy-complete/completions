@@ -3,6 +3,7 @@
 -v|--version: unified message
 
 general: miliseconds or milliseconds?
+general: channels? is this a number in a fixed range?
 
 aplayrecord --help doesn't write to stdout
 
@@ -18,11 +19,16 @@ aseqdump: --help: -u: missing space
 aseqnet: remove colons in help
 aseqnet: missing --help
 
+aseqsend: missing program name
+
+alsabat: missing arguments for options
+alsabat: usage...
+
 amidi: -p: Does the direction matter?
 
 alsa-utils /usr/bin/aconnect          
 alsa-utils /usr/bin/alsa-info.sh      
-alsa-utils /usr/bin/alsabat           
+alsa-utils /usr/bin/alsabat           DONE
 alsa-utils /usr/bin/alsabat-test.sh   
 alsa-utils /usr/bin/alsactl           DONE
 alsa-utils /usr/bin/alsaloop          

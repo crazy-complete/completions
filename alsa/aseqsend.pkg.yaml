@@ -1,0 +1,5 @@
+name: "aseqsend"
+description: "Completions for aseqsend (alsa-utils)"
+bash_args: ["--include-file", "inc/aseqsend_list_ports.bash", "aseqsend.yaml"]
+fish_args: ["--include-file", "inc/aseqsend_list_ports.fish", "aseqsend.yaml"]
+zsh_args:  ["--include-file", "inc/aseqsend_list_ports.zsh",  "aseqsend.yaml"]

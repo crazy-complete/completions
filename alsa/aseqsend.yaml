@@ -1,0 +1,36 @@
+prog: "aseqsend"
+
+options:
+  - option_strings: ["-h"]
+    help: "show help"
+
+  - option_strings: ["-V"]
+    help: "print current version"
+
+  - option_strings: ["-v"]
+    help: "verbose"
+
+  - option_strings: ["-l"]
+    help: "list all sequencer ports"
+
+  - option_strings: ["-p"]
+    metavar: "port"
+    help: "target port by number or name"
+    complete: ["exec", "_aseqsend_list_ports"] # TODO: aseqsend -l or aseqdump -l?
+
+  - option_strings: ["-s"]
+    metavar: "file"
+    help: "send binary data from given file name"
+    complete: ["file"]
+
+  - option_strings: ["-i"]
+    metavar: "miliseconds"
+    help: "interval between SysEx messages in miliseconds"
+    complete: ["none"]
+
+positionals:
+  - number: 1
+    metavar: "hex encoded bytes"
+    help: "hex encoded bytes"
+    complete: ["none"]
+    # TODO: only if -s not given

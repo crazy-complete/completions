@@ -1,5 +1,8 @@
 -h|--help: unified message
 -v|--version: unified message
+-v|--version: unified message
+
+general: miliseconds or milliseconds?
 
 aplayrecord --help doesn't write to stdout
 
@@ -34,7 +37,7 @@ alsa-utils /usr/bin/arecord
 alsa-utils /usr/bin/arecordmidi       DONE
 alsa-utils /usr/bin/aseqdump          DONE
 alsa-utils /usr/bin/aseqnet           DONE
-alsa-utils /usr/bin/aseqsend          
+alsa-utils /usr/bin/aseqsend          DONE
 alsa-utils /usr/bin/axfer             
 alsa-utils /usr/bin/iecset            DONE
 alsa-utils /usr/bin/nhlt-dmic-info    DONE

@@ -3,6 +3,11 @@
 
 aplayrecord --help doesn't write to stdout
 
+speaker-test: missing metavars
+speaker-test: man page misses -F|--format
+speaker-test: man page misses -S|--scale
+speaker-test: wrong error message if invalid option is supplied
+
 amidi: -p: Does the direction matter?
 
 alsa-utils /usr/bin/aconnect          

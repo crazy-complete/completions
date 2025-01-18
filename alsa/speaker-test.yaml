@@ -1,0 +1,99 @@
+prog: "speaker-test"
+options:
+  - option_strings: ["-h", "--help"]
+    help: "show help message"
+
+  - option_strings: ["-D", "--device"]
+    metavar: "device"
+    help: "PCM device name"
+    complete: ["exec", "_alsa_utils_list_pcm_devices"]
+
+  - option_strings: ["-r", "--rate"]
+    metavar: "rate"
+    help: "stream rate in Hz"
+    complete: ["none"]
+
+  - option_strings: ["-c", "--channels"]
+    metavar: "num"
+    help: "count of channels in stream"
+    complete: ["none"]
+
+  - option_strings: ["-f", "--frequency"]
+    metavar: "frequency"
+    help: "sine wave frequency in Hz"
+    complete: ["none"]
+
+  - option_strings: ["-F", "--format"]
+    metavar: "format"
+    help: "sample format"
+    complete: ["choices", ["S8", "S16", "S16_BE", "FLOAT_LE", "S24_3LE", "S24_3BE", "S24_LE", "S24_BE", "S32_LE", "S32_BE"]]
+
+  - option_strings: ["-b", "--buffer"]
+    metavar: "time"
+    help: "ring buffer size in microseconds (default: 0)"
+    complete: ["none"]
+
+  - option_strings: ["-p", "--period"]
+    metavar: "time"
+    help: "period size in microseconds (default: 0)"
+    complete: ["none"]
+
+  - option_strings: ["-P", "--nperiods"]
+    metavar: "periods"
+    help: "number of periods (default: 4)"
+    complete: ["none"]
+
+  - option_strings: ["-t", "--test"]
+    metavar: "" # TODO
+    help: "" # TODO
+    complete: ["choices", ["pink", "st2095", "sine", "wav"]]
+
+  - option_strings: ["-l", "--nloops"]
+    metavar: "count"
+    help: "specify number of loops to test, 0 = infinite"
+    complete: ["none"]
+
+  - option_strings: ["-s", "--speaker"]
+    metavar: "channel"
+    help: "single speaker test. Values 1=Left, 2=right, etc"
+    # taken from speaker-test.c
+    complete: ["choices", {
+      "1": "Front Left",
+      "2": "Front Right",
+      "3": "Rear Left",
+      "4": "Rear Right",
+      "5": "Center",
+      "6": "LFE",
+      "7": "Side Left",
+      "8": "Side Right",
+      "9": "Channel 9",
+     "10": "Channel 10",
+     "11": "Channel 11",
+     "12": "Channel 12",
+     "13": "Channel 13",
+     "14": "Channel 14",
+     "15": "Channel 15",
+     "16": "Channel 16"}]
+
+  - option_strings: ["-w", "--wavfile"]
+    metavar: "file"
+    help: "Use the given WAV file as a test sound"
+    complete: ["file"]
+
+  - option_strings: ["-W", "--wavdir"]
+    metavar: "directory"
+    help: "Specify the directory containing WAV files"
+    complete: ["directory"]
+
+  - option_strings: ["-m", "--chmap"]
+    metavar: "map"
+    help: "Specify the channel map to override"
+    complete: ["none"]
+
+  - option_strings: ["-X", "--force-frequency"]
+    help: "allow frequencies outside the 30-8000hz range"
+
+  - option_strings: ["-S", "--scale"]
+    metavar: "scale"
+    help: "Scale of generated test tones in percent (default=80)"
+    complete: ["none"]

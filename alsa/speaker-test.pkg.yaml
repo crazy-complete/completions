@@ -1,0 +1,5 @@
+name: "speaker-test"
+description: "Completions for speaker-test (alsa-utils)"
+bash_args: ["--include-file", "inc/list_pcm_devices.bash", "speaker-test.yaml"]
+fish_args: ["--include-file", "inc/list_pcm_devices.fish", "speaker-test.yaml"]
+zsh_args:  ["--include-file", "inc/list_pcm_devices.zsh",  "speaker-test.yaml"]

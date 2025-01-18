@@ -1,0 +1,18 @@
+prog: "nhlt-dmic-info"
+options:
+  - option_strings: ["-h", "--help"]
+    help: "show help"
+
+  - option_strings: ["-v", "--version"]
+    help: "print version of this program"
+
+  - option_strings: ["-f", "--file"]
+    metavar: "file"
+    help: "NHLT file (default /sys/firmware/acpi/tables/NHLT)"
+    complete: ["file"]
+
+  - option_strings: ["-o", "--output"]
+    metavar: "file"
+    help: "output file"
+    complete: ["file"]
+

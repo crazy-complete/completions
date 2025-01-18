@@ -1,0 +1,5 @@
+name: "nhlt-dmic-info"
+description: "Completions for nhlt-dmic-info (alsa-utils)"
+bash_args: ["nhlt-dmic-info.yaml"]
+fish_args: ["nhlt-dmic-info.yaml"]
+zsh_args:  ["nhlt-dmic-info.yaml"]

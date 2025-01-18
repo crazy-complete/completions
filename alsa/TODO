@@ -3,6 +3,8 @@
 
 aplayrecord --help doesn't write to stdout
 
+nhlt-dmic-info: wrong program name in help (nhlt-dmic-json)
+
 speaker-test: missing metavars
 speaker-test: man page misses -F|--format
 speaker-test: man page misses -S|--scale
@@ -30,5 +32,5 @@ alsa-utils /usr/bin/aseqnet
 alsa-utils /usr/bin/aseqsend          
 alsa-utils /usr/bin/axfer             
 alsa-utils /usr/bin/iecset            
-alsa-utils /usr/bin/nhlt-dmic-info    TODO
-alsa-utils /usr/bin/speaker-test      TODO
+alsa-utils /usr/bin/nhlt-dmic-info    DONE
+alsa-utils /usr/bin/speaker-test      DONE

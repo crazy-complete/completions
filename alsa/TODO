@@ -12,6 +12,9 @@ speaker-test: wrong error message if invalid option is supplied
 
 aseqdump: --help: -u: missing space
 
+aseqnet: remove colons in help
+aseqnet: missing --help
+
 amidi: -p: Does the direction matter?
 
 alsa-utils /usr/bin/aconnect          
@@ -30,7 +33,7 @@ alsa-utils /usr/bin/aplaymidi         DONE
 alsa-utils /usr/bin/arecord           
 alsa-utils /usr/bin/arecordmidi       DONE
 alsa-utils /usr/bin/aseqdump          DONE
-alsa-utils /usr/bin/aseqnet           
+alsa-utils /usr/bin/aseqnet           DONE
 alsa-utils /usr/bin/aseqsend          
 alsa-utils /usr/bin/axfer             
 alsa-utils /usr/bin/iecset            DONE

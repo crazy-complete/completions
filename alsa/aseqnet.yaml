@@ -1,0 +1,42 @@
+prog: "aseqnet"
+
+options:
+  - option_strings: ["-h", "--help"]
+    help: "show help"
+
+  - option_strings: ["-6", "--ipv6"]
+    help: "use IPv6 TCP protocol"
+
+  - option_strings: ["-p", "--port"]
+    metavar: "port"
+    help: "specify TCP port (digit or service name)"
+    complete: ["none"]
+    # TODO: add a function for service names?
+
+  - option_strings: ["-s", "--source"]
+    metavar: "address"
+    help: "read from given addr (client:port)"
+    complete: ["none"] # TODO: is this TCP?
+
+  - option_strings: ["-d", "--dest"]
+    metavar: "address"
+    help: "write to given addr (client:port)"
+    complete: ["none"] # TODO: is this TCP?
+
+  - option_strings: ["-n", "--name"]
+    metavar: "name"
+    help: "use a specific midi process name"
+    complete: ["none"]
+
+  - option_strings: ["-v", "--verbose"]
+    help: "print verbose messages"
+
+  - option_strings: ["-i", "--info"]
+    help: "print certain received events"
+
+positionals:
+  - number: 1
+    metavar: "server_host"
+    # TODO help
+    complete: ["none"]
+    # TODO: add host command?

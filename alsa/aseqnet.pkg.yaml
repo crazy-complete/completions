@@ -1,0 +1,5 @@
+name: "aseqnet"
+description: "Completions for aseqnet (alsa-utils)"
+bash_args: ["aseqnet.yaml"]
+fish_args: ["aseqnet.yaml"]
+zsh_args:  ["aseqnet.yaml"]

@@ -24,6 +24,10 @@ aseqsend: missing program name
 alsabat: missing arguments for options
 alsabat: usage...
 
+alsaloop: missing arguments for options
+alsaloop: -w doesnt fail on invalid argument
+alsaloop: -e seems to take an argument in help
+
 amidi: -p: Does the direction matter?
 
 alsa-utils /usr/bin/aconnect          
@@ -31,7 +35,7 @@ alsa-utils /usr/bin/alsa-info.sh
 alsa-utils /usr/bin/alsabat           DONE
 alsa-utils /usr/bin/alsabat-test.sh   DONE
 alsa-utils /usr/bin/alsactl           DONE
-alsa-utils /usr/bin/alsaloop          
+alsa-utils /usr/bin/alsaloop          DONE
 alsa-utils /usr/bin/alsamixer         DONE
 alsa-utils /usr/bin/alsatplg          DONE
 alsa-utils /usr/bin/alsaucm           TODO: cannot be done on my system

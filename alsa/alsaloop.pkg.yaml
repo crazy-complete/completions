@@ -1,0 +1,5 @@
+name: "alsaloop"
+description: "Completions for alsaloop (alsa-utils)"
+bash_args: ["--include-file", "inc/list_pcm_devices.bash", "alsaloop.yaml"]
+fish_args: ["--include-file", "inc/list_pcm_devices.fish", "alsaloop.yaml"]
+zsh_args:  ["--include-file", "inc/list_pcm_devices.zsh",  "alsaloop.yaml"]

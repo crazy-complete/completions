@@ -1,0 +1,153 @@
+prog: "alsaloop"
+options:
+  - option_strings: ["-h", "--help"]
+    help: "show help"
+
+  - option_strings: ["-g", "--config"]
+    metavar: "file"
+    help: "configuration file (one line = one job specified)"
+    complete: ["file"]
+
+  - option_strings: ["-d", "--daemonize"]
+    help: "daemonize the main process and use syslog for errors"
+
+  - option_strings: ["-P", "--pdevice"]
+    metavar: "device"
+    help: "playback device"
+    complete: ["exec", "_alsa_utils_list_pcm_devices"]
+
+  - option_strings: ["-C", "--cdevice"]
+    metavar: "device"
+    help: "capture device"
+    complete: ["exec", "_alsa_utils_list_pcm_devices"]
+
+  - option_strings: ["-X", "--pctl"]
+    metavar: "device"
+    help: "playback ctl device"
+    complete: ["exec", "_alsa_utils_list_pcm_devices"]
+
+  - option_strings: ["-Y", "--cctl"]
+    metavar: "device"
+    help: "capture ctl device"
+    complete: ["exec", "_alsa_utils_list_pcm_devices"]
+
+  - option_strings: ["-x", "--prateshift"]
+    metavar: "prateshift"
+    help: "playback 'PCM Rate Shift 100000' ascii ctl name"
+    complete: ["none"] # TODO?
+
+  - option_strings: ["-l", "--latency"]
+    metavar: "latency (frames)"
+    help: "requested latency in frames"
+    complete: ["none"]
+
+  - option_strings: ["-t", "--tlatency"]
+    metavar: "latency (microseconds)"
+    help: "requested latency in microseconds"
+    complete: ["none"]
+
+  - option_strings: ["-f", "--format"]
+    metavar: "sample format"
+    help: "sample format"
+    complete: ["choices", ["S8","U8",
+                           "S16_LE","S16_BE","U16_LE","U16_BE",
+                           "S24_LE","S24_BE","U24_LE","U24_BE",
+                           "S32_LE","S32_BE","U32_LE","U32_BE",
+                           "FLOAT_LE","FLOAT_BE","FLOAT64_LE","FLOAT64_BE",
+                           "IEC958_SUBFRAME_LE","IEC958_SUBFRAME_BE",
+                           "MU_LAW","A_LAW",
+                           "IMA_ADPCM","MPEG","GSM",
+                           "S20_LE","S20_BE","U20_LE","U20_BE",
+                           "SPECIAL",
+                           "S24_3LE","S24_3BE","U24_3LE","U24_3BE",
+                           "S20_3LE","S20_3BE","U20_3LE","U20_3BE",
+                           "S18_3LE","S18_3BE","U18_3LE","U18_3BE",
+                           "G723_24","G723_24_1B","G723_40","G723_40_1B",
+                           "DSD_U8","DSD_U16_LE","DSD_U32_LE","DSD_U16_BE"]]
+
+  - option_strings: ["-c", "--channels"]
+    metavar: "channels"
+    help: "channels"
+    complete: ["range", 1, 1024]
+    # taken from alsa-utils/alsaloop/alsaloop.c (case 'c')
+
+  - option_strings: ["-r", "--rate"]
+    metavar: "rate"
+    help: "rate"
+    complete: ["none"]
+
+  - option_strings: ["-n", "--resample"]
+    help: "resample in alsa-lib"
+
+  - option_strings: ["-A", "--samplerate"]
+    metavar: "samplerate"
+    help: "use converter"
+    complete: ["choices", ["sincbest", "sincmedium", "sincfastest", "zerohold", "linear"]]
+
+  - option_strings: ["-B", "--buffer"]
+    metavar: "buffer size (frames)"
+    help: "buffer size in frames"
+    complete: ["none"]
+
+  - option_strings: ["-E", "--period"]
+    metavar: "period size (fames)"
+    help: "period size in frames"
+    complete: ["none"]
+
+  - option_strings: ["-s", "--seconds"]
+    metavar: "seconds"
+    help: "duration of loop in seconds"
+    complete: ["none"]
+
+  - option_strings: ["-b", "--nblock"]
+    help: "non-block mode (very early process wakeup)"
+
+  - option_strings: ["-S", "--sync"]
+    metavar: "sync mode"
+    help: "sync mode"
+    complete: ["choices", ["none","simple","captshift","playshift","samplerate","auto"]]
+
+  - option_strings: ["-a", "--slave"]
+    metavar: "slave mode"
+    help: "stream parameters slave mode"
+    complete: ["choices", ["auto", "on", "off"]]
+
+  - option_strings: ["-T", "--thread"]
+    metavar: "thread number"
+    help: "thread number (-1 = create unique)"
+    complete: ["none"]
+
+  - option_strings: ["-m", "--mixer"]
+    metavar: "redirect" # TODO
+    help: "redirect mixer, argument is: SRC_SLAVE_ID(PLAYBACK)[@DST_SLAVE_ID(CAPTURE)]"
+    complete: ["none"]
+    repeatable: true
+
+  - option_strings: ["-O", "--ossmixer"]
+    metavar: "rescan" # TODO
+    help: "rescan and redirect oss mixer, argument is: ALSA_ID@OSS_ID (for example: \"Master@VOLUME\")"
+    complete: ["none"]
+    repeatable: true
+
+  - option_strings: ["-e", "--effect"]
+    help: "apply an effect (bandpass filter sweep)"
+
+  - option_strings: ["-v", "--verbose"]
+    help: "verbose mode (more -v means more verbose)"
+    repeatable: true
+
+  - option_strings: ["-w", "--workaround"]
+    metavar: "workaround"
+    help: "use workaround"
+    complete: ["choices", ["serialopen"]]
+
+  - option_strings: ["-U", "--xrun"]
+    help: "xrun profiling"
+
+  - option_strings: ["-W", "--wake"]
+    metavar: "miliseconds"
+    help: "process wake timeout in miliseconds"
+    complete: ["none"]
+
+  - option_strings: ["-z", "--syslog"]
+    help: "use syslog for errors"

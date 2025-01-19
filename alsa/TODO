@@ -4,6 +4,9 @@
 
 general: miliseconds or milliseconds?
 general: channels? is this a number in a fixed range?
+general: --help, --version, -l, -L: make them final
+
+aplay: aplay.c: duration and samples arguments cannot be used together
 
 aplayrecord --help doesn't write to stdout
 
@@ -41,7 +44,7 @@ alsa-utils /usr/bin/alsatplg          DONE
 alsa-utils /usr/bin/alsaucm           TODO: cannot be done on my system
 alsa-utils /usr/bin/amidi             DONE
 alsa-utils /usr/bin/amixer            DONE
-alsa-utils /usr/bin/aplay             
+alsa-utils /usr/bin/aplay             DONE
 alsa-utils /usr/bin/aplaymidi         DONE
 alsa-utils /usr/bin/arecord           
 alsa-utils /usr/bin/arecordmidi       DONE

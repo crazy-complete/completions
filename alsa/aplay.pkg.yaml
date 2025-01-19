@@ -1,0 +1,5 @@
+name: "aplay"
+description: "Completions for aplay (alsa-utils)"
+bash_args: ["--include-file", "inc/list_pcm_devices.bash", "aplay.yaml"]
+fish_args: ["--include-file", "inc/list_pcm_devices.fish", "aplay.yaml"]
+zsh_args:  ["--include-file", "inc/list_pcm_devices.zsh",  "aplay.yaml"]

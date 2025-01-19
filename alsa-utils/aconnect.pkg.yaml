@@ -1,0 +1,5 @@
+name: "aconnect"
+description: "Completions for aconnect (alsa-utils)"
+bash_args: ["--include-file", "inc/aseq_list_ports.bash", "aconnect.yaml"]
+fish_args: ["--include-file", "inc/aseq_list_ports.fish", "aconnect.yaml"]
+zsh_args:  ["--include-file", "inc/aseq_list_ports.zsh",  "aconnect.yaml"]

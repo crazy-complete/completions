@@ -38,7 +38,7 @@ amidi: -p: Does the direction matter?
 
 aplay <> axfer: --file-type: both case insensitive?
 
-alsa-utils /usr/bin/aconnect          
+alsa-utils /usr/bin/aconnect          DONE
 alsa-utils /usr/bin/alsa-info.sh      DONE
 alsa-utils /usr/bin/alsabat           DONE
 alsa-utils /usr/bin/alsabat-test.sh   DONE

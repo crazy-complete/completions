@@ -1,0 +1,44 @@
+prog: "aconnect"
+
+options:
+  - option_strings: ["-d", "--disconnect"]
+    help: "disconnect"
+
+  - option_strings: ["-e", "--exclusive"]
+    help: "exclusive connection"
+
+  - option_strings: ["-r", "--real"]
+    metavar: "#" # TODO
+    help: "convert real-time-stamp on queue"
+    complete: ["none"]
+
+  - option_strings: ["-t", "--tick"]
+    metavar: "#" # TODO
+    help: "convert tick-time-stamp on queue"
+    complete: ["none"]
+
+  - option_strings: ["-i", "--input"]
+    help: "list input (readable) ports"
+
+  - option_strings: ["-o", "--output"]
+    help: "list output (writable) ports"
+
+  - option_strings: ["-a", "--all"]
+    help: "show inactive ports, too"
+
+  - option_strings: ["-l", "--list"]
+    help: "list current connections of each port"
+
+  - option_strings: ["-x", "--removeall"]
+    help: "remove all exported connections"
+
+positionals:
+  - number: 1
+    metavar: "sender"
+    help: "sender"
+    complete: ["exec", "_aseq_list_ports"] # TODO is this right?
+
+  - number: 2
+    metavar: "receiver"
+    help: "receiver"
+    complete: ["exec", "_aseq_list_ports"] # TODO is this right?

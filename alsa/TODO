@@ -36,7 +36,7 @@ alsaloop: -e seems to take an argument in help
 amidi: -p: Does the direction matter?
 
 alsa-utils /usr/bin/aconnect          
-alsa-utils /usr/bin/alsa-info.sh      
+alsa-utils /usr/bin/alsa-info.sh      DONE
 alsa-utils /usr/bin/alsabat           DONE
 alsa-utils /usr/bin/alsabat-test.sh   DONE
 alsa-utils /usr/bin/alsactl           DONE

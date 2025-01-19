@@ -1,0 +1,48 @@
+prog: "alsa-info.sh"
+options:
+  - option_strings: ["--with-aplay"]
+    help: "includes the output of aplay -l"
+
+  - option_strings: ["--with-amixer"]
+    help: "includes the output of amixer"
+
+  - option_strings: ["--with-alsactl"]
+    help: "includes the output of alsactl"
+
+  - option_strings: ["--with-configs"]
+    help: "includes the output of ~/.asoundrc and /etc/asound.conf if they exist"
+
+  - option_strings: ["--with-devices"]
+    help: "shows the device nodes in /dev/snd/"
+
+  - option_strings: ["--with-dmesg"]
+    help: "shows the ALSA/HDA kernel messages"
+
+  - option_strings: ["--with-packages"]
+    help: "includes known packages installed"
+
+  - option_strings: ["--output"]
+    metavar: "FILE"
+    help: "specify the file to output for no-upload mode"
+    complete: ["file"]
+
+  - option_strings: ["--update"]
+    help: "check server for script updates"
+
+  - option_strings: ["--upload"]
+    help: "upload contents to remote server"
+
+  - option_strings: ["--no-upload"]
+    help: "do not upload contents to remote server"
+
+  - option_strings: ["--pastebin"]
+    help: "use 'https://pastebin.ca' as remote server instead www.alsa-project.org"
+
+  - option_strings: ["--stdout"]
+    help: "print alsa information to standard output instead of a file"
+
+  - option_strings: ["--about"]
+    help: "show some information about the script"
+
+  - option_strings: ["--debug"]
+    help: "will run the script as normal, but will not delete /tmp/alsa-info.*/alsa-info.txt"

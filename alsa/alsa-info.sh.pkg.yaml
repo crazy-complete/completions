@@ -1,0 +1,5 @@
+name: "alsa-info.sh"
+description: "Completions for alsa-info.sh (alsa-utils)"
+bash_args: ["alsa-info.sh.yaml"]
+fish_args: ["alsa-info.sh.yaml"]
+zsh_args:  ["alsa-info.sh.yaml"]

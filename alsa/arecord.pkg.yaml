@@ -1,0 +1,5 @@
+name: "arecord"
+description: "Completions for arecord (alsa-utils)"
+bash_args: ["--include-file", "inc/list_pcm_devices.bash", "arecord.yaml"]
+fish_args: ["--include-file", "inc/list_pcm_devices.fish", "arecord.yaml"]
+zsh_args:  ["--include-file", "inc/list_pcm_devices.zsh",  "arecord.yaml"]

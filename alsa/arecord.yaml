@@ -1,0 +1,182 @@
+prog: "arecord"
+options:
+  - option_strings: ["-h", "--help"]
+    help: "show help"
+
+  - option_strings: ["--version"]
+    help: "print current version"
+
+  - option_strings: ["-l", "--list-devices"]
+    help: "list all soundcards and digital audio devices"
+
+  - option_strings: ["-L", "--list-pcms"]
+    help: "list device names"
+
+  - option_strings: ["-D", "--device"]
+    metavar: "DEVICE"
+    help: "select PCM by name"
+    complete: ["exec", "_alsa_utils_list_pcm_devices"]
+
+  - option_strings: ["-q", "--quiet"]
+    help: "quiet mode"
+
+  - option_strings: ["-t", "--file-type"]
+    metavar: "TYPE"
+    help: "file type (voc, wav, raw or au)"
+    complete: ["choices", ["voc","wav","raw","au"]]
+
+  - option_strings: ["-c", "--channels"]
+    metavar: "NUMBER"
+    help: "channels"
+    complete: ["range", 1, 256]
+    # taken from alsa-utils/aplay/aplay.c (case 'c')
+
+  - option_strings: ["-f", "--format"]
+    metavar: "FORMAT"
+    help: "sample format (case insensitive)"
+    # TODO: maybe make this a dict with explanations for cd, cdr and dat
+    complete: ["choices", ["cd", "cdr", "dat",
+                           "S8","U8",
+                           "S16_LE","S16_BE","U16_LE","U16_BE",
+                           "S24_LE","S24_BE","U24_LE","U24_BE",
+                           "S32_LE","S32_BE","U32_LE","U32_BE",
+                           "FLOAT_LE","FLOAT_BE","FLOAT64_LE","FLOAT64_BE",
+                           "IEC958_SUBFRAME_LE","IEC958_SUBFRAME_BE",
+                           "MU_LAW","A_LAW","IMA_ADPCM","MPEG","GSM",
+                           "S20_LE","S20_BE","U20_LE","U20_BE",
+                           "SPECIAL",
+                           "S24_3LE","S24_3BE","U24_3LE","U24_3BE",
+                           "S20_3LE","S20_3BE","U20_3LE","U20_3BE",
+                           "S18_3LE","S18_3BE","U18_3LE","U18_3BE",
+                           "G723_24","G723_24_1B","G723_40","G723_40_1B",
+                           "DSD_U8","DSD_U16_LE","DSD_U32_LE","DSD_U16_BE","DSD_U32_BE"]]
+
+  - option_strings: ["--subformat"]
+    metavar: "SUBFORMAT"
+    help: "sample subformat (case insensitive)"
+    complete: ["choices", ["STD", "MSBITS_MAX", "MSBITS_20", "MSBITS_24"]]
+    # taken from: alsa-lib/src/pcm/pcm.c (snd_pcm_subformat_names[])
+
+  - option_strings: ["-r", "--rate"]
+    metavar: "rate"
+    help: "sample rate"
+    complete: ["none"]
+
+  - option_strings: ["-d", "--duration"]
+    metavar: "seconds"
+    help: "interrupt after num seconds"
+    complete: ["none"]
+
+  - option_strings: ["-s", "--samples"]
+    metavar: "samples"
+    help: "interrupt after num samples per channel"
+    complete: ["none"]
+
+  - option_strings: ["-M", "--mmap"]
+    help: "mmap stream"
+
+  - option_strings: ["-N", "--nonblock"]
+    help: "nonblocking mode"
+
+  - option_strings: ["-F", "--period-time"]
+    metavar: "period time (microseconds)"
+    help: "distance between interrupts in microseconds"
+    complete: ["none"]
+
+  - option_strings: ["-B", "--buffer-time"]
+    metavar: "buffer duration (microseconds)"
+    help: "buffer duration in microseconds"
+    complete: ["none"]
+
+  - option_strings: ["--period-size"]
+    metavar: "period size (frames)"
+    help: "distance between interrupts in number of frames"
+    complete: ["none"]
+
+  - option_strings: ["--buffer-size"]
+    metavar: "buffer size (frames)"
+    help: "buffer duration in number of frames"
+    complete: ["none"]
+
+  - option_strings: ["-A", "--avail-min"]
+    metavar: "microseconds"
+    help: "min available space for wakeup in microseconds"
+    complete: ["none"]
+
+  - option_strings: ["-R", "--start-delay"]
+    metavar: "delay (microseconds)"
+    help: "delay for automatic PCM start in microseconds (relative to buffer size if <= 0)"
+    complete: ["none"]
+
+  - option_strings: ["-T", "--stop-delay"]
+    metavar: "delay (microseconds)"
+    help: "delay for automatic PCM stop from xrun in microseconds"
+    complete: ["none"]
+
+  - option_strings: ["-v", "--verbose"]
+    help: "show PCM structure and setup (accumulative)"
+    repeatable: true
+
+  - option_strings: ["-V", "--vumeter"]
+    metavar: "TYPE"
+    help: "enable VU meter"
+    complete: ["choices", ["mono", "stereo"]]
+
+  - option_strings: ["-I", "--separate-channels"]
+    help: "one file for each channel"
+
+  - option_strings: ["-i", "--interactive"]
+    help: "allow interactive operation from stdin"
+
+  - option_strings: ["-m", "--chmap"]
+    metavar: "ch1,ch2,..."
+    help: "Give the channel map to override or follow"
+    complete: ["none"]
+
+  - option_strings: ["--disable-resample"]
+    help: "disable automatic rate resample"
+
+  - option_strings: ["--disable-channels"]
+    help: "disable automatic channel conversions"
+
+  - option_strings: ["--disable-format"]
+    help: "disable automatic format conversions"
+
+  - option_strings: ["--disable-softvol"]
+    help: "disable software volume control (softvol)"
+
+  - option_strings: ["--test-position"]
+    help: "test ring buffer position"
+
+  - option_strings: ["--test-coef"]
+    metavar: "coefficient"
+    help: "test coefficient for ring buffer position (default 8) expression for validation is: coef * (buffer_size / 2)"
+    complete: ["none"]
+
+  - option_strings: ["--test-nowait"]
+    help: "do not wait for ring buffer - eats whole CPU"
+
+  - option_strings: ["--max-file-time"]
+    metavar: "seconds"
+    help: "start another output file when the old file has recorded for this many seconds"
+    complete: ["none"]
+
+  - option_strings: ["--process-id-file"]
+    metavar: "file"
+    help: "write the process ID here"
+    complete: ["file"]
+
+  - option_strings: ["--use-strftime"]
+    help: "apply the strftime facility to the output file name"
+
+  - option_strings: ["--dump-hw-params"]
+    help: "dump hw_params of the device"
+
+  - option_strings: ["--fatal-errors"]
+    help: "treat all errors as fatal"
+
+positionals:
+  - number: 1
+    metavar: "file"
+    help: "output file"
+    complete: ["file"]

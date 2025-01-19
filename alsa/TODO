@@ -1,3 +1,5 @@
+merge arecord and aplay into a single definition file?
+
 -h|--help: unified message
 -v|--version: unified message
 -v|--version: unified message
@@ -46,7 +48,7 @@ alsa-utils /usr/bin/amidi             DONE
 alsa-utils /usr/bin/amixer            DONE
 alsa-utils /usr/bin/aplay             DONE
 alsa-utils /usr/bin/aplaymidi         DONE
-alsa-utils /usr/bin/arecord           
+alsa-utils /usr/bin/arecord           DONE
 alsa-utils /usr/bin/arecordmidi       DONE
 alsa-utils /usr/bin/aseqdump          DONE
 alsa-utils /usr/bin/aseqnet           DONE

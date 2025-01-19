@@ -7,6 +7,7 @@ merge arecord and aplay into a single definition file?
 general: miliseconds or milliseconds?
 general: channels? is this a number in a fixed range?
 general: --help, --version, -l, -L: make them final
+general: -f|--format: cd, cdr, data are missing...
 
 aplay: aplay.c: duration and samples arguments cannot be used together
 
@@ -35,6 +36,8 @@ alsaloop: -e seems to take an argument in help
 
 amidi: -p: Does the direction matter?
 
+aplay <> axfer: --file-type: both case insensitive?
+
 alsa-utils /usr/bin/aconnect          
 alsa-utils /usr/bin/alsa-info.sh      DONE
 alsa-utils /usr/bin/alsabat           DONE
@@ -53,7 +56,7 @@ alsa-utils /usr/bin/arecordmidi       DONE
 alsa-utils /usr/bin/aseqdump          DONE
 alsa-utils /usr/bin/aseqnet           DONE
 alsa-utils /usr/bin/aseqsend          DONE
-alsa-utils /usr/bin/axfer             
+alsa-utils /usr/bin/axfer             DONE
 alsa-utils /usr/bin/iecset            DONE
 alsa-utils /usr/bin/nhlt-dmic-info    DONE
 alsa-utils /usr/bin/speaker-test      DONE

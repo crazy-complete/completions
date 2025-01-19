@@ -1,0 +1,5 @@
+name: "axfer"
+description: "Completions for axfer (alsa-utils)"
+bash_args: ["--include-file", "inc/list_pcm_devices.bash", "axfer.yaml"]
+fish_args: ["--include-file", "inc/list_pcm_devices.fish", "axfer.yaml"]
+zsh_args:  ["--include-file", "inc/list_pcm_devices.zsh",  "axfer.yaml"]

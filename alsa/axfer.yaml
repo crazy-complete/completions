@@ -1,0 +1,198 @@
+prog: "axfer"
+
+---
+
+# TODO: subcommand descriptions
+
+# TODO: these options are only available to further subcommands
+#       (axfer transfer playback, axfer transfer capture)
+
+prog: "axfer transfer"
+options:
+
+# COMMON-OPTIONS
+
+  - option_strings: ["-h", "--help"]
+    help: "show help"
+
+  - option_strings: ["-v", "--verbose"]
+    help: "verbose"
+
+  - option_strings: ["-q", "--quiet"]
+    help: "quiet mode"
+
+  - option_strings: ["-d", "--duration"]
+    metavar: "duration (seconds)"
+    help: "interrupt after seconds"
+    complete: ["none"]
+
+  - option_strings: ["-s", "--samples"]
+    metavar: "samples (frames)"
+    help: "interrupt after frames"
+    complete: ["none"]
+
+  - option_strings: ["-f", "--format"]
+    metavar: "FORMAT"
+    help: "sample format (case-insensitive)"
+    complete: ["choices", ["cd", "cdr", "dat",
+                           "S8","U8",
+                           "S16_LE","S16_BE","U16_LE","U16_BE",
+                           "S24_LE","S24_BE","U24_LE","U24_BE",
+                           "S32_LE","S32_BE","U32_LE","U32_BE",
+                           "FLOAT_LE","FLOAT_BE","FLOAT64_LE","FLOAT64_BE",
+                           "IEC958_SUBFRAME_LE","IEC958_SUBFRAME_BE",
+                           "MU_LAW","A_LAW","IMA_ADPCM","MPEG","GSM",
+                           "S20_LE","S20_BE","U20_LE","U20_BE",
+                           "SPECIAL",
+                           "S24_3LE","S24_3BE","U24_3LE","U24_3BE",
+                           "S20_3LE","S20_3BE","U20_3LE","U20_3BE",
+                           "S18_3LE","S18_3BE","U18_3LE","U18_3BE",
+                           "G723_24","G723_24_1B","G723_40","G723_40_1B",
+                           "DSD_U8","DSD_U16_LE","DSD_U32_LE","DSD_U16_BE","DSD_U32_BE"]]
+
+  - option_strings: ["-c", "--channels"]
+    metavar: "channels"
+    help: "channels"
+    complete: ["none"]
+
+  - option_strings: ["-r", "--rate"]
+    metavar: "channels"
+    help: "numeric sample rate in unit of Hz or kHz"
+    complete: ["none"]
+
+  - option_strings: ["-t", "--file-type"]
+    metavar: "TYPE"
+    help: "file type (voc, wav, raw or au)"
+    complete: ["choices", ["voc","wav","raw","au"]]
+
+  - option_strings: ["-I", "--separate-channels"]
+    help: "one file for each channel"
+
+  - option_strings: ["--dump-hw-params"]
+    help: "dump hw_params of the device"
+
+  - option_strings: ["--xfer-type"]
+    metavar: "BACKEND"
+    help: "backend type (libasound, libffado)"
+    complete: ["choices", ["libasound", "libffado"]]
+
+# BACKEND-OPTIONS (libasound)
+
+# [BASICS]
+  - option_strings: ["-D", "--device"]
+    metavar: "device"
+    help: "select node by name in coniguration space"
+    complete: ["exec", "_alsa_utils_list_pcm_devices"]
+
+  - option_strings: ["-N", "--nonblock"]
+    help: "nonblocking mode"
+
+  - option_strings: ["-M", "--mmap"]
+    help: "use mmap(2) for zero copying technique"
+
+  - option_strings: ["-F", "--period-time"]
+    metavar: "period time (miliseconds)"
+    help: "interval between interrupts (miliseconds)"
+    complete: ["none"]
+
+  - option_strings: ["--period-size"]
+    metavar: "period size (frames)"
+    help: "interval between interrupts (frame unit)"
+    complete: ["none"]
+
+  - option_strings: ["-B", "--buffer-time"]
+    metavar: "buffer time (miliseconds)"
+    help: "size of buffer for frame (miliseconds)"
+    complete: ["none"]
+
+  - option_strings: ["--buffer-size"]
+    metavar: "buffer size (frames)"
+    help: "size of buffer for frame (frame unit)"
+    complete: ["none"]
+
+  - option_strings: ["--waiter-type"]
+    help: "type of waiter to handle available frames"
+    complete: ["choices", ["default", "poll", "select", "epoll"]]
+    # taken from alsa-utils/axfer/waiter.c (waiter_type_labels[])
+
+  - option_strings: ["--sched-model"]
+    help: "model of process scheduling"
+    complete: ["choices", ["irq", "timer"]]
+    # taken from alsa-utils/axfer/xfer-libasound.c (sched_model_labels[])
+
+# [SOFTWARE FEATURES]
+
+  - option_strings: ["-A", "--avail-min"]
+    metavar: "threshold (frames)"
+    help: "threshold of frames to wake up process"
+    complete: ["none"]
+
+  - option_strings: ["-R", "--start-delay"]
+    metavar: "threshold (frames)"
+    help: "threshold of frames to start PCM substream"
+    complete: ["none"]
+
+  - option_strings: ["-T", "--stop-delay"]
+    metavar: "threshold (frames)"
+    help: "threshold of frames to stop PCM substream"
+    complete: ["none"]
+
+# [LIBASOUND PLUGIN OPTIONS]
+
+  - option_strings: ["--disable-resample"]
+    help: "disable rate conversion for plug plugin"
+
+  - option_strings: ["--disable-channels"]
+    help: "disable channel conversion for plug plugin"
+
+  - option_strings: ["--disable-format"]
+    help: "disable format conversion for plug plugin"
+
+  - option_strings: ["--disable-softvol"]
+    help: "disable software volume for sofvol plugin"
+
+# [DEBUG ASSISTANT]
+
+  - option_strings: ["--fatal-errors"]
+    help: "finish at XRUN"
+
+  - option_strings: ["--test-nowait"]
+    help: "busy poll without any waiter"
+
+---
+
+prog: "axfer transfer capture"
+inherit_options: true
+
+---
+
+prog: "axfer transfer playback"
+inherit_options: true
+
+---
+
+prog: "axfer list"
+
+---
+
+prog: "axfer list capture"
+
+---
+
+prog: "axfer list capture device"
+
+---
+
+prog: "axfer list capture pcm"
+
+---
+
+prog: "axfer list playback"
+
+---
+
+prog: "axfer list playback device"
+
+---
+
+prog: "axfer list playback pcm"

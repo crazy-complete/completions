@@ -1,0 +1,5 @@
+name: "vlc"
+description: "Completions for vlc"
+bash_args: ["vlc.yaml"]
+fish_args: ["vlc.yaml", "--repeatable-options=True"]
+zsh_args:  ["vlc.yaml"]

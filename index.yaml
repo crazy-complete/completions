@@ -27,3 +27,4 @@
 - "alsa-utils/alsa-info.sh.pkg.yaml"
 - "alsa-utils/axfer.pkg.yaml"
 - "alsa-utils/aconnect.pkg.yaml"
+- "vlc/vlc.pkg.yaml"

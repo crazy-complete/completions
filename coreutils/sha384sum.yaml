@@ -1,0 +1,44 @@
+prog: "sha384sum"
+help: "Print or check SHA384 (384-bit) checksums"
+options:
+  - option_strings: ["-b", "--binary"]
+    help: "read in binary mode"
+
+  - option_strings: ["-c", "--check"]
+    help: "read checksums from the FILEs and check them"
+
+  - option_strings: ["--tag"]
+    help: "create a BSD-style checksum"
+
+  - option_strings: ["-t", "--text"]
+    help: "read in text mode (default)"
+
+  - option_strings: ["-z", "--zero"]
+    help: "end each output line with NUL, not newline, and disable file name escaping"
+
+  - option_strings: ["--ignore-missing"]
+    help: "don't fail or report status for missing files"
+
+  - option_strings: ["--quiet"]
+    help: "don't print OK for each successfully verified file"
+
+  - option_strings: ["--status"]
+    help: "don't output anything, status code shows success"
+
+  - option_strings: ["--strict"]
+    help: "exit non-zero for improperly formatted checksum lines"
+
+  - option_strings: ["-w", "--warn"]
+    help: "warn about improperly formatted checksum lines"
+
+  - option_strings: ["--help"]
+    help: "display help and exit"
+
+  - option_strings: ["--version"]
+    help: "output version information and exit"
+
+positionals:
+  - number: 1
+    metavar: "FILE"
+    complete: ["file"]
+    repeatable: true

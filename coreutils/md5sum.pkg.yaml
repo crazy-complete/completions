@@ -1,0 +1,5 @@
+name: "md5sum"
+description: "Completions for md5sum (coreutils)"
+bash_args: ["md5sum.yaml"]
+fish_args: ["md5sum.yaml"]
+zsh_args:  ["md5sum.yaml"]

@@ -1,0 +1,20 @@
+prog: "sum"
+help: "Print or check BSD (16-bit) checksums"
+options:
+  - option_strings: ["-r"]
+    help: "use BSD sum algorithm (the default), use 1K blocks"
+
+  - option_strings: ["-s", "--sysv"]
+    help: "use System V sum algorithm, use 512 bytes blocks"
+
+  - option_strings: ["--help"]
+    help: "display help and exit"
+
+  - option_strings: ["--version"]
+    help: "output version information and exit"
+
+positionals:
+  - number: 1
+    metavar: "FILE"
+    complete: ["file"]
+    repeatable: true

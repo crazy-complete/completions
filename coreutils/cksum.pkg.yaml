@@ -1,0 +1,5 @@
+name: "cksum"
+description: "Completions for cksum (coreutils)"
+bash_args: ["cksum.yaml"]
+fish_args: ["cksum.yaml"]
+zsh_args:  ["cksum.yaml"]

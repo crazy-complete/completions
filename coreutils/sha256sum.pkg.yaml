@@ -1,0 +1,5 @@
+name: "sha256sum"
+description: "Completions for sha256sum (coreutils)"
+bash_args: ["sha256sum.yaml"]
+fish_args: ["sha256sum.yaml"]
+zsh_args:  ["sha256sum.yaml"]

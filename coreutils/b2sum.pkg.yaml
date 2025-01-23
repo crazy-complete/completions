@@ -1,0 +1,5 @@
+name: "b2sum"
+description: "Completions for b2sum (coreutils)"
+bash_args: ["b2sum.yaml"]
+fish_args: ["b2sum.yaml"]
+zsh_args:  ["b2sum.yaml"]

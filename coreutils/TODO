@@ -1,0 +1,3 @@
+- Use a single file for sha*sum,md5sum,etc...
+- The following five options are useful only when verifying checksums (-c|--check)
+  (maybe use 'when: has_option -c --check')

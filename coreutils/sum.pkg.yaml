@@ -1,0 +1,5 @@
+name: "sum"
+description: "Completions for sum (coreutils)"
+bash_args: ["sum.yaml"]
+fish_args: ["sum.yaml"]
+zsh_args:  ["sum.yaml"]

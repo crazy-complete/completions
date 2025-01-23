@@ -1,0 +1,74 @@
+prog: "cksum"
+help: "Print or verify checksums"
+
+# TODO: --length is only supported with --algorithm=blake2b
+
+options:
+  - option_strings: ["-a", "--algorithm"]
+    metavar: "TYPE"
+    help: "select the digest type to use"
+    complete: ["choices", {
+      "sysv":    "equivalent to sum -s",
+      "bsd":     "equivalent to sum -r",
+      "crc":     "equivalent to cksum",
+      "md5":     "equivalent to md5sum",
+      "sha1":    "equivalent to sha1sum",
+      "sha224":  "equivalent to sha224sum",
+      "sha256":  "equivalent to sha256sum",
+      "sha384":  "equivalent to sha384sum",
+      "sha512":  "equivalent to sha512sum",
+      "blake2b": "equivalent to b2sum",
+      "sm3":     "only available through cksum"}]
+
+  - option_strings: ["--base64"]
+    help: "emit base64-encoded digests, not hexadecimal"
+
+  - option_strings: ["-c", "--check"]
+    help: "read checksums from the FILEs and check them"
+
+  - option_strings: ["-l", "--length"]
+    metavar: "BITS"
+    help: "digest length in bits; must not exceed the max for the blake2 algorithm and must be a multiple of 8"
+    complete: ["none"]
+
+  - option_strings: ["--raw"]
+    help: "emit a raw binary digest, not hexadecimal"
+
+  - option_strings: ["--tag"]
+    help: "create a BSD-style checksum (the default)"
+
+  - option_strings: ["--untagged"]
+    help: "create a reversed style checksum, without digest type"
+
+  - option_strings: ["-z", "--zero"]
+    help: "end each output line with NUL, not newline, and disable file name escaping"
+
+  - option_strings: ["--ignore-missing"]
+    help: "don't fail or report status for missing files"
+
+  - option_strings: ["--quiet"]
+    help: "don't print OK for each successfully verified file"
+
+  - option_strings: ["--status"]
+    help: "don't output anything, status code shows success"
+
+  - option_strings: ["--strict"]
+    help: "exit non-zero for improperly formatted checksum lines"
+
+  - option_strings: ["-w", "--warn"]
+    help: "warn about improperly formatted checksum lines"
+
+  - option_strings: ["--debug"]
+    help: "indicate which implementation used"
+
+  - option_strings: ["--help"]
+    help: "display help and exit"
+
+  - option_strings: ["--version"]
+    help: "output version information and exit"
+
+positionals:
+  - number: 1
+    metavar: "FILE"
+    complete: ["file"]
+    repeatable: true

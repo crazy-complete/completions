@@ -1,0 +1,123 @@
+prog: "scrot"
+help: "command line screen capture utility"
+options:
+  - option_strings: ["-a", "--autoselect"]
+    metavar: "<x,y,width,height>"
+    help: "autoselect provided region"
+    complete: ["none"] # TODO: value_list with exec
+
+  - option_strings: ["-b", "--border"]
+    help: "capture the window borders as well"
+
+  - option_strings: ["-C", "--class"]
+    metavar: "class"
+    help: "capture specified window class"
+    complete: ["none"] # TODO?
+
+  - option_strings: ["-c", "--count"]
+    help: "display a countdown for delay"
+
+  - option_strings: ["-D", "--display"]
+    metavar: "display"
+    help: "capture specified display"
+    complete: ["none"]
+
+  - option_strings: ["-d", "--delay"]
+    metavar: "[b]seconds"
+    help: "add delay before screenshot" # TODO: add expl. for [b]
+    complete: ["none"]
+
+  - option_strings: ["-e", "--exec"]
+    metavar: "command"
+    help: "execute command on saved image"
+    complete: ["command"] # TODO commandline
+
+  - option_strings: ["-F", "--file"]
+    metavar: "file"
+    help: "specify output file"
+    complete: ["file"]
+
+  - option_strings: ["-f", "--freeze"]
+    help: "freeze the screen when -s is used"
+
+  - option_strings: ["-h", "--help"]
+    help: "display help and exit"
+
+  - option_strings: ["-i", "--ignorekeyboard"]
+    help: "ignore keyboard"
+
+  - option_strings: ["-k", "--stack"]
+    metavar: "v|h"
+    help: "capture overlapped window and join them"
+    optional_arg: true
+    complete: ["choices", {"v": "vertical", "h": "horizontal"}]
+
+  - option_strings: ["-l", "--line"]
+    metavar: "style"
+    help: "specify the style of the selection line"
+    complete: ["none"] # TODO
+
+  - option_strings: ["-M", "--monitor"]
+    metavar: "NUM"
+    help: "capture monitor"
+    complete: ["exec", "_scrot_monitors"]
+
+  - option_strings: ["-m", "--multidisp"]
+    help: "capture all monitors"
+
+  - option_strings: ["-o", "--overwrite"]
+    help: "overwrite the output file if needed"
+
+  - option_strings: ["-p", "--pointer"]
+    help: "capture the mouse pointer as well"
+
+  - option_strings: ["-q", "--quality"]
+    metavar: "quality"
+    help: "image quality"
+    complete: ["range", 0, 100]
+
+  - option_strings: ["-s", "--select"]
+    metavar: "options"
+    help: "interactively select a region to capture"
+    optional_arg: true
+    complete: ["none"] # TODO
+
+  - option_strings: ["-t", "--thumb"]
+    metavar: "% | WIDTHxHEIGHT"
+    help: "also generate a thumbnail"
+    complete: ["none"]
+
+  - option_strings: ["-u", "--focused", "--focussed"]
+    help: "capture the currently focused window"
+
+  - option_strings: ["-v", "--version"]
+    help: "output version and exit"
+
+  - option_strings: ["-w", "--window"]
+    metavar: "window id"
+    help: "X window ID to capture"
+    complete: ["none"] # TODO?
+
+  - option_strings: ["-Z", "--compression"]
+    metavar: "compression level"
+    help: "image compression level"
+    complete: ["range", 0, 10]
+
+  - option_strings: ["-z", "--silent"]
+    help: "prevent beeping"
+
+  - option_strings: ["--format"]
+    metavar: "format"
+    help: "specify output file format"
+    complete: ["choices", ["bmp", "jpg", "png", "tiff", "webp", "tga", "jfif", "ppm", "pgm", "pbm"]]
+
+  - option_strings: ["--list-options"]
+    metavar: "human|tsv"
+    help: "list all options"
+    optional_arg: true
+    complete: ["choices", ["human", "tsv"]]
+
+positionals:
+  - number: 1
+    metavar: "file"
+    complete: ["file"]

@@ -1,0 +1,5 @@
+name: "scrot"
+description: "Completions for scrot"
+bash_args: ["--include-file", "scrot.sh",   "scrot.yaml"]
+fish_args: ["--include-file", "scrot.fish", "scrot.yaml"]
+zsh_args:  ["--include-file", "scrot.sh",   "scrot.yaml"]

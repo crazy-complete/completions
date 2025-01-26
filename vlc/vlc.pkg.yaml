@@ -1,5 +1,7 @@
 name: "vlc"
 description: "Completions for vlc"
-bash_args: ["vlc.yaml"]
-fish_args: ["vlc.yaml", "--repeatable-options=True"]
-zsh_args:  ["vlc.yaml"]
+# YAML is very slow (it takes up to seven seconds to parse the YAML file)
+# so we use JSON here
+bash_args: ["vlc.json"]
+fish_args: ["vlc.json", "--repeatable-options=True"]
+zsh_args:  ["vlc.json"]

@@ -1,5 +1,4 @@
 prog: "vlc"
-help: "<Program description here>"
 options:
   - option_strings: ["--ts-standard"]
     metavar: "{auto,mpeg,dvb,arib,atsc,tdmb}"
@@ -512,12 +511,12 @@ options:
   - option_strings: ["--overlay-input"]
     metavar: "<string>"
     help: "Input FIFO FIFO which will be read for commands"
-    complete: ["none"]
+    complete: ["file"]
 
   - option_strings: ["--overlay-output"]
     metavar: "<string>"
     help: "Output FIFO FIFO which will be written to for responses"
-    complete: ["none"]
+    complete: ["file"]
 
   - option_strings: ["--marq-marquee"]
     metavar: "<string>"
@@ -7034,4 +7033,10 @@ options:
   - option_strings: ["--config"]
     metavar: "<string>"
     help: "use alternate config file"
+    complete: ["file"]
+
+positionals:
+  - number: 1
+    metavar: "file"
+    repeatable: true
     complete: ["file"]

@@ -3,14 +3,11 @@
 import sys
 import crazy_complete
 
-cmdline = crazy_complete.yaml_source.load_from_file(sys.argv[1])
-
-del cmdline.options[0] # del --option
-del cmdline.options[0] # del -option
-
 # TODO --verbose, --alsa-audio-device
 
 FILE_OPTIONS = [
+    '--overlay-input',
+    '--overlay-output',
     '--demuxdump-file',
     '--keystore-file',
     '--logo-file',
@@ -75,6 +72,19 @@ def parse_float_range(s):
     s = s.replace(']>', '')
     start, stop = s.split(' .. ')
     return (float(start), float(stop))
+
+# =============================================================================
+
+cmdline = crazy_complete.yaml_source.load_from_file(sys.argv[1])
+
+del cmdline.options[0] # del --option
+del cmdline.options[0] # del -option
+cmdline.help = None
+
+cmdline.add_positional(1,
+    metavar='file',
+    complete=['file'],
+    repeatable=True)
 
 for option in cmdline.options:
     if option.metavar and option.metavar.startswith('{'):

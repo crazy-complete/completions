@@ -5,7 +5,7 @@
 function _legendary_list_aliases
   set -l line
 
-  command legendary alias list | begin
+  command legendary alias list 2>/dev/null | begin
     builtin read line
     while builtin read line
       set line (string trim -l -c ' -' -- $line)
@@ -17,7 +17,7 @@ end
 function _legendary_list_installed_games
   set -l line
 
-  command legendary list-installed --tsv | begin
+  command legendary list-installed --tsv 2>/dev/null | begin
     builtin read line
     while builtin read line
       set -l split (string split -- \t "$line")
@@ -29,7 +29,7 @@ end
 function _legendary_list_available_games
   set -l line
 
-  command legendary list --tsv | begin
+  command legendary list --tsv 2>/dev/null | begin
     builtin read line
     while builtin read line
       set -l split (string split -- \t "$line")

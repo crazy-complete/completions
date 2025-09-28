@@ -1,0 +1,675 @@
+prog: "legendary"
+help: "A free and open-source Epic Games Launcher alternative"
+options:
+  - option_strings: ["-h", "--help"]
+    help: "Show this help message and exit"
+    final: true
+
+  - option_strings: ["-H", "--full-help"]
+    help: "Show full help (including individual command help)"
+    final: true
+
+  - option_strings: ["-V", "--version"]
+    help: "Print version and exit"
+    final: true
+
+  - option_strings: ["-v", "--debug"]
+    help: "Set loglevel to debug"
+
+  - option_strings: ["-y", "--yes"]
+    help: "Default to yes for all prompts"
+
+  - option_strings: ["-J", "--pretty-json"]
+    help: "Pretty-print JSON"
+
+  - option_strings: ["-A", "--api-timeout"]
+    metavar: "seconds"
+    complete: ["integer"]
+    help: "API HTTP request timeout (default: 10 seconds)"
+
+---
+
+prog: "legendary activate"
+help: "Activate games on third party launchers"
+options:
+  - option_strings: ["-U", "--uplay"]
+    help: "Activate Uplay/Ubisoft Connect titles on your Ubisoft account (Uplay install not required)"
+    groups: ["group"]
+
+  - option_strings: ["-O", "--origin"]
+    help: "Activate Origin/EA App managed titles on your EA account (requires Origin to be installed)"
+    groups: ["group"]
+
+---
+
+prog: "legendary alias"
+help: "Manage aliases"
+---
+prog: "legendary alias add"
+help: "Add an alias"
+positionals:
+  - number: 1
+    metavar: "App Name"
+    complete: ['combine', [["exec", "_legendary_list_installed_games"], ["exec", "_legendary_list_aliases"]]]
+  - number: 2
+    metavar: "Alias"
+    complete: ['none']
+---
+prog: "legendary alias rename"
+help: "Rename an alias"
+positionals:
+  - number: 1
+    metavar: "Old Alias"
+    complete: ['exec', '_legendary_list_aliases']
+  - number: 2
+    metavar: "Alias"
+    complete: ['none']
+---
+prog: "legendary alias remove"
+help: "Remove an alias"
+positionals:
+  - number: 1
+    metavar: "Alias"
+    complete: ['exec', '_legendary_list_aliases']
+---
+prog: "legendary alias list"
+help: "List aliases"
+positionals:
+  - number: 1
+    metavar: "Alias"
+    complete: ['combine', [["exec", "_legendary_list_installed_games"], ["exec", "_legendary_list_aliases"]]]
+
+---
+
+prog: "legendary auth"
+help: "Authenticate with the Epic Games Store"
+options:
+  - option_strings: ["--import"]
+    help: "Import Epic Games Launcher authentication data (logs out of EGL)"
+
+  - option_strings: ["--code"]
+    metavar: "authorization code"
+    help: "Use specified authorization code instead of interactive authentication"
+    complete: ["none"]
+
+  - option_strings: ["--token"]
+    metavar: "exchange token"
+    help: "Use specified exchange token instead of interactive authentication"
+    complete: ["none"]
+
+  - option_strings: ["--sid"]
+    metavar: "session id"
+    help: "Use specified session id instead of interactive authentication"
+    complete: ["none"]
+
+  - option_strings: ["--delete"]
+    help: "Remove existing authentication (log out)"
+
+  - option_strings: ["--disable-webview"]
+    help: "Do not use embedded browser for login"
+
+---
+
+prog: "legendary clean-saves"
+help: "Clean cloud saves"
+options:
+  - option_strings: ["--delete-incomplete"]
+    help: "Delete incomplete save files"
+
+positionals:
+  - number: 1
+    metavar: "App name"
+    complete: ['combine', [["exec", "_legendary_list_installed_games"], ["exec", "_legendary_list_aliases"]]]
+
+---
+
+prog: "legendary cleanup"
+help: "Remove old temporary, metadata, and manifest files"
+options:
+  - option_strings: ["--keep-manifests"]
+    help: "Do not delete old manifests"
+
+---
+
+prog: "legendary crossover"
+help: "Setup CrossOver for launching games (macOS only)"
+options:
+  - option_strings: ["--reset"]
+    help: "Reset default/app-specific crossover configuration"
+
+  - option_strings: ["--download"]
+    help: "Automatically download and set up a preconfigured bottle (experimental)"
+
+  - option_strings: ["--ignore-version"]
+    help: "Disable version check for available bottles when using --download"
+
+  - option_strings: ["--crossover-app"]
+    metavar: "path to .app"
+    complete: ["file"] # TODO: is this file or directory?
+    help: "Specify app to skip interactive selection"
+
+  - option_strings: ["--crossover-bottle"]
+    metavar: "bottle name"
+    help: "Specify bottle to skip interactive selection"
+    complete: ["none"] # TODO: can this be auto completed?
+
+positionals:
+  - number: 1
+    metavar: "App name"
+    complete: ['combine', [["exec", "_legendary_list_installed_games"], ["exec", "_legendary_list_aliases"]]]
+
+---
+
+prog: "legendary download-saves"
+help: "Download all cloud saves"
+
+positionals:
+  - number: 1
+    metavar: "App name"
+    complete: ['combine', [["exec", "_legendary_list_installed_games"], ["exec", "_legendary_list_aliases"]]]
+
+---
+
+prog: "legendary egl-sync"
+help: "Setup or run Epic Games Launcher sync"
+options:
+  - option_strings: ["--egl-manifest-path"]
+    metavar: "EGL_MANIFEST_PATH"
+    help: "Path to the Epic Games Launcher's Manifests folder, should point to /ProgramData/Epic/EpicGamesLauncher/Data/Manifests"
+    complete: ['directory']
+
+  - option_strings: ["--egl-wine-prefix"]
+    metavar: "EGL_WINE_PREFIX"
+    help: "Path to the WINE prefix the Epic Games Launcher is installed in"
+    complete: ['directory'] # TODO: is this a directory?
+
+  - option_strings: ["--enable-sync"]
+    help: "Enable automatic EGL <-> Legendary sync"
+
+  - option_strings: ["--disable-sync"]
+    help: "Disable automatic sync and exit"
+
+  - option_strings: ["--one-shot"]
+    help: "Sync once, do not ask to setup automatic sync"
+
+  - option_strings: ["--import-only"]
+    help: "Only import games from EGL (no export)"
+
+  - option_strings: ["--export-only"]
+    help: "Only export games to EGL (no import)"
+
+  - option_strings: ["--migrate"]
+    help: "Import games into legendary, then remove them from EGL (implies --import-only --one-shot --unlink)"
+
+  - option_strings: ["--unlink"]
+    help: "Disable sync and remove EGL metadata from installed games"
+
+---
+
+prog: "legendary eos-overlay"
+help: "Manage EOS Overlay install"
+options:
+  - option_strings: ["--path"]
+    metavar: "PATH"
+    help: "Path to the EOS overlay folder to be enabled/installed to."
+    complete: ['directory']
+
+  - option_strings: ["--prefix"]
+    metavar: "PREFIX"
+    help: "WINE prefix to install the overlay in"
+    complete: ["none"] # TODO: is this a path?
+
+  - option_strings: ["--app"]
+    metavar: "APP"
+    help: "Use this app's wine prefix (if configured in config)"
+    complete: ['combine', [["exec", "_legendary_list_installed_games"], ["exec", "_legendary_list_aliases"]]]
+
+positionals:
+  - number: 1
+    metavar: 'action'
+    complete: ['choices', ['install', 'update', 'remove', 'enable', 'disable', 'info']]
+
+---
+
+prog: "legendary import"
+aliases: ["import-game"] # taken from source code
+help: "Import an already installed game"
+options:
+  - option_strings: ["--disable-check"]
+    help: "Disables completeness check of the to-be-imported game installation (useful if the imported game is a much older version or missing files)"
+
+  - option_strings: ["--with-dlcs"]
+    help: "Automatically attempt to import all DLCs with the base game"
+
+  - option_strings: ["--skip-dlcs"]
+    help: "Do not ask about importing DLCs."
+
+  - option_strings: ["--platform"]
+    metavar: "Platform"
+    help: "Platform for import (default: Mac on macOS, otherwise Windows)"
+    complete: ['choices', ['Linux', 'Mac', 'Windows']] # TODO: is this right?
+
+positionals:
+  - number: 1
+    metavar: "App name"
+    complete: ['combine', [["exec", "_legendary_list_installed_games"], ["exec", "_legendary_list_aliases"]]]
+
+  - number: 2
+    metavar: "Installation directory"
+    complete: ["directory"]
+
+---
+
+prog: "legendary info"
+help: "Prints info about specified app name or manifest"
+options:
+
+  - option_strings: ["--offline"]
+    help: "Only print info available offline"
+
+  - option_strings: ["--json"]
+    help: "Output information in JSON format"
+
+  - option_strings: ["--platform"]
+    metavar: "Platform"
+    help: "Platform to fetch info for (default: installed or Mac on macOS, Windows otherwise)"
+    complete: ['choices', ['installed', 'Linux', 'Mac', 'Windows']] # TODO: is this right?
+
+positionals:
+  - number: 1
+    metavar: "App name"
+    complete: ["exec", "_legendary_list_installed_games"] # TODO: is it right that this can be a file?
+    complete: ['combine', [
+      ["exec", "_legendary_list_installed_games"],
+      ["exec", "_legendary_list_aliases"],
+      ['file']]]
+
+---
+
+prog: "legendary install"
+aliases: ["download", "update", "repair"]
+help: "Install a game"
+options:
+  - option_strings: ["--base-path"]
+    metavar: "path"
+    help: "Path for game installations (defaults to ~/Games)"
+    complete: ["directory"]
+
+  - option_strings: ["--game-folder"]
+    metavar: "path"
+    help: "Folder for game installation (defaults to folder specified in metadata)"
+    complete: ["directory"]
+
+  - option_strings: ["--max-shared-memory"]
+    metavar: "size"
+    help: "Maximum amount of shared memory to use (in MiB), default: 1 GiB"
+    complete: ['integer']
+
+  - option_strings: ["--max-workers"]
+    metavar: "num"
+    help: "Maximum amount of download workers, default: min(2 * CPUs, 16)"
+    complete: ['integer']
+
+  - option_strings: ["--manifest"]
+    metavar: "uri"
+    help: "Manifest URL or path to use instead of the CDN one (e.g. for downgrading)"
+    complete: ['none']
+
+  - option_strings: ["--old-manifest"]
+    metavar: "uri"
+    help: "Manifest URL or path to use as the old one (e.g. for testing patching)"
+    complete: ['none']
+
+  - option_strings: ["--delta-manifest"]
+    metavar: "uri"
+    help: "Manifest URL or path to use as the delta one (e.g. for testing)"
+    complete: ['none']
+
+  - option_strings: ["--base-url"]
+    metavar: "url"
+    help: "Base URL to download from (e.g. to test or switch to a different CDNs)"
+    complete: ['none']
+
+  - option_strings: ["--force"]
+    help: "Download all files / ignore existing (overwrite)"
+
+  - option_strings: ["--disable-patching"]
+    help: "Do not attempt to patch existing installation (download entire changed files)"
+
+  - option_strings: ["--download-only", "--no-install"]
+    help: "Do not install app and do not run prerequisite installers after download"
+
+  - option_strings: ["--update-only"]
+    help: "Only update, do not do anything if specified app is not installed"
+
+  - option_strings: ["--dlm-debug"]
+    help: "Set download manager and worker processes' loglevel to debug"
+
+  - option_strings: ["--platform"]
+    metavar: "Platform"
+    help: "Platform for install (default: installed or Windows)"
+    complete: ['choices', ['Linux', 'Mac', 'Windows']] # TODO: must this include "installed"?
+
+  - option_strings: ["--prefix"]
+    metavar: "prefix"
+    help: "Only fetch files whose path starts with <prefix> (case insensitive)"
+    complete: ['none']
+
+  - option_strings: ["--exclude"]
+    metavar: "prefix"
+    help: "Exclude files starting with <prefix> (case insensitive)"
+    complete: ['none']
+
+  - option_strings: ["--install-tag"]
+    metavar: "tag"
+    help: "Only download files with the specified install tag"
+    complete: ['none']
+
+  - option_strings: ["--enable-reordering"]
+    help: "Enable reordering optimization to reduce RAM requirements during download (may have adverse results for some titles)"
+
+  - option_strings: ["--dl-timeout"]
+    metavar: "sec"
+    help: "Connection timeout for downloader (default: 10 seconds)"
+    complete: ['integer']
+
+  - option_strings: ["--save-path"]
+    metavar: "path"
+    help: "Set save game path to be used for sync-saves"
+    complete: ['directory'] # TODO: is this a directory?
+
+  - option_strings: ["--repair"]
+    help: "Repair installed game by checking and redownloading corrupted/missing files"
+
+  - option_strings: ["--repair-and-update"]
+    help: "Update game to the latest version when repairing"
+
+  - option_strings: ["--ignore-free-space"]
+    help: "Do not abort if not enough free space is available"
+
+  - option_strings: ["--disable-delta-manifest"]
+    help: "Do not use delta manifests when updating (may increase download size)"
+
+  - option_strings: ["--reset-sdl"]
+    help: "Reset selective downloading choices (requires repair to download new components)"
+
+  - option_strings: ["--skip-sdl"]
+    help: "Skip SDL prompt and continue with defaults (only required game data)"
+
+  - option_strings: ["--disable-sdl"]
+    help: "Disable selective downloading for title, reset existing configuration (if any)"
+
+  - option_strings: ["--preferred-cdn"]
+    metavar: "hostname"
+    help: "Set the hostname of the preferred CDN to use when available"
+    complete: ["none"] # TODO
+
+  - option_strings: ["--no-https"]
+    help: "Download games via plaintext HTTP (like EGS), e.g. for use with a lan cache"
+
+  - option_strings: ["--with-dlcs"]
+    help: "Automatically install all DLCs with the base game"
+
+  - option_strings: ["--skip-dlcs"]
+    help: "Do not ask about installing DLCs."
+
+  - option_strings: ["--bind"]
+    metavar: "IPs"
+    help: "Comma-separated list of IPs to bind to for downloading"
+    complete: ["none"]
+
+positionals:
+  - number: 1
+    metavar: "App name"
+    complete: ['combine', [ # TODO: is this right?
+      ["exec", "_legendary_list_available_games"],
+      ["exec", "_legendary_list_installed_games"],
+      ["exec", "_legendary_list_aliases"]]]
+
+---
+
+prog: "legendary launch"
+help: "Launch a game"
+options:
+  - option_strings: ["--offline"]
+    help: "Skip login and launch game without online authentication"
+
+  - option_strings: ["--skip-version-check"]
+    help: "Skip version check when launching game in online mode"
+
+  - option_strings: ["--override-username"]
+    metavar: "username"
+    help: "Override username used when launching the game (only works with some titles)"
+    complete: ['none']
+
+  - option_strings: ["--dry-run"]
+    help: "Print the command line that would have been used to launch the game and exit"
+
+  - option_strings: ["--language"]
+    metavar: "two letter language code"
+    complete: ["none"] # TODO
+    help: "Override language for game launch (defaults to system locale)"
+
+  - option_strings: ["--wrapper"]
+    metavar: "wrapper command"
+    complete: ["command"]
+    help: "Wrapper command to launch game with"
+
+  - option_strings: ["--set-defaults"]
+    help: "Save parameters used to launch to config (does not include env vars)"
+
+  - option_strings: ["--reset-defaults"]
+    help: "Reset config settings for app and exit"
+
+  - option_strings: ["--override-exe"]
+    metavar: "exe path"
+    complete: ["file"]
+    help: "Override executable to launch (relative path)"
+
+  - option_strings: ["--origin"]
+    help: "Launch Origin to activate or run the game."
+
+  - option_strings: ["--json"]
+    help: "Print launch information as JSON and exit"
+
+  - option_strings: ["--wine"]
+    metavar: "wine binary"
+    complete: ["file"]
+    help: "Set WINE binary to use to launch the app"
+
+  - option_strings: ["--wine-prefix"]
+    metavar: "wine pfx path"
+    complete: ["directory"] # TODO: is this a directory?
+    help: "Set WINE prefix to use"
+
+  - option_strings: ["--no-wine"]
+    help: "Do not run game with WINE (e.g. if a wrapper is used)"
+
+positionals:
+  - number: 1
+    metavar: "App name"
+    complete: ['combine', [["exec", "_legendary_list_installed_games"], ["exec", "_legendary_list_aliases"]]]
+
+---
+
+prog: "legendary list"
+aliases: ["list-games"] # taken from source code
+help: "List available (installable) games"
+options:
+  - option_strings: ["--platform"]
+    metavar: "Platform"
+    complete: ["choices", ["Linux", "Mac", "Windows"]] # TODO: is this right?
+    help: "Platform to fetch game list for (default: Mac on macOS, otherwise Windows)"
+
+  - option_strings: ["--include-ue"]
+    help: "Also include Unreal Engine content (Engine/Marketplace) in list"
+
+  - option_strings: ["-T", "--third-party", "--include-non-installable"]
+    help: "Include apps that are not installable (e.g. that have to be activated on Origin)"
+
+  - option_strings: ["--csv"]
+    help: "List games in CSV format"
+
+  - option_strings: ["--tsv"]
+    help: "List games in TSV format"
+
+  - option_strings: ["--json"]
+    help: "List games in JSON format"
+
+  - option_strings: ["--force-refresh"]
+    help: "Force a refresh of all game metadata"
+
+---
+
+prog: "legendary list-files"
+help: "List files in manifest"
+options:
+  - option_strings: ["--force-download"]
+    help: "Always download instead of using on-disk manifest"
+
+  - option_strings: ["--platform"]
+    metavar: "Platform"
+    complete: ["choices", ["Linux", "Mac", "Windows"]] # TODO: is this right?
+    help: "Platform (default: Mac on macOS, otherwise Windows)"
+
+  - option_strings: ["--manifest"]
+    metavar: "uri"
+    help: "Manifest URL or path to use instead of the CDN one"
+    complete: ['directory'] # TODO: is this really a path?
+
+  - option_strings: ["--csv"]
+    help: "Output in CSV format"
+
+  - option_strings: ["--tsv"]
+    help: "Output in TSV format"
+
+  - option_strings: ["--json"]
+    help: "Output in JSON format"
+
+  - option_strings: ["--hashlist"]
+    help: "Output file hash list in hashcheck/sha1sum -c compatible format"
+
+  - option_strings: ["--install-tag"]
+    metavar: "tag"
+    help: "Show only files with specified install tag"
+    complete: ['none']
+
+positionals:
+  - number: 1
+    metavar: "App name"
+    complete: ['combine', [["exec", "_legendary_list_installed_games"], ["exec", "_legendary_list_aliases"]]]
+
+---
+
+prog: "legendary list-installed"
+help: "List installed games"
+options:
+  - option_strings: ["--check-updates"]
+    help: "Check for updates for installed games"
+
+  - option_strings: ["--csv"]
+    help: "List games in CSV format"
+
+  - option_strings: ["--tsv"]
+    help: "List games in TSV format"
+
+  - option_strings: ["--json"]
+    help: "List games in JSON format"
+
+  - option_strings: ["--show-dirs"]
+    help: "Print installation directory in output"
+
+---
+
+prog: "legendary list-saves"
+help: "List available cloud saves"
+
+positionals:
+  - number: 1
+    metavar: "App name"
+    complete: ['combine', [["exec", "_legendary_list_installed_games"], ["exec", "_legendary_list_aliases"]]]
+
+---
+
+prog: "legendary move"
+help: "Move specified app name to a new location"
+
+options:
+  - option_strings: ["--skip-move"]
+    help: "Only change legendary database, do not move files (e.g. if already moved)"
+
+positionals:
+  - number: 1
+    metavar: "App name"
+    complete: ['combine', [["exec", "_legendary_list_installed_games"], ["exec", "_legendary_list_aliases"]]]
+
+  - number: 2
+    metavar: "New Base Path"
+    complete: ['directory']
+
+---
+
+prog: "legendary status"
+help: "Show legendary status information"
+options:
+  - option_strings: ["--offline"]
+    help: "Only print offline status information, do not login"
+
+  - option_strings: ["--json"]
+    help: "Show status in JSON format"
+
+---
+
+prog: "legendary sync-saves"
+help: "Sync cloud saves"
+options:
+  - option_strings: ["--skip-upload"]
+    help: "Only download new saves from cloud, don't upload"
+
+  - option_strings: ["--skip-download"]
+    help: "Only upload new saves from cloud, don't download"
+
+  - option_strings: ["--force-upload"]
+    help: "Force upload even if local saves are older"
+
+  - option_strings: ["--force-download"]
+    help: "Force download even if local saves are newer"
+
+  - option_strings: ["--save-path"]
+    metavar: "path"
+    help: "Override savegame path (requires single app name to be specified)"
+    complete: ['file'] # TODO: is this a directory?
+
+  - option_strings: ["--disable-filters"]
+    help: "Disable save game file filtering"
+
+positionals:
+  - number: 1
+    metavar: "App name"
+    complete: ['combine', [["exec", "_legendary_list_installed_games"], ["exec", "_legendary_list_aliases"]]]
+
+---
+
+prog: "legendary uninstall"
+help: "Uninstall (delete) a game"
+options:
+  - option_strings: ["--keep-files"]
+    help: "Keep files but remove game from Legendary database"
+
+  - option_strings: ["--skip-uninstaller"]
+    help: "Skip running the uninstaller"
+
+positionals:
+  - number: 1
+    metavar: "App name"
+    complete: ['combine', [["exec", "_legendary_list_installed_games"], ["exec", "_legendary_list_aliases"]]]
+
+---
+
+prog: "legendary verify"
+aliases: ["verify-game"] # taken from source code
+help: "Verify a game's local files"
+positionals:
+  - number: 1
+    metavar: "App name"
+    complete: ['combine', [["exec", "_legendary_list_installed_games"], ["exec", "_legendary_list_aliases"]]]

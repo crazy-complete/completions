@@ -1,0 +1,25 @@
+#!/bin/bash
+
+case "$1" in
+  list)
+    printf "%s\\t%s\n" "App name" "App title"
+    printf "%s\\t%s\n" "SW1" "Star Wars 1"
+    printf "%s\\t%s\n" "OA"  "Open Arena"
+    ;;
+
+  list-installed)
+    printf "%s\\t%s\n" "App name" "App title"
+    printf "%s\\t%s\n" "SW1" "Star Wars 1"
+    printf "%s\\t%s\n" "OA"  "Open Arena"
+    ;;
+
+  alias)
+    echo 'User defined aliases:'
+    echo '  - FOO => SW1'
+    echo '  - BAR => OA'
+    ;;
+
+  *)
+    /bin/legendary "$@"
+    ;;
+esac

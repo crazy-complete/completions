@@ -56,10 +56,6 @@ _legendary_parse_commandline() {
   local ARG_NONE=0 ARG_REQUIRED=1 ARG_OPTIONAL=2 VAR MODE
 
   __find_option() {
-    case "$1" in root:verify*)
-      case "$2" in
-      esac
-    esac
     case "$1" in root:uninstall*)
       case "$2" in
         --keep-files) VAR=OPT_keep_files; MODE=$ARG_NONE; return;;
@@ -85,10 +81,6 @@ _legendary_parse_commandline() {
     case "$1" in root:move*)
       case "$2" in
         --skip-move) VAR=OPT_skip_move; MODE=$ARG_NONE; return;;
-      esac
-    esac
-    case "$1" in root:list-saves*)
-      case "$2" in
       esac
     esac
     case "$1" in root:list-installed*)
@@ -212,10 +204,6 @@ _legendary_parse_commandline() {
         --unlink) VAR=OPT_unlink; MODE=$ARG_NONE; return;;
       esac
     esac
-    case "$1" in root:download-saves*)
-      case "$2" in
-      esac
-    esac
     case "$1" in root:crossover*)
       case "$2" in
         --reset) VAR=OPT_reset; MODE=$ARG_NONE; return;;
@@ -243,26 +231,6 @@ _legendary_parse_commandline() {
         --sid) VAR=OPT_sid; MODE=$ARG_REQUIRED; return;;
         --delete) VAR=OPT_delete; MODE=$ARG_NONE; return;;
         --disable-webview) VAR=OPT_disable_webview; MODE=$ARG_NONE; return;;
-      esac
-    esac
-    case "$1" in root:alias:list*)
-      case "$2" in
-      esac
-    esac
-    case "$1" in root:alias:remove*)
-      case "$2" in
-      esac
-    esac
-    case "$1" in root:alias:rename*)
-      case "$2" in
-      esac
-    esac
-    case "$1" in root:alias:add*)
-      case "$2" in
-      esac
-    esac
-    case "$1" in root:alias*)
-      case "$2" in
       esac
     esac
     case "$1" in root:activate*)

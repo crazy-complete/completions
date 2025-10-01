@@ -7,6 +7,7 @@ bash:
 	
 	$(CRAZY_COMPLETE) \
 		--include-file=legendary.bash \
+		--inherit-options=True \
 		-o generated/bash/_legendary \
 		bash legendary.yaml
 
@@ -15,6 +16,7 @@ fish:
 	
 	$(CRAZY_COMPLETE) \
 		--include-file=legendary.fish \
+		--inherit-options=True \
 		-o generated/fish/legendary.fish \
 		fish legendary.yaml 
 
@@ -23,11 +25,13 @@ zsh:
 	
 	$(CRAZY_COMPLETE) \
 		--include-file=legendary.zsh \
+		--inherit-options=True \
 		-o generated/zsh/legendary \
 		zsh legendary.yaml 
 	
 	$(CRAZY_COMPLETE) \
 		--include-file=legendary.zsh \
+		--inherit-options=True \
 		--zsh-compdef=False \
 		-o generated/zsh/legendary.sourceable \
 		zsh legendary.yaml

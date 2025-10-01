@@ -335,6 +335,13 @@ _legendary_activate() {
   local -a args=(
     '(--origin -O --uplay -U)'{-U,--uplay}'[Activate Uplay/Ubisoft Connect titles on your Ubisoft account (Uplay install not required)]'
     '(--uplay -U --origin -O)'{-O,--origin}'[Activate Origin/EA App managed titles on your EA account (requires Origin to be installed)]'
+    '(- *)'{-h,--help}'[Show this help message and exit]'
+    '(- *)'{-H,--full-help}'[Show full help (including individual command help)]'
+    '(- *)'{-V,--version}'[Print version and exit]'
+    '(--debug -v)'{-v,--debug}'[Set loglevel to debug]'
+    '(--yes -y)'{-y,--yes}'[Default to yes for all prompts]'
+    '(--pretty-json -J)'{-J,--pretty-json}'[Pretty-print JSON]'
+    '(--api-timeout -A)'{-A+,--api-timeout=}'[API HTTP request timeout (default\: 10 seconds)]':seconds:_numbers
     1:command1:_legendary__command
   )
   _arguments -S -s -w "${args[@]}"
@@ -353,6 +360,13 @@ _legendary_alias() {
   esac
 
   local -a args=(
+    '(- *)'{-h,--help}'[Show this help message and exit]'
+    '(- *)'{-H,--full-help}'[Show full help (including individual command help)]'
+    '(- *)'{-V,--version}'[Print version and exit]'
+    '(--debug -v)'{-v,--debug}'[Set loglevel to debug]'
+    '(--yes -y)'{-y,--yes}'[Default to yes for all prompts]'
+    '(--pretty-json -J)'{-J,--pretty-json}'[Pretty-print JSON]'
+    '(--api-timeout -A)'{-A+,--api-timeout=}'[API HTTP request timeout (default\: 10 seconds)]':seconds:_numbers
     1:command1:_legendary__command
     2:command2:_legendary_alias_command
   )
@@ -361,6 +375,13 @@ _legendary_alias() {
 
 _legendary_alias_add() {
   local -a args=(
+    '(- *)'{-h,--help}'[Show this help message and exit]'
+    '(- *)'{-H,--full-help}'[Show full help (including individual command help)]'
+    '(- *)'{-V,--version}'[Print version and exit]'
+    '(--debug -v)'{-v,--debug}'[Set loglevel to debug]'
+    '(--yes -y)'{-y,--yes}'[Default to yes for all prompts]'
+    '(--pretty-json -J)'{-J,--pretty-json}'[Pretty-print JSON]'
+    '(--api-timeout -A)'{-A+,--api-timeout=}'[API HTTP request timeout (default\: 10 seconds)]':seconds:_numbers
     1:command1:_legendary__command
     2:command2:_legendary_alias_command
     3:'App Name':_legendary_alias_add_AppName
@@ -371,6 +392,13 @@ _legendary_alias_add() {
 
 _legendary_alias_rename() {
   local -a args=(
+    '(- *)'{-h,--help}'[Show this help message and exit]'
+    '(- *)'{-H,--full-help}'[Show full help (including individual command help)]'
+    '(- *)'{-V,--version}'[Print version and exit]'
+    '(--debug -v)'{-v,--debug}'[Set loglevel to debug]'
+    '(--yes -y)'{-y,--yes}'[Default to yes for all prompts]'
+    '(--pretty-json -J)'{-J,--pretty-json}'[Pretty-print JSON]'
+    '(--api-timeout -A)'{-A+,--api-timeout=}'[API HTTP request timeout (default\: 10 seconds)]':seconds:_numbers
     1:command1:_legendary__command
     2:command2:_legendary_alias_command
     3:'Old Alias':'{_legendary_exec _legendary_list_aliases}'
@@ -381,6 +409,13 @@ _legendary_alias_rename() {
 
 _legendary_alias_remove() {
   local -a args=(
+    '(- *)'{-h,--help}'[Show this help message and exit]'
+    '(- *)'{-H,--full-help}'[Show full help (including individual command help)]'
+    '(- *)'{-V,--version}'[Print version and exit]'
+    '(--debug -v)'{-v,--debug}'[Set loglevel to debug]'
+    '(--yes -y)'{-y,--yes}'[Default to yes for all prompts]'
+    '(--pretty-json -J)'{-J,--pretty-json}'[Pretty-print JSON]'
+    '(--api-timeout -A)'{-A+,--api-timeout=}'[API HTTP request timeout (default\: 10 seconds)]':seconds:_numbers
     1:command1:_legendary__command
     2:command2:_legendary_alias_command
     3:Alias:'{_legendary_exec _legendary_list_aliases}'
@@ -390,6 +425,13 @@ _legendary_alias_remove() {
 
 _legendary_alias_list() {
   local -a args=(
+    '(- *)'{-h,--help}'[Show this help message and exit]'
+    '(- *)'{-H,--full-help}'[Show full help (including individual command help)]'
+    '(- *)'{-V,--version}'[Print version and exit]'
+    '(--debug -v)'{-v,--debug}'[Set loglevel to debug]'
+    '(--yes -y)'{-y,--yes}'[Default to yes for all prompts]'
+    '(--pretty-json -J)'{-J,--pretty-json}'[Pretty-print JSON]'
+    '(--api-timeout -A)'{-A+,--api-timeout=}'[API HTTP request timeout (default\: 10 seconds)]':seconds:_numbers
     1:command1:_legendary__command
     2:command2:_legendary_alias_command
     3:Alias:_legendary_alias_add_AppName
@@ -405,6 +447,13 @@ _legendary_auth() {
     '(--sid)'--sid='[Use specified session id instead of interactive authentication]':'session id':' '
     '(--delete)'--delete'[Remove existing authentication (log out)]'
     '(--disable-webview)'--disable-webview'[Do not use embedded browser for login]'
+    '(- *)'{-h,--help}'[Show this help message and exit]'
+    '(- *)'{-H,--full-help}'[Show full help (including individual command help)]'
+    '(- *)'{-V,--version}'[Print version and exit]'
+    '(--debug -v)'{-v,--debug}'[Set loglevel to debug]'
+    '(--yes -y)'{-y,--yes}'[Default to yes for all prompts]'
+    '(--pretty-json -J)'{-J,--pretty-json}'[Pretty-print JSON]'
+    '(--api-timeout -A)'{-A+,--api-timeout=}'[API HTTP request timeout (default\: 10 seconds)]':seconds:_numbers
     1:command1:_legendary__command
   )
   _arguments -S -s -w "${args[@]}"
@@ -413,6 +462,13 @@ _legendary_auth() {
 _legendary_clean_saves() {
   local -a args=(
     '(--delete-incomplete)'--delete-incomplete'[Delete incomplete save files]'
+    '(- *)'{-h,--help}'[Show this help message and exit]'
+    '(- *)'{-H,--full-help}'[Show full help (including individual command help)]'
+    '(- *)'{-V,--version}'[Print version and exit]'
+    '(--debug -v)'{-v,--debug}'[Set loglevel to debug]'
+    '(--yes -y)'{-y,--yes}'[Default to yes for all prompts]'
+    '(--pretty-json -J)'{-J,--pretty-json}'[Pretty-print JSON]'
+    '(--api-timeout -A)'{-A+,--api-timeout=}'[API HTTP request timeout (default\: 10 seconds)]':seconds:_numbers
     1:command1:_legendary__command
     2:'App name':_legendary_alias_add_AppName
   )
@@ -422,6 +478,13 @@ _legendary_clean_saves() {
 _legendary_cleanup() {
   local -a args=(
     '(--keep-manifests)'--keep-manifests'[Do not delete old manifests]'
+    '(- *)'{-h,--help}'[Show this help message and exit]'
+    '(- *)'{-H,--full-help}'[Show full help (including individual command help)]'
+    '(- *)'{-V,--version}'[Print version and exit]'
+    '(--debug -v)'{-v,--debug}'[Set loglevel to debug]'
+    '(--yes -y)'{-y,--yes}'[Default to yes for all prompts]'
+    '(--pretty-json -J)'{-J,--pretty-json}'[Pretty-print JSON]'
+    '(--api-timeout -A)'{-A+,--api-timeout=}'[API HTTP request timeout (default\: 10 seconds)]':seconds:_numbers
     1:command1:_legendary__command
   )
   _arguments -S -s -w "${args[@]}"
@@ -434,6 +497,13 @@ _legendary_crossover() {
     '(--ignore-version)'--ignore-version'[Disable version check for available bottles when using --download]'
     '(--crossover-app)'--crossover-app='[Specify app to skip interactive selection]':'path to .app':_files
     '(--crossover-bottle)'--crossover-bottle='[Specify bottle to skip interactive selection]':'bottle name':' '
+    '(- *)'{-h,--help}'[Show this help message and exit]'
+    '(- *)'{-H,--full-help}'[Show full help (including individual command help)]'
+    '(- *)'{-V,--version}'[Print version and exit]'
+    '(--debug -v)'{-v,--debug}'[Set loglevel to debug]'
+    '(--yes -y)'{-y,--yes}'[Default to yes for all prompts]'
+    '(--pretty-json -J)'{-J,--pretty-json}'[Pretty-print JSON]'
+    '(--api-timeout -A)'{-A+,--api-timeout=}'[API HTTP request timeout (default\: 10 seconds)]':seconds:_numbers
     1:command1:_legendary__command
     2:'App name':_legendary_alias_add_AppName
   )
@@ -442,6 +512,13 @@ _legendary_crossover() {
 
 _legendary_download_saves() {
   local -a args=(
+    '(- *)'{-h,--help}'[Show this help message and exit]'
+    '(- *)'{-H,--full-help}'[Show full help (including individual command help)]'
+    '(- *)'{-V,--version}'[Print version and exit]'
+    '(--debug -v)'{-v,--debug}'[Set loglevel to debug]'
+    '(--yes -y)'{-y,--yes}'[Default to yes for all prompts]'
+    '(--pretty-json -J)'{-J,--pretty-json}'[Pretty-print JSON]'
+    '(--api-timeout -A)'{-A+,--api-timeout=}'[API HTTP request timeout (default\: 10 seconds)]':seconds:_numbers
     1:command1:_legendary__command
     2:'App name':_legendary_alias_add_AppName
   )
@@ -459,6 +536,13 @@ _legendary_egl_sync() {
     '(--export-only)'--export-only'[Only export games to EGL (no import)]'
     '(--migrate)'--migrate'[Import games into legendary, then remove them from EGL (implies --import-only --one-shot --unlink)]'
     '(--unlink)'--unlink'[Disable sync and remove EGL metadata from installed games]'
+    '(- *)'{-h,--help}'[Show this help message and exit]'
+    '(- *)'{-H,--full-help}'[Show full help (including individual command help)]'
+    '(- *)'{-V,--version}'[Print version and exit]'
+    '(--debug -v)'{-v,--debug}'[Set loglevel to debug]'
+    '(--yes -y)'{-y,--yes}'[Default to yes for all prompts]'
+    '(--pretty-json -J)'{-J,--pretty-json}'[Pretty-print JSON]'
+    '(--api-timeout -A)'{-A+,--api-timeout=}'[API HTTP request timeout (default\: 10 seconds)]':seconds:_numbers
     1:command1:_legendary__command
   )
   _arguments -S -s -w "${args[@]}"
@@ -469,6 +553,13 @@ _legendary_eos_overlay() {
     '(--path)'--path='[Path to the EOS overlay folder to be enabled/installed to.]':PATH:_directories
     '(--prefix)'--prefix='[WINE prefix to install the overlay in]':PREFIX:' '
     '(--app)'--app="[Use this app's wine prefix (if configured in config)]":APP:_legendary_alias_add_AppName
+    '(- *)'{-h,--help}'[Show this help message and exit]'
+    '(- *)'{-H,--full-help}'[Show full help (including individual command help)]'
+    '(- *)'{-V,--version}'[Print version and exit]'
+    '(--debug -v)'{-v,--debug}'[Set loglevel to debug]'
+    '(--yes -y)'{-y,--yes}'[Default to yes for all prompts]'
+    '(--pretty-json -J)'{-J,--pretty-json}'[Pretty-print JSON]'
+    '(--api-timeout -A)'{-A+,--api-timeout=}'[API HTTP request timeout (default\: 10 seconds)]':seconds:_numbers
     1:command1:_legendary__command
     2:action:'(install update remove enable disable info)'
   )
@@ -481,6 +572,13 @@ _legendary_import() {
     '(--with-dlcs)'--with-dlcs'[Automatically attempt to import all DLCs with the base game]'
     '(--skip-dlcs)'--skip-dlcs'[Do not ask about importing DLCs.]'
     '(--platform)'--platform='[Platform for import (default\: Mac on macOS, otherwise Windows)]':Platform:'(Linux Mac Windows)'
+    '(- *)'{-h,--help}'[Show this help message and exit]'
+    '(- *)'{-H,--full-help}'[Show full help (including individual command help)]'
+    '(- *)'{-V,--version}'[Print version and exit]'
+    '(--debug -v)'{-v,--debug}'[Set loglevel to debug]'
+    '(--yes -y)'{-y,--yes}'[Default to yes for all prompts]'
+    '(--pretty-json -J)'{-J,--pretty-json}'[Pretty-print JSON]'
+    '(--api-timeout -A)'{-A+,--api-timeout=}'[API HTTP request timeout (default\: 10 seconds)]':seconds:_numbers
     1:command1:_legendary__command
     2:'App name':_legendary_alias_add_AppName
     3:'Installation directory':_directories
@@ -493,6 +591,13 @@ _legendary_info() {
     '(--offline)'--offline'[Only print info available offline]'
     '(--json)'--json'[Output information in JSON format]'
     '(--platform)'--platform='[Platform to fetch info for (default\: installed or Mac on macOS, Windows otherwise)]':Platform:'(installed Linux Mac Windows)'
+    '(- *)'{-h,--help}'[Show this help message and exit]'
+    '(- *)'{-H,--full-help}'[Show full help (including individual command help)]'
+    '(- *)'{-V,--version}'[Print version and exit]'
+    '(--debug -v)'{-v,--debug}'[Set loglevel to debug]'
+    '(--yes -y)'{-y,--yes}'[Default to yes for all prompts]'
+    '(--pretty-json -J)'{-J,--pretty-json}'[Pretty-print JSON]'
+    '(--api-timeout -A)'{-A+,--api-timeout=}'[API HTTP request timeout (default\: 10 seconds)]':seconds:_numbers
     1:command1:_legendary__command
     2:'App name':_legendary_info_Appname
   )
@@ -533,6 +638,13 @@ _legendary_install() {
     '(--with-dlcs)'--with-dlcs'[Automatically install all DLCs with the base game]'
     '(--skip-dlcs)'--skip-dlcs'[Do not ask about installing DLCs.]'
     '(--bind)'--bind='[Comma-separated list of IPs to bind to for downloading]':IPs:' '
+    '(- *)'{-h,--help}'[Show this help message and exit]'
+    '(- *)'{-H,--full-help}'[Show full help (including individual command help)]'
+    '(- *)'{-V,--version}'[Print version and exit]'
+    '(--debug -v)'{-v,--debug}'[Set loglevel to debug]'
+    '(--yes -y)'{-y,--yes}'[Default to yes for all prompts]'
+    '(--pretty-json -J)'{-J,--pretty-json}'[Pretty-print JSON]'
+    '(--api-timeout -A)'{-A+,--api-timeout=}'[API HTTP request timeout (default\: 10 seconds)]':seconds:_numbers
     1:command1:_legendary__command
     2:'App name':_legendary_install_Appname
   )
@@ -555,6 +667,13 @@ _legendary_launch() {
     '(--wine)'--wine='[Set WINE binary to use to launch the app]':'wine binary':_files
     '(--wine-prefix)'--wine-prefix='[Set WINE prefix to use]':'wine pfx path':_directories
     '(--no-wine)'--no-wine'[Do not run game with WINE (e.g. if a wrapper is used)]'
+    '(- *)'{-h,--help}'[Show this help message and exit]'
+    '(- *)'{-H,--full-help}'[Show full help (including individual command help)]'
+    '(- *)'{-V,--version}'[Print version and exit]'
+    '(--debug -v)'{-v,--debug}'[Set loglevel to debug]'
+    '(--yes -y)'{-y,--yes}'[Default to yes for all prompts]'
+    '(--pretty-json -J)'{-J,--pretty-json}'[Pretty-print JSON]'
+    '(--api-timeout -A)'{-A+,--api-timeout=}'[API HTTP request timeout (default\: 10 seconds)]':seconds:_numbers
     1:command1:_legendary__command
     2:'App name':_legendary_alias_add_AppName
   )
@@ -570,6 +689,13 @@ _legendary_list() {
     '(--tsv)'--tsv'[List games in TSV format]'
     '(--json)'--json'[List games in JSON format]'
     '(--force-refresh)'--force-refresh'[Force a refresh of all game metadata]'
+    '(- *)'{-h,--help}'[Show this help message and exit]'
+    '(- *)'{-H,--full-help}'[Show full help (including individual command help)]'
+    '(- *)'{-V,--version}'[Print version and exit]'
+    '(--debug -v)'{-v,--debug}'[Set loglevel to debug]'
+    '(--yes -y)'{-y,--yes}'[Default to yes for all prompts]'
+    '(--pretty-json -J)'{-J,--pretty-json}'[Pretty-print JSON]'
+    '(--api-timeout -A)'{-A+,--api-timeout=}'[API HTTP request timeout (default\: 10 seconds)]':seconds:_numbers
     1:command1:_legendary__command
   )
   _arguments -S -s -w "${args[@]}"
@@ -585,6 +711,13 @@ _legendary_list_files() {
     '(--json)'--json'[Output in JSON format]'
     '(--hashlist)'--hashlist'[Output file hash list in hashcheck/sha1sum -c compatible format]'
     '(--install-tag)'--install-tag='[Show only files with specified install tag]':tag:' '
+    '(- *)'{-h,--help}'[Show this help message and exit]'
+    '(- *)'{-H,--full-help}'[Show full help (including individual command help)]'
+    '(- *)'{-V,--version}'[Print version and exit]'
+    '(--debug -v)'{-v,--debug}'[Set loglevel to debug]'
+    '(--yes -y)'{-y,--yes}'[Default to yes for all prompts]'
+    '(--pretty-json -J)'{-J,--pretty-json}'[Pretty-print JSON]'
+    '(--api-timeout -A)'{-A+,--api-timeout=}'[API HTTP request timeout (default\: 10 seconds)]':seconds:_numbers
     1:command1:_legendary__command
     2:'App name':_legendary_alias_add_AppName
   )
@@ -598,6 +731,13 @@ _legendary_list_installed() {
     '(--tsv)'--tsv'[List games in TSV format]'
     '(--json)'--json'[List games in JSON format]'
     '(--show-dirs)'--show-dirs'[Print installation directory in output]'
+    '(- *)'{-h,--help}'[Show this help message and exit]'
+    '(- *)'{-H,--full-help}'[Show full help (including individual command help)]'
+    '(- *)'{-V,--version}'[Print version and exit]'
+    '(--debug -v)'{-v,--debug}'[Set loglevel to debug]'
+    '(--yes -y)'{-y,--yes}'[Default to yes for all prompts]'
+    '(--pretty-json -J)'{-J,--pretty-json}'[Pretty-print JSON]'
+    '(--api-timeout -A)'{-A+,--api-timeout=}'[API HTTP request timeout (default\: 10 seconds)]':seconds:_numbers
     1:command1:_legendary__command
   )
   _arguments -S -s -w "${args[@]}"
@@ -605,6 +745,13 @@ _legendary_list_installed() {
 
 _legendary_list_saves() {
   local -a args=(
+    '(- *)'{-h,--help}'[Show this help message and exit]'
+    '(- *)'{-H,--full-help}'[Show full help (including individual command help)]'
+    '(- *)'{-V,--version}'[Print version and exit]'
+    '(--debug -v)'{-v,--debug}'[Set loglevel to debug]'
+    '(--yes -y)'{-y,--yes}'[Default to yes for all prompts]'
+    '(--pretty-json -J)'{-J,--pretty-json}'[Pretty-print JSON]'
+    '(--api-timeout -A)'{-A+,--api-timeout=}'[API HTTP request timeout (default\: 10 seconds)]':seconds:_numbers
     1:command1:_legendary__command
     2:'App name':_legendary_alias_add_AppName
   )
@@ -614,6 +761,13 @@ _legendary_list_saves() {
 _legendary_move() {
   local -a args=(
     '(--skip-move)'--skip-move'[Only change legendary database, do not move files (e.g. if already moved)]'
+    '(- *)'{-h,--help}'[Show this help message and exit]'
+    '(- *)'{-H,--full-help}'[Show full help (including individual command help)]'
+    '(- *)'{-V,--version}'[Print version and exit]'
+    '(--debug -v)'{-v,--debug}'[Set loglevel to debug]'
+    '(--yes -y)'{-y,--yes}'[Default to yes for all prompts]'
+    '(--pretty-json -J)'{-J,--pretty-json}'[Pretty-print JSON]'
+    '(--api-timeout -A)'{-A+,--api-timeout=}'[API HTTP request timeout (default\: 10 seconds)]':seconds:_numbers
     1:command1:_legendary__command
     2:'App name':_legendary_alias_add_AppName
     3:'New Base Path':_directories
@@ -625,6 +779,13 @@ _legendary_status() {
   local -a args=(
     '(--offline)'--offline'[Only print offline status information, do not login]'
     '(--json)'--json'[Show status in JSON format]'
+    '(- *)'{-h,--help}'[Show this help message and exit]'
+    '(- *)'{-H,--full-help}'[Show full help (including individual command help)]'
+    '(- *)'{-V,--version}'[Print version and exit]'
+    '(--debug -v)'{-v,--debug}'[Set loglevel to debug]'
+    '(--yes -y)'{-y,--yes}'[Default to yes for all prompts]'
+    '(--pretty-json -J)'{-J,--pretty-json}'[Pretty-print JSON]'
+    '(--api-timeout -A)'{-A+,--api-timeout=}'[API HTTP request timeout (default\: 10 seconds)]':seconds:_numbers
     1:command1:_legendary__command
   )
   _arguments -S -s -w "${args[@]}"
@@ -638,6 +799,13 @@ _legendary_sync_saves() {
     '(--force-download)'--force-download'[Force download even if local saves are newer]'
     '(--save-path)'--save-path='[Override savegame path (requires single app name to be specified)]':path:_files
     '(--disable-filters)'--disable-filters'[Disable save game file filtering]'
+    '(- *)'{-h,--help}'[Show this help message and exit]'
+    '(- *)'{-H,--full-help}'[Show full help (including individual command help)]'
+    '(- *)'{-V,--version}'[Print version and exit]'
+    '(--debug -v)'{-v,--debug}'[Set loglevel to debug]'
+    '(--yes -y)'{-y,--yes}'[Default to yes for all prompts]'
+    '(--pretty-json -J)'{-J,--pretty-json}'[Pretty-print JSON]'
+    '(--api-timeout -A)'{-A+,--api-timeout=}'[API HTTP request timeout (default\: 10 seconds)]':seconds:_numbers
     1:command1:_legendary__command
     2:'App name':_legendary_alias_add_AppName
   )
@@ -648,6 +816,13 @@ _legendary_uninstall() {
   local -a args=(
     '(--keep-files)'--keep-files'[Keep files but remove game from Legendary database]'
     '(--skip-uninstaller)'--skip-uninstaller'[Skip running the uninstaller]'
+    '(- *)'{-h,--help}'[Show this help message and exit]'
+    '(- *)'{-H,--full-help}'[Show full help (including individual command help)]'
+    '(- *)'{-V,--version}'[Print version and exit]'
+    '(--debug -v)'{-v,--debug}'[Set loglevel to debug]'
+    '(--yes -y)'{-y,--yes}'[Default to yes for all prompts]'
+    '(--pretty-json -J)'{-J,--pretty-json}'[Pretty-print JSON]'
+    '(--api-timeout -A)'{-A+,--api-timeout=}'[API HTTP request timeout (default\: 10 seconds)]':seconds:_numbers
     1:command1:_legendary__command
     2:'App name':_legendary_alias_add_AppName
   )
@@ -656,6 +831,13 @@ _legendary_uninstall() {
 
 _legendary_verify() {
   local -a args=(
+    '(- *)'{-h,--help}'[Show this help message and exit]'
+    '(- *)'{-H,--full-help}'[Show full help (including individual command help)]'
+    '(- *)'{-V,--version}'[Print version and exit]'
+    '(--debug -v)'{-v,--debug}'[Set loglevel to debug]'
+    '(--yes -y)'{-y,--yes}'[Default to yes for all prompts]'
+    '(--pretty-json -J)'{-J,--pretty-json}'[Pretty-print JSON]'
+    '(--api-timeout -A)'{-A+,--api-timeout=}'[API HTTP request timeout (default\: 10 seconds)]':seconds:_numbers
     1:command1:_legendary__command
     2:'App name':_legendary_alias_add_AppName
   )

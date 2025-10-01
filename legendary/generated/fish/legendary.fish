@@ -349,11 +349,11 @@ complete -c $prog -x
 
 # command legendary
 set -l opts "-h,--help,-H,--full-help,-V,--version,-v,--debug,-y,--yes,-J,--pretty-json,-A=,--api-timeout="
-set -l C000 "not $query '$opts' has_option -h --help -H --full-help -V --version && $query '$opts' num_of_positionals -eq 0"
-set -l C001 "not $query '$opts' has_option -h --help -H --full-help -V --version -v --debug && $query '$opts' num_of_positionals -eq 0"
-set -l C002 "not $query '$opts' has_option -h --help -H --full-help -V --version -y --yes && $query '$opts' num_of_positionals -eq 0"
-set -l C003 "not $query '$opts' has_option -h --help -H --full-help -V --version -J --pretty-json && $query '$opts' num_of_positionals -eq 0"
-set -l C004 "not $query '$opts' has_option -h --help -H --full-help -V --version -A --api-timeout && $query '$opts' num_of_positionals -eq 0"
+set -l C000 "not $query '$opts' has_option -h --help -H --full-help -V --version"
+set -l C001 "not $query '$opts' has_option -h --help -H --full-help -V --version -v --debug"
+set -l C002 "not $query '$opts' has_option -h --help -H --full-help -V --version -y --yes"
+set -l C003 "not $query '$opts' has_option -h --help -H --full-help -V --version -J --pretty-json"
+set -l C004 "not $query '$opts' has_option -h --help -H --full-help -V --version -A --api-timeout"
 set -l C005 "$query '$opts' num_of_positionals -eq 0"
 complete -c $prog -n $C000 -s h -l help -d 'Show this help message and exit' -f
 complete -c $prog -n $C000 -s H -l full-help -d 'Show full help (including individual command help)' -f

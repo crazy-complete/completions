@@ -181,7 +181,7 @@ options:
   - option_strings: ["--egl-wine-prefix"]
     metavar: "EGL_WINE_PREFIX"
     help: "Path to the WINE prefix the Epic Games Launcher is installed in"
-    complete: ['directory'] # TODO: is this a directory?
+    complete: ['directory']
 
   - option_strings: ["--enable-sync"]
     help: "Enable automatic EGL <-> Legendary sync"
@@ -217,7 +217,7 @@ options:
   - option_strings: ["--prefix"]
     metavar: "PREFIX"
     help: "WINE prefix to install the overlay in"
-    complete: ["none"] # TODO: is this a path?
+    complete: ["none"] # TODO: is this a directory?
 
   - option_strings: ["--app"]
     metavar: "APP"
@@ -278,8 +278,7 @@ options:
 positionals:
   - number: 1
     metavar: "App name"
-    complete: ["exec", "_legendary_list_installed_games"] # TODO: is it right that this can be a file?
-    complete: ['combine', [
+    complete: ['combine', [ # TODO: is it right that this can be a file?
       ["exec", "_legendary_list_installed_games"],
       ["exec", "_legendary_list_aliases"],
       ['file']]]

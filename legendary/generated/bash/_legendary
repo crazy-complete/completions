@@ -50,7 +50,6 @@ _legendary_prefix_compreply() {
 _legendary_parse_commandline() {
   POSITIONALS=()
   END_OF_OPTIONS=0
-  POSITIONAL_NUM=0
 
   local cmd="root" argi arg i char trailing_chars
   local ARG_NONE=0 ARG_REQUIRED=1 ARG_OPTIONAL=2 VAR MODE
@@ -264,12 +263,8 @@ _legendary_parse_commandline() {
     case "$arg" in
       --)
         END_OF_OPTIONS=1
-        for ((++argi; argi < ${#words[@]}; ++argi)); do
-          POSITIONALS[POSITIONAL_NUM++]="${words[argi]}"
-        done
-        break;;
-      -)
-        POSITIONALS[POSITIONAL_NUM++]="-";;
+        POSITIONALS+=("${words[@]:$((++argi))}")
+        return;;
       --*=*)
         if __find_option "$cmd" "${arg%%=*}"
         then __append_to_array "$VAR" "${arg#*=}"
@@ -281,7 +276,7 @@ _legendary_parse_commandline() {
           else __append_to_array "$VAR" "_OPT_ISSET_"
           fi
         fi;;
-      -*)
+      -?*) # ignore '-'
         if [[ "$arg" == -*=* ]]; then
           if __find_option "$cmd" "${arg%%=*}"; then
             __append_to_array "$VAR" "${arg#*=}"
@@ -321,8 +316,8 @@ _legendary_parse_commandline() {
           fi
         done;;
       *)
-        POSITIONALS[POSITIONAL_NUM++]="$arg"
-        if [[ "$cmd" == "root" ]] && (( POSITIONAL_NUM == 1 )); then
+        POSITIONALS+=("$arg")
+        if [[ "$cmd" == "root" ]] && (( ${#POSITIONALS[@]} == 1 )); then
           case "$arg" in
             import-game) cmd+=":import";;
             download|update|repair) cmd+=":install";;
@@ -332,7 +327,7 @@ _legendary_parse_commandline() {
           esac
         fi
 
-        if [[ "$cmd" == "root:alias" ]] && (( POSITIONAL_NUM == 2 )); then
+        if [[ "$cmd" == "root:alias" ]] && (( ${#POSITIONALS[@]} == 2 )); then
           cmd+=":$arg"
         fi
         ;;
@@ -340,12 +335,9 @@ _legendary_parse_commandline() {
   done
 
   for ((; argi < ${#words[@]}; ++argi)); do
-    arg="${words[$argi]}"
-
-    case "$arg" in
-      -) POSITIONALS[POSITIONAL_NUM++]="-";;
-      -*);;
-      *) POSITIONALS[POSITIONAL_NUM++]="$arg";;
+    case "${words[argi]}" in
+      -?*);;
+      *) POSITIONALS+=("${words[argi]}");;
     esac
   done
 }
@@ -364,14 +356,14 @@ _legendary() {
   local cur prev words cword split
   _init_completion -n = || return
 
-  local END_OF_OPTIONS POSITIONALS POSITIONAL_NUM
+  local END_OF_OPTIONS POSITIONALS
   local -a OPT_help OPT_full_help OPT_version OPT_debug OPT_yes OPT_pretty_json OPT_api_timeout OPT_uplay OPT_origin OPT_import OPT_code OPT_token OPT_sid OPT_delete OPT_disable_webview OPT_delete_incomplete OPT_keep_manifests OPT_reset OPT_download OPT_ignore_version OPT_crossover_app OPT_crossover_bottle OPT_egl_manifest_path OPT_egl_wine_prefix OPT_enable_sync OPT_disable_sync OPT_one_shot OPT_import_only OPT_export_only OPT_migrate OPT_unlink OPT_path OPT_prefix OPT_app OPT_disable_check OPT_with_dlcs OPT_skip_dlcs OPT_platform OPT_offline OPT_json OPT_base_path OPT_game_folder OPT_max_shared_memory OPT_max_workers OPT_manifest OPT_old_manifest OPT_delta_manifest OPT_base_url OPT_force OPT_disable_patching OPT_download_only OPT_update_only OPT_dlm_debug OPT_exclude OPT_install_tag OPT_enable_reordering OPT_dl_timeout OPT_save_path OPT_repair OPT_repair_and_update OPT_ignore_free_space OPT_disable_delta_manifest OPT_reset_sdl OPT_skip_sdl OPT_disable_sdl OPT_preferred_cdn OPT_no_https OPT_bind OPT_skip_version_check OPT_override_username OPT_dry_run OPT_language OPT_wrapper OPT_set_defaults OPT_reset_defaults OPT_override_exe OPT_wine OPT_wine_prefix OPT_no_wine OPT_include_ue OPT_third_party OPT_csv OPT_tsv OPT_force_refresh OPT_force_download OPT_hashlist OPT_check_updates OPT_show_dirs OPT_skip_move OPT_skip_upload OPT_skip_download OPT_force_upload OPT_disable_filters OPT_keep_files OPT_skip_uninstaller
 
   _legendary_parse_commandline
 
   local COMP_WORDBREAKS=''
 
-  if (( 0 < POSITIONAL_NUM )); then
+  if (( 0 < ${#POSITIONALS[@]} )); then
     case "${POSITIONALS[0]}" in
       activate) _legendary_activate && return 0;;
       alias) _legendary_alias && return 0;;
@@ -445,7 +437,7 @@ _legendary() {
     return 1
   fi
 
-  (( POSITIONAL_NUM == 1 )) && {
+  (( ${#POSITIONALS[@]} == 1 )) && {
     COMPREPLY=($(compgen -W 'activate alias auth clean-saves cleanup crossover download-saves egl-sync eos-overlay import import-game info install download update repair launch list list-games list-files list-installed list-saves move status sync-saves uninstall verify verify-game' -- "$cur"))
     return 0;
   }
@@ -470,7 +462,7 @@ _legendary_activate() {
 _legendary_alias() {
   local COMP_WORDBREAKS=''
 
-  if (( 1 < POSITIONAL_NUM )); then
+  if (( 1 < ${#POSITIONALS[@]} )); then
     case "${POSITIONALS[1]}" in
       add) _legendary_alias_add && return 0;;
       rename) _legendary_alias_rename && return 0;;
@@ -479,7 +471,7 @@ _legendary_alias() {
     esac
   fi
 
-  (( POSITIONAL_NUM == 2 )) && {
+  (( ${#POSITIONALS[@]} == 2 )) && {
     COMPREPLY=($(compgen -W 'add rename remove list' -- "$cur"))
     return 0;
   }
@@ -490,7 +482,7 @@ _legendary_alias() {
 _legendary_alias_add() {
   local COMP_WORDBREAKS=''
 
-  (( POSITIONAL_NUM == 3 )) && {
+  (( ${#POSITIONALS[@]} == 3 )) && {
     _legendary_exec _legendary_list_installed_games
     local COMPREPLY_OLD=("${COMPREPLY[@]}")
     _legendary_exec _legendary_list_aliases
@@ -498,7 +490,7 @@ _legendary_alias_add() {
     return 0;
   }
 
-  (( POSITIONAL_NUM == 4 )) && {
+  (( ${#POSITIONALS[@]} == 4 )) && {
     return 0;
   }
 
@@ -508,12 +500,12 @@ _legendary_alias_add() {
 _legendary_alias_rename() {
   local COMP_WORDBREAKS=''
 
-  (( POSITIONAL_NUM == 3 )) && {
+  (( ${#POSITIONALS[@]} == 3 )) && {
     _legendary_exec _legendary_list_aliases
     return 0;
   }
 
-  (( POSITIONAL_NUM == 4 )) && {
+  (( ${#POSITIONALS[@]} == 4 )) && {
     return 0;
   }
 
@@ -523,7 +515,7 @@ _legendary_alias_rename() {
 _legendary_alias_remove() {
   local COMP_WORDBREAKS=''
 
-  (( POSITIONAL_NUM == 3 )) && {
+  (( ${#POSITIONALS[@]} == 3 )) && {
     _legendary_exec _legendary_list_aliases
     return 0;
   }
@@ -534,7 +526,7 @@ _legendary_alias_remove() {
 _legendary_alias_list() {
   local COMP_WORDBREAKS=''
 
-  (( POSITIONAL_NUM == 3 )) && {
+  (( ${#POSITIONALS[@]} == 3 )) && {
     _legendary_exec _legendary_list_installed_games
     local COMPREPLY_OLD=("${COMPREPLY[@]}")
     _legendary_exec _legendary_list_aliases
@@ -595,7 +587,7 @@ _legendary_clean_saves() {
     return 1
   fi
 
-  (( POSITIONAL_NUM == 2 )) && {
+  (( ${#POSITIONALS[@]} == 2 )) && {
     _legendary_exec _legendary_list_installed_games
     local COMPREPLY_OLD=("${COMPREPLY[@]}")
     _legendary_exec _legendary_list_aliases
@@ -658,7 +650,7 @@ _legendary_crossover() {
     return 1
   fi
 
-  (( POSITIONAL_NUM == 2 )) && {
+  (( ${#POSITIONALS[@]} == 2 )) && {
     _legendary_exec _legendary_list_installed_games
     local COMPREPLY_OLD=("${COMPREPLY[@]}")
     _legendary_exec _legendary_list_aliases
@@ -672,7 +664,7 @@ _legendary_crossover() {
 _legendary_download_saves() {
   local COMP_WORDBREAKS=''
 
-  (( POSITIONAL_NUM == 2 )) && {
+  (( ${#POSITIONALS[@]} == 2 )) && {
     _legendary_exec _legendary_list_installed_games
     local COMPREPLY_OLD=("${COMPREPLY[@]}")
     _legendary_exec _legendary_list_aliases
@@ -768,7 +760,7 @@ _legendary_eos_overlay() {
     return 1
   fi
 
-  (( POSITIONAL_NUM == 2 )) && {
+  (( ${#POSITIONALS[@]} == 2 )) && {
     COMPREPLY=($(compgen -W 'install update remove enable disable info' -- "$cur"))
     return 0;
   }
@@ -811,7 +803,7 @@ _legendary_import() {
     return 1
   fi
 
-  (( POSITIONAL_NUM == 2 )) && {
+  (( ${#POSITIONALS[@]} == 2 )) && {
     _legendary_exec _legendary_list_installed_games
     local COMPREPLY_OLD=("${COMPREPLY[@]}")
     _legendary_exec _legendary_list_aliases
@@ -819,7 +811,7 @@ _legendary_import() {
     return 0;
   }
 
-  (( POSITIONAL_NUM == 3 )) && {
+  (( ${#POSITIONALS[@]} == 3 )) && {
     _filedir -d
     return 0;
   }
@@ -861,7 +853,7 @@ _legendary_info() {
     return 1
   fi
 
-  (( POSITIONAL_NUM == 2 )) && {
+  (( ${#POSITIONALS[@]} == 2 )) && {
     _legendary_exec _legendary_list_installed_games
     local COMPREPLY_OLD=("${COMPREPLY[@]}")
     _legendary_exec _legendary_list_aliases
@@ -943,7 +935,7 @@ _legendary_install() {
     return 1
   fi
 
-  (( POSITIONAL_NUM == 2 )) && {
+  (( ${#POSITIONALS[@]} == 2 )) && {
     _legendary_exec _legendary_list_available_games
     local COMPREPLY_OLD=("${COMPREPLY[@]}")
     _legendary_exec _legendary_list_installed_games
@@ -1010,7 +1002,7 @@ _legendary_launch() {
     return 1
   fi
 
-  (( POSITIONAL_NUM == 2 )) && {
+  (( ${#POSITIONALS[@]} == 2 )) && {
     _legendary_exec _legendary_list_installed_games
     local COMPREPLY_OLD=("${COMPREPLY[@]}")
     _legendary_exec _legendary_list_aliases
@@ -1106,7 +1098,7 @@ _legendary_list_files() {
     return 1
   fi
 
-  (( POSITIONAL_NUM == 2 )) && {
+  (( ${#POSITIONALS[@]} == 2 )) && {
     _legendary_exec _legendary_list_installed_games
     local COMPREPLY_OLD=("${COMPREPLY[@]}")
     _legendary_exec _legendary_list_aliases
@@ -1138,7 +1130,7 @@ _legendary_list_installed() {
 _legendary_list_saves() {
   local COMP_WORDBREAKS=''
 
-  (( POSITIONAL_NUM == 2 )) && {
+  (( ${#POSITIONALS[@]} == 2 )) && {
     _legendary_exec _legendary_list_installed_games
     local COMPREPLY_OLD=("${COMPREPLY[@]}")
     _legendary_exec _legendary_list_aliases
@@ -1160,7 +1152,7 @@ _legendary_move() {
     return 1
   fi
 
-  (( POSITIONAL_NUM == 2 )) && {
+  (( ${#POSITIONALS[@]} == 2 )) && {
     _legendary_exec _legendary_list_installed_games
     local COMPREPLY_OLD=("${COMPREPLY[@]}")
     _legendary_exec _legendary_list_aliases
@@ -1168,7 +1160,7 @@ _legendary_move() {
     return 0;
   }
 
-  (( POSITIONAL_NUM == 3 )) && {
+  (( ${#POSITIONALS[@]} == 3 )) && {
     _filedir -d
     return 0;
   }
@@ -1228,7 +1220,7 @@ _legendary_sync_saves() {
     return 1
   fi
 
-  (( POSITIONAL_NUM == 2 )) && {
+  (( ${#POSITIONALS[@]} == 2 )) && {
     _legendary_exec _legendary_list_installed_games
     local COMPREPLY_OLD=("${COMPREPLY[@]}")
     _legendary_exec _legendary_list_aliases
@@ -1251,7 +1243,7 @@ _legendary_uninstall() {
     return 1
   fi
 
-  (( POSITIONAL_NUM == 2 )) && {
+  (( ${#POSITIONALS[@]} == 2 )) && {
     _legendary_exec _legendary_list_installed_games
     local COMPREPLY_OLD=("${COMPREPLY[@]}")
     _legendary_exec _legendary_list_aliases
@@ -1265,7 +1257,7 @@ _legendary_uninstall() {
 _legendary_verify() {
   local COMP_WORDBREAKS=''
 
-  (( POSITIONAL_NUM == 2 )) && {
+  (( ${#POSITIONALS[@]} == 2 )) && {
     _legendary_exec _legendary_list_installed_games
     local COMPREPLY_OLD=("${COMPREPLY[@]}")
     _legendary_exec _legendary_list_aliases

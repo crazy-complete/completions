@@ -62,14 +62,14 @@ def choices_from_metavar(s):
     return choices
 
 def parse_integer_range(s):
-    s = s.replace('<integer [', '')
-    s = s.replace(']>', '')
+    s = s.replace('integer [', '')
+    s = s.replace(']', '')
     start, stop = s.split(' .. ')
     return (int(start), int(stop))
 
 def parse_float_range(s):
-    s = s.replace('<float [', '')
-    s = s.replace(']>', '')
+    s = s.replace('float [', '')
+    s = s.replace(']', '')
     start, stop = s.split(' .. ')
     return (float(start), float(stop))
 
@@ -89,11 +89,20 @@ cmdline.add_positional(1,
 for option in cmdline.options:
     if option.metavar and option.metavar.startswith('{'):
         option.complete = ['choices', choices_from_metavar(option.metavar)]
+        option.metavar = None
 
-    elif option.metavar and option.metavar.startswith('<integer ['):
+    elif option.metavar and option.metavar.startswith('integer ['):
         start, stop = parse_integer_range(option.metavar)
         if stop < 5000:
             option.complete = ['range', start, stop]
+        else:
+            option.complete = ['integer']
+
+    elif option.metavar == 'integer':
+        option.complete = ['integer']
+
+    elif option.metavar and option.metavar.startswith('float'):
+        option.complete = ['float']
 
     elif option.option_strings[0] in FILE_OPTIONS:
         option.complete = ['file']

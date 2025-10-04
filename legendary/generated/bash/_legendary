@@ -51,202 +51,201 @@ _legendary_parse_commandline() {
   POSITIONALS=()
   END_OF_OPTIONS=0
 
-  local cmd="root" argi arg i char trailing_chars
-  local ARG_NONE=0 ARG_REQUIRED=1 ARG_OPTIONAL=2 VAR MODE
+  local cmd="root" argi arg i char trailing_chars VAR ARGS
 
   __find_option() {
     case "$1" in root:uninstall*)
       case "$2" in
-        --keep-files) VAR=OPT_keep_files; MODE=$ARG_NONE; return;;
-        --skip-uninstaller) VAR=OPT_skip_uninstaller; MODE=$ARG_NONE; return;;
+        --keep-files) VAR=OPT_keep_files; ARGS=0; return;;
+        --skip-uninstaller) VAR=OPT_skip_uninstaller; ARGS=0; return;;
       esac
     esac
     case "$1" in root:sync-saves*)
       case "$2" in
-        --skip-upload) VAR=OPT_skip_upload; MODE=$ARG_NONE; return;;
-        --skip-download) VAR=OPT_skip_download; MODE=$ARG_NONE; return;;
-        --force-upload) VAR=OPT_force_upload; MODE=$ARG_NONE; return;;
-        --force-download) VAR=OPT_force_download; MODE=$ARG_NONE; return;;
-        --save-path) VAR=OPT_save_path; MODE=$ARG_REQUIRED; return;;
-        --disable-filters) VAR=OPT_disable_filters; MODE=$ARG_NONE; return;;
+        --skip-upload) VAR=OPT_skip_upload; ARGS=0; return;;
+        --skip-download) VAR=OPT_skip_download; ARGS=0; return;;
+        --force-upload) VAR=OPT_force_upload; ARGS=0; return;;
+        --force-download) VAR=OPT_force_download; ARGS=0; return;;
+        --save-path) VAR=OPT_save_path; ARGS=1; return;;
+        --disable-filters) VAR=OPT_disable_filters; ARGS=0; return;;
       esac
     esac
     case "$1" in root:status*)
       case "$2" in
-        --offline) VAR=OPT_offline; MODE=$ARG_NONE; return;;
-        --json) VAR=OPT_json; MODE=$ARG_NONE; return;;
+        --offline) VAR=OPT_offline; ARGS=0; return;;
+        --json) VAR=OPT_json; ARGS=0; return;;
       esac
     esac
     case "$1" in root:move*)
       case "$2" in
-        --skip-move) VAR=OPT_skip_move; MODE=$ARG_NONE; return;;
+        --skip-move) VAR=OPT_skip_move; ARGS=0; return;;
       esac
     esac
     case "$1" in root:list-installed*)
       case "$2" in
-        --check-updates) VAR=OPT_check_updates; MODE=$ARG_NONE; return;;
-        --csv) VAR=OPT_csv; MODE=$ARG_NONE; return;;
-        --tsv) VAR=OPT_tsv; MODE=$ARG_NONE; return;;
-        --json) VAR=OPT_json; MODE=$ARG_NONE; return;;
-        --show-dirs) VAR=OPT_show_dirs; MODE=$ARG_NONE; return;;
+        --check-updates) VAR=OPT_check_updates; ARGS=0; return;;
+        --csv) VAR=OPT_csv; ARGS=0; return;;
+        --tsv) VAR=OPT_tsv; ARGS=0; return;;
+        --json) VAR=OPT_json; ARGS=0; return;;
+        --show-dirs) VAR=OPT_show_dirs; ARGS=0; return;;
       esac
     esac
     case "$1" in root:list-files*)
       case "$2" in
-        --force-download) VAR=OPT_force_download; MODE=$ARG_NONE; return;;
-        --platform) VAR=OPT_platform; MODE=$ARG_REQUIRED; return;;
-        --manifest) VAR=OPT_manifest; MODE=$ARG_REQUIRED; return;;
-        --csv) VAR=OPT_csv; MODE=$ARG_NONE; return;;
-        --tsv) VAR=OPT_tsv; MODE=$ARG_NONE; return;;
-        --json) VAR=OPT_json; MODE=$ARG_NONE; return;;
-        --hashlist) VAR=OPT_hashlist; MODE=$ARG_NONE; return;;
-        --install-tag) VAR=OPT_install_tag; MODE=$ARG_REQUIRED; return;;
+        --force-download) VAR=OPT_force_download; ARGS=0; return;;
+        --platform) VAR=OPT_platform; ARGS=1; return;;
+        --manifest) VAR=OPT_manifest; ARGS=1; return;;
+        --csv) VAR=OPT_csv; ARGS=0; return;;
+        --tsv) VAR=OPT_tsv; ARGS=0; return;;
+        --json) VAR=OPT_json; ARGS=0; return;;
+        --hashlist) VAR=OPT_hashlist; ARGS=0; return;;
+        --install-tag) VAR=OPT_install_tag; ARGS=1; return;;
       esac
     esac
     case "$1" in root:list*)
       case "$2" in
-        --platform) VAR=OPT_platform; MODE=$ARG_REQUIRED; return;;
-        --include-ue) VAR=OPT_include_ue; MODE=$ARG_NONE; return;;
-        -T|--third-party|--include-non-installable) VAR=OPT_third_party; MODE=$ARG_NONE; return;;
-        --csv) VAR=OPT_csv; MODE=$ARG_NONE; return;;
-        --tsv) VAR=OPT_tsv; MODE=$ARG_NONE; return;;
-        --json) VAR=OPT_json; MODE=$ARG_NONE; return;;
-        --force-refresh) VAR=OPT_force_refresh; MODE=$ARG_NONE; return;;
+        --platform) VAR=OPT_platform; ARGS=1; return;;
+        --include-ue) VAR=OPT_include_ue; ARGS=0; return;;
+        -T|--third-party|--include-non-installable) VAR=OPT_third_party; ARGS=0; return;;
+        --csv) VAR=OPT_csv; ARGS=0; return;;
+        --tsv) VAR=OPT_tsv; ARGS=0; return;;
+        --json) VAR=OPT_json; ARGS=0; return;;
+        --force-refresh) VAR=OPT_force_refresh; ARGS=0; return;;
       esac
     esac
     case "$1" in root:launch*)
       case "$2" in
-        --offline) VAR=OPT_offline; MODE=$ARG_NONE; return;;
-        --skip-version-check) VAR=OPT_skip_version_check; MODE=$ARG_NONE; return;;
-        --override-username) VAR=OPT_override_username; MODE=$ARG_REQUIRED; return;;
-        --dry-run) VAR=OPT_dry_run; MODE=$ARG_NONE; return;;
-        --language) VAR=OPT_language; MODE=$ARG_REQUIRED; return;;
-        --wrapper) VAR=OPT_wrapper; MODE=$ARG_REQUIRED; return;;
-        --set-defaults) VAR=OPT_set_defaults; MODE=$ARG_NONE; return;;
-        --reset-defaults) VAR=OPT_reset_defaults; MODE=$ARG_NONE; return;;
-        --override-exe) VAR=OPT_override_exe; MODE=$ARG_REQUIRED; return;;
-        --origin) VAR=OPT_origin; MODE=$ARG_NONE; return;;
-        --json) VAR=OPT_json; MODE=$ARG_NONE; return;;
-        --wine) VAR=OPT_wine; MODE=$ARG_REQUIRED; return;;
-        --wine-prefix) VAR=OPT_wine_prefix; MODE=$ARG_REQUIRED; return;;
-        --no-wine) VAR=OPT_no_wine; MODE=$ARG_NONE; return;;
+        --offline) VAR=OPT_offline; ARGS=0; return;;
+        --skip-version-check) VAR=OPT_skip_version_check; ARGS=0; return;;
+        --override-username) VAR=OPT_override_username; ARGS=1; return;;
+        --dry-run) VAR=OPT_dry_run; ARGS=0; return;;
+        --language) VAR=OPT_language; ARGS=1; return;;
+        --wrapper) VAR=OPT_wrapper; ARGS=1; return;;
+        --set-defaults) VAR=OPT_set_defaults; ARGS=0; return;;
+        --reset-defaults) VAR=OPT_reset_defaults; ARGS=0; return;;
+        --override-exe) VAR=OPT_override_exe; ARGS=1; return;;
+        --origin) VAR=OPT_origin; ARGS=0; return;;
+        --json) VAR=OPT_json; ARGS=0; return;;
+        --wine) VAR=OPT_wine; ARGS=1; return;;
+        --wine-prefix) VAR=OPT_wine_prefix; ARGS=1; return;;
+        --no-wine) VAR=OPT_no_wine; ARGS=0; return;;
       esac
     esac
     case "$1" in root:install*)
       case "$2" in
-        --base-path) VAR=OPT_base_path; MODE=$ARG_REQUIRED; return;;
-        --game-folder) VAR=OPT_game_folder; MODE=$ARG_REQUIRED; return;;
-        --max-shared-memory) VAR=OPT_max_shared_memory; MODE=$ARG_REQUIRED; return;;
-        --max-workers) VAR=OPT_max_workers; MODE=$ARG_REQUIRED; return;;
-        --manifest) VAR=OPT_manifest; MODE=$ARG_REQUIRED; return;;
-        --old-manifest) VAR=OPT_old_manifest; MODE=$ARG_REQUIRED; return;;
-        --delta-manifest) VAR=OPT_delta_manifest; MODE=$ARG_REQUIRED; return;;
-        --base-url) VAR=OPT_base_url; MODE=$ARG_REQUIRED; return;;
-        --force) VAR=OPT_force; MODE=$ARG_NONE; return;;
-        --disable-patching) VAR=OPT_disable_patching; MODE=$ARG_NONE; return;;
-        --download-only|--no-install) VAR=OPT_download_only; MODE=$ARG_NONE; return;;
-        --update-only) VAR=OPT_update_only; MODE=$ARG_NONE; return;;
-        --dlm-debug) VAR=OPT_dlm_debug; MODE=$ARG_NONE; return;;
-        --platform) VAR=OPT_platform; MODE=$ARG_REQUIRED; return;;
-        --prefix) VAR=OPT_prefix; MODE=$ARG_REQUIRED; return;;
-        --exclude) VAR=OPT_exclude; MODE=$ARG_REQUIRED; return;;
-        --install-tag) VAR=OPT_install_tag; MODE=$ARG_REQUIRED; return;;
-        --enable-reordering) VAR=OPT_enable_reordering; MODE=$ARG_NONE; return;;
-        --dl-timeout) VAR=OPT_dl_timeout; MODE=$ARG_REQUIRED; return;;
-        --save-path) VAR=OPT_save_path; MODE=$ARG_REQUIRED; return;;
-        --repair) VAR=OPT_repair; MODE=$ARG_NONE; return;;
-        --repair-and-update) VAR=OPT_repair_and_update; MODE=$ARG_NONE; return;;
-        --ignore-free-space) VAR=OPT_ignore_free_space; MODE=$ARG_NONE; return;;
-        --disable-delta-manifest) VAR=OPT_disable_delta_manifest; MODE=$ARG_NONE; return;;
-        --reset-sdl) VAR=OPT_reset_sdl; MODE=$ARG_NONE; return;;
-        --skip-sdl) VAR=OPT_skip_sdl; MODE=$ARG_NONE; return;;
-        --disable-sdl) VAR=OPT_disable_sdl; MODE=$ARG_NONE; return;;
-        --preferred-cdn) VAR=OPT_preferred_cdn; MODE=$ARG_REQUIRED; return;;
-        --no-https) VAR=OPT_no_https; MODE=$ARG_NONE; return;;
-        --with-dlcs) VAR=OPT_with_dlcs; MODE=$ARG_NONE; return;;
-        --skip-dlcs) VAR=OPT_skip_dlcs; MODE=$ARG_NONE; return;;
-        --bind) VAR=OPT_bind; MODE=$ARG_REQUIRED; return;;
+        --base-path) VAR=OPT_base_path; ARGS=1; return;;
+        --game-folder) VAR=OPT_game_folder; ARGS=1; return;;
+        --max-shared-memory) VAR=OPT_max_shared_memory; ARGS=1; return;;
+        --max-workers) VAR=OPT_max_workers; ARGS=1; return;;
+        --manifest) VAR=OPT_manifest; ARGS=1; return;;
+        --old-manifest) VAR=OPT_old_manifest; ARGS=1; return;;
+        --delta-manifest) VAR=OPT_delta_manifest; ARGS=1; return;;
+        --base-url) VAR=OPT_base_url; ARGS=1; return;;
+        --force) VAR=OPT_force; ARGS=0; return;;
+        --disable-patching) VAR=OPT_disable_patching; ARGS=0; return;;
+        --download-only|--no-install) VAR=OPT_download_only; ARGS=0; return;;
+        --update-only) VAR=OPT_update_only; ARGS=0; return;;
+        --dlm-debug) VAR=OPT_dlm_debug; ARGS=0; return;;
+        --platform) VAR=OPT_platform; ARGS=1; return;;
+        --prefix) VAR=OPT_prefix; ARGS=1; return;;
+        --exclude) VAR=OPT_exclude; ARGS=1; return;;
+        --install-tag) VAR=OPT_install_tag; ARGS=1; return;;
+        --enable-reordering) VAR=OPT_enable_reordering; ARGS=0; return;;
+        --dl-timeout) VAR=OPT_dl_timeout; ARGS=1; return;;
+        --save-path) VAR=OPT_save_path; ARGS=1; return;;
+        --repair) VAR=OPT_repair; ARGS=0; return;;
+        --repair-and-update) VAR=OPT_repair_and_update; ARGS=0; return;;
+        --ignore-free-space) VAR=OPT_ignore_free_space; ARGS=0; return;;
+        --disable-delta-manifest) VAR=OPT_disable_delta_manifest; ARGS=0; return;;
+        --reset-sdl) VAR=OPT_reset_sdl; ARGS=0; return;;
+        --skip-sdl) VAR=OPT_skip_sdl; ARGS=0; return;;
+        --disable-sdl) VAR=OPT_disable_sdl; ARGS=0; return;;
+        --preferred-cdn) VAR=OPT_preferred_cdn; ARGS=1; return;;
+        --no-https) VAR=OPT_no_https; ARGS=0; return;;
+        --with-dlcs) VAR=OPT_with_dlcs; ARGS=0; return;;
+        --skip-dlcs) VAR=OPT_skip_dlcs; ARGS=0; return;;
+        --bind) VAR=OPT_bind; ARGS=1; return;;
       esac
     esac
     case "$1" in root:info*)
       case "$2" in
-        --offline) VAR=OPT_offline; MODE=$ARG_NONE; return;;
-        --json) VAR=OPT_json; MODE=$ARG_NONE; return;;
-        --platform) VAR=OPT_platform; MODE=$ARG_REQUIRED; return;;
+        --offline) VAR=OPT_offline; ARGS=0; return;;
+        --json) VAR=OPT_json; ARGS=0; return;;
+        --platform) VAR=OPT_platform; ARGS=1; return;;
       esac
     esac
     case "$1" in root:import*)
       case "$2" in
-        --disable-check) VAR=OPT_disable_check; MODE=$ARG_NONE; return;;
-        --with-dlcs) VAR=OPT_with_dlcs; MODE=$ARG_NONE; return;;
-        --skip-dlcs) VAR=OPT_skip_dlcs; MODE=$ARG_NONE; return;;
-        --platform) VAR=OPT_platform; MODE=$ARG_REQUIRED; return;;
+        --disable-check) VAR=OPT_disable_check; ARGS=0; return;;
+        --with-dlcs) VAR=OPT_with_dlcs; ARGS=0; return;;
+        --skip-dlcs) VAR=OPT_skip_dlcs; ARGS=0; return;;
+        --platform) VAR=OPT_platform; ARGS=1; return;;
       esac
     esac
     case "$1" in root:eos-overlay*)
       case "$2" in
-        --path) VAR=OPT_path; MODE=$ARG_REQUIRED; return;;
-        --prefix) VAR=OPT_prefix; MODE=$ARG_REQUIRED; return;;
-        --app) VAR=OPT_app; MODE=$ARG_REQUIRED; return;;
+        --path) VAR=OPT_path; ARGS=1; return;;
+        --prefix) VAR=OPT_prefix; ARGS=1; return;;
+        --app) VAR=OPT_app; ARGS=1; return;;
       esac
     esac
     case "$1" in root:egl-sync*)
       case "$2" in
-        --egl-manifest-path) VAR=OPT_egl_manifest_path; MODE=$ARG_REQUIRED; return;;
-        --egl-wine-prefix) VAR=OPT_egl_wine_prefix; MODE=$ARG_REQUIRED; return;;
-        --enable-sync) VAR=OPT_enable_sync; MODE=$ARG_NONE; return;;
-        --disable-sync) VAR=OPT_disable_sync; MODE=$ARG_NONE; return;;
-        --one-shot) VAR=OPT_one_shot; MODE=$ARG_NONE; return;;
-        --import-only) VAR=OPT_import_only; MODE=$ARG_NONE; return;;
-        --export-only) VAR=OPT_export_only; MODE=$ARG_NONE; return;;
-        --migrate) VAR=OPT_migrate; MODE=$ARG_NONE; return;;
-        --unlink) VAR=OPT_unlink; MODE=$ARG_NONE; return;;
+        --egl-manifest-path) VAR=OPT_egl_manifest_path; ARGS=1; return;;
+        --egl-wine-prefix) VAR=OPT_egl_wine_prefix; ARGS=1; return;;
+        --enable-sync) VAR=OPT_enable_sync; ARGS=0; return;;
+        --disable-sync) VAR=OPT_disable_sync; ARGS=0; return;;
+        --one-shot) VAR=OPT_one_shot; ARGS=0; return;;
+        --import-only) VAR=OPT_import_only; ARGS=0; return;;
+        --export-only) VAR=OPT_export_only; ARGS=0; return;;
+        --migrate) VAR=OPT_migrate; ARGS=0; return;;
+        --unlink) VAR=OPT_unlink; ARGS=0; return;;
       esac
     esac
     case "$1" in root:crossover*)
       case "$2" in
-        --reset) VAR=OPT_reset; MODE=$ARG_NONE; return;;
-        --download) VAR=OPT_download; MODE=$ARG_NONE; return;;
-        --ignore-version) VAR=OPT_ignore_version; MODE=$ARG_NONE; return;;
-        --crossover-app) VAR=OPT_crossover_app; MODE=$ARG_REQUIRED; return;;
-        --crossover-bottle) VAR=OPT_crossover_bottle; MODE=$ARG_REQUIRED; return;;
+        --reset) VAR=OPT_reset; ARGS=0; return;;
+        --download) VAR=OPT_download; ARGS=0; return;;
+        --ignore-version) VAR=OPT_ignore_version; ARGS=0; return;;
+        --crossover-app) VAR=OPT_crossover_app; ARGS=1; return;;
+        --crossover-bottle) VAR=OPT_crossover_bottle; ARGS=1; return;;
       esac
     esac
     case "$1" in root:cleanup*)
       case "$2" in
-        --keep-manifests) VAR=OPT_keep_manifests; MODE=$ARG_NONE; return;;
+        --keep-manifests) VAR=OPT_keep_manifests; ARGS=0; return;;
       esac
     esac
     case "$1" in root:clean-saves*)
       case "$2" in
-        --delete-incomplete) VAR=OPT_delete_incomplete; MODE=$ARG_NONE; return;;
+        --delete-incomplete) VAR=OPT_delete_incomplete; ARGS=0; return;;
       esac
     esac
     case "$1" in root:auth*)
       case "$2" in
-        --import) VAR=OPT_import; MODE=$ARG_NONE; return;;
-        --code) VAR=OPT_code; MODE=$ARG_REQUIRED; return;;
-        --token) VAR=OPT_token; MODE=$ARG_REQUIRED; return;;
-        --sid) VAR=OPT_sid; MODE=$ARG_REQUIRED; return;;
-        --delete) VAR=OPT_delete; MODE=$ARG_NONE; return;;
-        --disable-webview) VAR=OPT_disable_webview; MODE=$ARG_NONE; return;;
+        --import) VAR=OPT_import; ARGS=0; return;;
+        --code) VAR=OPT_code; ARGS=1; return;;
+        --token) VAR=OPT_token; ARGS=1; return;;
+        --sid) VAR=OPT_sid; ARGS=1; return;;
+        --delete) VAR=OPT_delete; ARGS=0; return;;
+        --disable-webview) VAR=OPT_disable_webview; ARGS=0; return;;
       esac
     esac
     case "$1" in root:activate*)
       case "$2" in
-        -U|--uplay) VAR=OPT_uplay; MODE=$ARG_NONE; return;;
-        -O|--origin) VAR=OPT_origin; MODE=$ARG_NONE; return;;
+        -U|--uplay) VAR=OPT_uplay; ARGS=0; return;;
+        -O|--origin) VAR=OPT_origin; ARGS=0; return;;
       esac
     esac
     case "$1" in root*)
       case "$2" in
-        -h|--help) VAR=OPT_help; MODE=$ARG_NONE; return;;
-        -H|--full-help) VAR=OPT_full_help; MODE=$ARG_NONE; return;;
-        -V|--version) VAR=OPT_version; MODE=$ARG_NONE; return;;
-        -v|--debug) VAR=OPT_debug; MODE=$ARG_NONE; return;;
-        -y|--yes) VAR=OPT_yes; MODE=$ARG_NONE; return;;
-        -J|--pretty-json) VAR=OPT_pretty_json; MODE=$ARG_NONE; return;;
-        -A|--api-timeout) VAR=OPT_api_timeout; MODE=$ARG_REQUIRED; return;;
+        -h|--help) VAR=OPT_help; ARGS=0; return;;
+        -H|--full-help) VAR=OPT_full_help; ARGS=0; return;;
+        -V|--version) VAR=OPT_version; ARGS=0; return;;
+        -v|--debug) VAR=OPT_debug; ARGS=0; return;;
+        -y|--yes) VAR=OPT_yes; ARGS=0; return;;
+        -J|--pretty-json) VAR=OPT_pretty_json; ARGS=0; return;;
+        -A|--api-timeout) VAR=OPT_api_timeout; ARGS=1; return;;
       esac
     esac
     return 1
@@ -271,50 +270,30 @@ _legendary_parse_commandline() {
         fi;;
       --*)
         if __find_option "$cmd" "$arg"; then
-          if (( MODE == ARG_REQUIRED ))
+          if [[ "$ARGS" == 1 ]]
           then __append_to_array "$VAR" "${words[++argi]}"
           else __append_to_array "$VAR" "_OPT_ISSET_"
           fi
         fi;;
       -?*) # ignore '-'
-        if [[ "$arg" == -*=* ]]; then
-          if __find_option "$cmd" "${arg%%=*}"; then
-            __append_to_array "$VAR" "${arg#*=}"
-            continue
-          fi
-        fi
-
-        if __find_option "$cmd" "$arg"; then
-          if (( MODE == ARG_REQUIRED ));
-          then __append_to_array "$VAR" "${words[++argi]}"
-          else __append_to_array "$VAR" "_OPT_ISSET_"
-          fi
-
-          continue
-        fi
 
         for ((i=1; i < ${#arg}; ++i)); do
           char="${arg:$i:1}"
           trailing_chars="${arg:$((i + 1))}"
 
           if __find_option "$cmd" "-$char"; then
-            if (( MODE == ARG_REQUIRED )); then
+            if [[ "$ARGS" == 1 ]]; then
               if [[ -n "$trailing_chars" ]]
               then __append_to_array "$VAR" "$trailing_chars"
               else __append_to_array "$VAR" "${words[++argi]}"
-              fi
-              break;
-            elif (( MODE == ARG_OPTIONAL )); then
-              if [[ -n "$trailing_chars" ]]
-              then __append_to_array "$VAR" "$trailing_chars"
-              else __append_to_array "$VAR" _OPT_ISSET_
               fi
               break;
             else
               __append_to_array "$VAR" "_OPT_ISSET_"
             fi
           fi
-        done;;
+        done
+        ;;
       *)
         POSITIONALS+=("$arg")
         if [[ "$cmd" == "root" ]] && (( ${#POSITIONALS[@]} == 1 )); then

@@ -6,12 +6,14 @@ function _go-sendxmpp_jid_from_history
   builtin history | command grep go-sendxmpp | command grep -E -o '[^ ]+@[^ ]+(/[^ ]+)?' | command sort | command uniq
 end
 
-function _go-sendxmpp__--tls-version
-  printf "%s\t%s\n" \
-    10 TLSv1.0 \
-    11 TLSv1.1 \
-    12 TLSv1.2 \
-    13 TLSv1.3
+function _go-sendxmpp__--scram-mech-pinning
+  printf '%s\n' \
+    SCRAM-SHA-1 \
+    SCRAM-SHA-1-PLUS \
+    SCRAM-SHA-256 \
+    SCRAM-SHA-256-PLUS \
+    SCRAM-SHA-512 \
+    SCRAM-SHA-512-PLUS
 end
 
 function _go-sendxmpp_fish_query
@@ -38,8 +40,11 @@ function _go-sendxmpp_fish_query
   #     Checks if the positional argument number NUM is one of WORDS.
   #     NUM counts from one.
   #
-  #   has_option <OPTIONS...>
+  #   has_option [WITH_INCOMPLETE] <OPTIONS...>
   #     Checks if an option given in OPTIONS is passed on commandline.
+  #     If an option requires an argument, this command returns true only if the
+  #     option includes an argument. If 'WITH_INCOMPLETE' is specified, it also
+  #     returns true for options missing their arguments.
   #
   #   option_is <OPTIONS...> -- <VALUES...>
   #     Checks if any option in OPTIONS has a value of VALUES.
@@ -86,14 +91,20 @@ function _go-sendxmpp_fish_query
 
     if test -n "$options"
       for option in (string split -- ',' $options)
-        # Using one big switch case is the fastest way
-        switch $option
-          case '--?*=';   set -a long_opts_with_arg           (string replace -- '='  '' $option)
-          case '--?*=\?'; set -a long_opts_with_optional_arg  (string replace -- '=?' '' $option)
-          case '--?*';    set -a long_opts_without_arg        $option
-          case '-?=';     set -a short_opts_with_arg          (string replace -- '='  '' $option)
-          case '-?=\?';   set -a short_opts_with_optional_arg (string replace -- '=?' '' $option)
-          case '-?';      set -a short_opts_without_arg       $option
+        if false
+          true
+        else if string match -qr -- '^--.+=$' $option
+          set -a long_opts_with_arg (string replace -- '='  '' $option)
+        else if string match -qr -- '^--.+=\?$' $option
+          set -a long_opts_with_optional_arg (string replace -- '=?' '' $option)
+        else if string match -qr -- '^--.+$' $option
+          set -a long_opts_without_arg $option
+        else if string match -qr -- '^-.=$' $option
+          set -a short_opts_with_arg (string replace -- '='  '' $option)
+        else if string match -qr -- '^-.=\?$' $option
+          set -a short_opts_with_optional_arg (string replace -- '=?' '' $option)
+        else if string match -qr -- '^-.$' $option
+          set -a short_opts_without_arg $option
         end
       end
     end
@@ -131,7 +142,7 @@ function _go-sendxmpp_fish_query
             end
           else
             set -a having_options $arg
-            set -a option_values ""
+            set -a option_values ''
           end
         case '-*'
           set -l end_of_parsing false
@@ -144,7 +155,7 @@ function _go-sendxmpp_fish_query
 
             if contains -- $option $short_opts_without_arg
               set -a having_options $option
-              set -a option_values ""
+              set -a option_values ''
             else if contains -- $option $short_opts_with_arg
               set end_of_parsing true
 
@@ -157,8 +168,8 @@ function _go-sendxmpp_fish_query
                 set argi (math $argi + 1)
               end
             else if contains -- $option $short_opts_with_optional_arg
-              set -a having_options $option
               set end_of_parsing true
+              set -a having_options $option
               set -a option_values "$trailing_chars" # may be empty
             end
 
@@ -193,24 +204,27 @@ function _go-sendxmpp_fish_query
         case 0
           count $positionals
         case 1
-          echo "_go-sendxmpp_fish_query: num_of_positionals: $argv[1]: missing operand" >&2
+          echo '_go-sendxmpp_fish_query: num_of_positionals: $argv[1]: missing operand' >&2
           return 1
         case 2
           if contains -- $argv[1] -lt -le -eq -ne -gt -ge;
             test (count $positionals) $argv[1] $argv[2] && return 0 || return 1
           else
-            echo "_go-sendxmpp_fish_query: num_of_positionals: $argv[1]: unknown operator" >&2
+            echo '_go-sendxmpp_fish_query: num_of_positionals: $argv[1]: unknown operator' >&2
             return 1
           end
         case '*'
-          echo "_go-sendxmpp_fish_query: num_of_positionals: too many arguments" >&2
+          echo '_go-sendxmpp_fish_query: num_of_positionals: too many arguments' >&2
           return 1
       end
   end
 end
 
-set -l prog "go-sendxmpp"
-set -l query "_go-sendxmpp_fish_query"
+set -l prog 'go-sendxmpp'
+set -l query '_go-sendxmpp_fish_query'
+
+# Delete existing completions
+complete -c $prog -e
 
 # Generally disable file completion
 complete -c $prog -x
@@ -219,20 +233,20 @@ complete -c $prog -x
 set -l opts "--help,--version,-a=,--alias=,-c,--chatroom,-d,--debug,--fast-off,-f=,--file=,--headline,-h=,--http-upload=,-i,--interactive,-j=,--jserver=,-l,--listen,-m=,--message=,--muc-password=,-n,--no-tls-verify,--oob-file=,--ox,--ox-delete-nodes,--ox-genprivkey-rsa,--ox-genprivkey-x25519,--ox-import-privkey=,--ox-passphrase=,-p=,--password=,--raw,--scram-mech-pinning=,--ssdp-off,-s=,--subject=,--timeout=,-t,--tls,--tls-version=,-u=,--username="
 set -l C000 "not $query '$opts' has_option --help --version"
 set -l C001 "not $query '$opts' has_option --help --version -a --alias"
-set -l C002 "not $query '$opts' has_option --ox --headline --help --version -c --chatroom"
+set -l C002 "not $query '$opts' has_option --help --version --ox --headline -c --chatroom"
 set -l C003 "not $query '$opts' has_option --help --version -d --debug"
 set -l C004 "not $query '$opts' has_option --help --version --fast-off"
 set -l C005 "not $query '$opts' has_option --help --version -f --file"
-set -l C006 "not $query '$opts' has_option --ox -c --chatroom --help --version --headline"
-set -l C007 "not $query '$opts' has_option --ox -i --interactive -m --message --help --version -h --http-upload"
-set -l C008 "not $query '$opts' has_option -h --http-upload --help --version -i --interactive"
+set -l C006 "not $query '$opts' has_option --help --version --ox -c --chatroom --headline"
+set -l C007 "not $query '$opts' has_option --help --version --ox -i --interactive -m --message -h --http-upload"
+set -l C008 "not $query '$opts' has_option --help --version -h --http-upload -i --interactive"
 set -l C009 "not $query '$opts' has_option --help --version -j --jserver"
 set -l C010 "not $query '$opts' has_option --help --version -l --listen"
-set -l C011 "not $query '$opts' has_option -h --http-upload --help --version -m --message"
+set -l C011 "not $query '$opts' has_option --help --version -h --http-upload -m --message"
 set -l C012 "not $query '$opts' has_option --help --version --muc-password"
 set -l C013 "not $query '$opts' has_option --help --version -n --no-tls-verify"
-set -l C014 "not $query '$opts' has_option --ox --help --version --oob-file"
-set -l C015 "not $query '$opts' has_option -h --http-upload -c --chatroom --oob-file --headline --help --version --ox"
+set -l C014 "not $query '$opts' has_option --help --version --ox --oob-file"
+set -l C015 "not $query '$opts' has_option --help --version -h --http-upload -c --chatroom --oob-file --headline --ox"
 set -l C016 "not $query '$opts' has_option --help --version --ox-delete-nodes"
 set -l C017 "not $query '$opts' has_option --help --version --ox-genprivkey-rsa"
 set -l C018 "not $query '$opts' has_option --help --version --ox-genprivkey-x25519"
@@ -272,12 +286,12 @@ complete -c $prog -n $C019 -l ox-import-privkey -d 'Import an existing private O
 complete -c $prog -n $C020 -l ox-passphrase -d 'Passphrase for locking and unlocking the private OpenPGP key' -x
 complete -c $prog -n $C021 -s p -l password -d 'Password for XMPP account' -x
 complete -c $prog -n $C022 -l raw -d 'Send raw XML' -f
-complete -c $prog -n $C023 -l scram-mech-pinning -d 'Enforce the use of a certain SCRAM authentication mechanism' -x -a 'SCRAM-SHA-1 SCRAM-SHA-1-PLUS SCRAM-SHA-256 SCRAM-SHA-256-PLUS SCRAM-SHA-512 SCRAM-SHA-512-PLUS'
+complete -c $prog -n $C023 -l scram-mech-pinning -d 'Enforce the use of a certain SCRAM authentication mechanism' -x -a '(_go-sendxmpp__--scram-mech-pinning)'
 complete -c $prog -n $C024 -l ssdp-off -d 'Disable XEP-0474: SASL SCRAM Downgrade Protection' -f
 complete -c $prog -n $C025 -s s -l subject -d 'Set message subject' -x
 complete -c $prog -n $C026 -l timeout -d 'Connection timeout in seconds [default: 10]' -x
 complete -c $prog -n $C027 -s t -l tls -d 'Use direct TLS' -f
-complete -c $prog -n $C028 -l tls-version -d 'Minimal TLS version: 10 (TLSv1.0), 11 (TLSv1.1), 12 (TLSv1.2) or 13 (TLSv1.3) [default: 12]' -x -a '(_go-sendxmpp__--tls-version)'
+complete -c $prog -n $C028 -l tls-version -d 'Minimal TLS version: 10 (TLSv1.0), 11 (TLSv1.1), 12 (TLSv1.2) or 13 (TLSv1.3) [default: 12]' -x -a '10\tTLSv1.0 11\tTLSv1.1 12\tTLSv1.2 13\tTLSv1.3'
 complete -c $prog -n $C029 -s u -l username -d 'Username for XMPP account' -x
 complete -c $prog -n $C030 -d 'Specify JID' -x -a '(_go-sendxmpp_jid_from_history)'
 

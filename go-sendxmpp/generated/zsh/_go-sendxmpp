@@ -8,8 +8,17 @@ _go-sendxmpp_jid_from_history() {
   command grep go-sendxmpp "$HISTFILE" | command grep -E -o '[^ ]+@[^ ]+(/[^ ]+)?' | command sort | command uniq
 }
 
+_go-sendxmpp__--scram-mech-pinning() {
+  local items=(
+    SCRAM-SHA-1 SCRAM-SHA-1-PLUS SCRAM-SHA-256 SCRAM-SHA-256-PLUS SCRAM-SHA-512
+    SCRAM-SHA-512-PLUS
+  )
+
+  _describe -- value items
+}
+
 _go-sendxmpp__--tls-version() {
-  local -a items=(
+  local items=(
     10:TLSv1.0
     11:TLSv1.1
     12:TLSv1.2
@@ -20,12 +29,11 @@ _go-sendxmpp__--tls-version() {
 }
 
 _go-sendxmpp_exec() {
-  local -a describe=()
-  local item='' desc=''
+  local item='' desc='' describe=()
 
   while IFS=$'\t' read -r item desc; do
-    item="${item/:/\\:/}"
-    describe+=("$item:$desc")
+    item="${item//:/\\:}"
+    [[ -n "$desc" ]] && describe+=("$item:$desc") || describe+=("$item")
   done < <(eval "$1")
 
   _describe '' describe
@@ -57,7 +65,7 @@ _go_sendxmpp() {
     '(--ox-passphrase)'--ox-passphrase='[Passphrase for locking and unlocking the private OpenPGP key]':passphrase:' '
     '(--password -p)'{-p+,--password=}'[Password for XMPP account]':password:' '
     '(--raw)'--raw'[Send raw XML]'
-    '(--scram-mech-pinning)'--scram-mech-pinning='[Enforce the use of a certain SCRAM authentication mechanism]':value:'(SCRAM-SHA-1 SCRAM-SHA-1-PLUS SCRAM-SHA-256 SCRAM-SHA-256-PLUS SCRAM-SHA-512 SCRAM-SHA-512-PLUS)'
+    '(--scram-mech-pinning)'--scram-mech-pinning='[Enforce the use of a certain SCRAM authentication mechanism]':value:_go-sendxmpp__--scram-mech-pinning
     '(--ssdp-off)'--ssdp-off'[Disable XEP-0474\: SASL SCRAM Downgrade Protection]'
     '(--subject -s)'{-s+,--subject=}'[Set message subject]':subject:' '
     '(--timeout)'--timeout='[Connection timeout in seconds \[default\: 10\]]':seconds:' '

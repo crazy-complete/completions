@@ -8,7 +8,7 @@ all: bash fish zsh
 
 bash: fpm.yaml
 	mkdir -p generated/bash
-	$(CRAZY_COMPLETE) -o generated/bash/_fpm bash fpm.yaml
+	$(CRAZY_COMPLETE) -o generated/bash/fpm bash fpm.yaml
 
 fish: fpm.yaml
 	mkdir -p generated/fish
@@ -16,7 +16,7 @@ fish: fpm.yaml
 
 zsh: fpm.yaml
 	mkdir -p generated/zsh
-	$(CRAZY_COMPLETE) -o generated/zsh/fpm zsh fpm.yaml
+	$(CRAZY_COMPLETE) -o generated/zsh/_fpm zsh fpm.yaml
 	$(CRAZY_COMPLETE) --zsh-compdef=False -o generated/zsh/fpm.sourceable zsh fpm.yaml
 
 # =============================================================================

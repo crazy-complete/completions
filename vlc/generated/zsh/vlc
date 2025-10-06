@@ -4,7 +4,7 @@
 # crazy-complete: A tool that creates robust and reliable autocompletion scripts for Bash, Fish and Zsh.
 # For more information, visit: https://github.com/crazy-complete/crazy-complete
 
-_vlc__--alsa-audio-device() {
+_vlc___--alsa-audio-device() {
   local items=(
     null lavrate samplerate speexrate jack oss pulse speex upmix vdownmix
     'default\:CARD=sofhdadsp' 'sysdefault\:CARD=sofhdadsp'
@@ -14,7 +14,7 @@ _vlc__--alsa-audio-device() {
   _describe -- '' items
 }
 
-_vlc__--alsa-audio-channels() {
+_vlc___--alsa-audio-channels() {
   local items=(
     1:Mono
     6:Stereo
@@ -28,7 +28,7 @@ _vlc__--alsa-audio-channels() {
   _describe -- '' items
 }
 
-_vlc__--audiobargraph_v-position() {
+_vlc___--audiobargraph_v-position() {
   local items=(
     0:Center
     1:Left
@@ -44,7 +44,7 @@ _vlc__--audiobargraph_v-position() {
   _describe -- '' items
 }
 
-_vlc__--subsdelay-mode() {
+_vlc___--subsdelay-mode() {
   local items=(
     0:'Absolute delay'
     1:'Relative to source delay'
@@ -54,7 +54,7 @@ _vlc__--subsdelay-mode() {
   _describe -- '' items
 }
 
-_vlc__--marq-color() {
+_vlc___--marq-color() {
   local items=(
     -268435456:Default
     0:Black
@@ -78,7 +78,7 @@ _vlc__--marq-color() {
   _describe -- '' items
 }
 
-_vlc__--mosaic-position() {
+_vlc___--mosaic-position() {
   local items=(
     0:auto
     1:fixed
@@ -88,7 +88,7 @@ _vlc__--mosaic-position() {
   _describe -- '' items
 }
 
-_vlc__--rss-title() {
+_vlc___--rss-title() {
   local items=(
     -1:Default
     0:"Don't show"
@@ -99,7 +99,7 @@ _vlc__--rss-title() {
   _describe -- '' items
 }
 
-_vlc__--alsa-samplerate() {
+_vlc___--alsa-samplerate() {
   local items=(
     192000:'192000 Hz'
     176400:'176400 Hz'
@@ -119,7 +119,7 @@ _vlc__--alsa-samplerate() {
   _describe -- '' items
 }
 
-_vlc__--shm-depth() {
+_vlc___--shm-depth() {
   local items=(
     0:'XWD file (autodetect)'
     8:'8 bits'
@@ -132,7 +132,7 @@ _vlc__--shm-depth() {
   _describe -- '' items
 }
 
-_vlc__--dvb-inversion() {
+_vlc___--dvb-inversion() {
   local items=(
     -1:Automatic
     0:Off
@@ -142,7 +142,7 @@ _vlc__--dvb-inversion() {
   _describe -- '' items
 }
 
-_vlc__--dvb-bandwidth() {
+_vlc___--dvb-bandwidth() {
   local items=(
     0:Automatic
     10:'10 MHz'
@@ -156,7 +156,7 @@ _vlc__--dvb-bandwidth() {
   _describe -- '' items
 }
 
-_vlc__--dvb-transmission() {
+_vlc___--dvb-transmission() {
   local items=(
     -1:Automatic
     1:1k
@@ -170,7 +170,7 @@ _vlc__--dvb-transmission() {
   _describe -- '' items
 }
 
-_vlc__--dvb-hierarchy() {
+_vlc___--dvb-hierarchy() {
   local items=(
     -1:Automatic
     0:None
@@ -182,7 +182,7 @@ _vlc__--dvb-hierarchy() {
   _describe -- '' items
 }
 
-_vlc__--dvb-a-modulation() {
+_vlc___--dvb-a-modulation() {
   local items=(
     '' QAM 16QAM 32QAM 64QAM 128QAM 256QAM 8VSB 16VSB QPSK DQPSK 8PSK 16APSK
     32APSK
@@ -191,7 +191,7 @@ _vlc__--dvb-a-modulation() {
   _describe -- '' items
 }
 
-_vlc__--dvb-rolloff() {
+_vlc___--dvb-rolloff() {
   local items=(
     -1:Automatic
     35:'0.35 (same as DVB-S)'
@@ -202,7 +202,7 @@ _vlc__--dvb-rolloff() {
   _describe -- '' items
 }
 
-_vlc__--dvb-satno() {
+_vlc___--dvb-satno() {
   local items=(
     0:Unspecified
     1:A/1
@@ -214,7 +214,7 @@ _vlc__--dvb-satno() {
   _describe -- '' items
 }
 
-_vlc__--nack-type() {
+_vlc___--nack-type() {
   local items=(
     0:Range
     1:Bitmask
@@ -223,7 +223,7 @@ _vlc__--nack-type() {
   _describe -- '' items
 }
 
-_vlc__--imem-cat() {
+_vlc___--imem-cat() {
   local items=(
     0:Unknown
     1:Audio
@@ -235,7 +235,7 @@ _vlc__--imem-cat() {
   _describe -- '' items
 }
 
-_vlc__--vdpau-deinterlace() {
+_vlc___--vdpau-deinterlace() {
   local items=(
     -1:Bob
     0:Temporal
@@ -245,7 +245,7 @@ _vlc__--vdpau-deinterlace() {
   _describe -- '' items
 }
 
-_vlc__--sout-speex-mode() {
+_vlc___--sout-speex-mode() {
   local items=(
     0:'Narrow-band (8kHz)'
     1:'Wide-band (16kHz)'
@@ -255,7 +255,7 @@ _vlc__--sout-speex-mode() {
   _describe -- '' items
 }
 
-_vlc__--subsdec-align() {
+_vlc___--subsdec-align() {
   local items=(
     -1:Auto
     0:Center
@@ -266,7 +266,7 @@ _vlc__--subsdec-align() {
   _describe -- '' items
 }
 
-_vlc__--subsdec-encoding() {
+_vlc___--subsdec-encoding() {
   local items=(
     '' system UTF-8 UTF-16 UTF-16BE UTF-16LE GB18030 ISO-8859-15 Windows-1252
     IBM850 ISO-8859-2 Windows-1250 ISO-8859-3 ISO-8859-10 Windows-1251 KOI8-R
@@ -279,7 +279,7 @@ _vlc__--subsdec-encoding() {
   _describe -- '' items
 }
 
-_vlc__--sout-twolame-mode() {
+_vlc___--sout-twolame-mode() {
   local items=(
     0:Stereo
     1:'Dual mono'
@@ -289,7 +289,7 @@ _vlc__--sout-twolame-mode() {
   _describe -- '' items
 }
 
-_vlc__--sout-transcode-venc() {
+_vlc___--sout-transcode-venc() {
   local items=(
     any png jpeg theora g711 araw opus vorbis twolame lpcm t140 dvbsub flac speex
     vpx rtpvideo stats edummy none
@@ -298,7 +298,7 @@ _vlc__--sout-transcode-venc() {
   _describe -- '' items
 }
 
-_vlc__--adaptive-lowlatency() {
+_vlc___--adaptive-lowlatency() {
   local items=(
     -1:Auto
     1:Force
@@ -308,7 +308,7 @@ _vlc__--adaptive-lowlatency() {
   _describe -- '' items
 }
 
-_vlc__--sub-type() {
+_vlc___--sub-type() {
   local items=(
     auto microdvd subrip subviewer ssa1 ssa2-4 ass vplayer sami dvdsubtitle mpl2
     aqt pjs mpsub jacosub psb realtext dks subviewer1 sbv
@@ -317,7 +317,7 @@ _vlc__--sub-type() {
   _describe -- '' items
 }
 
-_vlc__--avi-index() {
+_vlc___--avi-index() {
   local items=(
     0:'Ask for action'
     1:'Always fix'
@@ -328,7 +328,7 @@ _vlc__--avi-index() {
   _describe -- '' items
 }
 
-_vlc__--log-verbose() {
+_vlc___--log-verbose() {
   local items=(
     -1:Default
     0:Info
@@ -340,7 +340,7 @@ _vlc__--log-verbose() {
   _describe -- '' items
 }
 
-_vlc__--qt-notification() {
+_vlc___--qt-notification() {
   local items=(
     0:Never
     1:'When minimized'
@@ -350,7 +350,7 @@ _vlc__--qt-notification() {
   _describe -- '' items
 }
 
-_vlc__--qt-continue() {
+_vlc___--qt-continue() {
   local items=(
     0:Never
     1:Ask
@@ -360,7 +360,7 @@ _vlc__--qt-continue() {
   _describe -- '' items
 }
 
-_vlc__--qt-auto-raise() {
+_vlc___--qt-auto-raise() {
   local items=(
     0:Never
     1:Video
@@ -371,7 +371,7 @@ _vlc__--qt-auto-raise() {
   _describe -- '' items
 }
 
-_vlc__--mirror-split() {
+_vlc___--mirror-split() {
   local items=(
     0:Vertical
     1:Horizontal
@@ -380,7 +380,7 @@ _vlc__--mirror-split() {
   _describe -- '' items
 }
 
-_vlc__--mirror-direction() {
+_vlc___--mirror-direction() {
   local items=(
     0:'Left to right/Top to bottom'
     1:'Right to left/Bottom to top'
@@ -389,7 +389,7 @@ _vlc__--mirror-direction() {
   _describe -- '' items
 }
 
-_vlc__--sout-deinterlace-phosphor-chroma() {
+_vlc___--sout-deinterlace-phosphor-chroma() {
   local items=(
     1:Latest
     2:AltLine
@@ -400,7 +400,7 @@ _vlc__--sout-deinterlace-phosphor-chroma() {
   _describe -- '' items
 }
 
-_vlc__--sout-deinterlace-phosphor-dimmer() {
+_vlc___--sout-deinterlace-phosphor-dimmer() {
   local items=(
     1:Off
     2:Low
@@ -411,7 +411,7 @@ _vlc__--sout-deinterlace-phosphor-dimmer() {
   _describe -- '' items
 }
 
-_vlc__--colorthres-color() {
+_vlc___--colorthres-color() {
   local items=(
     16711680:Red
     16711935:Fuchsia
@@ -424,7 +424,7 @@ _vlc__--colorthres-color() {
   _describe -- '' items
 }
 
-_vlc__--extract-component() {
+_vlc___--extract-component() {
   local items=(
     16711680:Red
     65280:Green
@@ -434,7 +434,7 @@ _vlc__--extract-component() {
   _describe -- '' items
 }
 
-_vlc__--puzzle-rotation() {
+_vlc___--puzzle-rotation() {
   local items=(
     0:0
     1:0/180
@@ -445,7 +445,7 @@ _vlc__--puzzle-rotation() {
   _describe -- '' items
 }
 
-_vlc__--puzzle-mode() {
+_vlc___--puzzle-mode() {
   local items=(
     0:'jigsaw puzzle'
     1:'sliding puzzle'
@@ -456,7 +456,7 @@ _vlc__--puzzle-mode() {
   _describe -- '' items
 }
 
-_vlc__--equalizer-preset() {
+_vlc___--equalizer-preset() {
   local items=(
     flat classical club dance fullbass fullbasstreble fulltreble headphones
     largehall live party pop reggae rock ska soft softrock techno
@@ -465,7 +465,7 @@ _vlc__--equalizer-preset() {
   _describe -- '' items
 }
 
-_vlc__--aout-remap-channel-left() {
+_vlc___--aout-remap-channel-left() {
   local items=(
     0:Left
     1:Center
@@ -481,7 +481,7 @@ _vlc__--aout-remap-channel-left() {
   _describe -- '' items
 }
 
-_vlc__--sout-mono-channel() {
+_vlc___--sout-mono-channel() {
   local items=(
     0:Left
     1:Right
@@ -497,7 +497,7 @@ _vlc__--sout-mono-channel() {
   _describe -- '' items
 }
 
-_vlc__--force-dolby-surround() {
+_vlc___--force-dolby-surround() {
   local items=(
     0:Auto
     1:On
@@ -507,7 +507,7 @@ _vlc__--force-dolby-surround() {
   _describe -- '' items
 }
 
-_vlc__--stereo-mode() {
+_vlc___--stereo-mode() {
   local items=(
     0:Unset
     1:Stereo
@@ -522,7 +522,7 @@ _vlc__--stereo-mode() {
   _describe -- '' items
 }
 
-_vlc__--role() {
+_vlc___--role() {
   local items=(
     video music communication game notification animation production accessibility
     test
@@ -531,7 +531,7 @@ _vlc__--role() {
   _describe -- '' items
 }
 
-_vlc__--deinterlace() {
+_vlc___--deinterlace() {
   local items=(
     0:Off
     -1:Automatic
@@ -541,7 +541,7 @@ _vlc__--deinterlace() {
   _describe -- '' items
 }
 
-_vlc__-V() {
+_vlc___-V() {
   local items=(
     any gl xcb_xv wl_shm xcb_x11 fb vdpau_display vdummy vdummy yuv vmem flaschen
     none
@@ -550,7 +550,7 @@ _vlc__-V() {
   _describe -- '' items
 }
 
-_vlc__--captions() {
+_vlc___--captions() {
   local items=(
     608:'EIA/CEA 608'
     708:'CEA 708'
@@ -559,7 +559,7 @@ _vlc__--captions() {
   _describe -- '' items
 }
 
-_vlc__--preferred-resolution() {
+_vlc___--preferred-resolution() {
   local items=(
     -1:'Best available'
     1080:'Full HD (1080p)'
@@ -572,7 +572,7 @@ _vlc__--preferred-resolution() {
   _describe -- '' items
 }
 
-_vlc__--clock-synchro() {
+_vlc___--clock-synchro() {
   local items=(
     -1:Default
     0:Disable
@@ -582,7 +582,7 @@ _vlc__--clock-synchro() {
   _describe -- '' items
 }
 
-_vlc__--access() {
+_vlc___--access() {
   local items=(
     any satip vdr vcd filesystem filesystem access_realrtsp access attachment imem
     http rist concat udp imem_access dtv tcp sdp ftp access_mms none
@@ -591,7 +591,7 @@ _vlc__--access() {
   _describe -- '' items
 }
 
-_vlc__--demux() {
+_vlc___--demux() {
   local items=(
     any mp4 avi asf flacsys es nuv tta wav caf sap diracsys ogg smf adaptive ttml
     webvtt voc directory rawvid image nsv pva au aiff xa ps h26x h26x ty mjpeg
@@ -602,7 +602,7 @@ _vlc__--demux() {
   _describe -- '' items
 }
 
-_vlc__--packetizer() {
+_vlc___--packetizer() {
   local items=(
     any lpcm rawvideo theora speex aes3 vorbis dirac av1 mpeg4audio mpegvideo vc1
     mlp flac mpeg4video hevc h264 svcdsub spudec cvdsub mpegaudio a52 dts oggspots
@@ -612,7 +612,7 @@ _vlc__--packetizer() {
   _describe -- '' items
 }
 
-_vlc__--hotkeys-y-wheel-mode() {
+_vlc___--hotkeys-y-wheel-mode() {
   local items=(
     -1:Ignore
     0:'Volume control'
@@ -623,7 +623,7 @@ _vlc__--hotkeys-y-wheel-mode() {
   _describe -- '' items
 }
 
-_vlc__--global-key-toggle-fullscreen() {
+_vlc___--global-key-toggle-fullscreen() {
   local items=(
     A alt-A shift-A ctrl-A meta-A B alt-B shift-B ctrl-B meta-B C alt-C shift-C
     ctrl-C meta-C D alt-D shift-D ctrl-D meta-D E alt-E shift-E ctrl-E meta-E F
@@ -662,8 +662,8 @@ _vlc() {
     '(--amem-format)'--amem-format='[Sample format Sample format]':string:' '
     '(--amem-rate)'--amem-rate='[Sample rate Sample rate]':'integer [1 .. 384000]':_numbers
     '(--amem-channels)'--amem-channels='[Channels count Channels count]':'integer [1 .. 9]':'({1..9})'
-    '(--alsa-audio-device)'--alsa-audio-device='[Audio output device Audio output device (using ALSA syntax).]':' ':_vlc__--alsa-audio-device
-    '(--alsa-audio-channels)'--alsa-audio-channels='[Audio output channels Channels available for audio output. If the input has more channels than the output, it will be down-mixed. This parameter is ignored when digital pass-through is active.]':' ':_vlc__--alsa-audio-channels
+    '(--alsa-audio-device)'--alsa-audio-device='[Audio output device Audio output device (using ALSA syntax).]':' ':_vlc___--alsa-audio-device
+    '(--alsa-audio-channels)'--alsa-audio-channels='[Audio output channels Channels available for audio output. If the input has more channels than the output, it will be down-mixed. This parameter is ignored when digital pass-through is active.]':' ':_vlc___--alsa-audio-channels
     '(--alsa-gain)'--alsa-gain='[Software gain This linear gain will be applied in software.]':'float [0.000000 .. 8.000000]':'_numbers -f'
     '(--audiofile-file)'--audiofile-file='[Output file File to which the audio samples will be written to ("-" for stdout).]':string:_files
     '(--audiofile-format)'--audiofile-format='[Output format Output format]':' ':'(u8 s16 float32 spdif)'
@@ -710,7 +710,7 @@ _vlc() {
     '(--audiobargraph_v-x)'--audiobargraph_v-x='[X coordinate X coordinate of the bargraph.]':integer:_numbers
     '(--audiobargraph_v-y)'--audiobargraph_v-y='[Y coordinate Y coordinate of the bargraph.]':integer:_numbers
     '(--audiobargraph_v-transparency)'--audiobargraph_v-transparency='[Transparency of the bargraph Bargraph transparency value (from 0 for full transparency to 255 for full opacity).]':'integer [0 .. 255]':'({0..255})'
-    '(--audiobargraph_v-position)'--audiobargraph_v-position='[Bargraph position Enforce the bargraph position on the video (0=center, 1=left, 2=right, 4=top, 8=bottom, you can also use combinations of these values, eg 6 = top-right).]':' ':_vlc__--audiobargraph_v-position
+    '(--audiobargraph_v-position)'--audiobargraph_v-position='[Bargraph position Enforce the bargraph position on the video (0=center, 1=left, 2=right, 4=top, 8=bottom, you can also use combinations of these values, eg 6 = top-right).]':' ':_vlc___--audiobargraph_v-position
     '(--audiobargraph_v-barWidth)'--audiobargraph_v-barWidth='[Bar width in pixel Width in pixel of each bar in the BarGraph to be displayed.]':integer:_numbers
     '(--audiobargraph_v-barHeight)'--audiobargraph_v-barHeight='[Bar Height in pixel Height in pixel of BarGraph to be displayed.]':integer:_numbers
     '(--logo-file)'--logo-file='[Logo filenames Full path of the image files to use. Format is <image>\[,<delay in ms>\[,<alpha>\]\]\[;<image>\[,<delay>\[,<alpha>\]\]\]\[;...\]. If you only have one file, simply enter its filename.]':string:_files
@@ -719,8 +719,8 @@ _vlc() {
     '(--logo-delay)'--logo-delay='[Logo individual image time in ms Individual image display time of 0 - 60000 ms.]':integer:_numbers
     '(--logo-repeat)'--logo-repeat='[Logo animation # of loops Number of loops for the logo animation. -1 = continuous, 0 = disabled]':integer:_numbers
     '(--logo-opacity)'--logo-opacity='[Opacity of the logo Logo opacity value (from 0 for full transparency to 255 for full opacity).]':'integer [0 .. 255]':'({0..255})'
-    '(--logo-position)'--logo-position='[Logo position Enforce the logo position on the video (0=center, 1=left, 2=right, 4=top, 8=bottom, you can also use combinations of these values, eg 6 = top-right).]':' ':_vlc__--audiobargraph_v-position
-    '(--subsdelay-mode)'--subsdelay-mode='[Delay calculation mode Absolute delay - add absolute delay to each subtitle. Relative to source delay - multiply subtitle delay. Relative to source content -determine subtitle delay from its content (text).]':' ':_vlc__--subsdelay-mode
+    '(--logo-position)'--logo-position='[Logo position Enforce the logo position on the video (0=center, 1=left, 2=right, 4=top, 8=bottom, you can also use combinations of these values, eg 6 = top-right).]':' ':_vlc___--audiobargraph_v-position
+    '(--subsdelay-mode)'--subsdelay-mode='[Delay calculation mode Absolute delay - add absolute delay to each subtitle. Relative to source delay - multiply subtitle delay. Relative to source content -determine subtitle delay from its content (text).]':' ':_vlc___--subsdelay-mode
     '(--subsdelay-factor)'--subsdelay-factor='[Calculation factor Calculation factor. In Absolute delay mode the factor represents seconds.]':'float [0.000000 .. 20.000000]':'_numbers -f'
     '(--subsdelay-overlap)'--subsdelay-overlap='[Maximum overlapping subtitles Maximum number of subtitles allowed at the same time.]':'integer [1 .. 4]':'({1..4})'
     '(--subsdelay-min-alpha)'--subsdelay-min-alpha='[Minimum alpha value Alpha value of the earliest subtitle, where 0 is fully transparent and 255 is fully opaque. Overlap fix\:]':'integer [0 .. 255]':'({0..255})'
@@ -731,21 +731,21 @@ _vlc() {
     '(--marq-file)'--marq-file='[Text file File to read the marquee text from. Position\:]':string:_files
     '(--marq-x)'--marq-x='[X offset X offset, from the left screen edge.]':integer:_numbers
     '(--marq-y)'--marq-y='[Y offset Y offset, down from the top.]':integer:_numbers
-    '(--marq-position)'--marq-position='[Marquee position You can enforce the marquee position on the video (0=center, 1=left, 2=right, 4=top, 8=bottom, you can also use combinations of these values, eg 6 = top-right). Font\:]':' ':_vlc__--audiobargraph_v-position
+    '(--marq-position)'--marq-position='[Marquee position You can enforce the marquee position on the video (0=center, 1=left, 2=right, 4=top, 8=bottom, you can also use combinations of these values, eg 6 = top-right). Font\:]':' ':_vlc___--audiobargraph_v-position
     '(--marq-opacity)'--marq-opacity='[Opacity Opacity (inverse of transparency) of overlayed text. 0 = transparent, 255 = totally opaque.]':'integer [0 .. 255]':'({0..255})'
-    '(--marq-color)'--marq-color='[Color Color of the text that will be rendered on the video. This must be an hexadecimal (like HTML colors). The first two chars are for red, then green, then blue. #000000 = black, #FF0000 = red, #00FF00 = green, #FFFF00 = yellow (red + green), #FFFFFF = white]':' ':_vlc__--marq-color
+    '(--marq-color)'--marq-color='[Color Color of the text that will be rendered on the video. This must be an hexadecimal (like HTML colors). The first two chars are for red, then green, then blue. #000000 = black, #FF0000 = red, #00FF00 = green, #FFFF00 = yellow (red + green), #FFFFFF = white]':' ':_vlc___--marq-color
     '(--marq-size)'--marq-size='[Font size, pixels Font size, in pixels. Default is 0 (use default font size). Misc\:]':'integer [0 .. 4096]':'({0..4096})'
     '(--marq-timeout)'--marq-timeout='[Timeout Number of milliseconds the marquee must remain displayed. Default value is 0 (remains forever).]':integer:_numbers
     '(--marq-refresh)'--marq-refresh='[Refresh period in ms Number of milliseconds between string updates. This is mainly useful when using meta data or time format string sequences.]':integer:_numbers
     '(--mosaic-alpha)'--mosaic-alpha='[Transparency Transparency of the mosaic foreground pictures. 0 means transparent, 255 opaque (default).]':'integer [0 .. 255]':'({0..255})'
     '(--mosaic-height)'--mosaic-height='[Height Total height of the mosaic, in pixels.]':integer:_numbers
     '(--mosaic-width)'--mosaic-width='[Width Total width of the mosaic, in pixels.]':integer:_numbers
-    '(--mosaic-align)'--mosaic-align='[Mosaic alignment You can enforce the mosaic alignment on the video (0=center, 1=left, 2=right, 4=top, 8=bottom, you can also use combinations of these values, eg 6 = top-right).]':' ':_vlc__--audiobargraph_v-position
+    '(--mosaic-align)'--mosaic-align='[Mosaic alignment You can enforce the mosaic alignment on the video (0=center, 1=left, 2=right, 4=top, 8=bottom, you can also use combinations of these values, eg 6 = top-right).]':' ':_vlc___--audiobargraph_v-position
     '(--mosaic-xoffset)'--mosaic-xoffset='[Top left corner X coordinate X Coordinate of the top-left corner of the mosaic.]':integer:_numbers
     '(--mosaic-yoffset)'--mosaic-yoffset='[Top left corner Y coordinate Y Coordinate of the top-left corner of the mosaic.]':integer:_numbers
     '(--mosaic-borderw)'--mosaic-borderw='[Border width Width in pixels of the border between miniatures.]':integer:_numbers
     '(--mosaic-borderh)'--mosaic-borderh='[Border height Height in pixels of the border between miniatures.]':integer:_numbers
-    '(--mosaic-position)'--mosaic-position='[Positioning method Positioning method for the mosaic. auto\: automatically choose the best number of rows and columns. fixed\: use the user-defined number of rows and columns. offsets\: use the user-defined offsets for each image.]':' ':_vlc__--mosaic-position
+    '(--mosaic-position)'--mosaic-position='[Positioning method Positioning method for the mosaic. auto\: automatically choose the best number of rows and columns. fixed\: use the user-defined number of rows and columns. offsets\: use the user-defined offsets for each image.]':' ':_vlc___--mosaic-position
     '(--mosaic-rows)'--mosaic-rows='[Number of rows Number of image rows in the mosaic (only used if positioning method is set to "fixed").]':integer:_numbers
     '(--mosaic-cols)'--mosaic-cols='[Number of columns Number of image columns in the mosaic (only used if positioning method is set to "fixed").]':integer:_numbers
     '(--mosaic-keep-aspect-ratio --no-mosaic-keep-aspect-ratio)'{--mosaic-keep-aspect-ratio,--no-mosaic-keep-aspect-ratio}'[Keep aspect ratio (default disabled) Keep the original aspect ratio when resizing mosaic elements.]'
@@ -756,17 +756,17 @@ _vlc() {
     '(--rss-urls)'--rss-urls="[Feed URLs RSS/Atom feed '|' (pipe) separated URLs. Position\\:]":string:' '
     '(--rss-x)'--rss-x='[X offset X offset, from the left screen edge.]':integer:_numbers
     '(--rss-y)'--rss-y='[Y offset Y offset, down from the top.]':integer:_numbers
-    '(--rss-position)'--rss-position='[Text position You can enforce the text position on the video (0=center, 1=left, 2=right, 4=top, 8=bottom; you can also use combinations of these values, eg 6 = top-right). Font\:]':' ':_vlc__--audiobargraph_v-position
+    '(--rss-position)'--rss-position='[Text position You can enforce the text position on the video (0=center, 1=left, 2=right, 4=top, 8=bottom; you can also use combinations of these values, eg 6 = top-right). Font\:]':' ':_vlc___--audiobargraph_v-position
     '(--rss-opacity)'--rss-opacity='[Opacity Opacity (inverse of transparency) of overlay text. 0 = transparent, 255 = totally opaque.]':'integer [0 .. 255]':'({0..255})'
-    '(--rss-color)'--rss-color='[Color Color of the text that will be rendered on the video. This must be an hexadecimal (like HTML colors). The first two chars are for red, then green, then blue. #000000 = black, #FF0000 = red, #00FF00 = green, #FFFF00 = yellow (red + green), #FFFFFF = white]':' ':_vlc__--marq-color
+    '(--rss-color)'--rss-color='[Color Color of the text that will be rendered on the video. This must be an hexadecimal (like HTML colors). The first two chars are for red, then green, then blue. #000000 = black, #FF0000 = red, #00FF00 = green, #FFFF00 = yellow (red + green), #FFFFFF = white]':' ':_vlc___--marq-color
     '(--rss-size)'--rss-size='[Font size, pixels Font size, in pixels. Default is 0 (use default font size). Misc\:]':'integer [0 .. 4096]':'({0..4096})'
     '(--rss-speed)'--rss-speed='[Speed of feeds Speed of the RSS/Atom feeds in microseconds (bigger is slower).]':integer:_numbers
     '(--rss-length)'--rss-length='[Max length Maximum number of characters displayed on the screen.]':integer:_numbers
     '(--rss-ttl)'--rss-ttl='[Refresh time Number of seconds between each forced refresh of the feeds. 0 means that the feeds are never updated.]':integer:_numbers
     '(--no-rss-images --rss-images)'{--rss-images,--no-rss-images}'[Feed images (default enabled) Display feed images if available.]'
-    '(--rss-title)'--rss-title='[Title display mode Title display mode. Default is 0 (hidden) if the feed has an image and feed images are enabled, 1 otherwise.]':' ':_vlc__--rss-title
+    '(--rss-title)'--rss-title='[Title display mode Title display mode. Default is 0 (hidden) if the feed has an image and feed images are enabled, 1 otherwise.]':' ':_vlc___--rss-title
     '(--alsa-stereo --no-alsa-stereo)'{--alsa-stereo,--no-alsa-stereo}'[Stereo (default enabled) Stereo]'
-    '(--alsa-samplerate)'--alsa-samplerate='[Sample rate Sample rate]':' ':_vlc__--alsa-samplerate
+    '(--alsa-samplerate)'--alsa-samplerate='[Sample rate Sample rate]':' ':_vlc___--alsa-samplerate
     '(--http-continuous --no-http-continuous)'{--http-continuous,--no-http-continuous}'[Continuous stream (default disabled) Keep reading a resource that keeps being updated.]'
     '(--http-forward-cookies --no-http-forward-cookies)'{--http-forward-cookies,--no-http-forward-cookies}'[Cookies forwarding (default enabled) Forward cookies across HTTP redirections.]'
     '(--http-referrer)'--http-referrer='[Referrer Provide the referral URL, i.e. HTTP "Referer" (sic).]':string:' '
@@ -781,7 +781,7 @@ _vlc() {
     '(--no-satip-multicast --satip-multicast)'{--satip-multicast,--no-satip-multicast}'[Request multicast stream (default disabled) Request server to send stream as multicast]'
     '(--satip-host)'--satip-host='[Host Host]':string:' '
     '(--shm-fps)'--shm-fps='[Frame rate How many times the screen content should be refreshed per second.]':float:'_numbers -f'
-    '(--shm-depth)'--shm-depth='[Frame buffer depth Pixel depth of the frame buffer, or zero for XWD file]':' ':_vlc__--shm-depth
+    '(--shm-depth)'--shm-depth='[Frame buffer depth Pixel depth of the frame buffer, or zero for XWD file]':' ':_vlc___--shm-depth
     '(--shm-width)'--shm-width='[Frame buffer width Pixel width of the frame buffer (ignored for XWD file)]':'integer [0 .. 65535]':_numbers
     '(--shm-height)'--shm-height='[Frame buffer height Pixel height of the frame buffer (ignored for XWD file)]':'integer [0 .. 65535]':_numbers
     '(--shm-file)'--shm-file='[Frame buffer file Path of the memory mapped file of the frame buffer]':string:_files
@@ -792,32 +792,32 @@ _vlc() {
     '(--dvb-device)'--dvb-device='[DVB device If the adapter provides multiple independent tuner devices, the device number must be selected. Numbering starts from zero.]':'integer [0 .. 255]':'({0..255})'
     '(--dvb-budget-mode --no-dvb-budget-mode)'{--dvb-budget-mode,--no-dvb-budget-mode}'[Do not demultiplex (default disabled) Only useful programs are normally demultiplexed from the transponder. This option will disable demultiplexing and receive all programs.]'
     '(--dvb-frequency)'--dvb-frequency='[Frequency (Hz) TV channels are grouped by transponder (a.k.a. multiplex) on a given frequency. This is required to tune the receiver.]':'integer [0 .. 107999999]':_numbers
-    '(--dvb-inversion)'--dvb-inversion='[Spectrum inversion If the demodulator cannot detect spectral inversion correctly, it needs to be configured manually. Terrestrial reception parameters\:]':' ':_vlc__--dvb-inversion
-    '(--dvb-bandwidth)'--dvb-bandwidth='[Bandwidth (MHz) Bandwidth (MHz)]':' ':_vlc__--dvb-bandwidth
-    '(--dvb-transmission)'--dvb-transmission='[Transmission mode Transmission mode]':' ':_vlc__--dvb-transmission
+    '(--dvb-inversion)'--dvb-inversion='[Spectrum inversion If the demodulator cannot detect spectral inversion correctly, it needs to be configured manually. Terrestrial reception parameters\:]':' ':_vlc___--dvb-inversion
+    '(--dvb-bandwidth)'--dvb-bandwidth='[Bandwidth (MHz) Bandwidth (MHz)]':' ':_vlc___--dvb-bandwidth
+    '(--dvb-transmission)'--dvb-transmission='[Transmission mode Transmission mode]':' ':_vlc___--dvb-transmission
     '(--dvb-guard)'--dvb-guard='[Guard interval Guard interval DVB-T reception parameters\:]':' ':"('' 1/128 1/32 1/16 19/256 1/8 19/128 1/4)"
     '(--dvb-code-rate-hp)'--dvb-code-rate-hp='[High-priority code rate The code rate for Forward Error Correction can be specified.]':' ':"('' 0 1/2 3/5 2/3 3/4 4/5 5/6 6/7 7/8 8/9 9/10)"
     '(--dvb-code-rate-lp)'--dvb-code-rate-lp='[Low-priority code rate The code rate for Forward Error Correction can be specified.]':' ':"('' 0 1/2 3/5 2/3 3/4 4/5 5/6 6/7 7/8 8/9 9/10)"
-    '(--dvb-hierarchy)'--dvb-hierarchy='[Hierarchy mode Hierarchy mode]':' ':_vlc__--dvb-hierarchy
+    '(--dvb-hierarchy)'--dvb-hierarchy='[Hierarchy mode Hierarchy mode]':' ':_vlc___--dvb-hierarchy
     '(--dvb-plp-id)'--dvb-plp-id='[DVB-T2 Physical Layer Pipe DVB-T2 Physical Layer Pipe ISDB-T reception parameters\:]':'integer [0 .. 255]':'({0..255})'
-    '(--dvb-a-modulation)'--dvb-a-modulation='[Layer A modulation The digital signal can be modulated according with different constellations (depending on the delivery system). If the demodulator cannot detect the constellation automatically, it needs to be configured manually.]':' ':_vlc__--dvb-a-modulation
+    '(--dvb-a-modulation)'--dvb-a-modulation='[Layer A modulation The digital signal can be modulated according with different constellations (depending on the delivery system). If the demodulator cannot detect the constellation automatically, it needs to be configured manually.]':' ':_vlc___--dvb-a-modulation
     '(--dvb-a-fec)'--dvb-a-fec='[Layer A code rate The code rate for Forward Error Correction can be specified.]':' ':"('' 0 1/2 3/5 2/3 3/4 4/5 5/6 6/7 7/8 8/9 9/10)"
     '(--dvb-a-count)'--dvb-a-count='[Layer A segments count]':'integer [0 .. 13]':'({0..13})'
     '(--dvb-a-interleaving)'--dvb-a-interleaving='[Layer A time interleaving]':'integer [0 .. 3]':'({0..3})'
-    '(--dvb-b-modulation)'--dvb-b-modulation='[Layer B modulation The digital signal can be modulated according with different constellations (depending on the delivery system). If the demodulator cannot detect the constellation automatically, it needs to be configured manually.]':' ':_vlc__--dvb-a-modulation
+    '(--dvb-b-modulation)'--dvb-b-modulation='[Layer B modulation The digital signal can be modulated according with different constellations (depending on the delivery system). If the demodulator cannot detect the constellation automatically, it needs to be configured manually.]':' ':_vlc___--dvb-a-modulation
     '(--dvb-b-fec)'--dvb-b-fec='[Layer B code rate The code rate for Forward Error Correction can be specified.]':' ':"('' 0 1/2 3/5 2/3 3/4 4/5 5/6 6/7 7/8 8/9 9/10)"
     '(--dvb-b-count)'--dvb-b-count='[Layer B segments count]':'integer [0 .. 13]':'({0..13})'
     '(--dvb-b-interleaving)'--dvb-b-interleaving='[Layer B time interleaving]':'integer [0 .. 3]':'({0..3})'
-    '(--dvb-c-modulation)'--dvb-c-modulation='[Layer C modulation The digital signal can be modulated according with different constellations (depending on the delivery system). If the demodulator cannot detect the constellation automatically, it needs to be configured manually.]':' ':_vlc__--dvb-a-modulation
+    '(--dvb-c-modulation)'--dvb-c-modulation='[Layer C modulation The digital signal can be modulated according with different constellations (depending on the delivery system). If the demodulator cannot detect the constellation automatically, it needs to be configured manually.]':' ':_vlc___--dvb-a-modulation
     '(--dvb-c-fec)'--dvb-c-fec='[Layer C code rate The code rate for Forward Error Correction can be specified.]':' ':"('' 0 1/2 3/5 2/3 3/4 4/5 5/6 6/7 7/8 8/9 9/10)"
     '(--dvb-c-count)'--dvb-c-count='[Layer C segments count]':'integer [0 .. 13]':'({0..13})'
     '(--dvb-c-interleaving)'--dvb-c-interleaving='[Layer C time interleaving Cable and satellite reception parameters\:]':'integer [0 .. 3]':'({0..3})'
-    '(--dvb-modulation)'--dvb-modulation='[Modulation / Constellation The digital signal can be modulated according with different constellations (depending on the delivery system). If the demodulator cannot detect the constellation automatically, it needs to be configured manually.]':' ':_vlc__--dvb-a-modulation
+    '(--dvb-modulation)'--dvb-modulation='[Modulation / Constellation The digital signal can be modulated according with different constellations (depending on the delivery system). If the demodulator cannot detect the constellation automatically, it needs to be configured manually.]':' ':_vlc___--dvb-a-modulation
     '(--dvb-srate)'--dvb-srate='[Symbol rate (bauds) The symbol rate must be specified manually for some systems, notably DVB-C, DVB-S and DVB-S2.]':'integer [0 .. 4294967295]':_numbers
     '(--dvb-fec)'--dvb-fec='[FEC code rate The code rate for Forward Error Correction can be specified. DVB-S2 parameters\:]':' ':"('' 0 1/2 3/5 2/3 3/4 4/5 5/6 6/7 7/8 8/9 9/10)"
     '(--dvb-stream)'--dvb-stream='[Stream identifier Stream identifier]':'integer [0 .. 255]':'({0..255})'
-    '(--dvb-pilot)'--dvb-pilot='[Pilot Pilot]':' ':_vlc__--dvb-inversion
-    '(--dvb-rolloff)'--dvb-rolloff='[Roll-off factor Roll-off factor ISDB-S parameters\:]':' ':_vlc__--dvb-rolloff
+    '(--dvb-pilot)'--dvb-pilot='[Pilot Pilot]':' ':_vlc___--dvb-inversion
+    '(--dvb-rolloff)'--dvb-rolloff='[Roll-off factor Roll-off factor ISDB-S parameters\:]':' ':_vlc___--dvb-rolloff
     '(--dvb-ts-id)'--dvb-ts-id='[Transport stream ID Transport stream ID Satellite equipment control\:]':'integer [0 .. 65535]':_numbers
     '(--dvb-polarization)'--dvb-polarization='[Polarization (Voltage) To select the polarization of the transponder, a different voltage is normally applied to the low noise block-downconverter (LNB).]':' ':"('' V H R L)"
     '(--dvb-voltage)'--dvb-voltage='[]':'integer [0 .. 18]':'({0..18})'
@@ -825,9 +825,9 @@ _vlc() {
     '(--dvb-lnb-low)'--dvb-lnb-low='[Local oscillator low frequency (kHz) The downconverter (LNB) will subtract the local oscillator frequency from the satellite transmission frequency. The intermediate frequency (IF) on the RF cable is the result.]':'integer [0 .. 2147483647]':_numbers
     '(--dvb-lnb-high)'--dvb-lnb-high='[Local oscillator high frequency (kHz) The downconverter (LNB) will subtract the local oscillator frequency from the satellite transmission frequency. The intermediate frequency (IF) on the RF cable is the result.]':'integer [0 .. 2147483647]':_numbers
     '(--dvb-lnb-switch)'--dvb-lnb-switch='[Universal LNB switch frequency (kHz) If the satellite transmission frequency exceeds the switch frequency, the oscillator high frequency will be used as reference. Furthermore the automatic continuous 22kHz tone will be sent.]':'integer [0 .. 2147483647]':_numbers
-    '(--dvb-satno)'--dvb-satno='[DiSEqC LNB number If the satellite receiver is connected to multiple low noise block-downconverters (LNB) through a DiSEqC 1.0 switch, the correct LNB can be selected (1 to 4). If there is no switch, this parameter should be 0.]':' ':_vlc__--dvb-satno
-    '(--dvb-uncommitted)'--dvb-uncommitted='[Uncommitted DiSEqC LNB number If the satellite receiver is connected to multiple low noise block-downconverters (LNB) through a cascade formed from DiSEqC 1.1 uncommitted switch and DiSEqC 1.0 committed switch, the correct uncommitted LNB can be selected (1 to 4). If there is no uncommitted switch, this parameter should be 0.]':' ':_vlc__--dvb-satno
-    '(--dvb-tone)'--dvb-tone='[Continuous 22kHz tone A continuous tone at 22kHz can be sent on the cable. This normally selects the higher frequency band from a universal LNB.]':' ':_vlc__--dvb-inversion
+    '(--dvb-satno)'--dvb-satno='[DiSEqC LNB number If the satellite receiver is connected to multiple low noise block-downconverters (LNB) through a DiSEqC 1.0 switch, the correct LNB can be selected (1 to 4). If there is no switch, this parameter should be 0.]':' ':_vlc___--dvb-satno
+    '(--dvb-uncommitted)'--dvb-uncommitted='[Uncommitted DiSEqC LNB number If the satellite receiver is connected to multiple low noise block-downconverters (LNB) through a cascade formed from DiSEqC 1.1 uncommitted switch and DiSEqC 1.0 committed switch, the correct uncommitted LNB can be selected (1 to 4). If there is no uncommitted switch, this parameter should be 0.]':' ':_vlc___--dvb-satno
+    '(--dvb-tone)'--dvb-tone='[Continuous 22kHz tone A continuous tone at 22kHz can be sent on the cable. This normally selects the higher frequency band from a universal LNB.]':' ':_vlc___--dvb-inversion
     '(--udp-timeout)'--udp-timeout='[UDP Source timeout (sec)]':integer:_numbers
     '(--list-special-files --no-list-special-files)'{--list-special-files,--no-list-special-files}'[List special files (default disabled) Include devices and pipes when listing directories]'
     '(--concat-list)'--concat-list='[Inputs list Comma-separated list of input URLs to concatenate.]':string:' '
@@ -843,7 +843,7 @@ _vlc() {
     '(--retry-interval)'--retry-interval='[RIST nack retry interval (ms)]':integer:_numbers
     '(--reorder-buffer)'--reorder-buffer='[RIST reorder buffer (ms)]':integer:_numbers
     '(--max-retries)'--max-retries='[RIST maximum retry count]':integer:_numbers
-    '(--nack-type)'--nack-type='[RIST nack type, 0 = range, 1 = bitmask. Default is range]':' ':_vlc__--nack-type
+    '(--nack-type)'--nack-type='[RIST nack type, 0 = range, 1 = bitmask. Default is range]':' ':_vlc___--nack-type
     '(--disable-nacks --no-disable-nacks)'{--disable-nacks,--no-disable-nacks}'[Disable NACK output packets (default disabled) Use this to disable packet recovery]'
     '(--mcast-blind-nacks --no-mcast-blind-nacks)'{--mcast-blind-nacks,--no-mcast-blind-nacks}'[Do not check for a valid rtcp message from the encoder (default disabled) Send nack messages even when we have not confirmed that the encoder is on our local network.]'
     '(--timecode-fps)'--timecode-fps='[Frame rate Frame rate]':' ':'(24/1 25/1 30000/1001 30/1)'
@@ -854,7 +854,7 @@ _vlc() {
     '(--imem-data)'--imem-data='[Callback data Data for the get and release functions]':string:' '
     '(--imem-id)'--imem-id='[ID Set the ID of the elementary stream]':integer:_numbers
     '(--imem-group)'--imem-group='[Group Set the group of the elementary stream]':integer:_numbers
-    '(--imem-cat)'--imem-cat='[Category Set the category of the elementary stream]':' ':_vlc__--imem-cat
+    '(--imem-cat)'--imem-cat='[Category Set the category of the elementary stream]':' ':_vlc___--imem-cat
     '(--imem-codec)'--imem-codec='[Codec Set the codec of the elementary stream]':string:' '
     '(--imem-language)'--imem-language='[Language Language of the elementary stream as described by ISO639]':string:' '
     '(--imem-samplerate)'--imem-samplerate='[Sample rate Sample rate of an audio elementary stream]':integer:_numbers
@@ -865,7 +865,7 @@ _vlc() {
     '(--imem-fps)'--imem-fps='[Frame rate Frame rate of a video elementary stream]':string:' '
     '(--imem-size)'--imem-size='[Size Size of stream in bytes]':integer:_numbers
     '(--denoise-sigma)'--denoise-sigma='[Denoise strength (0-2) Set the Denoise strength, between 0 and 2. Defaults to 1.]':'float [0.000000 .. 0.000000]':'_numbers -f'
-    '(--vdpau-deinterlace)'--vdpau-deinterlace='[Deinterlace Deinterlacing algorithm]':' ':_vlc__--vdpau-deinterlace
+    '(--vdpau-deinterlace)'--vdpau-deinterlace='[Deinterlace Deinterlacing algorithm]':' ':_vlc___--vdpau-deinterlace
     '(--no-vdpau-ivtc --vdpau-ivtc)'{--vdpau-ivtc,--no-vdpau-ivtc}'[Inverse telecine (default disabled) Inverse telecine]'
     '(--no-vdpau-chroma-skip --vdpau-chroma-skip)'{--vdpau-chroma-skip,--no-vdpau-chroma-skip}'[Deinterlace chroma skip (default disabled) Whether temporal deinterlacing applies to luma only]'
     '(--vdpau-noise-reduction)'--vdpau-noise-reduction='[Noise reduction level Noise reduction level]':'float [0.000000 .. 1.000000]':'_numbers -f'
@@ -902,15 +902,15 @@ _vlc() {
     '(--sout-vorbis-min-bitrate)'--sout-vorbis-min-bitrate='[Minimum encoding bitrate Minimum bitrate in kbps. This is useful for encoding for a fixed-size channel.]':integer:_numbers
     '(--no-sout-vorbis-cbr --sout-vorbis-cbr)'{--sout-vorbis-cbr,--no-sout-vorbis-cbr}'[CBR encoding (default disabled) Force a constant bitrate encoding (CBR).]'
     '(--ttml-align)'--ttml-align='[Subtitle justification Set the justification of subtitles]':integer:_numbers
-    '(--sout-speex-mode)'--sout-speex-mode='[Mode Enforce the mode of the encoder.]':' ':_vlc__--sout-speex-mode
+    '(--sout-speex-mode)'--sout-speex-mode='[Mode Enforce the mode of the encoder.]':' ':_vlc___--sout-speex-mode
     '(--sout-speex-complexity)'--sout-speex-complexity='[Encoding complexity Enforce the complexity of the encoder.]':'integer [1 .. 10]':'({1..10})'
     '(--no-sout-speex-cbr --sout-speex-cbr)'{--sout-speex-cbr,--no-sout-speex-cbr}'[CBR encoding (default disabled) Enforce a constant bitrate encoding (CBR) instead of default variable bitrate encoding (VBR).]'
     '(--sout-speex-quality)'--sout-speex-quality='[Encoding quality Enforce a quality between 0 (low) and 10 (high).]':'float [0.000000 .. 10.000000]':'_numbers -f'
     '(--sout-speex-max-bitrate)'--sout-speex-max-bitrate='[Maximal bitrate Enforce the maximal VBR bitrate]':integer:_numbers
     '(--no-sout-speex-vad --sout-speex-vad)'{--sout-speex-vad,--no-sout-speex-vad}'[Voice activity detection (default enabled) Enable voice activity detection (VAD). It is automatically activated in VBR mode.]'
     '(--no-sout-speex-dtx --sout-speex-dtx)'{--sout-speex-dtx,--no-sout-speex-dtx}'[Discontinuous Transmission (default disabled) Enable discontinuous transmission (DTX).]'
-    '(--subsdec-align)'--subsdec-align='[Subtitle justification Set the justification of subtitles]':' ':_vlc__--subsdec-align
-    '(--subsdec-encoding)'--subsdec-encoding='[Subtitle text encoding Set the encoding used in text subtitles]':' ':_vlc__--subsdec-encoding
+    '(--subsdec-align)'--subsdec-align='[Subtitle justification Set the justification of subtitles]':' ':_vlc___--subsdec-align
+    '(--subsdec-encoding)'--subsdec-encoding='[Subtitle text encoding Set the encoding used in text subtitles]':' ':_vlc___--subsdec-encoding
     '(--no-subsdec-autodetect-utf8 --subsdec-autodetect-utf8)'{--subsdec-autodetect-utf8,--no-subsdec-autodetect-utf8}'[UTF-8 subtitle autodetection (default enabled) This enables automatic detection of UTF-8 encoding within subtitle files.]'
     '(--theora-postproc)'--theora-postproc='[Post processing quality]':integer:_numbers
     '(--sout-theora-quality)'--sout-theora-quality='[Encoding quality Enforce a quality between 1 (low) and 10 (high), instead of specifying a particular bitrate. This will produce a VBR stream.]':integer:_numbers
@@ -918,14 +918,14 @@ _vlc() {
     '(--dummy-save-es --no-dummy-save-es)'{--dummy-save-es,--no-dummy-save-es}'[Save raw codec data (default disabled) Save the raw codec data if you have selected/forced the dummy decoder in the main options.]'
     '(--a52-dynrng --no-a52-dynrng)'{--a52-dynrng,--no-a52-dynrng}'[A/52 dynamic range compression (default enabled) Dynamic range compression makes the loud sounds softer, and the soft sounds louder, so you can more easily listen to the stream in a noisy environment without disturbing anyone. If you disable the dynamic range compression the playback will be more adapted to a movie theater or a listening room.]'
     '(--sout-vpx-quality-mode)'--sout-vpx-quality-mode='[Quality mode Quality setting which will determine max encoding time  - 0\: Good quality  - 1\: Realtime  - 2\: Best quality]':'integer [0 .. 2]':'({0..2})'
-    '(--dvbsub-position)'--dvbsub-position='[Subpicture position You can enforce the subpicture position on the video (0=center, 1=left, 2=right, 4=top, 8=bottom, you can also use combinations of these values, e.g. 6=top-right).]':' ':_vlc__--audiobargraph_v-position
+    '(--dvbsub-position)'--dvbsub-position='[Subpicture position You can enforce the subpicture position on the video (0=center, 1=left, 2=right, 4=top, 8=bottom, you can also use combinations of these values, e.g. 6=top-right).]':' ':_vlc___--audiobargraph_v-position
     '(--dvbsub-x)'--dvbsub-x='[Decoding X coordinate X coordinate of the rendered subtitle]':integer:_numbers
     '(--dvbsub-y)'--dvbsub-y='[Decoding Y coordinate Y coordinate of the rendered subtitle]':integer:_numbers
     '(--sout-dvbsub-x)'--sout-dvbsub-x='[Encoding X coordinate X coordinate of the encoded subtitle]':integer:_numbers
     '(--sout-dvbsub-y)'--sout-dvbsub-y='[Encoding Y coordinate Y coordinate of the encoded subtitle]':integer:_numbers
     '(--dvdsub-transparency --no-dvdsub-transparency)'{--dvdsub-transparency,--no-dvdsub-transparency}'[Disable DVD subtitle transparency (default disabled) Removes all transparency effects used in DVD subtitles.]'
     '(--sout-twolame-quality)'--sout-twolame-quality='[Encoding quality Force a specific encoding quality between 0.0 (high) and 50.0 (low), instead of specifying a particular bitrate. This will produce a VBR stream.]':float:'_numbers -f'
-    '(--sout-twolame-mode)'--sout-twolame-mode='[Stereo mode Handling mode for stereo streams]':' ':_vlc__--sout-twolame-mode
+    '(--sout-twolame-mode)'--sout-twolame-mode='[Stereo mode Handling mode for stereo streams]':' ':_vlc___--sout-twolame-mode
     '(--no-sout-twolame-vbr --sout-twolame-vbr)'{--sout-twolame-vbr,--no-sout-twolame-vbr}'[VBR mode (default disabled) Use Variable BitRate. Default is to use Constant BitRate (CBR).]'
     '(--sout-twolame-psy)'--sout-twolame-psy='[Psycho-acoustic model Integer from -1 (no model) to 4.]':integer:_numbers
     '(--no-subsdec-formatted --subsdec-formatted)'{--subsdec-formatted,--no-subsdec-formatted}'[Formatted Subtitles (default enabled) Some subtitle formats allow for text formatting. VLC partly implements this, but you can choose to disable all formatting.]'
@@ -970,7 +970,7 @@ _vlc() {
     '(--sout-standard-description)'--sout-standard-description='[Session description This allows you to give a short description with details about the stream, that will be announced in the SDP (Session Descriptor).]':string:' '
     '(--sout-standard-url)'--sout-standard-url='[Session URL This allows you to give a URL with more details about the stream (often the website of the streaming organization), that will be announced in the SDP (Session Descriptor).]':string:' '
     '(--sout-standard-email)'--sout-standard-email='[Session email This allows you to give a contact mail address for the stream, that will be announced in the SDP (Session Descriptor).]':string:' '
-    '(--sout-transcode-venc)'--sout-transcode-venc='[Video encoder This is the video encoder module that will be used (and its associated options).]':' ':_vlc__--sout-transcode-venc
+    '(--sout-transcode-venc)'--sout-transcode-venc='[Video encoder This is the video encoder module that will be used (and its associated options).]':' ':_vlc___--sout-transcode-venc
     '(--sout-transcode-vcodec)'--sout-transcode-vcodec='[Destination video codec This is the video codec that will be used.]':string:' '
     '(--sout-transcode-vb)'--sout-transcode-vb='[Video bitrate Target bitrate of the transcoded video stream.]':integer:_numbers
     '(--sout-transcode-scale)'--sout-transcode-scale='[Video scaling Scale factor to apply to the video while transcoding (eg\: 0.25)]':float:'_numbers -f'
@@ -982,14 +982,14 @@ _vlc() {
     '(--sout-transcode-maxwidth)'--sout-transcode-maxwidth='[Maximum video width Maximum output video width.]':integer:_numbers
     '(--sout-transcode-maxheight)'--sout-transcode-maxheight='[Maximum video height Maximum output video height.]':integer:_numbers
     '(--sout-transcode-vfilter)'--sout-transcode-vfilter='[Video filter Video filters will be applied to the video streams (after overlays are applied). You can enter a colon-separated list of filters. Audio\:]':string:' '
-    '(--sout-transcode-aenc)'--sout-transcode-aenc='[Audio encoder This is the audio encoder module that will be used (and its associated options).]':' ':_vlc__--sout-transcode-venc
+    '(--sout-transcode-aenc)'--sout-transcode-aenc='[Audio encoder This is the audio encoder module that will be used (and its associated options).]':' ':_vlc___--sout-transcode-venc
     '(--sout-transcode-acodec)'--sout-transcode-acodec='[Destination audio codec This is the audio codec that will be used.]':string:' '
     '(--sout-transcode-ab)'--sout-transcode-ab='[Audio bitrate Target bitrate of the transcoded audio stream.]':integer:_numbers
     '(--sout-transcode-alang)'--sout-transcode-alang='[Audio language This is the language of the audio stream.]':string:' '
     '(--sout-transcode-channels)'--sout-transcode-channels='[Audio channels Number of audio channels in the transcoded streams.]':'integer [0 .. 9]':'({0..9})'
     '(--sout-transcode-samplerate)'--sout-transcode-samplerate='[Audio sample rate Sample rate of the transcoded audio stream (11250, 22500, 44100 or 48000).]':'integer [0 .. 48000]':_numbers
     '(--sout-transcode-afilter)'--sout-transcode-afilter='[Audio filter Audio filters will be applied to the audio streams (after conversion filters are applied). You can enter a colon-separated list of filters. Overlays/Subtitles\:]':string:' '
-    '(--sout-transcode-senc)'--sout-transcode-senc='[Subtitle encoder This is the subtitle encoder module that will be used (and its associated options).]':' ':_vlc__--sout-transcode-venc
+    '(--sout-transcode-senc)'--sout-transcode-senc='[Subtitle encoder This is the subtitle encoder module that will be used (and its associated options).]':' ':_vlc___--sout-transcode-venc
     '(--sout-transcode-scodec)'--sout-transcode-scodec='[Destination subtitle codec This is the subtitle codec that will be used.]':string:' '
     '(--no-sout-transcode-soverlay --sout-transcode-soverlay)'{--sout-transcode-soverlay,--no-sout-transcode-soverlay}'[Destination subtitle codec (default disabled) This is the subtitle codec that will be used.]'
     '(--sout-transcode-sfilter)'--sout-transcode-sfilter='[Overlays This allows you to add overlays (also known as "subpictures") on the transcoded video stream. The subpictures produced by the filters will be overlayed directly onto the video. You can specify a colon-separated list of subpicture modules. Miscellaneous\:]':string:' '
@@ -1077,14 +1077,14 @@ _vlc() {
     '(--adaptive-use-access --no-adaptive-use-access)'{--adaptive-use-access,--no-adaptive-use-access}'[Use regular HTTP modules (default disabled) Connect using HTTP access instead of custom HTTP code]'
     '(--adaptive-livedelay)'--adaptive-livedelay='[Live Playback delay (ms) Tradeoff between stability and real time]':integer:_numbers
     '(--adaptive-maxbuffer)'--adaptive-maxbuffer='[Max buffering (ms)]':integer:_numbers
-    '(--adaptive-lowlatency)'--adaptive-lowlatency='[Low latency Overrides low latency parameters]':' ':_vlc__--adaptive-lowlatency
+    '(--adaptive-lowlatency)'--adaptive-lowlatency='[Low latency Overrides low latency parameters]':' ':_vlc___--adaptive-lowlatency
     '(--es-fps)'--es-fps='[Frames per Second This is the frame rate used as a fallback when playing MPEG video elementary streams.]':float:'_numbers -f'
     '(--sub-fps)'--sub-fps='[Frames per Second Override the normal frames per second settings. This will only work with MicroDVD and SubRIP (SRT) subtitles.]':float:'_numbers -f'
     '(--sub-delay)'--sub-delay='[Subtitle delay Apply a delay to all subtitles (in 1/10s, eg 100 means 10s).]':integer:_numbers
-    '(--sub-type)'--sub-type='[Subtitle format Force the subtitles format. Selecting "auto" means autodetection and should always work.]':' ':_vlc__--sub-type
+    '(--sub-type)'--sub-type='[Subtitle format Force the subtitles format. Selecting "auto" means autodetection and should always work.]':' ':_vlc___--sub-type
     '(--sub-description)'--sub-description='[Subtitle description Override the default track description.]':string:' '
     '(--avi-interleaved --no-avi-interleaved)'{--avi-interleaved,--no-avi-interleaved}'[Force interleaved method (default disabled) Force interleaved method]'
-    '(--avi-index)'--avi-index='[Force index creation Recreate a index for the AVI file. Use this if your AVI file is damaged or incomplete (not seekable).]':' ':_vlc__--avi-index
+    '(--avi-index)'--avi-index='[Force index creation Recreate a index for the AVI file. Use this if your AVI file is damaged or incomplete (not seekable).]':' ':_vlc___--avi-index
     '(--rawaud-channels)'--rawaud-channels='[Audio channels Audio channels in input stream. Numeric value >0. Default is 2.]':integer:_numbers
     '(--rawaud-samplerate)'--rawaud-samplerate='[Audio samplerate (Hz) Audio sample rate in Hertz. Default is 48000 Hz.]':integer:_numbers
     '(--rawaud-fourcc)'--rawaud-fourcc='[FOURCC code of raw input format FOURCC code of the raw input format. This is a four character string.]':string:' '
@@ -1164,10 +1164,10 @@ _vlc() {
     '(--file-logging --no-file-logging)'{--file-logging,--no-file-logging}'[Log to file (default disabled) Log all VLC messages to a text file.]'
     '(--logfile)'--logfile='[Log filename Specify the log filename.]':string:_files
     '(--logmode)'--logmode='[Log format Specify the logging format.]':' ':'(text html)'
-    '(--log-verbose)'--log-verbose='[Verbosity Select the logging verbosity or default to use the same verbosity given by --verbose.]':' ':_vlc__--log-verbose
+    '(--log-verbose)'--log-verbose='[Verbosity Select the logging verbosity or default to use the same verbosity given by --verbose.]':' ':_vlc___--log-verbose
     '(--no-qt-minimal-view --qt-minimal-view)'{--qt-minimal-view,--no-qt-minimal-view}'[Start in minimal view (without menus) (default disabled) Start in minimal view (without menus)]'
     '(--no-qt-system-tray --qt-system-tray)'{--qt-system-tray,--no-qt-system-tray}'[Systray icon (default enabled) Show an icon in the systray allowing you to control VLC media player for basic actions.]'
-    '(--qt-notification)'--qt-notification='[Show notification popup on track change Show a notification popup with the artist and track name when the current playlist item changes, when VLC is minimized or hidden.]':' ':_vlc__--qt-notification
+    '(--qt-notification)'--qt-notification='[Show notification popup on track change Show a notification popup with the artist and track name when the current playlist item changes, when VLC is minimized or hidden.]':' ':_vlc___--qt-notification
     '(--no-qt-start-minimized --qt-start-minimized)'{--qt-start-minimized,--no-qt-start-minimized}'[Start VLC with only a systray icon (default disabled) VLC will start with just an icon in your taskbar.]'
     '(--no-qt-pause-minimized --qt-pause-minimized)'{--qt-pause-minimized,--no-qt-pause-minimized}'[Pause the video playback when minimized (default disabled) With this option enabled, the playback will be automatically paused when minimizing the window.]'
     '(--qt-opacity)'--qt-opacity='[Windows opacity between 0.1 and 1 Sets the windows opacity between 0.1 and 1 for main interface, playlist and extended panel. This option only works with Windows and X11 with composite extensions.]':'float [0.100000 .. 1.000000]':'_numbers -f'
@@ -1177,7 +1177,7 @@ _vlc() {
     '(--no-qt-fs-controller --qt-fs-controller)'{--qt-fs-controller,--no-qt-fs-controller}'[Show a controller in fullscreen mode (default enabled) Show a controller in fullscreen mode]'
     '(--no-qt-recentplay --qt-recentplay)'{--qt-recentplay,--no-qt-recentplay}'[Save the recently played items in the menu (default enabled) Save the recently played items in the menu]'
     '(--qt-recentplay-filter)'--qt-recentplay-filter='[List of words separated by | to filter Regular expression used to filter the recent items played in the player.]':string:' '
-    '(--qt-continue)'--qt-continue='[Continue playback? Continue playback?]':' ':_vlc__--qt-continue
+    '(--qt-continue)'--qt-continue='[Continue playback? Continue playback?]':' ':_vlc___--qt-continue
     '(--no-qt-embedded-open --qt-embedded-open)'{--qt-embedded-open,--no-qt-embedded-open}'[Embed the file browser in open dialog (default disabled) Embed the file browser in open dialog]'
     '(--no-qt-advanced-pref --qt-advanced-pref)'{--qt-advanced-pref,--no-qt-advanced-pref}'[Show advanced preferences over simple ones (default disabled) Show advanced preferences and not simple preferences when opening the preferences dialog.]'
     '(--no-qt-error-dialogs --qt-error-dialogs)'{--qt-error-dialogs,--no-qt-error-dialogs}'[Show unimportant error and warnings dialogs (default enabled) Show unimportant error and warnings dialogs]'
@@ -1190,7 +1190,7 @@ _vlc() {
     '(--no-qt-icon-change --qt-icon-change)'{--qt-icon-change,--no-qt-icon-change}'[Allow automatic icon changes (default enabled) This option allows the interface to change its icon on various occasions.]'
     '(--qt-max-volume)'--qt-max-volume='[Maximum Volume displayed Maximum Volume displayed]':'integer [60 .. 300]':'({60..300})'
     '(--qt-fs-sensitivity)'--qt-fs-sensitivity='[Fullscreen controller mouse sensitivity Fullscreen controller mouse sensitivity]':'integer [0 .. 4000]':'({0..4000})'
-    '(--qt-auto-raise)'--qt-auto-raise='[When to raise the interface This option allows the interface to be raised automatically when a video/audio playback starts, or never.]':' ':_vlc__--qt-auto-raise
+    '(--qt-auto-raise)'--qt-auto-raise='[When to raise the interface This option allows the interface to be raised automatically when a video/audio playback starts, or never.]':' ':_vlc___--qt-auto-raise
     '(--bluescreen-u)'--bluescreen-u='[Bluescreen U value "U" value for the bluescreen key color (in YUV values). From 0 to 255. Defaults to 120 for blue.]':'integer [0 .. 255]':'({0..255})'
     '(--bluescreen-v)'--bluescreen-v='[Bluescreen V value "V" value for the bluescreen key color (in YUV values). From 0 to 255. Defaults to 90 for blue.]':'integer [0 .. 255]':'({0..255})'
     '(--bluescreen-ut)'--bluescreen-ut='[Bluescreen U tolerance Tolerance of the bluescreen blender on color variations for the U plane. A value between 10 and 20 seems sensible.]':'integer [0 .. 255]':'({0..255})'
@@ -1198,15 +1198,15 @@ _vlc() {
     '(--sharpen-sigma)'--sharpen-sigma='[Sharpen strength (0-2) Set the Sharpen strength, between 0 and 2. Defaults to 0.05.]':'float [0.000000 .. 2.000000]':'_numbers -f'
     '(--gaussianblur-sigma)'--gaussianblur-sigma="[Gaussian's std deviation Gaussian's standard deviation. The blurring will take into account pixels up to 3*sigma away in any direction.]":'float [0.010000 .. 4096.000000]':'_numbers -f'
     '(--anaglyph-scheme)'--anaglyph-scheme="[Color scheme Define the glasses' color scheme]":' ':'(red-green red-blue red-cyan trioscopic magenta-cyan)'
-    '(--mirror-split)'--mirror-split='[Mirror orientation Defines orientation of the mirror splitting. Can be vertical or horizontal.]':' ':_vlc__--mirror-split
-    '(--mirror-direction)'--mirror-direction='[Direction Direction of the mirroring.]':' ':_vlc__--mirror-direction
+    '(--mirror-split)'--mirror-split='[Mirror orientation Defines orientation of the mirror splitting. Can be vertical or horizontal.]':' ':_vlc___--mirror-split
+    '(--mirror-direction)'--mirror-direction='[Direction Direction of the mirroring.]':' ':_vlc___--mirror-direction
     '(--posterize-level)'--posterize-level='[Posterize level Posterize level (number of colors is cube of this value)]':'integer [2 .. 256]':'({2..256})'
     '(--erase-mask)'--erase-mask='[Image mask Image mask. Pixels with an alpha value greater than 50% will be erased.]':string:' '
     '(--erase-x)'--erase-x='[X coordinate X coordinate of the mask.]':integer:_numbers
     '(--erase-y)'--erase-y='[Y coordinate Y coordinate of the mask.]':integer:_numbers
     '(--sout-deinterlace-mode)'--sout-deinterlace-mode='[Streaming deinterlace mode Deinterlace method to use for streaming.]':' ':'(discard blend mean bob linear x yadif yadif2x phosphor ivtc)'
-    '(--sout-deinterlace-phosphor-chroma)'--sout-deinterlace-phosphor-chroma='[Phosphor chroma mode for 4\:2\:0 input Choose handling for colours in those output frames that fall across input frame boundaries.   Latest\: take chroma from new (bright) field only. Good for interlaced input, such as videos from a camcorder.   AltLine\: take chroma line 1 from top field, line 2 from bottom field, etc.  Default, good for NTSC telecined input (anime DVDs, etc.).   Blend\: average input field chromas. May distort the colours of the new (bright) field, too.   Upconvert\: output in 4\:2\:2 format (independent chroma for each field). Best simulation, but requires more CPU and memory bandwidth.]':' ':_vlc__--sout-deinterlace-phosphor-chroma
-    '(--sout-deinterlace-phosphor-dimmer)'--sout-deinterlace-phosphor-dimmer='[Phosphor old field dimmer strength This controls the strength of the darkening filter that simulates CRT TV phosphor light decay for the old field in the Phosphor framerate doubler. Default\: Low.]':' ':_vlc__--sout-deinterlace-phosphor-dimmer
+    '(--sout-deinterlace-phosphor-chroma)'--sout-deinterlace-phosphor-chroma='[Phosphor chroma mode for 4\:2\:0 input Choose handling for colours in those output frames that fall across input frame boundaries.   Latest\: take chroma from new (bright) field only. Good for interlaced input, such as videos from a camcorder.   AltLine\: take chroma line 1 from top field, line 2 from bottom field, etc.  Default, good for NTSC telecined input (anime DVDs, etc.).   Blend\: average input field chromas. May distort the colours of the new (bright) field, too.   Upconvert\: output in 4\:2\:2 format (independent chroma for each field). Best simulation, but requires more CPU and memory bandwidth.]':' ':_vlc___--sout-deinterlace-phosphor-chroma
+    '(--sout-deinterlace-phosphor-dimmer)'--sout-deinterlace-phosphor-dimmer='[Phosphor old field dimmer strength This controls the strength of the darkening filter that simulates CRT TV phosphor light decay for the old field in the Phosphor framerate doubler. Default\: Low.]':' ':_vlc___--sout-deinterlace-phosphor-dimmer
     '(--alphamask-mask)'--alphamask-mask='[Transparency mask Alpha blending transparency mask. Uses a png alpha channel.]':string:' '
     '(--sepia-intensity)'--sepia-intensity='[Sepia intensity Intensity of sepia effect]':'integer [0 .. 255]':'({0..255})'
     '(--ball-color)'--ball-color='[Ball color Ball color]':' ':'(red green blue white)'
@@ -1243,10 +1243,10 @@ _vlc() {
     '(--hqdn3d-chroma-temp)'--hqdn3d-chroma-temp='[Temporal chroma strength (0-254) Temporal chroma strength (0-254)]':'float [0.000000 .. 254.000000]':'_numbers -f'
     '(--rotate-angle)'--rotate-angle='[Angle in degrees Angle in degrees (0 to 359)]':float:'_numbers -f'
     '(--no-rotate-use-motion --rotate-use-motion)'{--rotate-use-motion,--no-rotate-use-motion}'[Use motion sensors (default disabled) Use HDAPS, AMS, APPLESMC or UNIMOTION motion sensors to rotate the video]'
-    '(--colorthres-color)'--colorthres-color='[Color Colors similar to this will be kept, others will be grayscaled. This must be an hexadecimal (like HTML colors). The first two chars are for red, then green, then blue. #000000 = black, #FF0000 = red, #00FF00 = green, #FFFF00 = yellow (red + green), #FFFFFF = white]':' ':_vlc__--colorthres-color
+    '(--colorthres-color)'--colorthres-color='[Color Colors similar to this will be kept, others will be grayscaled. This must be an hexadecimal (like HTML colors). The first two chars are for red, then green, then blue. #000000 = black, #FF0000 = red, #00FF00 = green, #FFFF00 = yellow (red + green), #FFFFFF = white]':' ':_vlc___--colorthres-color
     '(--colorthres-saturationthres)'--colorthres-saturationthres='[Saturation threshold]':integer:_numbers
     '(--colorthres-similaritythres)'--colorthres-similaritythres='[Similarity threshold]':integer:_numbers
-    '(--extract-component)'--extract-component='[RGB component to extract RGB component to extract. 0 for Red, 1 for Green and 2 for Blue.]':' ':_vlc__--extract-component
+    '(--extract-component)'--extract-component='[RGB component to extract RGB component to extract. 0 for Red, 1 for Green and 2 for Blue.]':' ':_vlc___--extract-component
     '(--antiflicker-window-size)'--antiflicker-window-size='[Window size Number of frames (0 to 100)]':'integer [0 .. 100]':'({0..100})'
     '(--antiflicker-softening-size)'--antiflicker-softening-size='[Softening value Number of frames consider for smoothening (0 to 30)]':'integer [0 .. 31]':'({0..31})'
     '(--croppadd-croptop)'--croppadd-croptop='[Pixels to crop from top Number of pixels to crop from the top of the image.]':'integer [0 .. 2147483647]':_numbers
@@ -1276,10 +1276,10 @@ _vlc() {
     '(--puzzle-shape-size)'--puzzle-shape-size="[Piece edge shape size Size of the curve along the piece's edge]":'integer [0 .. 100]':'({0..100})'
     '(--puzzle-auto-shuffle)'--puzzle-auto-shuffle='[Auto shuffle Auto shuffle delay during game]':'integer [0 .. 30000]':_numbers
     '(--puzzle-auto-solve)'--puzzle-auto-solve='[Auto solve Auto solve delay during game]':'integer [0 .. 30000]':_numbers
-    '(--puzzle-rotation)'--puzzle-rotation='[Rotation Rotation parameter\: none;180;90-270;mirror]':' ':_vlc__--puzzle-rotation
-    '(--puzzle-mode)'--puzzle-mode='[Game mode Select game mode variation from jigsaw puzzle to sliding puzzle.]':' ':_vlc__--puzzle-mode
+    '(--puzzle-rotation)'--puzzle-rotation='[Rotation Rotation parameter\: none;180;90-270;mirror]':' ':_vlc___--puzzle-rotation
+    '(--puzzle-mode)'--puzzle-mode='[Game mode Select game mode variation from jigsaw puzzle to sliding puzzle.]':' ':_vlc___--puzzle-mode
     '(--keystore-file)'--keystore-file='[]':string:_files
-    '(--equalizer-preset)'--equalizer-preset='[Equalizer preset Preset to use for the equalizer.]':' ':_vlc__--equalizer-preset
+    '(--equalizer-preset)'--equalizer-preset='[Equalizer preset Preset to use for the equalizer.]':' ':_vlc___--equalizer-preset
     '(--equalizer-bands)'--equalizer-bands='[Bands gain Don'"'"'t use presets, but manually specified bands. You need to provide 10 values between -20dB and 20dB, separated by spaces, e.g. "0 2 4 2 0 -2 -4 -2 0 2".]':string:' '
     '(--equalizer-2pass --no-equalizer-2pass)'{--equalizer-2pass,--no-equalizer-2pass}'[Two pass (default disabled) Filter the audio twice. This provides a more intense effect.]'
     '(--equalizer-vlcfreqs --no-equalizer-vlcfreqs)'{--equalizer-vlcfreqs,--no-equalizer-vlcfreqs}'[Use VLC frequency bands (default enabled) Use the VLC frequency bands. Otherwise, use the ISO Standard frequency bands.]'
@@ -1296,15 +1296,15 @@ _vlc() {
     '(--scaletempo-overlap)'--scaletempo-overlap='[Overlap Length Percentage of stride to overlap]':'float [0.000000 .. 1.000000]':'_numbers -f'
     '(--scaletempo-search)'--scaletempo-search='[Search Length Length in milliseconds to search for best overlap position]':'integer [0 .. 200]':'({0..200})'
     '(--scaletempo-search)'--scaletempo-search='[Search Length Length in milliseconds to search for best overlap position]':'integer [0 .. 200]':'({0..200})'
-    '(--aout-remap-channel-left)'--aout-remap-channel-left='[Left Left]':' ':_vlc__--aout-remap-channel-left
-    '(--aout-remap-channel-center)'--aout-remap-channel-center='[Center Center]':' ':_vlc__--aout-remap-channel-left
-    '(--aout-remap-channel-right)'--aout-remap-channel-right='[Right Right]':' ':_vlc__--aout-remap-channel-left
-    '(--aout-remap-channel-rearleft)'--aout-remap-channel-rearleft='[Rear left Rear left]':' ':_vlc__--aout-remap-channel-left
-    '(--aout-remap-channel-rearcenter)'--aout-remap-channel-rearcenter='[Rear center Rear center]':' ':_vlc__--aout-remap-channel-left
-    '(--aout-remap-channel-rearright)'--aout-remap-channel-rearright='[Rear right Rear right]':' ':_vlc__--aout-remap-channel-left
-    '(--aout-remap-channel-middleleft)'--aout-remap-channel-middleleft='[Side left Side left]':' ':_vlc__--aout-remap-channel-left
-    '(--aout-remap-channel-middleright)'--aout-remap-channel-middleright='[Side right Side right]':' ':_vlc__--aout-remap-channel-left
-    '(--aout-remap-channel-lfe)'--aout-remap-channel-lfe='[Low-frequency effects Low-frequency effects]':' ':_vlc__--aout-remap-channel-left
+    '(--aout-remap-channel-left)'--aout-remap-channel-left='[Left Left]':' ':_vlc___--aout-remap-channel-left
+    '(--aout-remap-channel-center)'--aout-remap-channel-center='[Center Center]':' ':_vlc___--aout-remap-channel-left
+    '(--aout-remap-channel-right)'--aout-remap-channel-right='[Right Right]':' ':_vlc___--aout-remap-channel-left
+    '(--aout-remap-channel-rearleft)'--aout-remap-channel-rearleft='[Rear left Rear left]':' ':_vlc___--aout-remap-channel-left
+    '(--aout-remap-channel-rearcenter)'--aout-remap-channel-rearcenter='[Rear center Rear center]':' ':_vlc___--aout-remap-channel-left
+    '(--aout-remap-channel-rearright)'--aout-remap-channel-rearright='[Rear right Rear right]':' ':_vlc___--aout-remap-channel-left
+    '(--aout-remap-channel-middleleft)'--aout-remap-channel-middleleft='[Side left Side left]':' ':_vlc___--aout-remap-channel-left
+    '(--aout-remap-channel-middleright)'--aout-remap-channel-middleright='[Side right Side right]':' ':_vlc___--aout-remap-channel-left
+    '(--aout-remap-channel-lfe)'--aout-remap-channel-lfe='[Low-frequency effects Low-frequency effects]':' ':_vlc___--aout-remap-channel-left
     '(--aout-remap-normalize --no-aout-remap-normalize)'{--aout-remap-normalize,--no-aout-remap-normalize}'[Normalize channels (default enabled) When mapping more than one channel to a single output channel, normalize the output accordingly.]'
     '(--gain-value)'--gain-value='[Gain multiplier Increase or decrease the gain (default 1.0)]':float:'_numbers -f'
     '(--stereowiden-delay)'--stereowiden-delay='[Delay time Time in ms of the delay of left signal into right and vice versa.]':'float [1.000000 .. 100.000000]':'_numbers -f'
@@ -1337,7 +1337,7 @@ _vlc() {
     '(--wet-mix)'--wet-mix='[Wet mix Level of delayed signal]':'float [-0.999000 .. 0.999000]':'_numbers -f'
     '(--dry-mix)'--dry-mix='[Dry Mix Level of input signal]':'float [-0.999000 .. 0.999000]':'_numbers -f'
     '(--no-sout-mono-downmix --sout-mono-downmix)'{--sout-mono-downmix,--no-sout-mono-downmix}'[Use downmix algorithm (default enabled) This option selects a stereo to mono downmix algorithm that is used in the headphone channel mixer. It gives the effect of standing in a room full of speakers.]'
-    '(--sout-mono-channel)'--sout-mono-channel='[Select channel to keep This option silences all other channels except the selected channel.]':' ':_vlc__--sout-mono-channel
+    '(--sout-mono-channel)'--sout-mono-channel='[Select channel to keep This option silences all other channels except the selected channel.]':' ':_vlc___--sout-mono-channel
     '(--param-eq-lowf)'--param-eq-lowf='[Low freq (Hz)]':float:'_numbers -f'
     '(--param-eq-lowgain)'--param-eq-lowgain='[Low freq gain (dB)]':'float [-20.000000 .. 20.000000]':'_numbers -f'
     '(--param-eq-highf)'--param-eq-highf='[High freq (Hz)]':float:'_numbers -f'
@@ -1356,8 +1356,8 @@ _vlc() {
     '(--volume-step)'--volume-step='[Audio output volume step The step size of the volume is adjustable using this option.]':'float [1.000000 .. 256.000000]':'_numbers -f'
     '(--no-volume-save --volume-save)'{--volume-save,--no-volume-save}'[Remember the audio volume (default enabled) Remember the audio volume]'
     '(--no-spdif --spdif)'{--spdif,--no-spdif}"[Force S/PDIF support (default disabled) This option should be used when the audio output can't negotiate S/PDIF support.]"
-    '(--force-dolby-surround)'--force-dolby-surround='[Force detection of Dolby Surround Use this when you know your stream is (or is not) encoded with Dolby Surround but fails to be detected as such. Even if the stream is not actually encoded with Dolby Surround, turning on this option might enhance your experience, especially when combined with the Headphone Channel Mixer.]':' ':_vlc__--force-dolby-surround
-    '(--stereo-mode)'--stereo-mode='[Stereo audio output mode Stereo audio output mode]':' ':_vlc__--stereo-mode
+    '(--force-dolby-surround)'--force-dolby-surround='[Force detection of Dolby Surround Use this when you know your stream is (or is not) encoded with Dolby Surround but fails to be detected as such. Even if the stream is not actually encoded with Dolby Surround, turning on this option might enhance your experience, especially when combined with the Headphone Channel Mixer.]':' ':_vlc___--force-dolby-surround
+    '(--stereo-mode)'--stereo-mode='[Stereo audio output mode Stereo audio output mode]':' ':_vlc___--stereo-mode
     '(--audio-desync)'--audio-desync='[Audio desynchronization compensation This delays the audio output. The delay must be given in milliseconds. This can be handy if you notice a lag between the video and the audio.]':integer:_numbers
     '(--audio-replay-gain-mode)'--audio-replay-gain-mode='[Replay gain mode Select the replay gain mode]':' ':'(none track album)'
     '(--audio-replay-gain-preamp)'--audio-replay-gain-preamp='[Replay preamp This allows you to change the default target level (89 dB) for stream with replay gain information]':float:'_numbers -f'
@@ -1365,7 +1365,7 @@ _vlc() {
     '(--audio-replay-gain-peak-protection --no-audio-replay-gain-peak-protection)'{--audio-replay-gain-peak-protection,--no-audio-replay-gain-peak-protection}'[Peak protection (default enabled) Protect against sound clipping]'
     '(--audio-time-stretch --no-audio-time-stretch)'{--audio-time-stretch,--no-audio-time-stretch}'[Enable time stretching audio (default enabled) This allows playing audio at lower or higher speed without affecting the audio pitch]'
     '(--aout -A)'{-A+,--aout=}'[Audio output module This is the audio output method used by VLC. The default behavior is to automatically select the best method available.]':' ':'(any pulse alsa adummy afile amem none)'
-    '(--role)'--role='[Media role Media (player) role for operating system policy.]':' ':_vlc__--role
+    '(--role)'--role='[Media role Media (player) role for operating system policy.]':' ':_vlc___--role
     '(--audio-filter)'--audio-filter='[Audio filters This adds audio post processing filters, to modify the sound rendering.]':string:' '
     '(--audio-visual)'--audio-visual='[Audio visualizations This adds visualization modules (spectrum analyzer, etc.).]':' ':'(any none)'
     '(--audio-resampler)'--audio-resampler='[Audio resampler This selects which plugin to use for audio resampling.]':' ':'(any ugly speex_resampler none)'
@@ -1384,7 +1384,7 @@ _vlc() {
     '(--disable-screensaver --no-disable-screensaver)'{--disable-screensaver,--no-disable-screensaver}'[Disable screensaver (default enabled) Disable the screensaver during video playback.]'
     '(--no-video-title-show --video-title-show)'{--video-title-show,--no-video-title-show}'[Show media title on video (default enabled) Display the title of the video on top of the movie.]'
     '(--video-title-timeout)'--video-title-timeout='[Show video title for x milliseconds Show the video title for n milliseconds, default is 5000 ms (5 sec.)]':integer:_numbers
-    '(--video-title-position)'--video-title-position='[Position of video title Place on video where to display the title (default bottom center).]':' ':_vlc__--audiobargraph_v-position
+    '(--video-title-position)'--video-title-position='[Position of video title Place on video where to display the title (default bottom center).]':' ':_vlc___--audiobargraph_v-position
     '(--mouse-hide-timeout)'--mouse-hide-timeout='[Hide cursor and fullscreen controller after x milliseconds Hide mouse cursor and fullscreen controller after n milliseconds. Snapshot\:]':integer:_numbers
     '(--snapshot-path)'--snapshot-path='[Video snapshot directory (or filename) Directory where the video snapshots will be stored.]':string:' '
     '(--snapshot-prefix)'--snapshot-prefix='[Video snapshot file prefix Video snapshot file prefix]':string:' '
@@ -1406,11 +1406,11 @@ _vlc() {
     '(--hdtv-fix --no-hdtv-fix)'{--hdtv-fix,--no-hdtv-fix}'[Fix HDTV height (default enabled) This allows proper handling of HDTV-1080 video format even if broken encoder incorrectly sets height to 1088 lines. You should only disable this option if your video has a non-standard format requiring all 1088 lines.]'
     '(--no-video-deco --video-deco)'{--video-deco,--no-video-deco}'[Window decorations (default enabled) VLC can avoid creating window caption, frames, etc... around the video, giving a "minimal" window.]'
     '(--video-title)'--video-title='[Video title Custom title for the video window (in case the video is not embedded in the interface).]':string:' '
-    '(--align)'--align='[Video alignment Enforce the alignment of the video in its window. By default (0) it will be centered (0=center, 1=left, 2=right, 4=top, 8=bottom, you can also use combinations of these values, like 6=4+2 meaning top-right).]':' ':_vlc__--audiobargraph_v-position
+    '(--align)'--align='[Video alignment Enforce the alignment of the video in its window. By default (0) it will be centered (0=center, 1=left, 2=right, 4=top, 8=bottom, you can also use combinations of these values, like 6=4+2 meaning top-right).]':' ':_vlc___--audiobargraph_v-position
     '(--zoom)'--zoom='[Zoom video You can zoom the video by the specified factor.]':float:'_numbers -f'
-    '(--deinterlace)'--deinterlace='[Deinterlace Deinterlace]':' ':_vlc__--deinterlace
+    '(--deinterlace)'--deinterlace='[Deinterlace Deinterlace]':' ':_vlc___--deinterlace
     '(--deinterlace-mode)'--deinterlace-mode='[Deinterlace mode Deinterlace method to use for video processing.]':' ':'(auto discard blend mean bob linear x yadif yadif2x phosphor ivtc)'
-    '(--vout -V)'{-V+,--vout=}'[Video output module This is the the video output method used by VLC. The default behavior is to automatically select the best method available.]':' ':_vlc__-V
+    '(--vout -V)'{-V+,--vout=}'[Video output module This is the the video output method used by VLC. The default behavior is to automatically select the best method available.]':' ':_vlc___-V
     '(--video-filter)'--video-filter='[Video filter module This adds post-processing filters to enhance the picture quality, for instance deinterlacing, or distort the video.]':string:' '
     '(--video-splitter)'--video-splitter='[Video splitter module This adds video splitters like clone or wall]':string:' '
     '(--no-spu --spu)'{--spu,--no-spu}'[Enable sub-pictures (default enabled) You can completely disable the sub-picture processing.]'
@@ -1433,8 +1433,8 @@ _vlc() {
     '(--menu-language)'--menu-language="[Menu language Language of the menus you want to use with DVD/BluRay (comma separated, two or three letters country code, you may use 'any' as a fallback).]":string:' '
     '(--audio-track-id)'--audio-track-id='[Audio track ID Stream ID of the audio track to use.]':integer:_numbers
     '(--sub-track-id)'--sub-track-id='[Subtitle track ID Stream ID of the subtitle track to use.]':integer:_numbers
-    '(--captions)'--captions='[Preferred Closed Captions decoder Preferred Closed Captions decoder]':' ':_vlc__--captions
-    '(--preferred-resolution)'--preferred-resolution="[Preferred video resolution When several video formats are available, select one whose resolution is closest to (but not higher than) this setting, in number of lines. Use this option if you don't have enough CPU power or network bandwidth to play higher resolutions. Playback control\\:]":' ':_vlc__--preferred-resolution
+    '(--captions)'--captions='[Preferred Closed Captions decoder Preferred Closed Captions decoder]':' ':_vlc___--captions
+    '(--preferred-resolution)'--preferred-resolution="[Preferred video resolution When several video formats are available, select one whose resolution is closest to (but not higher than) this setting, in number of lines. Use this option if you don't have enough CPU power or network bandwidth to play higher resolutions. Playback control\\:]":' ':_vlc___--preferred-resolution
     '(--input-repeat)'--input-repeat='[Input repetitions Number of time the same input will be repeated]':'integer [0 .. 65535]':_numbers
     '(--start-time)'--start-time='[Start time The stream will start at this position (in seconds).]':float:'_numbers -f'
     '(--stop-time)'--stop-time='[Stop time The stream will stop at this position (in seconds).]':float:'_numbers -f'
@@ -1471,7 +1471,7 @@ _vlc() {
     '(--disc-caching)'--disc-caching='[Disc caching (ms) Caching value for optical media, in milliseconds.]':'integer [0 .. 60000]':_numbers
     '(--network-caching)'--network-caching='[Network caching (ms) Caching value for network resources, in milliseconds.]':'integer [0 .. 60000]':_numbers
     '(--cr-average)'--cr-average='[Clock reference average counter When using the PVR input (or a very irregular source), you should set this to 10000.]':integer:_numbers
-    '(--clock-synchro)'--clock-synchro='[Clock synchronisation It is possible to disable the input clock synchronisation for real-time sources. Use this if you experience jerky playback of network streams.]':' ':_vlc__--clock-synchro
+    '(--clock-synchro)'--clock-synchro='[Clock synchronisation It is possible to disable the input clock synchronisation for real-time sources. Use this if you experience jerky playback of network streams.]':' ':_vlc___--clock-synchro
     '(--clock-jitter)'--clock-jitter='[Clock jitter This defines the maximum input delay jitter that the synchronization algorithms should try to compensate (in milliseconds).]':integer:_numbers
     '(--network-synchronisation --no-network-synchronisation)'{--network-synchronisation,--no-network-synchronisation}'[Network synchronisation (default disabled) This allows you to remotely synchronise clocks for server and client. The detailed settings are available in Advanced / Network Sync.]'
     '(--input-record-path)'--input-record-path='[Record directory Directory where the records will be stored]':string:' '
@@ -1482,8 +1482,8 @@ _vlc() {
     '(--lua --no-lua)'{--lua,--no-lua}'[Disable all lua plugins (default enabled) Disable all lua plugins]'
     '(--codec)'--codec="[Preferred decoders list List of codecs that VLC will use in priority. For instance, 'dummy,a52' will try the dummy and a52 codecs before trying the other ones. Only advanced users should alter this option as it can break playback of all your streams.]":string:' '
     '(--encoder)'--encoder='[Preferred encoders list This allows you to select a list of encoders that VLC will use in priority.]':string:' '
-    '(--access)'--access='[Access module This allows you to force an access module. You can use it if the correct access is not automatically detected. You should not set this as a global option unless you really know what you are doing.]':' ':_vlc__--access
-    '(--demux)'--demux='[Demux module Demultiplexers are used to separate the "elementary" streams (like audio and video streams). You can use it if the correct demuxer is not automatically detected. You should not set this as a global option unless you really know what you are doing.]':' ':_vlc__--demux
+    '(--access)'--access='[Access module This allows you to force an access module. You can use it if the correct access is not automatically detected. You should not set this as a global option unless you really know what you are doing.]':' ':_vlc___--access
+    '(--demux)'--demux='[Demux module Demultiplexers are used to separate the "elementary" streams (like audio and video streams). You can use it if the correct demuxer is not automatically detected. You should not set this as a global option unless you really know what you are doing.]':' ':_vlc___--demux
     '(--stream-filter)'--stream-filter='[Stream filter module Stream filters are used to modify the stream that is being read.]':string:' '
     '(--demux-filter)'--demux-filter='[Demux filter module Demux filters are used to modify/control the stream that is being read.]':string:' '
     '(--sout)'--sout='[Default stream output chain You can enter here a default stream output chain. Refer to the documentation to learn how to build such chains. Warning\: this chain will be enabled for all streams.]':string:' '
@@ -1501,7 +1501,7 @@ _vlc() {
     '(--ttl)'--ttl='[Hop limit (TTL) This is the hop limit (also known as "Time-To-Live" or TTL) of the multicast packets sent by the stream output (-1 = use operating system built-in default).]':integer:_numbers
     '(--miface)'--miface='[Multicast output interface Default multicast interface. This overrides the routing table.]':string:' '
     '(--dscp)'--dscp='[DiffServ Code Point Differentiated Services Code Point for outgoing UDP streams (or IPv4 Type Of Service, or IPv6 Traffic Class). This is used for network Quality of Service.]':integer:_numbers
-    '(--packetizer)'--packetizer='[Preferred packetizer list This allows you to select the order in which VLC will choose its packetizers.]':' ':_vlc__--packetizer
+    '(--packetizer)'--packetizer='[Preferred packetizer list This allows you to select the order in which VLC will choose its packetizers.]':' ':_vlc___--packetizer
     '(--vod-server)'--vod-server="[VoD server module You can select which VoD server module you want to use. Set this to 'vod_rtsp' to switch back to the old, legacy module. Plugins\\:]":' ':'(any stream_out_rtp rtsp none)'
     '(--no-plugins-cache --plugins-cache)'{--plugins-cache,--no-plugins-cache}'[Use a plugins cache (default enabled) Use a plugins cache which will greatly improve the startup time of VLC.]'
     '(--no-plugins-scan --plugins-scan)'{--plugins-scan,--no-plugins-scan}'[Scan for new plugins (default enabled) Scan plugin directories for new plugins at startup. This increases the startup time of VLC.]'
@@ -1543,234 +1543,234 @@ _vlc() {
     '(--intf -I)'{-I+,--intf=}'[Interface module This is the main interface used by VLC. The default behavior is to automatically select the best module available.]':string:' '
     '(--extraintf)'--extraintf='[Extra interface modules You can select "additional interfaces" for VLC. They will be launched in the background in addition to the default interface. Use a colon separated list of interface modules. (common values are "rc" (remote control), "http", "gestures" ...)]':string:' '
     '(--control)'--control='[Control interfaces You can select control interfaces for VLC.]':string:' '
-    '(--hotkeys-y-wheel-mode)'--hotkeys-y-wheel-mode='[Mouse wheel vertical axis control The mouse wheel vertical (up/down) axis can control volume, position or be ignored.]':' ':_vlc__--hotkeys-y-wheel-mode
-    '(--hotkeys-x-wheel-mode)'--hotkeys-x-wheel-mode='[Mouse wheel horizontal axis control The mouse wheel horizontal (left/right) axis can control volume, position or be ignored.]':' ':_vlc__--hotkeys-y-wheel-mode
-    '(--global-key-toggle-fullscreen)'--global-key-toggle-fullscreen='[Fullscreen Select the hotkey to use to swap fullscreen state.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-toggle-fullscreen)'--key-toggle-fullscreen='[Fullscreen Select the hotkey to use to swap fullscreen state.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-leave-fullscreen)'--global-key-leave-fullscreen='[Exit fullscreen Select the hotkey to use to exit fullscreen state.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-leave-fullscreen)'--key-leave-fullscreen='[Exit fullscreen Select the hotkey to use to exit fullscreen state.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-play-pause)'--global-key-play-pause='[Play/Pause Select the hotkey to use to swap paused state.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-play-pause)'--key-play-pause='[Play/Pause Select the hotkey to use to swap paused state.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-pause)'--global-key-pause='[Pause only Select the hotkey to use to pause.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-pause)'--key-pause='[Pause only Select the hotkey to use to pause.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-play)'--global-key-play='[Play only Select the hotkey to use to play.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-play)'--key-play='[Play only Select the hotkey to use to play.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-faster)'--global-key-faster='[Faster Select the hotkey to use for fast forward playback.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-faster)'--key-faster='[Faster Select the hotkey to use for fast forward playback.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-slower)'--global-key-slower='[Slower Select the hotkey to use for slow motion playback.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-slower)'--key-slower='[Slower Select the hotkey to use for slow motion playback.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-rate-normal)'--global-key-rate-normal='[Normal rate Select the hotkey to set the playback rate back to normal.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-rate-normal)'--key-rate-normal='[Normal rate Select the hotkey to set the playback rate back to normal.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-rate-faster-fine)'--global-key-rate-faster-fine='[Faster (fine) Select the hotkey to use for fast forward playback.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-rate-faster-fine)'--key-rate-faster-fine='[Faster (fine) Select the hotkey to use for fast forward playback.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-rate-slower-fine)'--global-key-rate-slower-fine='[Slower (fine) Select the hotkey to use for slow motion playback.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-rate-slower-fine)'--key-rate-slower-fine='[Slower (fine) Select the hotkey to use for slow motion playback.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-next)'--global-key-next='[Next Select the hotkey to use to skip to the next item in the playlist.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-next)'--key-next='[Next Select the hotkey to use to skip to the next item in the playlist.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-prev)'--global-key-prev='[Previous Select the hotkey to use to skip to the previous item in the playlist.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-prev)'--key-prev='[Previous Select the hotkey to use to skip to the previous item in the playlist.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-stop)'--global-key-stop='[Stop Select the hotkey to stop playback.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-stop)'--key-stop='[Stop Select the hotkey to stop playback.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-position)'--global-key-position='[Position Select the hotkey to display the position.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-position)'--key-position='[Position Select the hotkey to display the position.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-jump-extrashort)'--global-key-jump-extrashort='[Very short backwards jump Select the hotkey to make a very short backwards jump.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-jump-extrashort)'--key-jump-extrashort='[Very short backwards jump Select the hotkey to make a very short backwards jump.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-jump+extrashort)'--global-key-jump+extrashort='[Very short forward jump Select the hotkey to make a very short forward jump.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-jump+extrashort)'--key-jump+extrashort='[Very short forward jump Select the hotkey to make a very short forward jump.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-jump-short)'--global-key-jump-short='[Short backwards jump Select the hotkey to make a short backwards jump.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-jump-short)'--key-jump-short='[Short backwards jump Select the hotkey to make a short backwards jump.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-jump+short)'--global-key-jump+short='[Short forward jump Select the hotkey to make a short forward jump.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-jump+short)'--key-jump+short='[Short forward jump Select the hotkey to make a short forward jump.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-jump-medium)'--global-key-jump-medium='[Medium backwards jump Select the hotkey to make a medium backwards jump.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-jump-medium)'--key-jump-medium='[Medium backwards jump Select the hotkey to make a medium backwards jump.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-jump+medium)'--global-key-jump+medium='[Medium forward jump Select the hotkey to make a medium forward jump.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-jump+medium)'--key-jump+medium='[Medium forward jump Select the hotkey to make a medium forward jump.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-jump-long)'--global-key-jump-long='[Long backwards jump Select the hotkey to make a long backwards jump.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-jump-long)'--key-jump-long='[Long backwards jump Select the hotkey to make a long backwards jump.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-jump+long)'--global-key-jump+long='[Long forward jump Select the hotkey to make a long forward jump.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-jump+long)'--key-jump+long='[Long forward jump Select the hotkey to make a long forward jump.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-frame-next)'--global-key-frame-next='[Next frame Select the hotkey to got to the next video frame.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-frame-next)'--key-frame-next='[Next frame Select the hotkey to got to the next video frame.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-nav-activate)'--global-key-nav-activate='[Activate Select the key to activate selected item in DVD menus.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-nav-activate)'--key-nav-activate='[Activate Select the key to activate selected item in DVD menus.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-nav-up)'--global-key-nav-up='[Navigate up Select the key to move the selector up in DVD menus / Move viewpoint to up (pitch).]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-nav-up)'--key-nav-up='[Navigate up Select the key to move the selector up in DVD menus / Move viewpoint to up (pitch).]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-nav-down)'--global-key-nav-down='[Navigate down Select the key to move the selector down in DVD menus / Move viewpoint to down (pitch).]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-nav-down)'--key-nav-down='[Navigate down Select the key to move the selector down in DVD menus / Move viewpoint to down (pitch).]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-nav-left)'--global-key-nav-left='[Navigate left Select the key to move the selector left in DVD menus / Move viewpoint to left (yaw).]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-nav-left)'--key-nav-left='[Navigate left Select the key to move the selector left in DVD menus / Move viewpoint to left (yaw).]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-nav-right)'--global-key-nav-right='[Navigate right Select the key to move the selector right in DVD menus / Move viewpoint to right (yaw).]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-nav-right)'--key-nav-right='[Navigate right Select the key to move the selector right in DVD menus / Move viewpoint to right (yaw).]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-disc-menu)'--global-key-disc-menu='[Go to the DVD menu Select the key to take you to the DVD menu]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-disc-menu)'--key-disc-menu='[Go to the DVD menu Select the key to take you to the DVD menu]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-title-prev)'--global-key-title-prev='[Select previous DVD title Select the key to choose the previous title from the DVD]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-title-prev)'--key-title-prev='[Select previous DVD title Select the key to choose the previous title from the DVD]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-title-next)'--global-key-title-next='[Select next DVD title Select the key to choose the next title from the DVD]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-title-next)'--key-title-next='[Select next DVD title Select the key to choose the next title from the DVD]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-chapter-prev)'--global-key-chapter-prev='[Select prev DVD chapter Select the key to choose the previous chapter from the DVD]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-chapter-prev)'--key-chapter-prev='[Select prev DVD chapter Select the key to choose the previous chapter from the DVD]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-chapter-next)'--global-key-chapter-next='[Select next DVD chapter Select the key to choose the next chapter from the DVD]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-chapter-next)'--key-chapter-next='[Select next DVD chapter Select the key to choose the next chapter from the DVD]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-quit)'--global-key-quit='[Quit Select the hotkey to quit the application.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-quit)'--key-quit='[Quit Select the hotkey to quit the application.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-vol-up)'--global-key-vol-up='[Volume up Select the key to increase audio volume.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-vol-up)'--key-vol-up='[Volume up Select the key to increase audio volume.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-vol-down)'--global-key-vol-down='[Volume down Select the key to decrease audio volume.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-vol-down)'--key-vol-down='[Volume down Select the key to decrease audio volume.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-vol-mute)'--global-key-vol-mute='[Mute Select the key to mute audio.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-vol-mute)'--key-vol-mute='[Mute Select the key to mute audio.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-subdelay-up)'--global-key-subdelay-up='[Subtitle delay up Select the key to increase the subtitle delay.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-subdelay-up)'--key-subdelay-up='[Subtitle delay up Select the key to increase the subtitle delay.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-subdelay-down)'--global-key-subdelay-down='[Subtitle delay down Select the key to decrease the subtitle delay.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-subdelay-down)'--key-subdelay-down='[Subtitle delay down Select the key to decrease the subtitle delay.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-subsync-markaudio)'--global-key-subsync-markaudio='[Subtitle sync / bookmark audio timestamp Select the key to bookmark audio timestamp when syncing subtitles.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-subsync-markaudio)'--key-subsync-markaudio='[Subtitle sync / bookmark audio timestamp Select the key to bookmark audio timestamp when syncing subtitles.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-subsync-marksub)'--global-key-subsync-marksub='[Subtitle sync / bookmark subtitle timestamp Select the key to bookmark subtitle timestamp when syncing subtitles.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-subsync-marksub)'--key-subsync-marksub='[Subtitle sync / bookmark subtitle timestamp Select the key to bookmark subtitle timestamp when syncing subtitles.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-subsync-apply)'--global-key-subsync-apply='[Subtitle sync / synchronize audio & subtitle timestamps Select the key to synchronize bookmarked audio & subtitle timestamps.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-subsync-apply)'--key-subsync-apply='[Subtitle sync / synchronize audio & subtitle timestamps Select the key to synchronize bookmarked audio & subtitle timestamps.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-subsync-reset)'--global-key-subsync-reset='[Subtitle sync / reset audio & subtitle synchronization Select the key to reset synchronization of audio & subtitle timestamps.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-subsync-reset)'--key-subsync-reset='[Subtitle sync / reset audio & subtitle synchronization Select the key to reset synchronization of audio & subtitle timestamps.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-subpos-up)'--global-key-subpos-up='[Subtitle position up Select the key to move subtitles higher.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-subpos-up)'--key-subpos-up='[Subtitle position up Select the key to move subtitles higher.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-subpos-down)'--global-key-subpos-down='[Subtitle position down Select the key to move subtitles lower.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-subpos-down)'--key-subpos-down='[Subtitle position down Select the key to move subtitles lower.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-audiodelay-up)'--global-key-audiodelay-up='[Audio delay up Select the key to increase the audio delay.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-audiodelay-up)'--key-audiodelay-up='[Audio delay up Select the key to increase the audio delay.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-audiodelay-down)'--global-key-audiodelay-down='[Audio delay down Select the key to decrease the audio delay.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-audiodelay-down)'--key-audiodelay-down='[Audio delay down Select the key to decrease the audio delay.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-audio-track)'--global-key-audio-track='[Cycle audio track Cycle through the available audio tracks(languages).]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-audio-track)'--key-audio-track='[Cycle audio track Cycle through the available audio tracks(languages).]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-audiodevice-cycle)'--global-key-audiodevice-cycle='[Cycle through audio devices Cycle through available audio devices]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-audiodevice-cycle)'--key-audiodevice-cycle='[Cycle through audio devices Cycle through available audio devices]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-subtitle-revtrack)'--global-key-subtitle-revtrack='[Cycle subtitle track in reverse order Cycle through the available subtitle tracks in reverse order.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-subtitle-revtrack)'--key-subtitle-revtrack='[Cycle subtitle track in reverse order Cycle through the available subtitle tracks in reverse order.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-subtitle-track)'--global-key-subtitle-track='[Cycle subtitle track Cycle through the available subtitle tracks.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-subtitle-track)'--key-subtitle-track='[Cycle subtitle track Cycle through the available subtitle tracks.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-subtitle-toggle)'--global-key-subtitle-toggle='[Toggle subtitles Toggle subtitle track visibility.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-subtitle-toggle)'--key-subtitle-toggle='[Toggle subtitles Toggle subtitle track visibility.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-program-sid-next)'--global-key-program-sid-next='[Cycle next program Service ID Cycle through the available next program Service IDs (SIDs).]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-program-sid-next)'--key-program-sid-next='[Cycle next program Service ID Cycle through the available next program Service IDs (SIDs).]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-program-sid-prev)'--global-key-program-sid-prev='[Cycle previous program Service ID Cycle through the available previous program Service IDs (SIDs).]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-program-sid-prev)'--key-program-sid-prev='[Cycle previous program Service ID Cycle through the available previous program Service IDs (SIDs).]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-aspect-ratio)'--global-key-aspect-ratio='[Cycle source aspect ratio Cycle through a predefined list of source aspect ratios.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-aspect-ratio)'--key-aspect-ratio='[Cycle source aspect ratio Cycle through a predefined list of source aspect ratios.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-crop)'--global-key-crop='[Cycle video crop Cycle through a predefined list of crop formats.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-crop)'--key-crop='[Cycle video crop Cycle through a predefined list of crop formats.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-toggle-autoscale)'--global-key-toggle-autoscale='[Toggle autoscaling Activate or deactivate autoscaling.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-toggle-autoscale)'--key-toggle-autoscale='[Toggle autoscaling Activate or deactivate autoscaling.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-incr-scalefactor)'--global-key-incr-scalefactor='[Increase scale factor Increase scale factor]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-incr-scalefactor)'--key-incr-scalefactor='[Increase scale factor Increase scale factor]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-decr-scalefactor)'--global-key-decr-scalefactor='[Decrease scale factor Decrease scale factor]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-decr-scalefactor)'--key-decr-scalefactor='[Decrease scale factor Decrease scale factor]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-deinterlace)'--global-key-deinterlace='[Toggle deinterlacing Activate or deactivate deinterlacing.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-deinterlace)'--key-deinterlace='[Toggle deinterlacing Activate or deactivate deinterlacing.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-deinterlace-mode)'--global-key-deinterlace-mode='[Cycle deinterlace modes Cycle through available deinterlace modes.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-deinterlace-mode)'--key-deinterlace-mode='[Cycle deinterlace modes Cycle through available deinterlace modes.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-intf-show)'--global-key-intf-show='[Show controller in fullscreen Show controller in fullscreen]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-intf-show)'--key-intf-show='[Show controller in fullscreen Show controller in fullscreen]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-intf-boss)'--global-key-intf-boss='[Boss key Hide the interface and pause playback.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-intf-boss)'--key-intf-boss='[Boss key Hide the interface and pause playback.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-intf-popup-menu)'--global-key-intf-popup-menu='[Context menu Show the contextual popup menu.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-intf-popup-menu)'--key-intf-popup-menu='[Context menu Show the contextual popup menu.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-snapshot)'--global-key-snapshot='[Take video snapshot Takes a video snapshot and writes it to disk.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-snapshot)'--key-snapshot='[Take video snapshot Takes a video snapshot and writes it to disk.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-record)'--global-key-record='[Record Record access filter start/stop.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-record)'--key-record='[Record Record access filter start/stop.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-zoom)'--global-key-zoom='[Zoom Zoom]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-zoom)'--key-zoom='[Zoom Zoom]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-unzoom)'--global-key-unzoom='[Un-Zoom Un-Zoom]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-unzoom)'--key-unzoom='[Un-Zoom Un-Zoom]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-wallpaper)'--global-key-wallpaper='[Toggle wallpaper mode in video output Toggle wallpaper mode in video output.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-wallpaper)'--key-wallpaper='[Toggle wallpaper mode in video output Toggle wallpaper mode in video output.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-crop-top)'--global-key-crop-top='[Crop one pixel from the top of the video Crop one pixel from the top of the video]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-crop-top)'--key-crop-top='[Crop one pixel from the top of the video Crop one pixel from the top of the video]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-uncrop-top)'--global-key-uncrop-top='[Uncrop one pixel from the top of the video Uncrop one pixel from the top of the video]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-uncrop-top)'--key-uncrop-top='[Uncrop one pixel from the top of the video Uncrop one pixel from the top of the video]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-crop-left)'--global-key-crop-left='[Crop one pixel from the left of the video Crop one pixel from the left of the video]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-crop-left)'--key-crop-left='[Crop one pixel from the left of the video Crop one pixel from the left of the video]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-uncrop-left)'--global-key-uncrop-left='[Uncrop one pixel from the left of the video Uncrop one pixel from the left of the video]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-uncrop-left)'--key-uncrop-left='[Uncrop one pixel from the left of the video Uncrop one pixel from the left of the video]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-crop-bottom)'--global-key-crop-bottom='[Crop one pixel from the bottom of the video Crop one pixel from the bottom of the video]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-crop-bottom)'--key-crop-bottom='[Crop one pixel from the bottom of the video Crop one pixel from the bottom of the video]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-uncrop-bottom)'--global-key-uncrop-bottom='[Uncrop one pixel from the bottom of the video Uncrop one pixel from the bottom of the video]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-uncrop-bottom)'--key-uncrop-bottom='[Uncrop one pixel from the bottom of the video Uncrop one pixel from the bottom of the video]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-crop-right)'--global-key-crop-right='[Crop one pixel from the right of the video Crop one pixel from the right of the video]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-crop-right)'--key-crop-right='[Crop one pixel from the right of the video Crop one pixel from the right of the video]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-uncrop-right)'--global-key-uncrop-right='[Uncrop one pixel from the right of the video Uncrop one pixel from the right of the video]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-uncrop-right)'--key-uncrop-right='[Uncrop one pixel from the right of the video Uncrop one pixel from the right of the video]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-random)'--global-key-random='[Random Toggle random playlist playback]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-random)'--key-random='[Random Toggle random playlist playback]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-loop)'--global-key-loop='[Normal/Loop/Repeat Toggle Normal/Loop/Repeat playlist modes]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-loop)'--key-loop='[Normal/Loop/Repeat Toggle Normal/Loop/Repeat playlist modes]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-viewpoint-fov-in)'--global-key-viewpoint-fov-in='[Shrink the viewpoint field of view (360°) Shrink the viewpoint field of view (360°)]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-viewpoint-fov-in)'--key-viewpoint-fov-in='[Shrink the viewpoint field of view (360°) Shrink the viewpoint field of view (360°)]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-viewpoint-fov-out)'--global-key-viewpoint-fov-out='[Expand the viewpoint field of view (360°) Expand the viewpoint field of view (360°)]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-viewpoint-fov-out)'--key-viewpoint-fov-out='[Expand the viewpoint field of view (360°) Expand the viewpoint field of view (360°)]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-viewpoint-roll-clock)'--global-key-viewpoint-roll-clock='[Roll the viewpoint clockwise (360°) Roll the viewpoint clockwise (360°)]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-viewpoint-roll-clock)'--key-viewpoint-roll-clock='[Roll the viewpoint clockwise (360°) Roll the viewpoint clockwise (360°)]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-viewpoint-roll-anticlock)'--global-key-viewpoint-roll-anticlock='[Roll the viewpoint anti-clockwise (360°) Roll the viewpoint anti-clockwise (360°)]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-viewpoint-roll-anticlock)'--key-viewpoint-roll-anticlock='[Roll the viewpoint anti-clockwise (360°) Roll the viewpoint anti-clockwise (360°)]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-zoom-quarter)'--global-key-zoom-quarter='[1\:4 Quarter]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-zoom-quarter)'--key-zoom-quarter='[1\:4 Quarter]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-zoom-half)'--global-key-zoom-half='[1\:2 Half]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-zoom-half)'--key-zoom-half='[1\:2 Half]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-zoom-original)'--global-key-zoom-original='[1\:1 Original]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-zoom-original)'--key-zoom-original='[1\:1 Original]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-zoom-double)'--global-key-zoom-double='[2\:1 Double]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-zoom-double)'--key-zoom-double='[2\:1 Double Jump sizes\:]':string:_vlc__--global-key-toggle-fullscreen
+    '(--hotkeys-y-wheel-mode)'--hotkeys-y-wheel-mode='[Mouse wheel vertical axis control The mouse wheel vertical (up/down) axis can control volume, position or be ignored.]':' ':_vlc___--hotkeys-y-wheel-mode
+    '(--hotkeys-x-wheel-mode)'--hotkeys-x-wheel-mode='[Mouse wheel horizontal axis control The mouse wheel horizontal (left/right) axis can control volume, position or be ignored.]':' ':_vlc___--hotkeys-y-wheel-mode
+    '(--global-key-toggle-fullscreen)'--global-key-toggle-fullscreen='[Fullscreen Select the hotkey to use to swap fullscreen state.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-toggle-fullscreen)'--key-toggle-fullscreen='[Fullscreen Select the hotkey to use to swap fullscreen state.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-leave-fullscreen)'--global-key-leave-fullscreen='[Exit fullscreen Select the hotkey to use to exit fullscreen state.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-leave-fullscreen)'--key-leave-fullscreen='[Exit fullscreen Select the hotkey to use to exit fullscreen state.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-play-pause)'--global-key-play-pause='[Play/Pause Select the hotkey to use to swap paused state.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-play-pause)'--key-play-pause='[Play/Pause Select the hotkey to use to swap paused state.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-pause)'--global-key-pause='[Pause only Select the hotkey to use to pause.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-pause)'--key-pause='[Pause only Select the hotkey to use to pause.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-play)'--global-key-play='[Play only Select the hotkey to use to play.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-play)'--key-play='[Play only Select the hotkey to use to play.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-faster)'--global-key-faster='[Faster Select the hotkey to use for fast forward playback.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-faster)'--key-faster='[Faster Select the hotkey to use for fast forward playback.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-slower)'--global-key-slower='[Slower Select the hotkey to use for slow motion playback.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-slower)'--key-slower='[Slower Select the hotkey to use for slow motion playback.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-rate-normal)'--global-key-rate-normal='[Normal rate Select the hotkey to set the playback rate back to normal.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-rate-normal)'--key-rate-normal='[Normal rate Select the hotkey to set the playback rate back to normal.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-rate-faster-fine)'--global-key-rate-faster-fine='[Faster (fine) Select the hotkey to use for fast forward playback.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-rate-faster-fine)'--key-rate-faster-fine='[Faster (fine) Select the hotkey to use for fast forward playback.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-rate-slower-fine)'--global-key-rate-slower-fine='[Slower (fine) Select the hotkey to use for slow motion playback.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-rate-slower-fine)'--key-rate-slower-fine='[Slower (fine) Select the hotkey to use for slow motion playback.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-next)'--global-key-next='[Next Select the hotkey to use to skip to the next item in the playlist.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-next)'--key-next='[Next Select the hotkey to use to skip to the next item in the playlist.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-prev)'--global-key-prev='[Previous Select the hotkey to use to skip to the previous item in the playlist.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-prev)'--key-prev='[Previous Select the hotkey to use to skip to the previous item in the playlist.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-stop)'--global-key-stop='[Stop Select the hotkey to stop playback.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-stop)'--key-stop='[Stop Select the hotkey to stop playback.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-position)'--global-key-position='[Position Select the hotkey to display the position.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-position)'--key-position='[Position Select the hotkey to display the position.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-jump-extrashort)'--global-key-jump-extrashort='[Very short backwards jump Select the hotkey to make a very short backwards jump.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-jump-extrashort)'--key-jump-extrashort='[Very short backwards jump Select the hotkey to make a very short backwards jump.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-jump+extrashort)'--global-key-jump+extrashort='[Very short forward jump Select the hotkey to make a very short forward jump.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-jump+extrashort)'--key-jump+extrashort='[Very short forward jump Select the hotkey to make a very short forward jump.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-jump-short)'--global-key-jump-short='[Short backwards jump Select the hotkey to make a short backwards jump.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-jump-short)'--key-jump-short='[Short backwards jump Select the hotkey to make a short backwards jump.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-jump+short)'--global-key-jump+short='[Short forward jump Select the hotkey to make a short forward jump.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-jump+short)'--key-jump+short='[Short forward jump Select the hotkey to make a short forward jump.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-jump-medium)'--global-key-jump-medium='[Medium backwards jump Select the hotkey to make a medium backwards jump.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-jump-medium)'--key-jump-medium='[Medium backwards jump Select the hotkey to make a medium backwards jump.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-jump+medium)'--global-key-jump+medium='[Medium forward jump Select the hotkey to make a medium forward jump.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-jump+medium)'--key-jump+medium='[Medium forward jump Select the hotkey to make a medium forward jump.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-jump-long)'--global-key-jump-long='[Long backwards jump Select the hotkey to make a long backwards jump.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-jump-long)'--key-jump-long='[Long backwards jump Select the hotkey to make a long backwards jump.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-jump+long)'--global-key-jump+long='[Long forward jump Select the hotkey to make a long forward jump.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-jump+long)'--key-jump+long='[Long forward jump Select the hotkey to make a long forward jump.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-frame-next)'--global-key-frame-next='[Next frame Select the hotkey to got to the next video frame.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-frame-next)'--key-frame-next='[Next frame Select the hotkey to got to the next video frame.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-nav-activate)'--global-key-nav-activate='[Activate Select the key to activate selected item in DVD menus.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-nav-activate)'--key-nav-activate='[Activate Select the key to activate selected item in DVD menus.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-nav-up)'--global-key-nav-up='[Navigate up Select the key to move the selector up in DVD menus / Move viewpoint to up (pitch).]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-nav-up)'--key-nav-up='[Navigate up Select the key to move the selector up in DVD menus / Move viewpoint to up (pitch).]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-nav-down)'--global-key-nav-down='[Navigate down Select the key to move the selector down in DVD menus / Move viewpoint to down (pitch).]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-nav-down)'--key-nav-down='[Navigate down Select the key to move the selector down in DVD menus / Move viewpoint to down (pitch).]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-nav-left)'--global-key-nav-left='[Navigate left Select the key to move the selector left in DVD menus / Move viewpoint to left (yaw).]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-nav-left)'--key-nav-left='[Navigate left Select the key to move the selector left in DVD menus / Move viewpoint to left (yaw).]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-nav-right)'--global-key-nav-right='[Navigate right Select the key to move the selector right in DVD menus / Move viewpoint to right (yaw).]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-nav-right)'--key-nav-right='[Navigate right Select the key to move the selector right in DVD menus / Move viewpoint to right (yaw).]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-disc-menu)'--global-key-disc-menu='[Go to the DVD menu Select the key to take you to the DVD menu]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-disc-menu)'--key-disc-menu='[Go to the DVD menu Select the key to take you to the DVD menu]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-title-prev)'--global-key-title-prev='[Select previous DVD title Select the key to choose the previous title from the DVD]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-title-prev)'--key-title-prev='[Select previous DVD title Select the key to choose the previous title from the DVD]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-title-next)'--global-key-title-next='[Select next DVD title Select the key to choose the next title from the DVD]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-title-next)'--key-title-next='[Select next DVD title Select the key to choose the next title from the DVD]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-chapter-prev)'--global-key-chapter-prev='[Select prev DVD chapter Select the key to choose the previous chapter from the DVD]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-chapter-prev)'--key-chapter-prev='[Select prev DVD chapter Select the key to choose the previous chapter from the DVD]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-chapter-next)'--global-key-chapter-next='[Select next DVD chapter Select the key to choose the next chapter from the DVD]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-chapter-next)'--key-chapter-next='[Select next DVD chapter Select the key to choose the next chapter from the DVD]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-quit)'--global-key-quit='[Quit Select the hotkey to quit the application.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-quit)'--key-quit='[Quit Select the hotkey to quit the application.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-vol-up)'--global-key-vol-up='[Volume up Select the key to increase audio volume.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-vol-up)'--key-vol-up='[Volume up Select the key to increase audio volume.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-vol-down)'--global-key-vol-down='[Volume down Select the key to decrease audio volume.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-vol-down)'--key-vol-down='[Volume down Select the key to decrease audio volume.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-vol-mute)'--global-key-vol-mute='[Mute Select the key to mute audio.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-vol-mute)'--key-vol-mute='[Mute Select the key to mute audio.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-subdelay-up)'--global-key-subdelay-up='[Subtitle delay up Select the key to increase the subtitle delay.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-subdelay-up)'--key-subdelay-up='[Subtitle delay up Select the key to increase the subtitle delay.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-subdelay-down)'--global-key-subdelay-down='[Subtitle delay down Select the key to decrease the subtitle delay.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-subdelay-down)'--key-subdelay-down='[Subtitle delay down Select the key to decrease the subtitle delay.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-subsync-markaudio)'--global-key-subsync-markaudio='[Subtitle sync / bookmark audio timestamp Select the key to bookmark audio timestamp when syncing subtitles.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-subsync-markaudio)'--key-subsync-markaudio='[Subtitle sync / bookmark audio timestamp Select the key to bookmark audio timestamp when syncing subtitles.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-subsync-marksub)'--global-key-subsync-marksub='[Subtitle sync / bookmark subtitle timestamp Select the key to bookmark subtitle timestamp when syncing subtitles.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-subsync-marksub)'--key-subsync-marksub='[Subtitle sync / bookmark subtitle timestamp Select the key to bookmark subtitle timestamp when syncing subtitles.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-subsync-apply)'--global-key-subsync-apply='[Subtitle sync / synchronize audio & subtitle timestamps Select the key to synchronize bookmarked audio & subtitle timestamps.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-subsync-apply)'--key-subsync-apply='[Subtitle sync / synchronize audio & subtitle timestamps Select the key to synchronize bookmarked audio & subtitle timestamps.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-subsync-reset)'--global-key-subsync-reset='[Subtitle sync / reset audio & subtitle synchronization Select the key to reset synchronization of audio & subtitle timestamps.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-subsync-reset)'--key-subsync-reset='[Subtitle sync / reset audio & subtitle synchronization Select the key to reset synchronization of audio & subtitle timestamps.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-subpos-up)'--global-key-subpos-up='[Subtitle position up Select the key to move subtitles higher.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-subpos-up)'--key-subpos-up='[Subtitle position up Select the key to move subtitles higher.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-subpos-down)'--global-key-subpos-down='[Subtitle position down Select the key to move subtitles lower.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-subpos-down)'--key-subpos-down='[Subtitle position down Select the key to move subtitles lower.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-audiodelay-up)'--global-key-audiodelay-up='[Audio delay up Select the key to increase the audio delay.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-audiodelay-up)'--key-audiodelay-up='[Audio delay up Select the key to increase the audio delay.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-audiodelay-down)'--global-key-audiodelay-down='[Audio delay down Select the key to decrease the audio delay.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-audiodelay-down)'--key-audiodelay-down='[Audio delay down Select the key to decrease the audio delay.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-audio-track)'--global-key-audio-track='[Cycle audio track Cycle through the available audio tracks(languages).]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-audio-track)'--key-audio-track='[Cycle audio track Cycle through the available audio tracks(languages).]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-audiodevice-cycle)'--global-key-audiodevice-cycle='[Cycle through audio devices Cycle through available audio devices]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-audiodevice-cycle)'--key-audiodevice-cycle='[Cycle through audio devices Cycle through available audio devices]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-subtitle-revtrack)'--global-key-subtitle-revtrack='[Cycle subtitle track in reverse order Cycle through the available subtitle tracks in reverse order.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-subtitle-revtrack)'--key-subtitle-revtrack='[Cycle subtitle track in reverse order Cycle through the available subtitle tracks in reverse order.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-subtitle-track)'--global-key-subtitle-track='[Cycle subtitle track Cycle through the available subtitle tracks.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-subtitle-track)'--key-subtitle-track='[Cycle subtitle track Cycle through the available subtitle tracks.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-subtitle-toggle)'--global-key-subtitle-toggle='[Toggle subtitles Toggle subtitle track visibility.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-subtitle-toggle)'--key-subtitle-toggle='[Toggle subtitles Toggle subtitle track visibility.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-program-sid-next)'--global-key-program-sid-next='[Cycle next program Service ID Cycle through the available next program Service IDs (SIDs).]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-program-sid-next)'--key-program-sid-next='[Cycle next program Service ID Cycle through the available next program Service IDs (SIDs).]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-program-sid-prev)'--global-key-program-sid-prev='[Cycle previous program Service ID Cycle through the available previous program Service IDs (SIDs).]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-program-sid-prev)'--key-program-sid-prev='[Cycle previous program Service ID Cycle through the available previous program Service IDs (SIDs).]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-aspect-ratio)'--global-key-aspect-ratio='[Cycle source aspect ratio Cycle through a predefined list of source aspect ratios.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-aspect-ratio)'--key-aspect-ratio='[Cycle source aspect ratio Cycle through a predefined list of source aspect ratios.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-crop)'--global-key-crop='[Cycle video crop Cycle through a predefined list of crop formats.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-crop)'--key-crop='[Cycle video crop Cycle through a predefined list of crop formats.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-toggle-autoscale)'--global-key-toggle-autoscale='[Toggle autoscaling Activate or deactivate autoscaling.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-toggle-autoscale)'--key-toggle-autoscale='[Toggle autoscaling Activate or deactivate autoscaling.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-incr-scalefactor)'--global-key-incr-scalefactor='[Increase scale factor Increase scale factor]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-incr-scalefactor)'--key-incr-scalefactor='[Increase scale factor Increase scale factor]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-decr-scalefactor)'--global-key-decr-scalefactor='[Decrease scale factor Decrease scale factor]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-decr-scalefactor)'--key-decr-scalefactor='[Decrease scale factor Decrease scale factor]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-deinterlace)'--global-key-deinterlace='[Toggle deinterlacing Activate or deactivate deinterlacing.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-deinterlace)'--key-deinterlace='[Toggle deinterlacing Activate or deactivate deinterlacing.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-deinterlace-mode)'--global-key-deinterlace-mode='[Cycle deinterlace modes Cycle through available deinterlace modes.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-deinterlace-mode)'--key-deinterlace-mode='[Cycle deinterlace modes Cycle through available deinterlace modes.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-intf-show)'--global-key-intf-show='[Show controller in fullscreen Show controller in fullscreen]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-intf-show)'--key-intf-show='[Show controller in fullscreen Show controller in fullscreen]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-intf-boss)'--global-key-intf-boss='[Boss key Hide the interface and pause playback.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-intf-boss)'--key-intf-boss='[Boss key Hide the interface and pause playback.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-intf-popup-menu)'--global-key-intf-popup-menu='[Context menu Show the contextual popup menu.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-intf-popup-menu)'--key-intf-popup-menu='[Context menu Show the contextual popup menu.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-snapshot)'--global-key-snapshot='[Take video snapshot Takes a video snapshot and writes it to disk.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-snapshot)'--key-snapshot='[Take video snapshot Takes a video snapshot and writes it to disk.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-record)'--global-key-record='[Record Record access filter start/stop.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-record)'--key-record='[Record Record access filter start/stop.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-zoom)'--global-key-zoom='[Zoom Zoom]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-zoom)'--key-zoom='[Zoom Zoom]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-unzoom)'--global-key-unzoom='[Un-Zoom Un-Zoom]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-unzoom)'--key-unzoom='[Un-Zoom Un-Zoom]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-wallpaper)'--global-key-wallpaper='[Toggle wallpaper mode in video output Toggle wallpaper mode in video output.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-wallpaper)'--key-wallpaper='[Toggle wallpaper mode in video output Toggle wallpaper mode in video output.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-crop-top)'--global-key-crop-top='[Crop one pixel from the top of the video Crop one pixel from the top of the video]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-crop-top)'--key-crop-top='[Crop one pixel from the top of the video Crop one pixel from the top of the video]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-uncrop-top)'--global-key-uncrop-top='[Uncrop one pixel from the top of the video Uncrop one pixel from the top of the video]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-uncrop-top)'--key-uncrop-top='[Uncrop one pixel from the top of the video Uncrop one pixel from the top of the video]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-crop-left)'--global-key-crop-left='[Crop one pixel from the left of the video Crop one pixel from the left of the video]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-crop-left)'--key-crop-left='[Crop one pixel from the left of the video Crop one pixel from the left of the video]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-uncrop-left)'--global-key-uncrop-left='[Uncrop one pixel from the left of the video Uncrop one pixel from the left of the video]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-uncrop-left)'--key-uncrop-left='[Uncrop one pixel from the left of the video Uncrop one pixel from the left of the video]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-crop-bottom)'--global-key-crop-bottom='[Crop one pixel from the bottom of the video Crop one pixel from the bottom of the video]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-crop-bottom)'--key-crop-bottom='[Crop one pixel from the bottom of the video Crop one pixel from the bottom of the video]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-uncrop-bottom)'--global-key-uncrop-bottom='[Uncrop one pixel from the bottom of the video Uncrop one pixel from the bottom of the video]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-uncrop-bottom)'--key-uncrop-bottom='[Uncrop one pixel from the bottom of the video Uncrop one pixel from the bottom of the video]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-crop-right)'--global-key-crop-right='[Crop one pixel from the right of the video Crop one pixel from the right of the video]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-crop-right)'--key-crop-right='[Crop one pixel from the right of the video Crop one pixel from the right of the video]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-uncrop-right)'--global-key-uncrop-right='[Uncrop one pixel from the right of the video Uncrop one pixel from the right of the video]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-uncrop-right)'--key-uncrop-right='[Uncrop one pixel from the right of the video Uncrop one pixel from the right of the video]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-random)'--global-key-random='[Random Toggle random playlist playback]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-random)'--key-random='[Random Toggle random playlist playback]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-loop)'--global-key-loop='[Normal/Loop/Repeat Toggle Normal/Loop/Repeat playlist modes]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-loop)'--key-loop='[Normal/Loop/Repeat Toggle Normal/Loop/Repeat playlist modes]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-viewpoint-fov-in)'--global-key-viewpoint-fov-in='[Shrink the viewpoint field of view (360°) Shrink the viewpoint field of view (360°)]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-viewpoint-fov-in)'--key-viewpoint-fov-in='[Shrink the viewpoint field of view (360°) Shrink the viewpoint field of view (360°)]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-viewpoint-fov-out)'--global-key-viewpoint-fov-out='[Expand the viewpoint field of view (360°) Expand the viewpoint field of view (360°)]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-viewpoint-fov-out)'--key-viewpoint-fov-out='[Expand the viewpoint field of view (360°) Expand the viewpoint field of view (360°)]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-viewpoint-roll-clock)'--global-key-viewpoint-roll-clock='[Roll the viewpoint clockwise (360°) Roll the viewpoint clockwise (360°)]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-viewpoint-roll-clock)'--key-viewpoint-roll-clock='[Roll the viewpoint clockwise (360°) Roll the viewpoint clockwise (360°)]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-viewpoint-roll-anticlock)'--global-key-viewpoint-roll-anticlock='[Roll the viewpoint anti-clockwise (360°) Roll the viewpoint anti-clockwise (360°)]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-viewpoint-roll-anticlock)'--key-viewpoint-roll-anticlock='[Roll the viewpoint anti-clockwise (360°) Roll the viewpoint anti-clockwise (360°)]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-zoom-quarter)'--global-key-zoom-quarter='[1\:4 Quarter]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-zoom-quarter)'--key-zoom-quarter='[1\:4 Quarter]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-zoom-half)'--global-key-zoom-half='[1\:2 Half]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-zoom-half)'--key-zoom-half='[1\:2 Half]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-zoom-original)'--global-key-zoom-original='[1\:1 Original]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-zoom-original)'--key-zoom-original='[1\:1 Original]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-zoom-double)'--global-key-zoom-double='[2\:1 Double]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-zoom-double)'--key-zoom-double='[2\:1 Double Jump sizes\:]':string:_vlc___--global-key-toggle-fullscreen
     '(--extrashort-jump-size)'--extrashort-jump-size='[Very short jump length Very short jump length, in seconds.]':integer:_numbers
     '(--short-jump-size)'--short-jump-size='[Short jump length Short jump length, in seconds.]':integer:_numbers
     '(--medium-jump-size)'--medium-jump-size='[Medium jump length Medium jump length, in seconds.]':integer:_numbers
     '(--long-jump-size)'--long-jump-size='[Long jump length Long jump length, in seconds.]':integer:_numbers
-    '(--global-key-set-bookmark1)'--global-key-set-bookmark1='[Set playlist bookmark 1 Select the key to set this playlist bookmark.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-set-bookmark1)'--key-set-bookmark1='[Set playlist bookmark 1 Select the key to set this playlist bookmark.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-set-bookmark2)'--global-key-set-bookmark2='[Set playlist bookmark 2 Select the key to set this playlist bookmark.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-set-bookmark2)'--key-set-bookmark2='[Set playlist bookmark 2 Select the key to set this playlist bookmark.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-set-bookmark3)'--global-key-set-bookmark3='[Set playlist bookmark 3 Select the key to set this playlist bookmark.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-set-bookmark3)'--key-set-bookmark3='[Set playlist bookmark 3 Select the key to set this playlist bookmark.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-set-bookmark4)'--global-key-set-bookmark4='[Set playlist bookmark 4 Select the key to set this playlist bookmark.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-set-bookmark4)'--key-set-bookmark4='[Set playlist bookmark 4 Select the key to set this playlist bookmark.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-set-bookmark5)'--global-key-set-bookmark5='[Set playlist bookmark 5 Select the key to set this playlist bookmark.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-set-bookmark5)'--key-set-bookmark5='[Set playlist bookmark 5 Select the key to set this playlist bookmark.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-set-bookmark6)'--global-key-set-bookmark6='[Set playlist bookmark 6 Select the key to set this playlist bookmark.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-set-bookmark6)'--key-set-bookmark6='[Set playlist bookmark 6 Select the key to set this playlist bookmark.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-set-bookmark7)'--global-key-set-bookmark7='[Set playlist bookmark 7 Select the key to set this playlist bookmark.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-set-bookmark7)'--key-set-bookmark7='[Set playlist bookmark 7 Select the key to set this playlist bookmark.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-set-bookmark8)'--global-key-set-bookmark8='[Set playlist bookmark 8 Select the key to set this playlist bookmark.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-set-bookmark8)'--key-set-bookmark8='[Set playlist bookmark 8 Select the key to set this playlist bookmark.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-set-bookmark9)'--global-key-set-bookmark9='[Set playlist bookmark 9 Select the key to set this playlist bookmark.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-set-bookmark9)'--key-set-bookmark9='[Set playlist bookmark 9 Select the key to set this playlist bookmark.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-set-bookmark10)'--global-key-set-bookmark10='[Set playlist bookmark 10 Select the key to set this playlist bookmark.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-set-bookmark10)'--key-set-bookmark10='[Set playlist bookmark 10 Select the key to set this playlist bookmark.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-play-bookmark1)'--global-key-play-bookmark1='[Play playlist bookmark 1 Select the key to play this bookmark.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-play-bookmark1)'--key-play-bookmark1='[Play playlist bookmark 1 Select the key to play this bookmark.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-play-bookmark2)'--global-key-play-bookmark2='[Play playlist bookmark 2 Select the key to play this bookmark.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-play-bookmark2)'--key-play-bookmark2='[Play playlist bookmark 2 Select the key to play this bookmark.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-play-bookmark3)'--global-key-play-bookmark3='[Play playlist bookmark 3 Select the key to play this bookmark.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-play-bookmark3)'--key-play-bookmark3='[Play playlist bookmark 3 Select the key to play this bookmark.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-play-bookmark4)'--global-key-play-bookmark4='[Play playlist bookmark 4 Select the key to play this bookmark.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-play-bookmark4)'--key-play-bookmark4='[Play playlist bookmark 4 Select the key to play this bookmark.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-play-bookmark5)'--global-key-play-bookmark5='[Play playlist bookmark 5 Select the key to play this bookmark.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-play-bookmark5)'--key-play-bookmark5='[Play playlist bookmark 5 Select the key to play this bookmark.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-play-bookmark6)'--global-key-play-bookmark6='[Play playlist bookmark 6 Select the key to play this bookmark.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-play-bookmark6)'--key-play-bookmark6='[Play playlist bookmark 6 Select the key to play this bookmark.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-play-bookmark7)'--global-key-play-bookmark7='[Play playlist bookmark 7 Select the key to play this bookmark.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-play-bookmark7)'--key-play-bookmark7='[Play playlist bookmark 7 Select the key to play this bookmark.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-play-bookmark8)'--global-key-play-bookmark8='[Play playlist bookmark 8 Select the key to play this bookmark.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-play-bookmark8)'--key-play-bookmark8='[Play playlist bookmark 8 Select the key to play this bookmark.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-play-bookmark9)'--global-key-play-bookmark9='[Play playlist bookmark 9 Select the key to play this bookmark.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-play-bookmark9)'--key-play-bookmark9='[Play playlist bookmark 9 Select the key to play this bookmark.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-play-bookmark10)'--global-key-play-bookmark10='[Play playlist bookmark 10 Select the key to play this bookmark.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-play-bookmark10)'--key-play-bookmark10='[Play playlist bookmark 10 Select the key to play this bookmark.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-clear-playlist)'--global-key-clear-playlist='[Clear the playlist Select the key to clear the current playlist.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-clear-playlist)'--key-clear-playlist='[Clear the playlist Select the key to clear the current playlist.]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-subtitle-text-scale-normal)'--global-key-subtitle-text-scale-normal='[Reset subtitles text scale Select the key to change subtitles text scaling]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-subtitle-text-scale-normal)'--key-subtitle-text-scale-normal='[Reset subtitles text scale Select the key to change subtitles text scaling]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-subtitle-text-scale-up)'--global-key-subtitle-text-scale-up='[Scale down subtitles text Select the key to change subtitles text scaling]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-subtitle-text-scale-up)'--key-subtitle-text-scale-up='[Scale down subtitles text Select the key to change subtitles text scaling]':string:_vlc__--global-key-toggle-fullscreen
-    '(--global-key-subtitle-text-scale-down)'--global-key-subtitle-text-scale-down='[Scale up subtitles text Select the key to change subtitles text scaling]':string:_vlc__--global-key-toggle-fullscreen
-    '(--key-subtitle-text-scale-down)'--key-subtitle-text-scale-down='[Scale up subtitles text Select the key to change subtitles text scaling]':string:_vlc__--global-key-toggle-fullscreen
+    '(--global-key-set-bookmark1)'--global-key-set-bookmark1='[Set playlist bookmark 1 Select the key to set this playlist bookmark.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-set-bookmark1)'--key-set-bookmark1='[Set playlist bookmark 1 Select the key to set this playlist bookmark.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-set-bookmark2)'--global-key-set-bookmark2='[Set playlist bookmark 2 Select the key to set this playlist bookmark.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-set-bookmark2)'--key-set-bookmark2='[Set playlist bookmark 2 Select the key to set this playlist bookmark.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-set-bookmark3)'--global-key-set-bookmark3='[Set playlist bookmark 3 Select the key to set this playlist bookmark.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-set-bookmark3)'--key-set-bookmark3='[Set playlist bookmark 3 Select the key to set this playlist bookmark.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-set-bookmark4)'--global-key-set-bookmark4='[Set playlist bookmark 4 Select the key to set this playlist bookmark.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-set-bookmark4)'--key-set-bookmark4='[Set playlist bookmark 4 Select the key to set this playlist bookmark.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-set-bookmark5)'--global-key-set-bookmark5='[Set playlist bookmark 5 Select the key to set this playlist bookmark.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-set-bookmark5)'--key-set-bookmark5='[Set playlist bookmark 5 Select the key to set this playlist bookmark.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-set-bookmark6)'--global-key-set-bookmark6='[Set playlist bookmark 6 Select the key to set this playlist bookmark.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-set-bookmark6)'--key-set-bookmark6='[Set playlist bookmark 6 Select the key to set this playlist bookmark.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-set-bookmark7)'--global-key-set-bookmark7='[Set playlist bookmark 7 Select the key to set this playlist bookmark.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-set-bookmark7)'--key-set-bookmark7='[Set playlist bookmark 7 Select the key to set this playlist bookmark.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-set-bookmark8)'--global-key-set-bookmark8='[Set playlist bookmark 8 Select the key to set this playlist bookmark.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-set-bookmark8)'--key-set-bookmark8='[Set playlist bookmark 8 Select the key to set this playlist bookmark.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-set-bookmark9)'--global-key-set-bookmark9='[Set playlist bookmark 9 Select the key to set this playlist bookmark.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-set-bookmark9)'--key-set-bookmark9='[Set playlist bookmark 9 Select the key to set this playlist bookmark.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-set-bookmark10)'--global-key-set-bookmark10='[Set playlist bookmark 10 Select the key to set this playlist bookmark.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-set-bookmark10)'--key-set-bookmark10='[Set playlist bookmark 10 Select the key to set this playlist bookmark.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-play-bookmark1)'--global-key-play-bookmark1='[Play playlist bookmark 1 Select the key to play this bookmark.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-play-bookmark1)'--key-play-bookmark1='[Play playlist bookmark 1 Select the key to play this bookmark.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-play-bookmark2)'--global-key-play-bookmark2='[Play playlist bookmark 2 Select the key to play this bookmark.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-play-bookmark2)'--key-play-bookmark2='[Play playlist bookmark 2 Select the key to play this bookmark.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-play-bookmark3)'--global-key-play-bookmark3='[Play playlist bookmark 3 Select the key to play this bookmark.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-play-bookmark3)'--key-play-bookmark3='[Play playlist bookmark 3 Select the key to play this bookmark.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-play-bookmark4)'--global-key-play-bookmark4='[Play playlist bookmark 4 Select the key to play this bookmark.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-play-bookmark4)'--key-play-bookmark4='[Play playlist bookmark 4 Select the key to play this bookmark.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-play-bookmark5)'--global-key-play-bookmark5='[Play playlist bookmark 5 Select the key to play this bookmark.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-play-bookmark5)'--key-play-bookmark5='[Play playlist bookmark 5 Select the key to play this bookmark.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-play-bookmark6)'--global-key-play-bookmark6='[Play playlist bookmark 6 Select the key to play this bookmark.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-play-bookmark6)'--key-play-bookmark6='[Play playlist bookmark 6 Select the key to play this bookmark.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-play-bookmark7)'--global-key-play-bookmark7='[Play playlist bookmark 7 Select the key to play this bookmark.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-play-bookmark7)'--key-play-bookmark7='[Play playlist bookmark 7 Select the key to play this bookmark.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-play-bookmark8)'--global-key-play-bookmark8='[Play playlist bookmark 8 Select the key to play this bookmark.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-play-bookmark8)'--key-play-bookmark8='[Play playlist bookmark 8 Select the key to play this bookmark.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-play-bookmark9)'--global-key-play-bookmark9='[Play playlist bookmark 9 Select the key to play this bookmark.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-play-bookmark9)'--key-play-bookmark9='[Play playlist bookmark 9 Select the key to play this bookmark.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-play-bookmark10)'--global-key-play-bookmark10='[Play playlist bookmark 10 Select the key to play this bookmark.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-play-bookmark10)'--key-play-bookmark10='[Play playlist bookmark 10 Select the key to play this bookmark.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-clear-playlist)'--global-key-clear-playlist='[Clear the playlist Select the key to clear the current playlist.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-clear-playlist)'--key-clear-playlist='[Clear the playlist Select the key to clear the current playlist.]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-subtitle-text-scale-normal)'--global-key-subtitle-text-scale-normal='[Reset subtitles text scale Select the key to change subtitles text scaling]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-subtitle-text-scale-normal)'--key-subtitle-text-scale-normal='[Reset subtitles text scale Select the key to change subtitles text scaling]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-subtitle-text-scale-up)'--global-key-subtitle-text-scale-up='[Scale down subtitles text Select the key to change subtitles text scaling]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-subtitle-text-scale-up)'--key-subtitle-text-scale-up='[Scale down subtitles text Select the key to change subtitles text scaling]':string:_vlc___--global-key-toggle-fullscreen
+    '(--global-key-subtitle-text-scale-down)'--global-key-subtitle-text-scale-down='[Scale up subtitles text Select the key to change subtitles text scaling]':string:_vlc___--global-key-toggle-fullscreen
+    '(--key-subtitle-text-scale-down)'--key-subtitle-text-scale-down='[Scale up subtitles text Select the key to change subtitles text scaling]':string:_vlc___--global-key-toggle-fullscreen
     '(--bookmark1)'--bookmark1='[Playlist bookmark 1 This allows you to define playlist bookmarks.]':string:' '
     '(--bookmark2)'--bookmark2='[Playlist bookmark 2 This allows you to define playlist bookmarks.]':string:' '
     '(--bookmark3)'--bookmark3='[Playlist bookmark 3 This allows you to define playlist bookmarks.]':string:' '

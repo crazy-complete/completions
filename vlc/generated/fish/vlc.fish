@@ -2,14 +2,14 @@
 # crazy-complete: A tool that creates robust and reliable autocompletion scripts for Bash, Fish and Zsh.
 # For more information, visit: https://github.com/crazy-complete/crazy-complete
 
-function _vlc__--alsa-audio-device
+function _vlc___--alsa-audio-device
   printf '%s\n' \
     null lavrate samplerate speexrate jack oss pulse speex upmix vdownmix \
     default:CARD=sofhdadsp sysdefault:CARD=sofhdadsp usbstream:CARD=sofhdadsp \
     default
 end
 
-function _vlc__--alsa-audio-channels
+function _vlc___--alsa-audio-channels
   printf '%s\t%s\n' \
     1 Mono \
     6 Stereo \
@@ -20,7 +20,7 @@ function _vlc__--alsa-audio-channels
     4967 'Surround 7.1'
 end
 
-function _vlc__--audiobargraph_v-position
+function _vlc___--audiobargraph_v-position
   printf '%s\t%s\n' \
     0 Center \
     1 Left \
@@ -33,14 +33,14 @@ function _vlc__--audiobargraph_v-position
     10 Bottom-Right
 end
 
-function _vlc__--subsdelay-mode
+function _vlc___--subsdelay-mode
   printf '%s\t%s\n' \
     0 'Absolute delay' \
     1 'Relative to source delay' \
     2 'Relative to source content'
 end
 
-function _vlc__--marq-color
+function _vlc___--marq-color
   printf '%s\t%s\n' \
     -268435456 Default \
     0 Black \
@@ -61,7 +61,7 @@ function _vlc__--marq-color
     65535 Aqua
 end
 
-function _vlc__--alsa-samplerate
+function _vlc___--alsa-samplerate
   printf '%s\t%s\n' \
     192000 '192000 Hz' \
     176400 '176400 Hz' \
@@ -78,7 +78,7 @@ function _vlc__--alsa-samplerate
     4000 '4000 Hz'
 end
 
-function _vlc__--shm-depth
+function _vlc___--shm-depth
   printf '%s\t%s\n' \
     0 'XWD file (autodetect)' \
     8 '8 bits' \
@@ -88,7 +88,7 @@ function _vlc__--shm-depth
     32 '32 bits'
 end
 
-function _vlc__--dvb-bandwidth
+function _vlc___--dvb-bandwidth
   printf '%s\t%s\n' \
     0 Automatic \
     10 '10 MHz' \
@@ -99,7 +99,7 @@ function _vlc__--dvb-bandwidth
     2 '1.712 MHz'
 end
 
-function _vlc__--subsdec-encoding
+function _vlc___--subsdec-encoding
   printf '%s\n' \
     '' system UTF-8 UTF-16 UTF-16BE UTF-16LE GB18030 ISO-8859-15 Windows-1252 IBM850 \
     ISO-8859-2 Windows-1250 ISO-8859-3 ISO-8859-10 Windows-1251 KOI8-R KOI8-U \
@@ -109,19 +109,19 @@ function _vlc__--subsdec-encoding
     CP949 ISO-2022-KR Big5 ISO-2022-TW Big5-HKSCS VISCII Windows-1258
 end
 
-function _vlc__--sout-transcode-venc
+function _vlc___--sout-transcode-venc
   printf '%s\n' \
     any png jpeg theora g711 araw opus vorbis twolame lpcm t140 dvbsub flac speex \
     vpx rtpvideo stats edummy none
 end
 
-function _vlc__--sub-type
+function _vlc___--sub-type
   printf '%s\n' \
     auto microdvd subrip subviewer ssa1 ssa2-4 ass vplayer sami dvdsubtitle mpl2 aqt \
     pjs mpsub jacosub psb realtext dks subviewer1 sbv
 end
 
-function _vlc__--colorthres-color
+function _vlc___--colorthres-color
   printf '%s\t%s\n' \
     16711680 Red \
     16711935 Fuchsia \
@@ -131,13 +131,13 @@ function _vlc__--colorthres-color
     65535 Aqua
 end
 
-function _vlc__--equalizer-preset
+function _vlc___--equalizer-preset
   printf '%s\n' \
     flat classical club dance fullbass fullbasstreble fulltreble headphones \
     largehall live party pop reggae rock ska soft softrock techno
 end
 
-function _vlc__--aout-remap-channel-left
+function _vlc___--aout-remap-channel-left
   printf '%s\t%s\n' \
     0 Left \
     1 Center \
@@ -150,7 +150,7 @@ function _vlc__--aout-remap-channel-left
     8 'Low-frequency effects'
 end
 
-function _vlc__--sout-mono-channel
+function _vlc___--sout-mono-channel
   printf '%s\t%s\n' \
     0 Left \
     1 Right \
@@ -163,7 +163,7 @@ function _vlc__--sout-mono-channel
     6 'Rear center'
 end
 
-function _vlc__--stereo-mode
+function _vlc___--stereo-mode
   printf '%s\t%s\n' \
     0 Unset \
     1 Stereo \
@@ -175,19 +175,19 @@ function _vlc__--stereo-mode
     7 Mono
 end
 
-function _vlc__--role
+function _vlc___--role
   printf '%s\n' \
     video music communication game notification animation production accessibility \
     test
 end
 
-function _vlc__-V
+function _vlc___-V
   printf '%s\n' \
     any gl xcb_xv wl_shm xcb_x11 fb vdpau_display vdummy vdummy yuv vmem flaschen \
     none
 end
 
-function _vlc__--preferred-resolution
+function _vlc___--preferred-resolution
   printf '%s\t%s\n' \
     -1 'Best available' \
     1080 'Full HD (1080p)' \
@@ -197,13 +197,13 @@ function _vlc__--preferred-resolution
     240 'Very Low Definition (240 lines)'
 end
 
-function _vlc__--access
+function _vlc___--access
   printf '%s\n' \
     any satip vdr vcd filesystem filesystem access_realrtsp access attachment imem \
     http rist concat udp imem_access dtv tcp sdp ftp access_mms none
 end
 
-function _vlc__--demux
+function _vlc___--demux
   printf '%s\n' \
     any mp4 avi asf flacsys es nuv tta wav caf sap diracsys ogg smf adaptive ttml \
     webvtt voc directory rawvid image nsv pva au aiff xa ps h26x h26x ty mjpeg mpgv \
@@ -211,14 +211,14 @@ function _vlc__--demux
     stats webvtt none
 end
 
-function _vlc__--packetizer
+function _vlc___--packetizer
   printf '%s\n' \
     any lpcm rawvideo theora speex aes3 vorbis dirac av1 mpeg4audio mpegvideo vc1 \
     mlp flac mpeg4video hevc h264 svcdsub spudec cvdsub mpegaudio a52 dts oggspots \
     copy none
 end
 
-function _vlc__--hotkeys-y-wheel-mode
+function _vlc___--hotkeys-y-wheel-mode
   printf '%s\t%s\n' \
     -1 Ignore \
     0 'Volume control' \
@@ -226,7 +226,7 @@ function _vlc__--hotkeys-y-wheel-mode
     3 'Position control reversed'
 end
 
-function _vlc__--global-key-toggle-fullscreen
+function _vlc___--global-key-toggle-fullscreen
   printf '%s\n' \
     A alt-A shift-A ctrl-A meta-A B alt-B shift-B ctrl-B meta-B C alt-C shift-C \
     ctrl-C meta-C D alt-D shift-D ctrl-D meta-D E alt-E shift-E ctrl-E meta-E F \
@@ -256,206 +256,7 @@ function _vlc__--global-key-toggle-fullscreen
     ctrl-Insert meta-Insert Delete alt-Delete shift-Delete ctrl-Delete meta-Delete
 end
 
-function _vlc_fish_query
-  # ===========================================================================
-  #
-  # This function implements the parsing of options and positionals in the Fish shell.
-  #
-  # Usage: __fish_query <OPTIONS> <COMMAND> [ARGS...]
-  #
-  # The first argument is a comma-separated list of options that the parser should know about.
-  # Short options (-o), long options (--option), and old-style options (-option) are supported.
-  #
-  # If an option takes an argument, it is suffixed by '='.
-  # If an option takes an optional argument, it is suffixed by '=?'.
-  #
-  # For example:
-  #   __fish_query '-f,--flag,-old-style,--with-arg=,--with-optional=?' [...]
-  #
-  #   Here, -f, --flag and -old-style don't take options, --with-arg requires an
-  #   argument and --with-optional takes an optional argument.
-  #
-  # COMMANDS
-  #   positional_contains <NUM> <WORDS...>
-  #     Checks if the positional argument number NUM is one of WORDS.
-  #     NUM counts from one.
-  #
-  #   has_option [WITH_INCOMPLETE] <OPTIONS...>
-  #     Checks if an option given in OPTIONS is passed on commandline.
-  #     If an option requires an argument, this command returns true only if the
-  #     option includes an argument. If 'WITH_INCOMPLETE' is specified, it also
-  #     returns true for options missing their arguments.
-  #
-  #   option_is <OPTIONS...> -- <VALUES...>
-  #     Checks if any option in OPTIONS has a value of VALUES.
-  #
-  #   num_of_positionals [<OPERATOR> <NUMBER>]
-  #     Checks the number of positional arguments.
-  #     If no arguments are provided, print the total count of positional arguments.
-  #     If two arguments are provided, the first argument should be one of
-  #     the comparison operators: '-lt', '-le', '-eq', '-ne', '-gt', '-ge'.
-  #     Returns 0 if the count of positional arguments matches the
-  #     specified NUMBER according to the comparison operator, otherwise returns 1.
-  #
-  # ===========================================================================
-
-  set -l positionals
-  set -l having_options
-  set -l option_values
-
-  set -l options $argv[1]
-  set -e argv[1]
-
-  set -l cmd $argv[1]
-  set -e argv[1]
-
-  set -l my_cache_key "$(commandline -b) $options"
-
-  if test "$__QUERY_CACHE_KEY" = "$my_cache_key"
-    set positionals    $__QUERY_CACHE_POSITIONALS
-    set having_options $__QUERY_CACHE_HAVING_OPTIONS
-    set option_values  $__QUERY_CACHE_OPTION_VALUES
-  else
-    # =========================================================================
-    # Parsing of OPTIONS argument
-    # =========================================================================
-
-    set -l short_opts_with_arg
-    set -l short_opts_without_arg
-    set -l short_opts_with_optional_arg
-    set -l long_opts_with_arg
-    set -l long_opts_without_arg
-    set -l long_opts_with_optional_arg
-
-    set -l option
-
-    if test -n "$options"
-      for option in (string split -- ',' $options)
-        if false
-          true
-        else if string match -qr -- '^--.+=$' $option
-          set -a long_opts_with_arg (string replace -- '='  '' $option)
-        else if string match -qr -- '^--.+=\?$' $option
-          set -a long_opts_with_optional_arg (string replace -- '=?' '' $option)
-        else if string match -qr -- '^--.+$' $option
-          set -a long_opts_without_arg $option
-        else if string match -qr -- '^-.=$' $option
-          set -a short_opts_with_arg (string replace -- '='  '' $option)
-        else if string match -qr -- '^-.=\?$' $option
-          set -a short_opts_with_optional_arg (string replace -- '=?' '' $option)
-        else if string match -qr -- '^-.$' $option
-          set -a short_opts_without_arg $option
-        end
-      end
-    end
-
-    # =========================================================================
-    # Parsing of options and positionals
-    # =========================================================================
-
-    set -l cmdline (commandline -poc)
-    set -l cmdline_count (count $cmdline)
-
-    set -l argi 2 # cmdline[1] is command name
-    while test $argi -le $cmdline_count
-      set -l arg "$cmdline[$argi]"
-      set -l have_trailing_arg (test $argi -lt $cmdline_count && echo true || echo false)
-
-      switch $arg
-        case '-'
-          set -a positionals -
-        case '--'
-          for argi in (seq (math $argi + 1) $cmdline_count)
-            set -a positionals $cmdline[$argi]
-          end
-          break
-        case '--*=*'
-          set -l split (string split -m 1 -- '=' $arg)
-          set -a having_options $split[1]
-          set -a option_values "$split[2]"
-        case '--*'
-          if contains -- $arg $long_opts_with_arg
-            if $have_trailing_arg
-              set -a having_options $arg
-              set -a option_values $cmdline[(math $argi + 1)]
-              set argi (math $argi + 1)
-            end
-          else
-            set -a having_options $arg
-            set -a option_values ''
-          end
-        case '-*'
-          set -l end_of_parsing false
-
-          set -l arg_length (string length -- $arg)
-          set -l i 2
-          while not $end_of_parsing; and test $i -le $arg_length
-            set -l option "-$(string sub -s $i -l 1 -- $arg)"
-            set -l trailing_chars "$(string sub -s (math $i + 1) -- $arg)"
-
-            if contains -- $option $short_opts_without_arg
-              set -a having_options $option
-              set -a option_values ''
-            else if contains -- $option $short_opts_with_arg
-              set end_of_parsing true
-
-              if test -n "$trailing_chars"
-                set -a having_options $option
-                set -a option_values $trailing_chars
-              else if $have_trailing_arg
-                set -a having_options $option
-                set -a option_values $cmdline[(math $argi + 1)]
-                set argi (math $argi + 1)
-              end
-            else if contains -- $option $short_opts_with_optional_arg
-              set end_of_parsing true
-              set -a having_options $option
-              set -a option_values "$trailing_chars" # may be empty
-            end
-
-            set i (math $i + 1)
-          end
-        case '*'
-          set -a positionals $arg
-      end
-
-      set argi (math $argi + 1)
-    end
-
-    set -g __QUERY_CACHE_POSITIONALS    $positionals
-    set -g __QUERY_CACHE_HAVING_OPTIONS $having_options
-    set -g __QUERY_CACHE_OPTION_VALUES  $option_values
-    set -g __QUERY_CACHE_KEY            $my_cache_key
-  end
-
-  # ===========================================================================
-  # Commands
-  # ===========================================================================
-
-  switch $cmd
-    case 'num_of_positionals'
-      switch (count $argv)
-        case 0
-          count $positionals
-        case 1
-          echo '_vlc_fish_query: num_of_positionals: $argv[1]: missing operand' >&2
-          return 1
-        case 2
-          if contains -- $argv[1] -lt -le -eq -ne -gt -ge;
-            test (count $positionals) $argv[1] $argv[2] && return 0 || return 1
-          else
-            echo '_vlc_fish_query: num_of_positionals: $argv[1]: unknown operator' >&2
-            return 1
-          end
-        case '*'
-          echo '_vlc_fish_query: num_of_positionals: too many arguments' >&2
-          return 1
-      end
-  end
-end
-
 set -l prog 'vlc'
-set -l query '_vlc_fish_query'
 
 # Delete existing completions
 complete -c $prog -e
@@ -465,12 +266,12 @@ complete -c $prog -x
 
 # command vlc
 set -l opts "--amem-format=,--amem-rate=,--amem-channels=,--alsa-audio-device=,--alsa-audio-channels=,--alsa-gain=,--audiofile-file=,--audiofile-format=,--audiofile-channels=,--audiofile-wav,--no-audiofile-wav,--lua-intf=,--lua-config=,--http-password=,--http-src=,--http-index,--no-http-index,--rc-host=,--rc-host=,--cli-host=,--telnet-host=,--telnet-port=,--telnet-password=,--lua-sd=,--wl-display=,--wl-display=,--flaschen-display=,--flaschen-width=,--flaschen-height=,--vmem-width=,--vmem-height=,--vmem-pitch=,--vmem-chroma=,--yuv-file=,--yuv-chroma=,--yuv-yuv4mpeg2,--no-yuv-yuv4mpeg2,--xvideo-adaptor=,--xvideo-format-id=,--dummy-chroma=,--x11-display=,--drawable-xid=,--gl=,--glconv=,--fbdev=,--fb-tty,--no-fb-tty,--fb-chroma=,--fb-mode=,--fb-hw-accel,--no-fb-hw-accel,--overlay-input=,--overlay-output=,--audiobargraph_v-x=,--audiobargraph_v-y=,--audiobargraph_v-transparency=,--audiobargraph_v-position=,--audiobargraph_v-barWidth=,--audiobargraph_v-barHeight=,--logo-file=,--logo-x=,--logo-y=,--logo-delay=,--logo-repeat=,--logo-opacity=,--logo-position=,--subsdelay-mode=,--subsdelay-factor=,--subsdelay-overlap=,--subsdelay-min-alpha=,--subsdelay-min-stops=,--subsdelay-min-start-stop=,--subsdelay-min-stop-start=,--marq-marquee=,--marq-file=,--marq-x=,--marq-y=,--marq-position=,--marq-opacity=,--marq-color=,--marq-size=,--marq-timeout=,--marq-refresh=,--mosaic-alpha=,--mosaic-height=,--mosaic-width=,--mosaic-align=,--mosaic-xoffset=,--mosaic-yoffset=,--mosaic-borderw=,--mosaic-borderh=,--mosaic-position=,--mosaic-rows=,--mosaic-cols=,--mosaic-keep-aspect-ratio,--no-mosaic-keep-aspect-ratio,--mosaic-keep-picture,--no-mosaic-keep-picture,--mosaic-order=,--mosaic-offsets=,--mosaic-delay=,--rss-urls=,--rss-x=,--rss-y=,--rss-position=,--rss-opacity=,--rss-color=,--rss-size=,--rss-speed=,--rss-length=,--rss-ttl=,--rss-images,--no-rss-images,--rss-title=,--alsa-stereo,--no-alsa-stereo,--alsa-samplerate=,--http-continuous,--no-http-continuous,--http-forward-cookies,--no-http-forward-cookies,--http-referrer=,--http-user-agent=,--ftp-user=,--ftp-pwd=,--ftp-account=,--mms-timeout=,--mms-all,--no-mms-all,--mms-maxbitrate=,--satip-buffer=,--satip-multicast,--no-satip-multicast,--satip-host=,--shm-fps=,--shm-depth=,--shm-width=,--shm-height=,--shm-file=,--shm-id=,--vdr-chapter-offset=,--vdr-fps=,--dvb-adapter=,--dvb-device=,--dvb-budget-mode,--no-dvb-budget-mode,--dvb-frequency=,--dvb-inversion=,--dvb-bandwidth=,--dvb-transmission=,--dvb-guard=,--dvb-code-rate-hp=,--dvb-code-rate-lp=,--dvb-hierarchy=,--dvb-plp-id=,--dvb-a-modulation=,--dvb-a-fec=,--dvb-a-count=,--dvb-a-interleaving=,--dvb-b-modulation=,--dvb-b-fec=,--dvb-b-count=,--dvb-b-interleaving=,--dvb-c-modulation=,--dvb-c-fec=,--dvb-c-count=,--dvb-c-interleaving=,--dvb-modulation=,--dvb-srate=,--dvb-fec=,--dvb-stream=,--dvb-pilot=,--dvb-rolloff=,--dvb-ts-id=,--dvb-polarization=,--dvb-voltage=,--dvb-high-voltage,--no-dvb-high-voltage,--dvb-lnb-low=,--dvb-lnb-high=,--dvb-lnb-switch=,--dvb-satno=,--dvb-uncommitted=,--dvb-tone=,--udp-timeout=,--list-special-files,--no-list-special-files,--concat-list=,--rtcp-port=,--rtp-max-src=,--rtp-timeout=,--rtp-max-dropout=,--rtp-max-misorder=,--rtp-dynamic-pt=,--packet-size=,--maximum-jitter=,--latency=,--retry-interval=,--reorder-buffer=,--max-retries=,--nack-type=,--disable-nacks,--no-disable-nacks,--mcast-blind-nacks,--no-mcast-blind-nacks,--timecode-fps=,--http-reconnect,--no-http-reconnect,--imem-get=,--imem-release=,--imem-cookie=,--imem-data=,--imem-id=,--imem-group=,--imem-cat=,--imem-codec=,--imem-language=,--imem-samplerate=,--imem-channels=,--imem-width=,--imem-height=,--imem-dar=,--imem-fps=,--imem-size=,--denoise-sigma=,--vdpau-deinterlace=,--vdpau-ivtc,--no-vdpau-ivtc,--vdpau-chroma-skip,--no-vdpau-chroma-skip,--vdpau-noise-reduction=,--vdpau-scaling=,--prefetch-buffer-size=,--prefetch-read-size=,--prefetch-seek-threshold=,--album-art-filename=,--sout-ps-dts-delay=,--sout-ps-pes-max-size=,--sout-asf-title=,--sout-asf-author=,--sout-asf-copyright=,--sout-asf-comment=,--sout-asf-rating=,--sout-asf-packet-size=,--sout-asf-bitrate-override=,--sout-mp4-faststart,--no-sout-mp4-faststart,--sout-avi-artist=,--sout-avi-date=,--sout-avi-genre=,--sout-avi-copyright=,--sout-avi-comment=,--sout-avi-name=,--sout-avi-subject=,--sout-avi-encoder=,--sout-avi-keywords=,--sout-ogg-indexintvl=,--sout-ogg-indexratio=,--sout-jpeg-quality=,--cc-opaque,--no-cc-opaque,--sout-vorbis-quality=,--sout-vorbis-max-bitrate=,--sout-vorbis-min-bitrate=,--sout-vorbis-cbr,--no-sout-vorbis-cbr,--ttml-align=,--sout-speex-mode=,--sout-speex-complexity=,--sout-speex-cbr,--no-sout-speex-cbr,--sout-speex-quality=,--sout-speex-max-bitrate=,--sout-speex-vad,--no-sout-speex-vad,--sout-speex-dtx,--no-sout-speex-dtx,--subsdec-align=,--subsdec-encoding=,--subsdec-autodetect-utf8,--no-subsdec-autodetect-utf8,--theora-postproc=,--sout-theora-quality=,--dav1d-thread-frames=,--dummy-save-es,--no-dummy-save-es,--a52-dynrng,--no-a52-dynrng,--sout-vpx-quality-mode=,--dvbsub-position=,--dvbsub-x=,--dvbsub-y=,--sout-dvbsub-x=,--sout-dvbsub-y=,--dvdsub-transparency,--no-dvdsub-transparency,--sout-twolame-quality=,--sout-twolame-mode=,--sout-twolame-vbr,--no-sout-twolame-vbr,--sout-twolame-psy=,--subsdec-formatted,--no-subsdec-formatted,--telx-override-page=,--telx-ignore-subtitle-flag,--no-telx-ignore-subtitle-flag,--telx-french-workaround,--no-telx-french-workaround,--gnutls-system-trust,--no-gnutls-system-trust,--gnutls-dir-trust=,--gnutls-priorities=,--lastfm-username=,--lastfm-password=,--scrobbler-url=,--rtsp-raw-mux=,--rtsp-throttle-users=,--rtsp-session-timeout=,--sout-mosaic-bridge-id=,--sout-mosaic-bridge-width=,--sout-mosaic-bridge-height=,--sout-mosaic-bridge-sar=,--sout-mosaic-bridge-chroma=,--sout-mosaic-bridge-vfilter=,--sout-mosaic-bridge-alpha=,--sout-mosaic-bridge-x=,--sout-mosaic-bridge-y=,--sout-delay-id=,--sout-delay-delay=,--sout-bridge-out-id=,--sout-bridge-out-in-name=,--sout-bridge-in-delay=,--sout-bridge-in-id-offset=,--sout-bridge-in-name=,--sout-bridge-in-placeholder,--no-sout-bridge-in-placeholder,--sout-bridge-in-placeholder-delay=,--sout-bridge-in-placeholder-switch-on-iframe,--no-sout-bridge-in-placeholder-switch-on-iframe,--sout-standard-access=,--sout-standard-mux=,--sout-standard-dst=,--sout-standard-bind=,--sout-standard-path=,--sout-standard-sap,--no-sout-standard-sap,--sout-standard-name=,--sout-standard-description=,--sout-standard-url=,--sout-standard-email=,--sout-transcode-venc=,--sout-transcode-vcodec=,--sout-transcode-vb=,--sout-transcode-scale=,--sout-transcode-fps=,--sout-transcode-deinterlace,--no-sout-transcode-deinterlace,--sout-transcode-deinterlace-module=,--sout-transcode-width=,--sout-transcode-height=,--sout-transcode-maxwidth=,--sout-transcode-maxheight=,--sout-transcode-vfilter=,--sout-transcode-aenc=,--sout-transcode-acodec=,--sout-transcode-ab=,--sout-transcode-alang=,--sout-transcode-channels=,--sout-transcode-samplerate=,--sout-transcode-afilter=,--sout-transcode-senc=,--sout-transcode-scodec=,--sout-transcode-soverlay,--no-sout-transcode-soverlay,--sout-transcode-sfilter=,--sout-transcode-threads=,--sout-transcode-pool-size=,--sout-transcode-high-priority,--no-sout-transcode-high-priority,--sout-smem-video-prerender-callback=,--sout-smem-audio-prerender-callback=,--sout-smem-video-postrender-callback=,--sout-smem-audio-postrender-callback=,--sout-smem-video-data=,--sout-smem-audio-data=,--sout-smem-time-sync,--no-sout-smem-time-sync,--sout-record-dst-prefix=,--sout-es-access=,--sout-es-mux=,--sout-es-dst=,--sout-es-access-audio=,--sout-es-mux-audio=,--sout-es-dst-audio=,--sout-es-access-video=,--sout-es-mux-video=,--sout-es-dst-video=,--sout-setid-id=,--sout-setid-new-id=,--sout-setlang-id=,--sout-setlang-lang=,--sout-stats-output=,--sout-stats-prefix=,--sout-display-audio,--no-sout-display-audio,--sout-display-video,--no-sout-display-video,--sout-display-delay=,--sout-rtp-dst=,--sout-rtp-sdp=,--sout-rtp-mux=,--sout-rtp-sap,--no-sout-rtp-sap,--sout-rtp-name=,--sout-rtp-cat=,--sout-rtp-description=,--sout-rtp-url=,--sout-rtp-email=,--sout-rtp-proto=,--sout-rtp-port=,--sout-rtp-port-audio=,--sout-rtp-port-video=,--sout-rtp-ttl=,--sout-rtp-rtcp-mux,--no-sout-rtp-rtcp-mux,--sout-rtp-caching=,--sout-rtp-mp4a-latm,--no-sout-rtp-mp4a-latm,--rtsp-timeout=,--sout-rtsp-user=,--sout-rtsp-pwd=,--sout-http-user=,--sout-http-pwd=,--sout-http-mime=,--sout-http-metacube,--no-sout-http-metacube,--sout-shout-name=,--sout-shout-description=,--sout-shout-mp3,--no-sout-shout-mp3,--sout-shout-genre=,--sout-shout-url=,--sout-shout-bitrate=,--sout-shout-samplerate=,--sout-shout-channels=,--sout-shout-quality=,--sout-shout-public,--no-sout-shout-public,--sout-file-overwrite,--no-sout-file-overwrite,--sout-file-append,--no-sout-file-append,--sout-file-format,--no-sout-file-format,--sout-file-sync,--no-sout-file-sync,--sout-rist-packet-size=,--sout-rist-caching=,--sout-rist-buffer-size=,--sout-rist-ssrc=,--sout-rist-stream-name=,--sout-udp-caching=,--sout-udp-group=,--demuxdump-access=,--demuxdump-file=,--demuxdump-append,--no-demuxdump-append,--adaptive-logic=,--adaptive-maxwidth=,--adaptive-maxheight=,--adaptive-bw=,--adaptive-use-access,--no-adaptive-use-access,--adaptive-livedelay=,--adaptive-maxbuffer=,--adaptive-lowlatency=,--es-fps=,--sub-fps=,--sub-delay=,--sub-type=,--sub-description=,--avi-interleaved,--no-avi-interleaved,--avi-index=,--rawaud-channels=,--rawaud-samplerate=,--rawaud-fourcc=,--rawaud-lang=,--mjpeg-fps=,--vc1-fps=,--image-id=,--image-group=,--image-decode,--no-image-decode,--image-chroma=,--image-duration=,--image-fps=,--image-realtime,--no-image-realtime,--rawdv-hurry-up,--no-rawdv-hurry-up,--h264-fps=,--hevc-fps=,--rawvid-fps=,--rawvid-width=,--rawvid-height=,--rawvid-chroma=,--rawvid-aspect-ratio=,--mp4-m4a-audioonly,--no-mp4-m4a-audioonly,--ps-trust-timestamps,--no-ps-trust-timestamps,--playlist-skip-ads,--no-playlist-skip-ads,--shoutcast-show-adult,--no-shoutcast-show-adult,--dirac-dts-offset=,--wall-cols=,--wall-rows=,--wall-active=,--wall-element-aspect=,--panoramix-cols=,--panoramix-rows=,--panoramix-bz-length=,--panoramix-bz-height=,--panoramix-attenuate,--no-panoramix-attenuate,--panoramix-bz-begin=,--panoramix-bz-middle=,--panoramix-bz-end=,--panoramix-bz-middle-pos=,--panoramix-bz-gamma-red=,--panoramix-bz-gamma-green=,--panoramix-bz-gamma-blue=,--panoramix-bz-blackcrush-red=,--panoramix-bz-blackcrush-green=,--panoramix-bz-blackcrush-blue=,--panoramix-bz-whitecrush-red=,--panoramix-bz-whitecrush-green=,--panoramix-bz-whitecrush-blue=,--panoramix-bz-blacklevel-red=,--panoramix-bz-blacklevel-green=,--panoramix-bz-blacklevel-blue=,--panoramix-bz-whitelevel-red=,--panoramix-bz-whitelevel-green=,--panoramix-bz-whitelevel-blue=,--panoramix-active=,--clone-count=,--clone-vout-list=,--podcast-urls=,--sap-addr=,--sap-timeout=,--sap-parse,--no-sap-parse,--sap-strict,--no-sap-strict,--packetizer-mpegvideo-sync-iframe,--no-packetizer-mpegvideo-sync-iframe,--rc-show-pos,--no-rc-show-pos,--rc-fake-tty,--no-rc-fake-tty,--rc-unix=,--gestures-threshold=,--gestures-button=,--netsync-master,--no-netsync-master,--netsync-master-ip=,--netsync-timeout=,-q,--quiet,--no-quiet,--syslog,--no-syslog,--syslog-debug,--no-syslog-debug,--syslog-ident=,--syslog-facility=,--file-logging,--no-file-logging,--logfile=,--logmode=,--log-verbose=,--qt-minimal-view,--no-qt-minimal-view,--qt-system-tray,--no-qt-system-tray,--qt-notification=,--qt-start-minimized,--no-qt-start-minimized,--qt-pause-minimized,--no-qt-pause-minimized,--qt-opacity=,--qt-fs-opacity=,--qt-video-autoresize,--no-qt-video-autoresize,--qt-name-in-title,--no-qt-name-in-title,--qt-fs-controller,--no-qt-fs-controller,--qt-recentplay,--no-qt-recentplay,--qt-recentplay-filter=,--qt-continue=,--qt-embedded-open,--no-qt-embedded-open,--qt-advanced-pref,--no-qt-advanced-pref,--qt-error-dialogs,--no-qt-error-dialogs,--qt-slider-colours=,--qt-privacy-ask,--no-qt-privacy-ask,--qt-fullscreen-screennumber=,--qt-autoload-extensions,--no-qt-autoload-extensions,--qt-bgcone,--no-qt-bgcone,--qt-bgcone-expands,--no-qt-bgcone-expands,--qt-icon-change,--no-qt-icon-change,--qt-max-volume=,--qt-fs-sensitivity=,--qt-auto-raise=,--bluescreen-u=,--bluescreen-v=,--bluescreen-ut=,--bluescreen-vt=,--sharpen-sigma=,--gaussianblur-sigma=,--anaglyph-scheme=,--mirror-split=,--mirror-direction=,--posterize-level=,--erase-mask=,--erase-x=,--erase-y=,--sout-deinterlace-mode=,--sout-deinterlace-phosphor-chroma=,--sout-deinterlace-phosphor-dimmer=,--alphamask-mask=,--sepia-intensity=,--ball-color=,--ball-speed=,--ball-size=,--ball-gradient-threshold=,--ball-edge-visible,--no-ball-edge-visible,--transform-type=,--scene-format=,--scene-width=,--scene-height=,--scene-prefix=,--scene-path=,--scene-replace,--no-scene-replace,--scene-ratio=,--contrast=,--brightness=,--hue=,--saturation=,--gamma=,--brightness-threshold,--no-brightness-threshold,--gradfun-radius=,--gradfun-strength=,--blendbench-loops=,--blendbench-alpha=,--blendbench-base-image=,--blendbench-base-chroma=,--blendbench-blend-image=,--blendbench-blend-chroma=,--fps-fps=,--hqdn3d-luma-spat=,--hqdn3d-chroma-spat=,--hqdn3d-luma-temp=,--hqdn3d-chroma-temp=,--rotate-angle=,--rotate-use-motion,--no-rotate-use-motion,--colorthres-color=,--colorthres-saturationthres=,--colorthres-similaritythres=,--extract-component=,--antiflicker-window-size=,--antiflicker-softening-size=,--croppadd-croptop=,--croppadd-cropbottom=,--croppadd-cropleft=,--croppadd-cropright=,--croppadd-paddtop=,--croppadd-paddbottom=,--croppadd-paddleft=,--croppadd-paddright=,--gradient-mode=,--gradient-type=,--gradient-cartoon,--no-gradient-cartoon,--blur-factor=,--grain-variance=,--grain-period-min=,--grain-period-max=,--canvas-width=,--canvas-height=,--canvas-aspect=,--canvas-padd,--no-canvas-padd,--puzzle-rows=,--puzzle-cols=,--puzzle-border=,--puzzle-preview,--no-puzzle-preview,--puzzle-preview-size=,--puzzle-shape-size=,--puzzle-auto-shuffle=,--puzzle-auto-solve=,--puzzle-rotation=,--puzzle-mode=,--keystore-file=,--equalizer-preset=,--equalizer-bands=,--equalizer-2pass,--no-equalizer-2pass,--equalizer-vlcfreqs,--no-equalizer-vlcfreqs,--equalizer-preamp=,--speex-resampler-quality=,--norm-buff-size=,--norm-max-level=,--headphone-dim=,--headphone-compensate,--no-headphone-compensate,--headphone-dolby,--no-headphone-dolby,--scaletempo-stride=,--scaletempo-stride=,--scaletempo-overlap=,--scaletempo-overlap=,--scaletempo-search=,--scaletempo-search=,--aout-remap-channel-left=,--aout-remap-channel-center=,--aout-remap-channel-right=,--aout-remap-channel-rearleft=,--aout-remap-channel-rearcenter=,--aout-remap-channel-rearright=,--aout-remap-channel-middleleft=,--aout-remap-channel-middleright=,--aout-remap-channel-lfe=,--aout-remap-normalize,--no-aout-remap-normalize,--gain-value=,--stereowiden-delay=,--stereowiden-feedback=,--stereowiden-crossfeed=,--stereowiden-dry-mix=,--pitch-shift=,--compressor-rms-peak=,--compressor-attack=,--compressor-release=,--compressor-threshold=,--compressor-ratio=,--compressor-knee=,--compressor-makeup-gain=,--spatializer-roomsize=,--spatializer-width=,--spatializer-wet=,--spatializer-dry=,--spatializer-damp=,--audiobargraph_a-bargraph=,--audiobargraph_a-bargraph_repetition=,--audiobargraph_a-silence=,--audiobargraph_a-time_window=,--audiobargraph_a-alarm_threshold=,--audiobargraph_a-repetition_time=,--delay-time=,--sweep-depth=,--sweep-rate=,--feedback-gain=,--wet-mix=,--dry-mix=,--sout-mono-downmix,--no-sout-mono-downmix,--sout-mono-channel=,--param-eq-lowf=,--param-eq-lowgain=,--param-eq-highf=,--param-eq-highgain=,--param-eq-f1=,--param-eq-gain1=,--param-eq-q1=,--param-eq-f2=,--param-eq-gain2=,--param-eq-q2=,--param-eq-f3=,--param-eq-gain3=,--param-eq-q3=,--audio,--no-audio,--gain=,--volume-step=,--volume-save,--no-volume-save,--spdif,--no-spdif,--force-dolby-surround=,--stereo-mode=,--audio-desync=,--audio-replay-gain-mode=,--audio-replay-gain-preamp=,--audio-replay-gain-default=,--audio-replay-gain-peak-protection,--no-audio-replay-gain-peak-protection,--audio-time-stretch,--no-audio-time-stretch,-A=,--aout=,--role=,--audio-filter=,--audio-visual=,--audio-resampler=,--video,--no-video,--grayscale,--no-grayscale,-f,--fullscreen,--no-fullscreen,--embedded-video,--no-embedded-video,--xlib,--no-xlib,--drop-late-frames,--no-drop-late-frames,--skip-frames,--no-skip-frames,--quiet-synchro,--no-quiet-synchro,--keyboard-events,--no-keyboard-events,--mouse-events,--no-mouse-events,--video-on-top,--no-video-on-top,--video-wallpaper,--no-video-wallpaper,--disable-screensaver,--no-disable-screensaver,--video-title-show,--no-video-title-show,--video-title-timeout=,--video-title-position=,--mouse-hide-timeout=,--snapshot-path=,--snapshot-prefix=,--snapshot-format=,--snapshot-preview,--no-snapshot-preview,--snapshot-sequential,--no-snapshot-sequential,--snapshot-width=,--snapshot-height=,--width=,--height=,--video-x=,--video-y=,--crop=,--custom-crop-ratios=,--aspect-ratio=,--autoscale,--no-autoscale,--monitor-par=,--custom-aspect-ratios=,--hdtv-fix,--no-hdtv-fix,--video-deco,--no-video-deco,--video-title=,--align=,--zoom=,--deinterlace=,--deinterlace-mode=,-V=,--vout=,--video-filter=,--video-splitter=,--spu,--no-spu,--osd,--no-osd,--text-renderer=,--sub-file=,--sub-autodetect-file,--no-sub-autodetect-file,--sub-autodetect-fuzzy=,--sub-autodetect-path=,--sub-margin=,--sub-text-scale=,--sub-source=,--sub-filter=,--program=,--programs=,--audio-track=,--sub-track=,--audio-language=,--sub-language=,--menu-language=,--audio-track-id=,--sub-track-id=,--captions=,--preferred-resolution=,--input-repeat=,--start-time=,--stop-time=,--run-time=,--input-fast-seek,--no-input-fast-seek,--rate=,--input-list=,--input-slave=,--bookmarks=,--dvd=,--vcd=,--mtu=,--ipv4-timeout=,--http-host=,--http-port=,--https-port=,--rtsp-host=,--rtsp-port=,--http-cert=,--http-key=,--socks=,--socks-user=,--socks-pwd=,--meta-title=,--meta-author=,--meta-artist=,--meta-genre=,--meta-copyright=,--meta-description=,--meta-date=,--meta-url=,--file-caching=,--live-caching=,--disc-caching=,--network-caching=,--cr-average=,--clock-synchro=,--clock-jitter=,--network-synchronisation,--no-network-synchronisation,--input-record-path=,--input-record-native,--no-input-record-native,--input-timeshift-path=,--input-timeshift-granularity=,--input-title-format=,--lua,--no-lua,--codec=,--encoder=,--access=,--demux=,--stream-filter=,--demux-filter=,--sout=,--sout-display,--no-sout-display,--sout-keep,--no-sout-keep,--sout-all,--no-sout-all,--sout-audio,--no-sout-audio,--sout-video,--no-sout-video,--sout-spu,--no-sout-spu,--sout-mux-caching=,--vlm-conf=,--sap-interval=,--mux=,--access_output=,--ttl=,--miface=,--dscp=,--packetizer=,--vod-server=,--plugins-cache,--no-plugins-cache,--plugins-scan,--no-plugins-scan,--keystore=,--rt-priority,--no-rt-priority,--rt-offset=,-Z,--random,--no-random,-L,--loop,--no-loop,-R,--repeat,--no-repeat,--play-and-exit,--no-play-and-exit,--play-and-stop,--no-play-and-stop,--play-and-pause,--no-play-and-pause,--start-paused,--no-start-paused,--playlist-autostart,--no-playlist-autostart,--playlist-cork,--no-playlist-cork,--one-instance,--no-one-instance,--started-from-file,--no-started-from-file,--one-instance-when-started-from-file,--no-one-instance-when-started-from-file,--playlist-enqueue,--no-playlist-enqueue,--dbus,--no-dbus,--media-library,--no-media-library,--playlist-tree,--no-playlist-tree,--open=,--auto-preparse,--no-auto-preparse,--preparse-timeout=,--metadata-network-access,--no-metadata-network-access,--recursive=,--ignore-filetypes=,--show-hiddenfiles,--no-show-hiddenfiles,--extractor-flatten,--no-extractor-flatten,-S=,--services-discovery=,-v=,--verbose=,-d,--daemon,--no-daemon,--pidfile=,--color,--no-color,--advanced,--no-advanced,--interact,--no-interact,--stats,--no-stats,-I=,--intf=,--extraintf=,--control=,--hotkeys-y-wheel-mode=,--hotkeys-x-wheel-mode=,--global-key-toggle-fullscreen=,--key-toggle-fullscreen=,--global-key-leave-fullscreen=,--key-leave-fullscreen=,--global-key-play-pause=,--key-play-pause=,--global-key-pause=,--key-pause=,--global-key-play=,--key-play=,--global-key-faster=,--key-faster=,--global-key-slower=,--key-slower=,--global-key-rate-normal=,--key-rate-normal=,--global-key-rate-faster-fine=,--key-rate-faster-fine=,--global-key-rate-slower-fine=,--key-rate-slower-fine=,--global-key-next=,--key-next=,--global-key-prev=,--key-prev=,--global-key-stop=,--key-stop=,--global-key-position=,--key-position=,--global-key-jump-extrashort=,--key-jump-extrashort=,--global-key-jump+extrashort=,--key-jump+extrashort=,--global-key-jump-short=,--key-jump-short=,--global-key-jump+short=,--key-jump+short=,--global-key-jump-medium=,--key-jump-medium=,--global-key-jump+medium=,--key-jump+medium=,--global-key-jump-long=,--key-jump-long=,--global-key-jump+long=,--key-jump+long=,--global-key-frame-next=,--key-frame-next=,--global-key-nav-activate=,--key-nav-activate=,--global-key-nav-up=,--key-nav-up=,--global-key-nav-down=,--key-nav-down=,--global-key-nav-left=,--key-nav-left=,--global-key-nav-right=,--key-nav-right=,--global-key-disc-menu=,--key-disc-menu=,--global-key-title-prev=,--key-title-prev=,--global-key-title-next=,--key-title-next=,--global-key-chapter-prev=,--key-chapter-prev=,--global-key-chapter-next=,--key-chapter-next=,--global-key-quit=,--key-quit=,--global-key-vol-up=,--key-vol-up=,--global-key-vol-down=,--key-vol-down=,--global-key-vol-mute=,--key-vol-mute=,--global-key-subdelay-up=,--key-subdelay-up=,--global-key-subdelay-down=,--key-subdelay-down=,--global-key-subsync-markaudio=,--key-subsync-markaudio=,--global-key-subsync-marksub=,--key-subsync-marksub=,--global-key-subsync-apply=,--key-subsync-apply=,--global-key-subsync-reset=,--key-subsync-reset=,--global-key-subpos-up=,--key-subpos-up=,--global-key-subpos-down=,--key-subpos-down=,--global-key-audiodelay-up=,--key-audiodelay-up=,--global-key-audiodelay-down=,--key-audiodelay-down=,--global-key-audio-track=,--key-audio-track=,--global-key-audiodevice-cycle=,--key-audiodevice-cycle=,--global-key-subtitle-revtrack=,--key-subtitle-revtrack=,--global-key-subtitle-track=,--key-subtitle-track=,--global-key-subtitle-toggle=,--key-subtitle-toggle=,--global-key-program-sid-next=,--key-program-sid-next=,--global-key-program-sid-prev=,--key-program-sid-prev=,--global-key-aspect-ratio=,--key-aspect-ratio=,--global-key-crop=,--key-crop=,--global-key-toggle-autoscale=,--key-toggle-autoscale=,--global-key-incr-scalefactor=,--key-incr-scalefactor=,--global-key-decr-scalefactor=,--key-decr-scalefactor=,--global-key-deinterlace=,--key-deinterlace=,--global-key-deinterlace-mode=,--key-deinterlace-mode=,--global-key-intf-show=,--key-intf-show=,--global-key-intf-boss=,--key-intf-boss=,--global-key-intf-popup-menu=,--key-intf-popup-menu=,--global-key-snapshot=,--key-snapshot=,--global-key-record=,--key-record=,--global-key-zoom=,--key-zoom=,--global-key-unzoom=,--key-unzoom=,--global-key-wallpaper=,--key-wallpaper=,--global-key-crop-top=,--key-crop-top=,--global-key-uncrop-top=,--key-uncrop-top=,--global-key-crop-left=,--key-crop-left=,--global-key-uncrop-left=,--key-uncrop-left=,--global-key-crop-bottom=,--key-crop-bottom=,--global-key-uncrop-bottom=,--key-uncrop-bottom=,--global-key-crop-right=,--key-crop-right=,--global-key-uncrop-right=,--key-uncrop-right=,--global-key-random=,--key-random=,--global-key-loop=,--key-loop=,--global-key-viewpoint-fov-in=,--key-viewpoint-fov-in=,--global-key-viewpoint-fov-out=,--key-viewpoint-fov-out=,--global-key-viewpoint-roll-clock=,--key-viewpoint-roll-clock=,--global-key-viewpoint-roll-anticlock=,--key-viewpoint-roll-anticlock=,--global-key-zoom-quarter=,--key-zoom-quarter=,--global-key-zoom-half=,--key-zoom-half=,--global-key-zoom-original=,--key-zoom-original=,--global-key-zoom-double=,--key-zoom-double=,--extrashort-jump-size=,--short-jump-size=,--medium-jump-size=,--long-jump-size=,--global-key-set-bookmark1=,--key-set-bookmark1=,--global-key-set-bookmark2=,--key-set-bookmark2=,--global-key-set-bookmark3=,--key-set-bookmark3=,--global-key-set-bookmark4=,--key-set-bookmark4=,--global-key-set-bookmark5=,--key-set-bookmark5=,--global-key-set-bookmark6=,--key-set-bookmark6=,--global-key-set-bookmark7=,--key-set-bookmark7=,--global-key-set-bookmark8=,--key-set-bookmark8=,--global-key-set-bookmark9=,--key-set-bookmark9=,--global-key-set-bookmark10=,--key-set-bookmark10=,--global-key-play-bookmark1=,--key-play-bookmark1=,--global-key-play-bookmark2=,--key-play-bookmark2=,--global-key-play-bookmark3=,--key-play-bookmark3=,--global-key-play-bookmark4=,--key-play-bookmark4=,--global-key-play-bookmark5=,--key-play-bookmark5=,--global-key-play-bookmark6=,--key-play-bookmark6=,--global-key-play-bookmark7=,--key-play-bookmark7=,--global-key-play-bookmark8=,--key-play-bookmark8=,--global-key-play-bookmark9=,--key-play-bookmark9=,--global-key-play-bookmark10=,--key-play-bookmark10=,--global-key-clear-playlist=,--key-clear-playlist=,--global-key-subtitle-text-scale-normal=,--key-subtitle-text-scale-normal=,--global-key-subtitle-text-scale-up=,--key-subtitle-text-scale-up=,--global-key-subtitle-text-scale-down=,--key-subtitle-text-scale-down=,--bookmark1=,--bookmark2=,--bookmark3=,--bookmark4=,--bookmark5=,--bookmark6=,--bookmark7=,--bookmark8=,--bookmark9=,--bookmark10=,-h,--help,--no-help,-H,--full-help,--no-full-help,--longhelp,--no-longhelp,--help-verbose,--no-help-verbose,-l,--list,--no-list,--list-verbose,--no-list-verbose,-p=,--module=,--ignore-config,--no-ignore-config,--reset-config,--no-reset-config,--reset-plugins-cache,--no-reset-plugins-cache,--version,--no-version,--config="
-set -l C000 "$query '$opts' num_of_positionals -ge 0"
+set -l C000 "test (__fish_number_of_cmd_args_wo_opts) -ge 1"
 complete -c $prog -l amem-format -d 'Sample format Sample format' -x
 complete -c $prog -l amem-rate -d 'Sample rate Sample rate' -x
 complete -c $prog -l amem-channels -d 'Channels count Channels count' -x -a '(command seq 1 9)'
-complete -c $prog -l alsa-audio-device -d 'Audio output device Audio output device (using ALSA syntax).' -x -a '(_vlc__--alsa-audio-device)'
-complete -c $prog -l alsa-audio-channels -d 'Audio output channels Channels available for audio output. If the input has more channels than the output, it will be down-mixed. This parameter is ignored when digital pass-through is active.' -x -a '(_vlc__--alsa-audio-channels)'
+complete -c $prog -l alsa-audio-device -d 'Audio output device Audio output device (using ALSA syntax).' -x -a '(_vlc___--alsa-audio-device)'
+complete -c $prog -l alsa-audio-channels -d 'Audio output channels Channels available for audio output. If the input has more channels than the output, it will be down-mixed. This parameter is ignored when digital pass-through is active.' -x -a '(_vlc___--alsa-audio-channels)'
 complete -c $prog -l alsa-gain -d 'Software gain This linear gain will be applied in software.' -x
 complete -c $prog -l audiofile-file -d 'Output file File to which the audio samples will be written to ("-" for stdout).' -Fr
 complete -c $prog -l audiofile-format -d 'Output format Output format' -x -a 'u8 s16 float32 spdif'
@@ -517,7 +318,7 @@ complete -c $prog -l overlay-output -d 'Output FIFO FIFO which will be written t
 complete -c $prog -l audiobargraph_v-x -d 'X coordinate X coordinate of the bargraph.' -x
 complete -c $prog -l audiobargraph_v-y -d 'Y coordinate Y coordinate of the bargraph.' -x
 complete -c $prog -l audiobargraph_v-transparency -d 'Transparency of the bargraph Bargraph transparency value (from 0 for full transparency to 255 for full opacity).' -x -a '(command seq 0 255)'
-complete -c $prog -l audiobargraph_v-position -d 'Bargraph position Enforce the bargraph position on the video (0=center, 1=left, 2=right, 4=top, 8=bottom, you can also use combinations of these values, eg 6 = top-right).' -x -a '(_vlc__--audiobargraph_v-position)'
+complete -c $prog -l audiobargraph_v-position -d 'Bargraph position Enforce the bargraph position on the video (0=center, 1=left, 2=right, 4=top, 8=bottom, you can also use combinations of these values, eg 6 = top-right).' -x -a '(_vlc___--audiobargraph_v-position)'
 complete -c $prog -l audiobargraph_v-barWidth -d 'Bar width in pixel Width in pixel of each bar in the BarGraph to be displayed.' -x
 complete -c $prog -l audiobargraph_v-barHeight -d 'Bar Height in pixel Height in pixel of BarGraph to be displayed.' -x
 complete -c $prog -l logo-file -d 'Logo filenames Full path of the image files to use. Format is <image>[,<delay in ms>[,<alpha>]][;<image>[,<delay>[,<alpha>]]][;...]. If you only have one file, simply enter its filename.' -Fr
@@ -526,8 +327,8 @@ complete -c $prog -l logo-y -d 'Y coordinate Y coordinate of the logo. You can m
 complete -c $prog -l logo-delay -d 'Logo individual image time in ms Individual image display time of 0 - 60000 ms.' -x
 complete -c $prog -l logo-repeat -d 'Logo animation # of loops Number of loops for the logo animation. -1 = continuous, 0 = disabled' -x
 complete -c $prog -l logo-opacity -d 'Opacity of the logo Logo opacity value (from 0 for full transparency to 255 for full opacity).' -x -a '(command seq 0 255)'
-complete -c $prog -l logo-position -d 'Logo position Enforce the logo position on the video (0=center, 1=left, 2=right, 4=top, 8=bottom, you can also use combinations of these values, eg 6 = top-right).' -x -a '(_vlc__--audiobargraph_v-position)'
-complete -c $prog -l subsdelay-mode -d 'Delay calculation mode Absolute delay - add absolute delay to each subtitle. Relative to source delay - multiply subtitle delay. Relative to source content -determine subtitle delay from its content (text).' -x -a '(_vlc__--subsdelay-mode)'
+complete -c $prog -l logo-position -d 'Logo position Enforce the logo position on the video (0=center, 1=left, 2=right, 4=top, 8=bottom, you can also use combinations of these values, eg 6 = top-right).' -x -a '(_vlc___--audiobargraph_v-position)'
+complete -c $prog -l subsdelay-mode -d 'Delay calculation mode Absolute delay - add absolute delay to each subtitle. Relative to source delay - multiply subtitle delay. Relative to source content -determine subtitle delay from its content (text).' -x -a '(_vlc___--subsdelay-mode)'
 complete -c $prog -l subsdelay-factor -d 'Calculation factor Calculation factor. In Absolute delay mode the factor represents seconds.' -x
 complete -c $prog -l subsdelay-overlap -d 'Maximum overlapping subtitles Maximum number of subtitles allowed at the same time.' -x -a '(command seq 1 4)'
 complete -c $prog -l subsdelay-min-alpha -d 'Minimum alpha value Alpha value of the earliest subtitle, where 0 is fully transparent and 255 is fully opaque. Overlap fix:' -x -a '(command seq 0 255)'
@@ -538,16 +339,16 @@ complete -c $prog -l marq-marquee -d 'Text Marquee text to display. (Available f
 complete -c $prog -l marq-file -d 'Text file File to read the marquee text from. Position:' -Fr
 complete -c $prog -l marq-x -d 'X offset X offset, from the left screen edge.' -x
 complete -c $prog -l marq-y -d 'Y offset Y offset, down from the top.' -x
-complete -c $prog -l marq-position -d 'Marquee position You can enforce the marquee position on the video (0=center, 1=left, 2=right, 4=top, 8=bottom, you can also use combinations of these values, eg 6 = top-right). Font:' -x -a '(_vlc__--audiobargraph_v-position)'
+complete -c $prog -l marq-position -d 'Marquee position You can enforce the marquee position on the video (0=center, 1=left, 2=right, 4=top, 8=bottom, you can also use combinations of these values, eg 6 = top-right). Font:' -x -a '(_vlc___--audiobargraph_v-position)'
 complete -c $prog -l marq-opacity -d 'Opacity Opacity (inverse of transparency) of overlayed text. 0 = transparent, 255 = totally opaque.' -x -a '(command seq 0 255)'
-complete -c $prog -l marq-color -d 'Color Color of the text that will be rendered on the video. This must be an hexadecimal (like HTML colors). The first two chars are for red, then green, then blue. #000000 = black, #FF0000 = red, #00FF00 = green, #FFFF00 = yellow (red + green), #FFFFFF = white' -x -a '(_vlc__--marq-color)'
+complete -c $prog -l marq-color -d 'Color Color of the text that will be rendered on the video. This must be an hexadecimal (like HTML colors). The first two chars are for red, then green, then blue. #000000 = black, #FF0000 = red, #00FF00 = green, #FFFF00 = yellow (red + green), #FFFFFF = white' -x -a '(_vlc___--marq-color)'
 complete -c $prog -l marq-size -d 'Font size, pixels Font size, in pixels. Default is 0 (use default font size). Misc:' -x -a '(command seq 0 4096)'
 complete -c $prog -l marq-timeout -d 'Timeout Number of milliseconds the marquee must remain displayed. Default value is 0 (remains forever).' -x
 complete -c $prog -l marq-refresh -d 'Refresh period in ms Number of milliseconds between string updates. This is mainly useful when using meta data or time format string sequences.' -x
 complete -c $prog -l mosaic-alpha -d 'Transparency Transparency of the mosaic foreground pictures. 0 means transparent, 255 opaque (default).' -x -a '(command seq 0 255)'
 complete -c $prog -l mosaic-height -d 'Height Total height of the mosaic, in pixels.' -x
 complete -c $prog -l mosaic-width -d 'Width Total width of the mosaic, in pixels.' -x
-complete -c $prog -l mosaic-align -d 'Mosaic alignment You can enforce the mosaic alignment on the video (0=center, 1=left, 2=right, 4=top, 8=bottom, you can also use combinations of these values, eg 6 = top-right).' -x -a '(_vlc__--audiobargraph_v-position)'
+complete -c $prog -l mosaic-align -d 'Mosaic alignment You can enforce the mosaic alignment on the video (0=center, 1=left, 2=right, 4=top, 8=bottom, you can also use combinations of these values, eg 6 = top-right).' -x -a '(_vlc___--audiobargraph_v-position)'
 complete -c $prog -l mosaic-xoffset -d 'Top left corner X coordinate X Coordinate of the top-left corner of the mosaic.' -x
 complete -c $prog -l mosaic-yoffset -d 'Top left corner Y coordinate Y Coordinate of the top-left corner of the mosaic.' -x
 complete -c $prog -l mosaic-borderw -d 'Border width Width in pixels of the border between miniatures.' -x
@@ -563,9 +364,9 @@ complete -c $prog -l mosaic-delay -d 'Delay Pictures coming from the mosaic elem
 complete -c $prog -l rss-urls -d "Feed URLs RSS/Atom feed '|' (pipe) separated URLs. Position:" -x
 complete -c $prog -l rss-x -d 'X offset X offset, from the left screen edge.' -x
 complete -c $prog -l rss-y -d 'Y offset Y offset, down from the top.' -x
-complete -c $prog -l rss-position -d 'Text position You can enforce the text position on the video (0=center, 1=left, 2=right, 4=top, 8=bottom; you can also use combinations of these values, eg 6 = top-right). Font:' -x -a '(_vlc__--audiobargraph_v-position)'
+complete -c $prog -l rss-position -d 'Text position You can enforce the text position on the video (0=center, 1=left, 2=right, 4=top, 8=bottom; you can also use combinations of these values, eg 6 = top-right). Font:' -x -a '(_vlc___--audiobargraph_v-position)'
 complete -c $prog -l rss-opacity -d 'Opacity Opacity (inverse of transparency) of overlay text. 0 = transparent, 255 = totally opaque.' -x -a '(command seq 0 255)'
-complete -c $prog -l rss-color -d 'Color Color of the text that will be rendered on the video. This must be an hexadecimal (like HTML colors). The first two chars are for red, then green, then blue. #000000 = black, #FF0000 = red, #00FF00 = green, #FFFF00 = yellow (red + green), #FFFFFF = white' -x -a '(_vlc__--marq-color)'
+complete -c $prog -l rss-color -d 'Color Color of the text that will be rendered on the video. This must be an hexadecimal (like HTML colors). The first two chars are for red, then green, then blue. #000000 = black, #FF0000 = red, #00FF00 = green, #FFFF00 = yellow (red + green), #FFFFFF = white' -x -a '(_vlc___--marq-color)'
 complete -c $prog -l rss-size -d 'Font size, pixels Font size, in pixels. Default is 0 (use default font size). Misc:' -x -a '(command seq 0 4096)'
 complete -c $prog -l rss-speed -d 'Speed of feeds Speed of the RSS/Atom feeds in microseconds (bigger is slower).' -x
 complete -c $prog -l rss-length -d 'Max length Maximum number of characters displayed on the screen.' -x
@@ -573,7 +374,7 @@ complete -c $prog -l rss-ttl -d 'Refresh time Number of seconds between each for
 complete -c $prog -l rss-images -l no-rss-images -d 'Feed images (default enabled) Display feed images if available.' -f
 complete -c $prog -l rss-title -d 'Title display mode Title display mode. Default is 0 (hidden) if the feed has an image and feed images are enabled, 1 otherwise.' -x -a '-1\tDefault 0\t"Don'"'"'t show" 1\t'"'"'Always visible'"'"' 2\t'"'"'Scroll with feed'"'"''
 complete -c $prog -l alsa-stereo -l no-alsa-stereo -d 'Stereo (default enabled) Stereo' -f
-complete -c $prog -l alsa-samplerate -d 'Sample rate Sample rate' -x -a '(_vlc__--alsa-samplerate)'
+complete -c $prog -l alsa-samplerate -d 'Sample rate Sample rate' -x -a '(_vlc___--alsa-samplerate)'
 complete -c $prog -l http-continuous -l no-http-continuous -d 'Continuous stream (default disabled) Keep reading a resource that keeps being updated.' -f
 complete -c $prog -l http-forward-cookies -l no-http-forward-cookies -d 'Cookies forwarding (default enabled) Forward cookies across HTTP redirections.' -f
 complete -c $prog -l http-referrer -d 'Referrer Provide the referral URL, i.e. HTTP "Referer" (sic).' -x
@@ -588,7 +389,7 @@ complete -c $prog -l satip-buffer -d 'Receive buffer UDP receive buffer size (by
 complete -c $prog -l satip-multicast -l no-satip-multicast -d 'Request multicast stream (default disabled) Request server to send stream as multicast' -f
 complete -c $prog -l satip-host -d 'Host Host' -x
 complete -c $prog -l shm-fps -d 'Frame rate How many times the screen content should be refreshed per second.' -x
-complete -c $prog -l shm-depth -d 'Frame buffer depth Pixel depth of the frame buffer, or zero for XWD file' -x -a '(_vlc__--shm-depth)'
+complete -c $prog -l shm-depth -d 'Frame buffer depth Pixel depth of the frame buffer, or zero for XWD file' -x -a '(_vlc___--shm-depth)'
 complete -c $prog -l shm-width -d 'Frame buffer width Pixel width of the frame buffer (ignored for XWD file)' -x
 complete -c $prog -l shm-height -d 'Frame buffer height Pixel height of the frame buffer (ignored for XWD file)' -x
 complete -c $prog -l shm-file -d 'Frame buffer file Path of the memory mapped file of the frame buffer' -Fr
@@ -600,7 +401,7 @@ complete -c $prog -l dvb-device -d 'DVB device If the adapter provides multiple 
 complete -c $prog -l dvb-budget-mode -l no-dvb-budget-mode -d 'Do not demultiplex (default disabled) Only useful programs are normally demultiplexed from the transponder. This option will disable demultiplexing and receive all programs.' -f
 complete -c $prog -l dvb-frequency -d 'Frequency (Hz) TV channels are grouped by transponder (a.k.a. multiplex) on a given frequency. This is required to tune the receiver.' -x
 complete -c $prog -l dvb-inversion -d 'Spectrum inversion If the demodulator cannot detect spectral inversion correctly, it needs to be configured manually. Terrestrial reception parameters:' -x -a '-1\tAutomatic 0\tOff 1\tOn'
-complete -c $prog -l dvb-bandwidth -d 'Bandwidth (MHz) Bandwidth (MHz)' -x -a '(_vlc__--dvb-bandwidth)'
+complete -c $prog -l dvb-bandwidth -d 'Bandwidth (MHz) Bandwidth (MHz)' -x -a '(_vlc___--dvb-bandwidth)'
 complete -c $prog -l dvb-transmission -d 'Transmission mode Transmission mode' -x -a '-1\tAutomatic 1\t1k 2\t2k 4\t4k 8\t8k 16\t16k 32\t32k'
 complete -c $prog -l dvb-guard -d 'Guard interval Guard interval DVB-T reception parameters:' -x -a "'' 1/128 1/32 1/16 19/256 1/8 19/128 1/4"
 complete -c $prog -l dvb-code-rate-hp -d 'High-priority code rate The code rate for Forward Error Correction can be specified.' -x -a "'' 0 1/2 3/5 2/3 3/4 4/5 5/6 6/7 7/8 8/9 9/10"
@@ -717,7 +518,7 @@ complete -c $prog -l sout-speex-max-bitrate -d 'Maximal bitrate Enforce the maxi
 complete -c $prog -l sout-speex-vad -l no-sout-speex-vad -d 'Voice activity detection (default enabled) Enable voice activity detection (VAD). It is automatically activated in VBR mode.' -f
 complete -c $prog -l sout-speex-dtx -l no-sout-speex-dtx -d 'Discontinuous Transmission (default disabled) Enable discontinuous transmission (DTX).' -f
 complete -c $prog -l subsdec-align -d 'Subtitle justification Set the justification of subtitles' -x -a '-1\tAuto 0\tCenter 1\tLeft 2\tRight'
-complete -c $prog -l subsdec-encoding -d 'Subtitle text encoding Set the encoding used in text subtitles' -x -a '(_vlc__--subsdec-encoding)'
+complete -c $prog -l subsdec-encoding -d 'Subtitle text encoding Set the encoding used in text subtitles' -x -a '(_vlc___--subsdec-encoding)'
 complete -c $prog -l subsdec-autodetect-utf8 -l no-subsdec-autodetect-utf8 -d 'UTF-8 subtitle autodetection (default enabled) This enables automatic detection of UTF-8 encoding within subtitle files.' -f
 complete -c $prog -l theora-postproc -d 'Post processing quality' -x
 complete -c $prog -l sout-theora-quality -d 'Encoding quality Enforce a quality between 1 (low) and 10 (high), instead of specifying a particular bitrate. This will produce a VBR stream.' -x
@@ -725,7 +526,7 @@ complete -c $prog -l dav1d-thread-frames -d 'Frames Threads Max number of thread
 complete -c $prog -l dummy-save-es -l no-dummy-save-es -d 'Save raw codec data (default disabled) Save the raw codec data if you have selected/forced the dummy decoder in the main options.' -f
 complete -c $prog -l a52-dynrng -l no-a52-dynrng -d 'A/52 dynamic range compression (default enabled) Dynamic range compression makes the loud sounds softer, and the soft sounds louder, so you can more easily listen to the stream in a noisy environment without disturbing anyone. If you disable the dynamic range compression the playback will be more adapted to a movie theater or a listening room.' -f
 complete -c $prog -l sout-vpx-quality-mode -d 'Quality mode Quality setting which will determine max encoding time  - 0: Good quality  - 1: Realtime  - 2: Best quality' -x -a '(command seq 0 2)'
-complete -c $prog -l dvbsub-position -d 'Subpicture position You can enforce the subpicture position on the video (0=center, 1=left, 2=right, 4=top, 8=bottom, you can also use combinations of these values, e.g. 6=top-right).' -x -a '(_vlc__--audiobargraph_v-position)'
+complete -c $prog -l dvbsub-position -d 'Subpicture position You can enforce the subpicture position on the video (0=center, 1=left, 2=right, 4=top, 8=bottom, you can also use combinations of these values, e.g. 6=top-right).' -x -a '(_vlc___--audiobargraph_v-position)'
 complete -c $prog -l dvbsub-x -d 'Decoding X coordinate X coordinate of the rendered subtitle' -x
 complete -c $prog -l dvbsub-y -d 'Decoding Y coordinate Y coordinate of the rendered subtitle' -x
 complete -c $prog -l sout-dvbsub-x -d 'Encoding X coordinate X coordinate of the encoded subtitle' -x
@@ -777,7 +578,7 @@ complete -c $prog -l sout-standard-name -d 'Session name This is the name of the
 complete -c $prog -l sout-standard-description -d 'Session description This allows you to give a short description with details about the stream, that will be announced in the SDP (Session Descriptor).' -x
 complete -c $prog -l sout-standard-url -d 'Session URL This allows you to give a URL with more details about the stream (often the website of the streaming organization), that will be announced in the SDP (Session Descriptor).' -x
 complete -c $prog -l sout-standard-email -d 'Session email This allows you to give a contact mail address for the stream, that will be announced in the SDP (Session Descriptor).' -x
-complete -c $prog -l sout-transcode-venc -d 'Video encoder This is the video encoder module that will be used (and its associated options).' -x -a '(_vlc__--sout-transcode-venc)'
+complete -c $prog -l sout-transcode-venc -d 'Video encoder This is the video encoder module that will be used (and its associated options).' -x -a '(_vlc___--sout-transcode-venc)'
 complete -c $prog -l sout-transcode-vcodec -d 'Destination video codec This is the video codec that will be used.' -x
 complete -c $prog -l sout-transcode-vb -d 'Video bitrate Target bitrate of the transcoded video stream.' -x
 complete -c $prog -l sout-transcode-scale -d 'Video scaling Scale factor to apply to the video while transcoding (eg: 0.25)' -x
@@ -789,14 +590,14 @@ complete -c $prog -l sout-transcode-height -d 'Video height Output video height.
 complete -c $prog -l sout-transcode-maxwidth -d 'Maximum video width Maximum output video width.' -x
 complete -c $prog -l sout-transcode-maxheight -d 'Maximum video height Maximum output video height.' -x
 complete -c $prog -l sout-transcode-vfilter -d 'Video filter Video filters will be applied to the video streams (after overlays are applied). You can enter a colon-separated list of filters. Audio:' -x
-complete -c $prog -l sout-transcode-aenc -d 'Audio encoder This is the audio encoder module that will be used (and its associated options).' -x -a '(_vlc__--sout-transcode-venc)'
+complete -c $prog -l sout-transcode-aenc -d 'Audio encoder This is the audio encoder module that will be used (and its associated options).' -x -a '(_vlc___--sout-transcode-venc)'
 complete -c $prog -l sout-transcode-acodec -d 'Destination audio codec This is the audio codec that will be used.' -x
 complete -c $prog -l sout-transcode-ab -d 'Audio bitrate Target bitrate of the transcoded audio stream.' -x
 complete -c $prog -l sout-transcode-alang -d 'Audio language This is the language of the audio stream.' -x
 complete -c $prog -l sout-transcode-channels -d 'Audio channels Number of audio channels in the transcoded streams.' -x -a '(command seq 0 9)'
 complete -c $prog -l sout-transcode-samplerate -d 'Audio sample rate Sample rate of the transcoded audio stream (11250, 22500, 44100 or 48000).' -x
 complete -c $prog -l sout-transcode-afilter -d 'Audio filter Audio filters will be applied to the audio streams (after conversion filters are applied). You can enter a colon-separated list of filters. Overlays/Subtitles:' -x
-complete -c $prog -l sout-transcode-senc -d 'Subtitle encoder This is the subtitle encoder module that will be used (and its associated options).' -x -a '(_vlc__--sout-transcode-venc)'
+complete -c $prog -l sout-transcode-senc -d 'Subtitle encoder This is the subtitle encoder module that will be used (and its associated options).' -x -a '(_vlc___--sout-transcode-venc)'
 complete -c $prog -l sout-transcode-scodec -d 'Destination subtitle codec This is the subtitle codec that will be used.' -x
 complete -c $prog -l sout-transcode-soverlay -l no-sout-transcode-soverlay -d 'Destination subtitle codec (default disabled) This is the subtitle codec that will be used.' -f
 complete -c $prog -l sout-transcode-sfilter -d 'Overlays This allows you to add overlays (also known as "subpictures") on the transcoded video stream. The subpictures produced by the filters will be overlayed directly onto the video. You can specify a colon-separated list of subpicture modules. Miscellaneous:' -x
@@ -888,7 +689,7 @@ complete -c $prog -l adaptive-lowlatency -d 'Low latency Overrides low latency p
 complete -c $prog -l es-fps -d 'Frames per Second This is the frame rate used as a fallback when playing MPEG video elementary streams.' -x
 complete -c $prog -l sub-fps -d 'Frames per Second Override the normal frames per second settings. This will only work with MicroDVD and SubRIP (SRT) subtitles.' -x
 complete -c $prog -l sub-delay -d 'Subtitle delay Apply a delay to all subtitles (in 1/10s, eg 100 means 10s).' -x
-complete -c $prog -l sub-type -d 'Subtitle format Force the subtitles format. Selecting "auto" means autodetection and should always work.' -x -a '(_vlc__--sub-type)'
+complete -c $prog -l sub-type -d 'Subtitle format Force the subtitles format. Selecting "auto" means autodetection and should always work.' -x -a '(_vlc___--sub-type)'
 complete -c $prog -l sub-description -d 'Subtitle description Override the default track description.' -x
 complete -c $prog -l avi-interleaved -l no-avi-interleaved -d 'Force interleaved method (default disabled) Force interleaved method' -f
 complete -c $prog -l avi-index -d 'Force index creation Recreate a index for the AVI file. Use this if your AVI file is damaged or incomplete (not seekable).' -x -a "0\\t'Ask for action' 1\\t'Always fix' 2\\t'Never fix' 3\\t'Fix when necessary'"
@@ -1050,7 +851,7 @@ complete -c $prog -l hqdn3d-luma-temp -d 'Temporal luma strength (0-254) Tempora
 complete -c $prog -l hqdn3d-chroma-temp -d 'Temporal chroma strength (0-254) Temporal chroma strength (0-254)' -x
 complete -c $prog -l rotate-angle -d 'Angle in degrees Angle in degrees (0 to 359)' -x
 complete -c $prog -l rotate-use-motion -l no-rotate-use-motion -d 'Use motion sensors (default disabled) Use HDAPS, AMS, APPLESMC or UNIMOTION motion sensors to rotate the video' -f
-complete -c $prog -l colorthres-color -d 'Color Colors similar to this will be kept, others will be grayscaled. This must be an hexadecimal (like HTML colors). The first two chars are for red, then green, then blue. #000000 = black, #FF0000 = red, #00FF00 = green, #FFFF00 = yellow (red + green), #FFFFFF = white' -x -a '(_vlc__--colorthres-color)'
+complete -c $prog -l colorthres-color -d 'Color Colors similar to this will be kept, others will be grayscaled. This must be an hexadecimal (like HTML colors). The first two chars are for red, then green, then blue. #000000 = black, #FF0000 = red, #00FF00 = green, #FFFF00 = yellow (red + green), #FFFFFF = white' -x -a '(_vlc___--colorthres-color)'
 complete -c $prog -l colorthres-saturationthres -d 'Saturation threshold' -x
 complete -c $prog -l colorthres-similaritythres -d 'Similarity threshold' -x
 complete -c $prog -l extract-component -d 'RGB component to extract RGB component to extract. 0 for Red, 1 for Green and 2 for Blue.' -x -a '16711680\tRed 65280\tGreen 255\tBlue'
@@ -1086,7 +887,7 @@ complete -c $prog -l puzzle-auto-solve -d 'Auto solve Auto solve delay during ga
 complete -c $prog -l puzzle-rotation -d 'Rotation Rotation parameter: none;180;90-270;mirror' -x -a '0\t0 1\t0/180 2\t0/90/180/270 3\t0/90/180/270/mirror'
 complete -c $prog -l puzzle-mode -d 'Game mode Select game mode variation from jigsaw puzzle to sliding puzzle.' -x -a "0\\t'jigsaw puzzle' 1\\t'sliding puzzle' 2\\t'swap puzzle' 3\\t'exchange puzzle'"
 complete -c $prog -l keystore-file -d '' -Fr
-complete -c $prog -l equalizer-preset -d 'Equalizer preset Preset to use for the equalizer.' -x -a '(_vlc__--equalizer-preset)'
+complete -c $prog -l equalizer-preset -d 'Equalizer preset Preset to use for the equalizer.' -x -a '(_vlc___--equalizer-preset)'
 complete -c $prog -l equalizer-bands -d 'Bands gain Don'"'"'t use presets, but manually specified bands. You need to provide 10 values between -20dB and 20dB, separated by spaces, e.g. "0 2 4 2 0 -2 -4 -2 0 2".' -x
 complete -c $prog -l equalizer-2pass -l no-equalizer-2pass -d 'Two pass (default disabled) Filter the audio twice. This provides a more intense effect.' -f
 complete -c $prog -l equalizer-vlcfreqs -l no-equalizer-vlcfreqs -d 'Use VLC frequency bands (default enabled) Use the VLC frequency bands. Otherwise, use the ISO Standard frequency bands.' -f
@@ -1103,15 +904,15 @@ complete -c $prog -l scaletempo-overlap -d 'Overlap Length Percentage of stride 
 complete -c $prog -l scaletempo-overlap -d 'Overlap Length Percentage of stride to overlap' -x
 complete -c $prog -l scaletempo-search -d 'Search Length Length in milliseconds to search for best overlap position' -x -a '(command seq 0 200)'
 complete -c $prog -l scaletempo-search -d 'Search Length Length in milliseconds to search for best overlap position' -x -a '(command seq 0 200)'
-complete -c $prog -l aout-remap-channel-left -d 'Left Left' -x -a '(_vlc__--aout-remap-channel-left)'
-complete -c $prog -l aout-remap-channel-center -d 'Center Center' -x -a '(_vlc__--aout-remap-channel-left)'
-complete -c $prog -l aout-remap-channel-right -d 'Right Right' -x -a '(_vlc__--aout-remap-channel-left)'
-complete -c $prog -l aout-remap-channel-rearleft -d 'Rear left Rear left' -x -a '(_vlc__--aout-remap-channel-left)'
-complete -c $prog -l aout-remap-channel-rearcenter -d 'Rear center Rear center' -x -a '(_vlc__--aout-remap-channel-left)'
-complete -c $prog -l aout-remap-channel-rearright -d 'Rear right Rear right' -x -a '(_vlc__--aout-remap-channel-left)'
-complete -c $prog -l aout-remap-channel-middleleft -d 'Side left Side left' -x -a '(_vlc__--aout-remap-channel-left)'
-complete -c $prog -l aout-remap-channel-middleright -d 'Side right Side right' -x -a '(_vlc__--aout-remap-channel-left)'
-complete -c $prog -l aout-remap-channel-lfe -d 'Low-frequency effects Low-frequency effects' -x -a '(_vlc__--aout-remap-channel-left)'
+complete -c $prog -l aout-remap-channel-left -d 'Left Left' -x -a '(_vlc___--aout-remap-channel-left)'
+complete -c $prog -l aout-remap-channel-center -d 'Center Center' -x -a '(_vlc___--aout-remap-channel-left)'
+complete -c $prog -l aout-remap-channel-right -d 'Right Right' -x -a '(_vlc___--aout-remap-channel-left)'
+complete -c $prog -l aout-remap-channel-rearleft -d 'Rear left Rear left' -x -a '(_vlc___--aout-remap-channel-left)'
+complete -c $prog -l aout-remap-channel-rearcenter -d 'Rear center Rear center' -x -a '(_vlc___--aout-remap-channel-left)'
+complete -c $prog -l aout-remap-channel-rearright -d 'Rear right Rear right' -x -a '(_vlc___--aout-remap-channel-left)'
+complete -c $prog -l aout-remap-channel-middleleft -d 'Side left Side left' -x -a '(_vlc___--aout-remap-channel-left)'
+complete -c $prog -l aout-remap-channel-middleright -d 'Side right Side right' -x -a '(_vlc___--aout-remap-channel-left)'
+complete -c $prog -l aout-remap-channel-lfe -d 'Low-frequency effects Low-frequency effects' -x -a '(_vlc___--aout-remap-channel-left)'
 complete -c $prog -l aout-remap-normalize -l no-aout-remap-normalize -d 'Normalize channels (default enabled) When mapping more than one channel to a single output channel, normalize the output accordingly.' -f
 complete -c $prog -l gain-value -d 'Gain multiplier Increase or decrease the gain (default 1.0)' -x
 complete -c $prog -l stereowiden-delay -d 'Delay time Time in ms of the delay of left signal into right and vice versa.' -x
@@ -1144,7 +945,7 @@ complete -c $prog -l feedback-gain -d 'Feedback gain Gain on Feedback loop' -x
 complete -c $prog -l wet-mix -d 'Wet mix Level of delayed signal' -x
 complete -c $prog -l dry-mix -d 'Dry Mix Level of input signal' -x
 complete -c $prog -l sout-mono-downmix -l no-sout-mono-downmix -d 'Use downmix algorithm (default enabled) This option selects a stereo to mono downmix algorithm that is used in the headphone channel mixer. It gives the effect of standing in a room full of speakers.' -f
-complete -c $prog -l sout-mono-channel -d 'Select channel to keep This option silences all other channels except the selected channel.' -x -a '(_vlc__--sout-mono-channel)'
+complete -c $prog -l sout-mono-channel -d 'Select channel to keep This option silences all other channels except the selected channel.' -x -a '(_vlc___--sout-mono-channel)'
 complete -c $prog -l param-eq-lowf -d 'Low freq (Hz)' -x
 complete -c $prog -l param-eq-lowgain -d 'Low freq gain (dB)' -x
 complete -c $prog -l param-eq-highf -d 'High freq (Hz)' -x
@@ -1164,7 +965,7 @@ complete -c $prog -l volume-step -d 'Audio output volume step The step size of t
 complete -c $prog -l volume-save -l no-volume-save -d 'Remember the audio volume (default enabled) Remember the audio volume' -f
 complete -c $prog -l spdif -l no-spdif -d "Force S/PDIF support (default disabled) This option should be used when the audio output can't negotiate S/PDIF support." -f
 complete -c $prog -l force-dolby-surround -d 'Force detection of Dolby Surround Use this when you know your stream is (or is not) encoded with Dolby Surround but fails to be detected as such. Even if the stream is not actually encoded with Dolby Surround, turning on this option might enhance your experience, especially when combined with the Headphone Channel Mixer.' -x -a '0\tAuto 1\tOn 2\tOff'
-complete -c $prog -l stereo-mode -d 'Stereo audio output mode Stereo audio output mode' -x -a '(_vlc__--stereo-mode)'
+complete -c $prog -l stereo-mode -d 'Stereo audio output mode Stereo audio output mode' -x -a '(_vlc___--stereo-mode)'
 complete -c $prog -l audio-desync -d 'Audio desynchronization compensation This delays the audio output. The delay must be given in milliseconds. This can be handy if you notice a lag between the video and the audio.' -x
 complete -c $prog -l audio-replay-gain-mode -d 'Replay gain mode Select the replay gain mode' -x -a 'none track album'
 complete -c $prog -l audio-replay-gain-preamp -d 'Replay preamp This allows you to change the default target level (89 dB) for stream with replay gain information' -x
@@ -1172,7 +973,7 @@ complete -c $prog -l audio-replay-gain-default -d 'Default replay gain This is t
 complete -c $prog -l audio-replay-gain-peak-protection -l no-audio-replay-gain-peak-protection -d 'Peak protection (default enabled) Protect against sound clipping' -f
 complete -c $prog -l audio-time-stretch -l no-audio-time-stretch -d 'Enable time stretching audio (default enabled) This allows playing audio at lower or higher speed without affecting the audio pitch' -f
 complete -c $prog -s A -l aout -d 'Audio output module This is the audio output method used by VLC. The default behavior is to automatically select the best method available.' -x -a 'any pulse alsa adummy afile amem none'
-complete -c $prog -l role -d 'Media role Media (player) role for operating system policy.' -x -a '(_vlc__--role)'
+complete -c $prog -l role -d 'Media role Media (player) role for operating system policy.' -x -a '(_vlc___--role)'
 complete -c $prog -l audio-filter -d 'Audio filters This adds audio post processing filters, to modify the sound rendering.' -x
 complete -c $prog -l audio-visual -d 'Audio visualizations This adds visualization modules (spectrum analyzer, etc.).' -x -a 'any none'
 complete -c $prog -l audio-resampler -d 'Audio resampler This selects which plugin to use for audio resampling.' -x -a 'any ugly speex_resampler none'
@@ -1191,7 +992,7 @@ complete -c $prog -l video-wallpaper -l no-video-wallpaper -d 'Enable wallpaper 
 complete -c $prog -l disable-screensaver -l no-disable-screensaver -d 'Disable screensaver (default enabled) Disable the screensaver during video playback.' -f
 complete -c $prog -l video-title-show -l no-video-title-show -d 'Show media title on video (default enabled) Display the title of the video on top of the movie.' -f
 complete -c $prog -l video-title-timeout -d 'Show video title for x milliseconds Show the video title for n milliseconds, default is 5000 ms (5 sec.)' -x
-complete -c $prog -l video-title-position -d 'Position of video title Place on video where to display the title (default bottom center).' -x -a '(_vlc__--audiobargraph_v-position)'
+complete -c $prog -l video-title-position -d 'Position of video title Place on video where to display the title (default bottom center).' -x -a '(_vlc___--audiobargraph_v-position)'
 complete -c $prog -l mouse-hide-timeout -d 'Hide cursor and fullscreen controller after x milliseconds Hide mouse cursor and fullscreen controller after n milliseconds. Snapshot:' -x
 complete -c $prog -l snapshot-path -d 'Video snapshot directory (or filename) Directory where the video snapshots will be stored.' -x
 complete -c $prog -l snapshot-prefix -d 'Video snapshot file prefix Video snapshot file prefix' -x
@@ -1213,11 +1014,11 @@ complete -c $prog -l custom-aspect-ratios -d "Custom aspect ratios list Comma se
 complete -c $prog -l hdtv-fix -l no-hdtv-fix -d 'Fix HDTV height (default enabled) This allows proper handling of HDTV-1080 video format even if broken encoder incorrectly sets height to 1088 lines. You should only disable this option if your video has a non-standard format requiring all 1088 lines.' -f
 complete -c $prog -l video-deco -l no-video-deco -d 'Window decorations (default enabled) VLC can avoid creating window caption, frames, etc... around the video, giving a "minimal" window.' -f
 complete -c $prog -l video-title -d 'Video title Custom title for the video window (in case the video is not embedded in the interface).' -x
-complete -c $prog -l align -d 'Video alignment Enforce the alignment of the video in its window. By default (0) it will be centered (0=center, 1=left, 2=right, 4=top, 8=bottom, you can also use combinations of these values, like 6=4+2 meaning top-right).' -x -a '(_vlc__--audiobargraph_v-position)'
+complete -c $prog -l align -d 'Video alignment Enforce the alignment of the video in its window. By default (0) it will be centered (0=center, 1=left, 2=right, 4=top, 8=bottom, you can also use combinations of these values, like 6=4+2 meaning top-right).' -x -a '(_vlc___--audiobargraph_v-position)'
 complete -c $prog -l zoom -d 'Zoom video You can zoom the video by the specified factor.' -x
 complete -c $prog -l deinterlace -d 'Deinterlace Deinterlace' -x -a '0\tOff -1\tAutomatic 1\tOn'
 complete -c $prog -l deinterlace-mode -d 'Deinterlace mode Deinterlace method to use for video processing.' -x -a 'auto discard blend mean bob linear x yadif yadif2x phosphor ivtc'
-complete -c $prog -s V -l vout -d 'Video output module This is the the video output method used by VLC. The default behavior is to automatically select the best method available.' -x -a '(_vlc__-V)'
+complete -c $prog -s V -l vout -d 'Video output module This is the the video output method used by VLC. The default behavior is to automatically select the best method available.' -x -a '(_vlc___-V)'
 complete -c $prog -l video-filter -d 'Video filter module This adds post-processing filters to enhance the picture quality, for instance deinterlacing, or distort the video.' -x
 complete -c $prog -l video-splitter -d 'Video splitter module This adds video splitters like clone or wall' -x
 complete -c $prog -l spu -l no-spu -d 'Enable sub-pictures (default enabled) You can completely disable the sub-picture processing.' -f
@@ -1241,7 +1042,7 @@ complete -c $prog -l menu-language -d "Menu language Language of the menus you w
 complete -c $prog -l audio-track-id -d 'Audio track ID Stream ID of the audio track to use.' -x
 complete -c $prog -l sub-track-id -d 'Subtitle track ID Stream ID of the subtitle track to use.' -x
 complete -c $prog -l captions -d 'Preferred Closed Captions decoder Preferred Closed Captions decoder' -x -a "608\\t'EIA/CEA 608' 708\\t'CEA 708'"
-complete -c $prog -l preferred-resolution -d "Preferred video resolution When several video formats are available, select one whose resolution is closest to (but not higher than) this setting, in number of lines. Use this option if you don't have enough CPU power or network bandwidth to play higher resolutions. Playback control:" -x -a '(_vlc__--preferred-resolution)'
+complete -c $prog -l preferred-resolution -d "Preferred video resolution When several video formats are available, select one whose resolution is closest to (but not higher than) this setting, in number of lines. Use this option if you don't have enough CPU power or network bandwidth to play higher resolutions. Playback control:" -x -a '(_vlc___--preferred-resolution)'
 complete -c $prog -l input-repeat -d 'Input repetitions Number of time the same input will be repeated' -x
 complete -c $prog -l start-time -d 'Start time The stream will start at this position (in seconds).' -x
 complete -c $prog -l stop-time -d 'Stop time The stream will stop at this position (in seconds).' -x
@@ -1289,8 +1090,8 @@ complete -c $prog -l input-title-format -d 'Change title according to current me
 complete -c $prog -l lua -l no-lua -d 'Disable all lua plugins (default enabled) Disable all lua plugins' -f
 complete -c $prog -l codec -d "Preferred decoders list List of codecs that VLC will use in priority. For instance, 'dummy,a52' will try the dummy and a52 codecs before trying the other ones. Only advanced users should alter this option as it can break playback of all your streams." -x
 complete -c $prog -l encoder -d 'Preferred encoders list This allows you to select a list of encoders that VLC will use in priority.' -x
-complete -c $prog -l access -d 'Access module This allows you to force an access module. You can use it if the correct access is not automatically detected. You should not set this as a global option unless you really know what you are doing.' -x -a '(_vlc__--access)'
-complete -c $prog -l demux -d 'Demux module Demultiplexers are used to separate the "elementary" streams (like audio and video streams). You can use it if the correct demuxer is not automatically detected. You should not set this as a global option unless you really know what you are doing.' -x -a '(_vlc__--demux)'
+complete -c $prog -l access -d 'Access module This allows you to force an access module. You can use it if the correct access is not automatically detected. You should not set this as a global option unless you really know what you are doing.' -x -a '(_vlc___--access)'
+complete -c $prog -l demux -d 'Demux module Demultiplexers are used to separate the "elementary" streams (like audio and video streams). You can use it if the correct demuxer is not automatically detected. You should not set this as a global option unless you really know what you are doing.' -x -a '(_vlc___--demux)'
 complete -c $prog -l stream-filter -d 'Stream filter module Stream filters are used to modify the stream that is being read.' -x
 complete -c $prog -l demux-filter -d 'Demux filter module Demux filters are used to modify/control the stream that is being read.' -x
 complete -c $prog -l sout -d 'Default stream output chain You can enter here a default stream output chain. Refer to the documentation to learn how to build such chains. Warning: this chain will be enabled for all streams.' -x
@@ -1308,7 +1109,7 @@ complete -c $prog -l access_output -d 'Access output module This is a legacy ent
 complete -c $prog -l ttl -d 'Hop limit (TTL) This is the hop limit (also known as "Time-To-Live" or TTL) of the multicast packets sent by the stream output (-1 = use operating system built-in default).' -x
 complete -c $prog -l miface -d 'Multicast output interface Default multicast interface. This overrides the routing table.' -x
 complete -c $prog -l dscp -d 'DiffServ Code Point Differentiated Services Code Point for outgoing UDP streams (or IPv4 Type Of Service, or IPv6 Traffic Class). This is used for network Quality of Service.' -x
-complete -c $prog -l packetizer -d 'Preferred packetizer list This allows you to select the order in which VLC will choose its packetizers.' -x -a '(_vlc__--packetizer)'
+complete -c $prog -l packetizer -d 'Preferred packetizer list This allows you to select the order in which VLC will choose its packetizers.' -x -a '(_vlc___--packetizer)'
 complete -c $prog -l vod-server -d "VoD server module You can select which VoD server module you want to use. Set this to 'vod_rtsp' to switch back to the old, legacy module. Plugins:" -x -a 'any stream_out_rtp rtsp none'
 complete -c $prog -l plugins-cache -l no-plugins-cache -d 'Use a plugins cache (default enabled) Use a plugins cache which will greatly improve the startup time of VLC.' -f
 complete -c $prog -l plugins-scan -l no-plugins-scan -d 'Scan for new plugins (default enabled) Scan plugin directories for new plugins at startup. This increases the startup time of VLC.' -f
@@ -1350,234 +1151,234 @@ complete -c $prog -l stats -l no-stats -d 'Locally collect statistics (default e
 complete -c $prog -s I -l intf -d 'Interface module This is the main interface used by VLC. The default behavior is to automatically select the best module available.' -x
 complete -c $prog -l extraintf -d 'Extra interface modules You can select "additional interfaces" for VLC. They will be launched in the background in addition to the default interface. Use a colon separated list of interface modules. (common values are "rc" (remote control), "http", "gestures" ...)' -x
 complete -c $prog -l control -d 'Control interfaces You can select control interfaces for VLC.' -x
-complete -c $prog -l hotkeys-y-wheel-mode -d 'Mouse wheel vertical axis control The mouse wheel vertical (up/down) axis can control volume, position or be ignored.' -x -a '(_vlc__--hotkeys-y-wheel-mode)'
-complete -c $prog -l hotkeys-x-wheel-mode -d 'Mouse wheel horizontal axis control The mouse wheel horizontal (left/right) axis can control volume, position or be ignored.' -x -a '(_vlc__--hotkeys-y-wheel-mode)'
-complete -c $prog -l global-key-toggle-fullscreen -d 'Fullscreen Select the hotkey to use to swap fullscreen state.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-toggle-fullscreen -d 'Fullscreen Select the hotkey to use to swap fullscreen state.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-leave-fullscreen -d 'Exit fullscreen Select the hotkey to use to exit fullscreen state.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-leave-fullscreen -d 'Exit fullscreen Select the hotkey to use to exit fullscreen state.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-play-pause -d 'Play/Pause Select the hotkey to use to swap paused state.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-play-pause -d 'Play/Pause Select the hotkey to use to swap paused state.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-pause -d 'Pause only Select the hotkey to use to pause.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-pause -d 'Pause only Select the hotkey to use to pause.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-play -d 'Play only Select the hotkey to use to play.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-play -d 'Play only Select the hotkey to use to play.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-faster -d 'Faster Select the hotkey to use for fast forward playback.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-faster -d 'Faster Select the hotkey to use for fast forward playback.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-slower -d 'Slower Select the hotkey to use for slow motion playback.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-slower -d 'Slower Select the hotkey to use for slow motion playback.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-rate-normal -d 'Normal rate Select the hotkey to set the playback rate back to normal.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-rate-normal -d 'Normal rate Select the hotkey to set the playback rate back to normal.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-rate-faster-fine -d 'Faster (fine) Select the hotkey to use for fast forward playback.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-rate-faster-fine -d 'Faster (fine) Select the hotkey to use for fast forward playback.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-rate-slower-fine -d 'Slower (fine) Select the hotkey to use for slow motion playback.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-rate-slower-fine -d 'Slower (fine) Select the hotkey to use for slow motion playback.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-next -d 'Next Select the hotkey to use to skip to the next item in the playlist.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-next -d 'Next Select the hotkey to use to skip to the next item in the playlist.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-prev -d 'Previous Select the hotkey to use to skip to the previous item in the playlist.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-prev -d 'Previous Select the hotkey to use to skip to the previous item in the playlist.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-stop -d 'Stop Select the hotkey to stop playback.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-stop -d 'Stop Select the hotkey to stop playback.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-position -d 'Position Select the hotkey to display the position.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-position -d 'Position Select the hotkey to display the position.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-jump-extrashort -d 'Very short backwards jump Select the hotkey to make a very short backwards jump.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-jump-extrashort -d 'Very short backwards jump Select the hotkey to make a very short backwards jump.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-jump+extrashort -d 'Very short forward jump Select the hotkey to make a very short forward jump.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-jump+extrashort -d 'Very short forward jump Select the hotkey to make a very short forward jump.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-jump-short -d 'Short backwards jump Select the hotkey to make a short backwards jump.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-jump-short -d 'Short backwards jump Select the hotkey to make a short backwards jump.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-jump+short -d 'Short forward jump Select the hotkey to make a short forward jump.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-jump+short -d 'Short forward jump Select the hotkey to make a short forward jump.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-jump-medium -d 'Medium backwards jump Select the hotkey to make a medium backwards jump.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-jump-medium -d 'Medium backwards jump Select the hotkey to make a medium backwards jump.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-jump+medium -d 'Medium forward jump Select the hotkey to make a medium forward jump.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-jump+medium -d 'Medium forward jump Select the hotkey to make a medium forward jump.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-jump-long -d 'Long backwards jump Select the hotkey to make a long backwards jump.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-jump-long -d 'Long backwards jump Select the hotkey to make a long backwards jump.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-jump+long -d 'Long forward jump Select the hotkey to make a long forward jump.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-jump+long -d 'Long forward jump Select the hotkey to make a long forward jump.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-frame-next -d 'Next frame Select the hotkey to got to the next video frame.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-frame-next -d 'Next frame Select the hotkey to got to the next video frame.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-nav-activate -d 'Activate Select the key to activate selected item in DVD menus.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-nav-activate -d 'Activate Select the key to activate selected item in DVD menus.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-nav-up -d 'Navigate up Select the key to move the selector up in DVD menus / Move viewpoint to up (pitch).' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-nav-up -d 'Navigate up Select the key to move the selector up in DVD menus / Move viewpoint to up (pitch).' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-nav-down -d 'Navigate down Select the key to move the selector down in DVD menus / Move viewpoint to down (pitch).' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-nav-down -d 'Navigate down Select the key to move the selector down in DVD menus / Move viewpoint to down (pitch).' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-nav-left -d 'Navigate left Select the key to move the selector left in DVD menus / Move viewpoint to left (yaw).' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-nav-left -d 'Navigate left Select the key to move the selector left in DVD menus / Move viewpoint to left (yaw).' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-nav-right -d 'Navigate right Select the key to move the selector right in DVD menus / Move viewpoint to right (yaw).' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-nav-right -d 'Navigate right Select the key to move the selector right in DVD menus / Move viewpoint to right (yaw).' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-disc-menu -d 'Go to the DVD menu Select the key to take you to the DVD menu' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-disc-menu -d 'Go to the DVD menu Select the key to take you to the DVD menu' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-title-prev -d 'Select previous DVD title Select the key to choose the previous title from the DVD' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-title-prev -d 'Select previous DVD title Select the key to choose the previous title from the DVD' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-title-next -d 'Select next DVD title Select the key to choose the next title from the DVD' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-title-next -d 'Select next DVD title Select the key to choose the next title from the DVD' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-chapter-prev -d 'Select prev DVD chapter Select the key to choose the previous chapter from the DVD' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-chapter-prev -d 'Select prev DVD chapter Select the key to choose the previous chapter from the DVD' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-chapter-next -d 'Select next DVD chapter Select the key to choose the next chapter from the DVD' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-chapter-next -d 'Select next DVD chapter Select the key to choose the next chapter from the DVD' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-quit -d 'Quit Select the hotkey to quit the application.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-quit -d 'Quit Select the hotkey to quit the application.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-vol-up -d 'Volume up Select the key to increase audio volume.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-vol-up -d 'Volume up Select the key to increase audio volume.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-vol-down -d 'Volume down Select the key to decrease audio volume.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-vol-down -d 'Volume down Select the key to decrease audio volume.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-vol-mute -d 'Mute Select the key to mute audio.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-vol-mute -d 'Mute Select the key to mute audio.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-subdelay-up -d 'Subtitle delay up Select the key to increase the subtitle delay.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-subdelay-up -d 'Subtitle delay up Select the key to increase the subtitle delay.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-subdelay-down -d 'Subtitle delay down Select the key to decrease the subtitle delay.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-subdelay-down -d 'Subtitle delay down Select the key to decrease the subtitle delay.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-subsync-markaudio -d 'Subtitle sync / bookmark audio timestamp Select the key to bookmark audio timestamp when syncing subtitles.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-subsync-markaudio -d 'Subtitle sync / bookmark audio timestamp Select the key to bookmark audio timestamp when syncing subtitles.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-subsync-marksub -d 'Subtitle sync / bookmark subtitle timestamp Select the key to bookmark subtitle timestamp when syncing subtitles.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-subsync-marksub -d 'Subtitle sync / bookmark subtitle timestamp Select the key to bookmark subtitle timestamp when syncing subtitles.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-subsync-apply -d 'Subtitle sync / synchronize audio & subtitle timestamps Select the key to synchronize bookmarked audio & subtitle timestamps.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-subsync-apply -d 'Subtitle sync / synchronize audio & subtitle timestamps Select the key to synchronize bookmarked audio & subtitle timestamps.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-subsync-reset -d 'Subtitle sync / reset audio & subtitle synchronization Select the key to reset synchronization of audio & subtitle timestamps.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-subsync-reset -d 'Subtitle sync / reset audio & subtitle synchronization Select the key to reset synchronization of audio & subtitle timestamps.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-subpos-up -d 'Subtitle position up Select the key to move subtitles higher.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-subpos-up -d 'Subtitle position up Select the key to move subtitles higher.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-subpos-down -d 'Subtitle position down Select the key to move subtitles lower.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-subpos-down -d 'Subtitle position down Select the key to move subtitles lower.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-audiodelay-up -d 'Audio delay up Select the key to increase the audio delay.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-audiodelay-up -d 'Audio delay up Select the key to increase the audio delay.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-audiodelay-down -d 'Audio delay down Select the key to decrease the audio delay.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-audiodelay-down -d 'Audio delay down Select the key to decrease the audio delay.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-audio-track -d 'Cycle audio track Cycle through the available audio tracks(languages).' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-audio-track -d 'Cycle audio track Cycle through the available audio tracks(languages).' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-audiodevice-cycle -d 'Cycle through audio devices Cycle through available audio devices' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-audiodevice-cycle -d 'Cycle through audio devices Cycle through available audio devices' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-subtitle-revtrack -d 'Cycle subtitle track in reverse order Cycle through the available subtitle tracks in reverse order.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-subtitle-revtrack -d 'Cycle subtitle track in reverse order Cycle through the available subtitle tracks in reverse order.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-subtitle-track -d 'Cycle subtitle track Cycle through the available subtitle tracks.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-subtitle-track -d 'Cycle subtitle track Cycle through the available subtitle tracks.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-subtitle-toggle -d 'Toggle subtitles Toggle subtitle track visibility.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-subtitle-toggle -d 'Toggle subtitles Toggle subtitle track visibility.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-program-sid-next -d 'Cycle next program Service ID Cycle through the available next program Service IDs (SIDs).' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-program-sid-next -d 'Cycle next program Service ID Cycle through the available next program Service IDs (SIDs).' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-program-sid-prev -d 'Cycle previous program Service ID Cycle through the available previous program Service IDs (SIDs).' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-program-sid-prev -d 'Cycle previous program Service ID Cycle through the available previous program Service IDs (SIDs).' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-aspect-ratio -d 'Cycle source aspect ratio Cycle through a predefined list of source aspect ratios.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-aspect-ratio -d 'Cycle source aspect ratio Cycle through a predefined list of source aspect ratios.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-crop -d 'Cycle video crop Cycle through a predefined list of crop formats.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-crop -d 'Cycle video crop Cycle through a predefined list of crop formats.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-toggle-autoscale -d 'Toggle autoscaling Activate or deactivate autoscaling.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-toggle-autoscale -d 'Toggle autoscaling Activate or deactivate autoscaling.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-incr-scalefactor -d 'Increase scale factor Increase scale factor' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-incr-scalefactor -d 'Increase scale factor Increase scale factor' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-decr-scalefactor -d 'Decrease scale factor Decrease scale factor' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-decr-scalefactor -d 'Decrease scale factor Decrease scale factor' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-deinterlace -d 'Toggle deinterlacing Activate or deactivate deinterlacing.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-deinterlace -d 'Toggle deinterlacing Activate or deactivate deinterlacing.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-deinterlace-mode -d 'Cycle deinterlace modes Cycle through available deinterlace modes.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-deinterlace-mode -d 'Cycle deinterlace modes Cycle through available deinterlace modes.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-intf-show -d 'Show controller in fullscreen Show controller in fullscreen' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-intf-show -d 'Show controller in fullscreen Show controller in fullscreen' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-intf-boss -d 'Boss key Hide the interface and pause playback.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-intf-boss -d 'Boss key Hide the interface and pause playback.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-intf-popup-menu -d 'Context menu Show the contextual popup menu.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-intf-popup-menu -d 'Context menu Show the contextual popup menu.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-snapshot -d 'Take video snapshot Takes a video snapshot and writes it to disk.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-snapshot -d 'Take video snapshot Takes a video snapshot and writes it to disk.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-record -d 'Record Record access filter start/stop.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-record -d 'Record Record access filter start/stop.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-zoom -d 'Zoom Zoom' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-zoom -d 'Zoom Zoom' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-unzoom -d 'Un-Zoom Un-Zoom' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-unzoom -d 'Un-Zoom Un-Zoom' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-wallpaper -d 'Toggle wallpaper mode in video output Toggle wallpaper mode in video output.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-wallpaper -d 'Toggle wallpaper mode in video output Toggle wallpaper mode in video output.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-crop-top -d 'Crop one pixel from the top of the video Crop one pixel from the top of the video' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-crop-top -d 'Crop one pixel from the top of the video Crop one pixel from the top of the video' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-uncrop-top -d 'Uncrop one pixel from the top of the video Uncrop one pixel from the top of the video' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-uncrop-top -d 'Uncrop one pixel from the top of the video Uncrop one pixel from the top of the video' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-crop-left -d 'Crop one pixel from the left of the video Crop one pixel from the left of the video' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-crop-left -d 'Crop one pixel from the left of the video Crop one pixel from the left of the video' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-uncrop-left -d 'Uncrop one pixel from the left of the video Uncrop one pixel from the left of the video' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-uncrop-left -d 'Uncrop one pixel from the left of the video Uncrop one pixel from the left of the video' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-crop-bottom -d 'Crop one pixel from the bottom of the video Crop one pixel from the bottom of the video' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-crop-bottom -d 'Crop one pixel from the bottom of the video Crop one pixel from the bottom of the video' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-uncrop-bottom -d 'Uncrop one pixel from the bottom of the video Uncrop one pixel from the bottom of the video' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-uncrop-bottom -d 'Uncrop one pixel from the bottom of the video Uncrop one pixel from the bottom of the video' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-crop-right -d 'Crop one pixel from the right of the video Crop one pixel from the right of the video' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-crop-right -d 'Crop one pixel from the right of the video Crop one pixel from the right of the video' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-uncrop-right -d 'Uncrop one pixel from the right of the video Uncrop one pixel from the right of the video' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-uncrop-right -d 'Uncrop one pixel from the right of the video Uncrop one pixel from the right of the video' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-random -d 'Random Toggle random playlist playback' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-random -d 'Random Toggle random playlist playback' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-loop -d 'Normal/Loop/Repeat Toggle Normal/Loop/Repeat playlist modes' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-loop -d 'Normal/Loop/Repeat Toggle Normal/Loop/Repeat playlist modes' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-viewpoint-fov-in -d 'Shrink the viewpoint field of view (360°) Shrink the viewpoint field of view (360°)' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-viewpoint-fov-in -d 'Shrink the viewpoint field of view (360°) Shrink the viewpoint field of view (360°)' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-viewpoint-fov-out -d 'Expand the viewpoint field of view (360°) Expand the viewpoint field of view (360°)' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-viewpoint-fov-out -d 'Expand the viewpoint field of view (360°) Expand the viewpoint field of view (360°)' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-viewpoint-roll-clock -d 'Roll the viewpoint clockwise (360°) Roll the viewpoint clockwise (360°)' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-viewpoint-roll-clock -d 'Roll the viewpoint clockwise (360°) Roll the viewpoint clockwise (360°)' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-viewpoint-roll-anticlock -d 'Roll the viewpoint anti-clockwise (360°) Roll the viewpoint anti-clockwise (360°)' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-viewpoint-roll-anticlock -d 'Roll the viewpoint anti-clockwise (360°) Roll the viewpoint anti-clockwise (360°)' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-zoom-quarter -d '1:4 Quarter' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-zoom-quarter -d '1:4 Quarter' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-zoom-half -d '1:2 Half' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-zoom-half -d '1:2 Half' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-zoom-original -d '1:1 Original' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-zoom-original -d '1:1 Original' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-zoom-double -d '2:1 Double' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-zoom-double -d '2:1 Double Jump sizes:' -x -a '(_vlc__--global-key-toggle-fullscreen)'
+complete -c $prog -l hotkeys-y-wheel-mode -d 'Mouse wheel vertical axis control The mouse wheel vertical (up/down) axis can control volume, position or be ignored.' -x -a '(_vlc___--hotkeys-y-wheel-mode)'
+complete -c $prog -l hotkeys-x-wheel-mode -d 'Mouse wheel horizontal axis control The mouse wheel horizontal (left/right) axis can control volume, position or be ignored.' -x -a '(_vlc___--hotkeys-y-wheel-mode)'
+complete -c $prog -l global-key-toggle-fullscreen -d 'Fullscreen Select the hotkey to use to swap fullscreen state.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-toggle-fullscreen -d 'Fullscreen Select the hotkey to use to swap fullscreen state.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-leave-fullscreen -d 'Exit fullscreen Select the hotkey to use to exit fullscreen state.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-leave-fullscreen -d 'Exit fullscreen Select the hotkey to use to exit fullscreen state.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-play-pause -d 'Play/Pause Select the hotkey to use to swap paused state.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-play-pause -d 'Play/Pause Select the hotkey to use to swap paused state.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-pause -d 'Pause only Select the hotkey to use to pause.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-pause -d 'Pause only Select the hotkey to use to pause.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-play -d 'Play only Select the hotkey to use to play.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-play -d 'Play only Select the hotkey to use to play.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-faster -d 'Faster Select the hotkey to use for fast forward playback.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-faster -d 'Faster Select the hotkey to use for fast forward playback.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-slower -d 'Slower Select the hotkey to use for slow motion playback.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-slower -d 'Slower Select the hotkey to use for slow motion playback.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-rate-normal -d 'Normal rate Select the hotkey to set the playback rate back to normal.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-rate-normal -d 'Normal rate Select the hotkey to set the playback rate back to normal.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-rate-faster-fine -d 'Faster (fine) Select the hotkey to use for fast forward playback.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-rate-faster-fine -d 'Faster (fine) Select the hotkey to use for fast forward playback.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-rate-slower-fine -d 'Slower (fine) Select the hotkey to use for slow motion playback.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-rate-slower-fine -d 'Slower (fine) Select the hotkey to use for slow motion playback.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-next -d 'Next Select the hotkey to use to skip to the next item in the playlist.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-next -d 'Next Select the hotkey to use to skip to the next item in the playlist.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-prev -d 'Previous Select the hotkey to use to skip to the previous item in the playlist.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-prev -d 'Previous Select the hotkey to use to skip to the previous item in the playlist.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-stop -d 'Stop Select the hotkey to stop playback.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-stop -d 'Stop Select the hotkey to stop playback.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-position -d 'Position Select the hotkey to display the position.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-position -d 'Position Select the hotkey to display the position.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-jump-extrashort -d 'Very short backwards jump Select the hotkey to make a very short backwards jump.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-jump-extrashort -d 'Very short backwards jump Select the hotkey to make a very short backwards jump.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-jump+extrashort -d 'Very short forward jump Select the hotkey to make a very short forward jump.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-jump+extrashort -d 'Very short forward jump Select the hotkey to make a very short forward jump.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-jump-short -d 'Short backwards jump Select the hotkey to make a short backwards jump.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-jump-short -d 'Short backwards jump Select the hotkey to make a short backwards jump.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-jump+short -d 'Short forward jump Select the hotkey to make a short forward jump.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-jump+short -d 'Short forward jump Select the hotkey to make a short forward jump.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-jump-medium -d 'Medium backwards jump Select the hotkey to make a medium backwards jump.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-jump-medium -d 'Medium backwards jump Select the hotkey to make a medium backwards jump.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-jump+medium -d 'Medium forward jump Select the hotkey to make a medium forward jump.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-jump+medium -d 'Medium forward jump Select the hotkey to make a medium forward jump.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-jump-long -d 'Long backwards jump Select the hotkey to make a long backwards jump.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-jump-long -d 'Long backwards jump Select the hotkey to make a long backwards jump.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-jump+long -d 'Long forward jump Select the hotkey to make a long forward jump.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-jump+long -d 'Long forward jump Select the hotkey to make a long forward jump.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-frame-next -d 'Next frame Select the hotkey to got to the next video frame.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-frame-next -d 'Next frame Select the hotkey to got to the next video frame.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-nav-activate -d 'Activate Select the key to activate selected item in DVD menus.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-nav-activate -d 'Activate Select the key to activate selected item in DVD menus.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-nav-up -d 'Navigate up Select the key to move the selector up in DVD menus / Move viewpoint to up (pitch).' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-nav-up -d 'Navigate up Select the key to move the selector up in DVD menus / Move viewpoint to up (pitch).' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-nav-down -d 'Navigate down Select the key to move the selector down in DVD menus / Move viewpoint to down (pitch).' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-nav-down -d 'Navigate down Select the key to move the selector down in DVD menus / Move viewpoint to down (pitch).' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-nav-left -d 'Navigate left Select the key to move the selector left in DVD menus / Move viewpoint to left (yaw).' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-nav-left -d 'Navigate left Select the key to move the selector left in DVD menus / Move viewpoint to left (yaw).' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-nav-right -d 'Navigate right Select the key to move the selector right in DVD menus / Move viewpoint to right (yaw).' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-nav-right -d 'Navigate right Select the key to move the selector right in DVD menus / Move viewpoint to right (yaw).' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-disc-menu -d 'Go to the DVD menu Select the key to take you to the DVD menu' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-disc-menu -d 'Go to the DVD menu Select the key to take you to the DVD menu' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-title-prev -d 'Select previous DVD title Select the key to choose the previous title from the DVD' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-title-prev -d 'Select previous DVD title Select the key to choose the previous title from the DVD' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-title-next -d 'Select next DVD title Select the key to choose the next title from the DVD' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-title-next -d 'Select next DVD title Select the key to choose the next title from the DVD' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-chapter-prev -d 'Select prev DVD chapter Select the key to choose the previous chapter from the DVD' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-chapter-prev -d 'Select prev DVD chapter Select the key to choose the previous chapter from the DVD' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-chapter-next -d 'Select next DVD chapter Select the key to choose the next chapter from the DVD' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-chapter-next -d 'Select next DVD chapter Select the key to choose the next chapter from the DVD' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-quit -d 'Quit Select the hotkey to quit the application.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-quit -d 'Quit Select the hotkey to quit the application.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-vol-up -d 'Volume up Select the key to increase audio volume.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-vol-up -d 'Volume up Select the key to increase audio volume.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-vol-down -d 'Volume down Select the key to decrease audio volume.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-vol-down -d 'Volume down Select the key to decrease audio volume.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-vol-mute -d 'Mute Select the key to mute audio.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-vol-mute -d 'Mute Select the key to mute audio.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-subdelay-up -d 'Subtitle delay up Select the key to increase the subtitle delay.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-subdelay-up -d 'Subtitle delay up Select the key to increase the subtitle delay.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-subdelay-down -d 'Subtitle delay down Select the key to decrease the subtitle delay.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-subdelay-down -d 'Subtitle delay down Select the key to decrease the subtitle delay.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-subsync-markaudio -d 'Subtitle sync / bookmark audio timestamp Select the key to bookmark audio timestamp when syncing subtitles.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-subsync-markaudio -d 'Subtitle sync / bookmark audio timestamp Select the key to bookmark audio timestamp when syncing subtitles.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-subsync-marksub -d 'Subtitle sync / bookmark subtitle timestamp Select the key to bookmark subtitle timestamp when syncing subtitles.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-subsync-marksub -d 'Subtitle sync / bookmark subtitle timestamp Select the key to bookmark subtitle timestamp when syncing subtitles.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-subsync-apply -d 'Subtitle sync / synchronize audio & subtitle timestamps Select the key to synchronize bookmarked audio & subtitle timestamps.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-subsync-apply -d 'Subtitle sync / synchronize audio & subtitle timestamps Select the key to synchronize bookmarked audio & subtitle timestamps.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-subsync-reset -d 'Subtitle sync / reset audio & subtitle synchronization Select the key to reset synchronization of audio & subtitle timestamps.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-subsync-reset -d 'Subtitle sync / reset audio & subtitle synchronization Select the key to reset synchronization of audio & subtitle timestamps.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-subpos-up -d 'Subtitle position up Select the key to move subtitles higher.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-subpos-up -d 'Subtitle position up Select the key to move subtitles higher.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-subpos-down -d 'Subtitle position down Select the key to move subtitles lower.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-subpos-down -d 'Subtitle position down Select the key to move subtitles lower.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-audiodelay-up -d 'Audio delay up Select the key to increase the audio delay.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-audiodelay-up -d 'Audio delay up Select the key to increase the audio delay.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-audiodelay-down -d 'Audio delay down Select the key to decrease the audio delay.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-audiodelay-down -d 'Audio delay down Select the key to decrease the audio delay.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-audio-track -d 'Cycle audio track Cycle through the available audio tracks(languages).' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-audio-track -d 'Cycle audio track Cycle through the available audio tracks(languages).' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-audiodevice-cycle -d 'Cycle through audio devices Cycle through available audio devices' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-audiodevice-cycle -d 'Cycle through audio devices Cycle through available audio devices' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-subtitle-revtrack -d 'Cycle subtitle track in reverse order Cycle through the available subtitle tracks in reverse order.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-subtitle-revtrack -d 'Cycle subtitle track in reverse order Cycle through the available subtitle tracks in reverse order.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-subtitle-track -d 'Cycle subtitle track Cycle through the available subtitle tracks.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-subtitle-track -d 'Cycle subtitle track Cycle through the available subtitle tracks.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-subtitle-toggle -d 'Toggle subtitles Toggle subtitle track visibility.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-subtitle-toggle -d 'Toggle subtitles Toggle subtitle track visibility.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-program-sid-next -d 'Cycle next program Service ID Cycle through the available next program Service IDs (SIDs).' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-program-sid-next -d 'Cycle next program Service ID Cycle through the available next program Service IDs (SIDs).' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-program-sid-prev -d 'Cycle previous program Service ID Cycle through the available previous program Service IDs (SIDs).' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-program-sid-prev -d 'Cycle previous program Service ID Cycle through the available previous program Service IDs (SIDs).' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-aspect-ratio -d 'Cycle source aspect ratio Cycle through a predefined list of source aspect ratios.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-aspect-ratio -d 'Cycle source aspect ratio Cycle through a predefined list of source aspect ratios.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-crop -d 'Cycle video crop Cycle through a predefined list of crop formats.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-crop -d 'Cycle video crop Cycle through a predefined list of crop formats.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-toggle-autoscale -d 'Toggle autoscaling Activate or deactivate autoscaling.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-toggle-autoscale -d 'Toggle autoscaling Activate or deactivate autoscaling.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-incr-scalefactor -d 'Increase scale factor Increase scale factor' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-incr-scalefactor -d 'Increase scale factor Increase scale factor' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-decr-scalefactor -d 'Decrease scale factor Decrease scale factor' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-decr-scalefactor -d 'Decrease scale factor Decrease scale factor' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-deinterlace -d 'Toggle deinterlacing Activate or deactivate deinterlacing.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-deinterlace -d 'Toggle deinterlacing Activate or deactivate deinterlacing.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-deinterlace-mode -d 'Cycle deinterlace modes Cycle through available deinterlace modes.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-deinterlace-mode -d 'Cycle deinterlace modes Cycle through available deinterlace modes.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-intf-show -d 'Show controller in fullscreen Show controller in fullscreen' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-intf-show -d 'Show controller in fullscreen Show controller in fullscreen' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-intf-boss -d 'Boss key Hide the interface and pause playback.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-intf-boss -d 'Boss key Hide the interface and pause playback.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-intf-popup-menu -d 'Context menu Show the contextual popup menu.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-intf-popup-menu -d 'Context menu Show the contextual popup menu.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-snapshot -d 'Take video snapshot Takes a video snapshot and writes it to disk.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-snapshot -d 'Take video snapshot Takes a video snapshot and writes it to disk.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-record -d 'Record Record access filter start/stop.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-record -d 'Record Record access filter start/stop.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-zoom -d 'Zoom Zoom' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-zoom -d 'Zoom Zoom' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-unzoom -d 'Un-Zoom Un-Zoom' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-unzoom -d 'Un-Zoom Un-Zoom' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-wallpaper -d 'Toggle wallpaper mode in video output Toggle wallpaper mode in video output.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-wallpaper -d 'Toggle wallpaper mode in video output Toggle wallpaper mode in video output.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-crop-top -d 'Crop one pixel from the top of the video Crop one pixel from the top of the video' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-crop-top -d 'Crop one pixel from the top of the video Crop one pixel from the top of the video' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-uncrop-top -d 'Uncrop one pixel from the top of the video Uncrop one pixel from the top of the video' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-uncrop-top -d 'Uncrop one pixel from the top of the video Uncrop one pixel from the top of the video' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-crop-left -d 'Crop one pixel from the left of the video Crop one pixel from the left of the video' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-crop-left -d 'Crop one pixel from the left of the video Crop one pixel from the left of the video' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-uncrop-left -d 'Uncrop one pixel from the left of the video Uncrop one pixel from the left of the video' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-uncrop-left -d 'Uncrop one pixel from the left of the video Uncrop one pixel from the left of the video' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-crop-bottom -d 'Crop one pixel from the bottom of the video Crop one pixel from the bottom of the video' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-crop-bottom -d 'Crop one pixel from the bottom of the video Crop one pixel from the bottom of the video' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-uncrop-bottom -d 'Uncrop one pixel from the bottom of the video Uncrop one pixel from the bottom of the video' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-uncrop-bottom -d 'Uncrop one pixel from the bottom of the video Uncrop one pixel from the bottom of the video' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-crop-right -d 'Crop one pixel from the right of the video Crop one pixel from the right of the video' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-crop-right -d 'Crop one pixel from the right of the video Crop one pixel from the right of the video' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-uncrop-right -d 'Uncrop one pixel from the right of the video Uncrop one pixel from the right of the video' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-uncrop-right -d 'Uncrop one pixel from the right of the video Uncrop one pixel from the right of the video' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-random -d 'Random Toggle random playlist playback' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-random -d 'Random Toggle random playlist playback' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-loop -d 'Normal/Loop/Repeat Toggle Normal/Loop/Repeat playlist modes' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-loop -d 'Normal/Loop/Repeat Toggle Normal/Loop/Repeat playlist modes' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-viewpoint-fov-in -d 'Shrink the viewpoint field of view (360°) Shrink the viewpoint field of view (360°)' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-viewpoint-fov-in -d 'Shrink the viewpoint field of view (360°) Shrink the viewpoint field of view (360°)' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-viewpoint-fov-out -d 'Expand the viewpoint field of view (360°) Expand the viewpoint field of view (360°)' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-viewpoint-fov-out -d 'Expand the viewpoint field of view (360°) Expand the viewpoint field of view (360°)' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-viewpoint-roll-clock -d 'Roll the viewpoint clockwise (360°) Roll the viewpoint clockwise (360°)' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-viewpoint-roll-clock -d 'Roll the viewpoint clockwise (360°) Roll the viewpoint clockwise (360°)' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-viewpoint-roll-anticlock -d 'Roll the viewpoint anti-clockwise (360°) Roll the viewpoint anti-clockwise (360°)' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-viewpoint-roll-anticlock -d 'Roll the viewpoint anti-clockwise (360°) Roll the viewpoint anti-clockwise (360°)' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-zoom-quarter -d '1:4 Quarter' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-zoom-quarter -d '1:4 Quarter' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-zoom-half -d '1:2 Half' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-zoom-half -d '1:2 Half' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-zoom-original -d '1:1 Original' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-zoom-original -d '1:1 Original' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-zoom-double -d '2:1 Double' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-zoom-double -d '2:1 Double Jump sizes:' -x -a '(_vlc___--global-key-toggle-fullscreen)'
 complete -c $prog -l extrashort-jump-size -d 'Very short jump length Very short jump length, in seconds.' -x
 complete -c $prog -l short-jump-size -d 'Short jump length Short jump length, in seconds.' -x
 complete -c $prog -l medium-jump-size -d 'Medium jump length Medium jump length, in seconds.' -x
 complete -c $prog -l long-jump-size -d 'Long jump length Long jump length, in seconds.' -x
-complete -c $prog -l global-key-set-bookmark1 -d 'Set playlist bookmark 1 Select the key to set this playlist bookmark.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-set-bookmark1 -d 'Set playlist bookmark 1 Select the key to set this playlist bookmark.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-set-bookmark2 -d 'Set playlist bookmark 2 Select the key to set this playlist bookmark.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-set-bookmark2 -d 'Set playlist bookmark 2 Select the key to set this playlist bookmark.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-set-bookmark3 -d 'Set playlist bookmark 3 Select the key to set this playlist bookmark.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-set-bookmark3 -d 'Set playlist bookmark 3 Select the key to set this playlist bookmark.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-set-bookmark4 -d 'Set playlist bookmark 4 Select the key to set this playlist bookmark.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-set-bookmark4 -d 'Set playlist bookmark 4 Select the key to set this playlist bookmark.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-set-bookmark5 -d 'Set playlist bookmark 5 Select the key to set this playlist bookmark.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-set-bookmark5 -d 'Set playlist bookmark 5 Select the key to set this playlist bookmark.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-set-bookmark6 -d 'Set playlist bookmark 6 Select the key to set this playlist bookmark.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-set-bookmark6 -d 'Set playlist bookmark 6 Select the key to set this playlist bookmark.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-set-bookmark7 -d 'Set playlist bookmark 7 Select the key to set this playlist bookmark.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-set-bookmark7 -d 'Set playlist bookmark 7 Select the key to set this playlist bookmark.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-set-bookmark8 -d 'Set playlist bookmark 8 Select the key to set this playlist bookmark.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-set-bookmark8 -d 'Set playlist bookmark 8 Select the key to set this playlist bookmark.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-set-bookmark9 -d 'Set playlist bookmark 9 Select the key to set this playlist bookmark.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-set-bookmark9 -d 'Set playlist bookmark 9 Select the key to set this playlist bookmark.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-set-bookmark10 -d 'Set playlist bookmark 10 Select the key to set this playlist bookmark.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-set-bookmark10 -d 'Set playlist bookmark 10 Select the key to set this playlist bookmark.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-play-bookmark1 -d 'Play playlist bookmark 1 Select the key to play this bookmark.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-play-bookmark1 -d 'Play playlist bookmark 1 Select the key to play this bookmark.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-play-bookmark2 -d 'Play playlist bookmark 2 Select the key to play this bookmark.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-play-bookmark2 -d 'Play playlist bookmark 2 Select the key to play this bookmark.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-play-bookmark3 -d 'Play playlist bookmark 3 Select the key to play this bookmark.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-play-bookmark3 -d 'Play playlist bookmark 3 Select the key to play this bookmark.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-play-bookmark4 -d 'Play playlist bookmark 4 Select the key to play this bookmark.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-play-bookmark4 -d 'Play playlist bookmark 4 Select the key to play this bookmark.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-play-bookmark5 -d 'Play playlist bookmark 5 Select the key to play this bookmark.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-play-bookmark5 -d 'Play playlist bookmark 5 Select the key to play this bookmark.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-play-bookmark6 -d 'Play playlist bookmark 6 Select the key to play this bookmark.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-play-bookmark6 -d 'Play playlist bookmark 6 Select the key to play this bookmark.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-play-bookmark7 -d 'Play playlist bookmark 7 Select the key to play this bookmark.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-play-bookmark7 -d 'Play playlist bookmark 7 Select the key to play this bookmark.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-play-bookmark8 -d 'Play playlist bookmark 8 Select the key to play this bookmark.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-play-bookmark8 -d 'Play playlist bookmark 8 Select the key to play this bookmark.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-play-bookmark9 -d 'Play playlist bookmark 9 Select the key to play this bookmark.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-play-bookmark9 -d 'Play playlist bookmark 9 Select the key to play this bookmark.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-play-bookmark10 -d 'Play playlist bookmark 10 Select the key to play this bookmark.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-play-bookmark10 -d 'Play playlist bookmark 10 Select the key to play this bookmark.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-clear-playlist -d 'Clear the playlist Select the key to clear the current playlist.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-clear-playlist -d 'Clear the playlist Select the key to clear the current playlist.' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-subtitle-text-scale-normal -d 'Reset subtitles text scale Select the key to change subtitles text scaling' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-subtitle-text-scale-normal -d 'Reset subtitles text scale Select the key to change subtitles text scaling' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-subtitle-text-scale-up -d 'Scale down subtitles text Select the key to change subtitles text scaling' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-subtitle-text-scale-up -d 'Scale down subtitles text Select the key to change subtitles text scaling' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l global-key-subtitle-text-scale-down -d 'Scale up subtitles text Select the key to change subtitles text scaling' -x -a '(_vlc__--global-key-toggle-fullscreen)'
-complete -c $prog -l key-subtitle-text-scale-down -d 'Scale up subtitles text Select the key to change subtitles text scaling' -x -a '(_vlc__--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-set-bookmark1 -d 'Set playlist bookmark 1 Select the key to set this playlist bookmark.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-set-bookmark1 -d 'Set playlist bookmark 1 Select the key to set this playlist bookmark.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-set-bookmark2 -d 'Set playlist bookmark 2 Select the key to set this playlist bookmark.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-set-bookmark2 -d 'Set playlist bookmark 2 Select the key to set this playlist bookmark.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-set-bookmark3 -d 'Set playlist bookmark 3 Select the key to set this playlist bookmark.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-set-bookmark3 -d 'Set playlist bookmark 3 Select the key to set this playlist bookmark.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-set-bookmark4 -d 'Set playlist bookmark 4 Select the key to set this playlist bookmark.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-set-bookmark4 -d 'Set playlist bookmark 4 Select the key to set this playlist bookmark.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-set-bookmark5 -d 'Set playlist bookmark 5 Select the key to set this playlist bookmark.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-set-bookmark5 -d 'Set playlist bookmark 5 Select the key to set this playlist bookmark.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-set-bookmark6 -d 'Set playlist bookmark 6 Select the key to set this playlist bookmark.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-set-bookmark6 -d 'Set playlist bookmark 6 Select the key to set this playlist bookmark.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-set-bookmark7 -d 'Set playlist bookmark 7 Select the key to set this playlist bookmark.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-set-bookmark7 -d 'Set playlist bookmark 7 Select the key to set this playlist bookmark.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-set-bookmark8 -d 'Set playlist bookmark 8 Select the key to set this playlist bookmark.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-set-bookmark8 -d 'Set playlist bookmark 8 Select the key to set this playlist bookmark.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-set-bookmark9 -d 'Set playlist bookmark 9 Select the key to set this playlist bookmark.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-set-bookmark9 -d 'Set playlist bookmark 9 Select the key to set this playlist bookmark.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-set-bookmark10 -d 'Set playlist bookmark 10 Select the key to set this playlist bookmark.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-set-bookmark10 -d 'Set playlist bookmark 10 Select the key to set this playlist bookmark.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-play-bookmark1 -d 'Play playlist bookmark 1 Select the key to play this bookmark.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-play-bookmark1 -d 'Play playlist bookmark 1 Select the key to play this bookmark.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-play-bookmark2 -d 'Play playlist bookmark 2 Select the key to play this bookmark.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-play-bookmark2 -d 'Play playlist bookmark 2 Select the key to play this bookmark.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-play-bookmark3 -d 'Play playlist bookmark 3 Select the key to play this bookmark.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-play-bookmark3 -d 'Play playlist bookmark 3 Select the key to play this bookmark.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-play-bookmark4 -d 'Play playlist bookmark 4 Select the key to play this bookmark.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-play-bookmark4 -d 'Play playlist bookmark 4 Select the key to play this bookmark.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-play-bookmark5 -d 'Play playlist bookmark 5 Select the key to play this bookmark.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-play-bookmark5 -d 'Play playlist bookmark 5 Select the key to play this bookmark.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-play-bookmark6 -d 'Play playlist bookmark 6 Select the key to play this bookmark.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-play-bookmark6 -d 'Play playlist bookmark 6 Select the key to play this bookmark.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-play-bookmark7 -d 'Play playlist bookmark 7 Select the key to play this bookmark.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-play-bookmark7 -d 'Play playlist bookmark 7 Select the key to play this bookmark.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-play-bookmark8 -d 'Play playlist bookmark 8 Select the key to play this bookmark.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-play-bookmark8 -d 'Play playlist bookmark 8 Select the key to play this bookmark.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-play-bookmark9 -d 'Play playlist bookmark 9 Select the key to play this bookmark.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-play-bookmark9 -d 'Play playlist bookmark 9 Select the key to play this bookmark.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-play-bookmark10 -d 'Play playlist bookmark 10 Select the key to play this bookmark.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-play-bookmark10 -d 'Play playlist bookmark 10 Select the key to play this bookmark.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-clear-playlist -d 'Clear the playlist Select the key to clear the current playlist.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-clear-playlist -d 'Clear the playlist Select the key to clear the current playlist.' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-subtitle-text-scale-normal -d 'Reset subtitles text scale Select the key to change subtitles text scaling' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-subtitle-text-scale-normal -d 'Reset subtitles text scale Select the key to change subtitles text scaling' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-subtitle-text-scale-up -d 'Scale down subtitles text Select the key to change subtitles text scaling' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-subtitle-text-scale-up -d 'Scale down subtitles text Select the key to change subtitles text scaling' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l global-key-subtitle-text-scale-down -d 'Scale up subtitles text Select the key to change subtitles text scaling' -x -a '(_vlc___--global-key-toggle-fullscreen)'
+complete -c $prog -l key-subtitle-text-scale-down -d 'Scale up subtitles text Select the key to change subtitles text scaling' -x -a '(_vlc___--global-key-toggle-fullscreen)'
 complete -c $prog -l bookmark1 -d 'Playlist bookmark 1 This allows you to define playlist bookmarks.' -x
 complete -c $prog -l bookmark2 -d 'Playlist bookmark 2 This allows you to define playlist bookmarks.' -x
 complete -c $prog -l bookmark3 -d 'Playlist bookmark 3 This allows you to define playlist bookmarks.' -x

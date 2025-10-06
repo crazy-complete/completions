@@ -8,7 +8,7 @@ bash:
 	$(CRAZY_COMPLETE) \
 		--include-file=legendary.bash \
 		--inherit-options=True \
-		-o generated/bash/_legendary \
+		-o generated/bash/legendary \
 		bash legendary.yaml
 
 fish:
@@ -26,7 +26,7 @@ zsh:
 	$(CRAZY_COMPLETE) \
 		--include-file=legendary.zsh \
 		--inherit-options=True \
-		-o generated/zsh/legendary \
+		-o generated/zsh/_legendary \
 		zsh legendary.yaml 
 	
 	$(CRAZY_COMPLETE) \

@@ -2,7 +2,7 @@
 # crazy-complete: A tool that creates robust and reliable autocompletion scripts for Bash, Fish and Zsh.
 # For more information, visit: https://github.com/crazy-complete/crazy-complete
 
-function _fpm_fish_query
+function _fpm__fish_query
   # ===========================================================================
   #
   # This function implements the parsing of options and positionals in the Fish shell.
@@ -26,8 +26,11 @@ function _fpm_fish_query
   #     Checks if the positional argument number NUM is one of WORDS.
   #     NUM counts from one.
   #
-  #   has_option <OPTIONS...>
+  #   has_option [WITH_INCOMPLETE] <OPTIONS...>
   #     Checks if an option given in OPTIONS is passed on commandline.
+  #     If an option requires an argument, this command returns true only if the
+  #     option includes an argument. If 'WITH_INCOMPLETE' is specified, it also
+  #     returns true for options missing their arguments.
   #
   #   option_is <OPTIONS...> -- <VALUES...>
   #     Checks if any option in OPTIONS has a value of VALUES.
@@ -74,14 +77,20 @@ function _fpm_fish_query
 
     if test -n "$options"
       for option in (string split -- ',' $options)
-        # Using one big switch case is the fastest way
-        switch $option
-          case '--?*=';   set -a long_opts_with_arg           (string replace -- '='  '' $option)
-          case '--?*=\?'; set -a long_opts_with_optional_arg  (string replace -- '=?' '' $option)
-          case '--?*';    set -a long_opts_without_arg        $option
-          case '-?=';     set -a short_opts_with_arg          (string replace -- '='  '' $option)
-          case '-?=\?';   set -a short_opts_with_optional_arg (string replace -- '=?' '' $option)
-          case '-?';      set -a short_opts_without_arg       $option
+        if false
+          true
+        else if string match -qr -- '^--.+=$' $option
+          set -a long_opts_with_arg (string replace -- '='  '' $option)
+        else if string match -qr -- '^--.+=\?$' $option
+          set -a long_opts_with_optional_arg (string replace -- '=?' '' $option)
+        else if string match -qr -- '^--.+$' $option
+          set -a long_opts_without_arg $option
+        else if string match -qr -- '^-.=$' $option
+          set -a short_opts_with_arg (string replace -- '='  '' $option)
+        else if string match -qr -- '^-.=\?$' $option
+          set -a short_opts_with_optional_arg (string replace -- '=?' '' $option)
+        else if string match -qr -- '^-.$' $option
+          set -a short_opts_without_arg $option
         end
       end
     end
@@ -119,7 +128,7 @@ function _fpm_fish_query
             end
           else
             set -a having_options $arg
-            set -a option_values ""
+            set -a option_values ''
           end
         case '-*'
           set -l end_of_parsing false
@@ -132,7 +141,7 @@ function _fpm_fish_query
 
             if contains -- $option $short_opts_without_arg
               set -a having_options $option
-              set -a option_values ""
+              set -a option_values ''
             else if contains -- $option $short_opts_with_arg
               set end_of_parsing true
 
@@ -145,8 +154,8 @@ function _fpm_fish_query
                 set argi (math $argi + 1)
               end
             else if contains -- $option $short_opts_with_optional_arg
-              set -a having_options $option
               set end_of_parsing true
+              set -a having_options $option
               set -a option_values "$trailing_chars" # may be empty
             end
 
@@ -170,24 +179,6 @@ function _fpm_fish_query
   # ===========================================================================
 
   switch $cmd
-    case 'num_of_positionals'
-      switch (count $argv)
-        case 0
-          count $positionals
-        case 1
-          echo "_fpm_fish_query: num_of_positionals: $argv[1]: missing operand" >&2
-          return 1
-        case 2
-          if contains -- $argv[1] -lt -le -eq -ne -gt -ge;
-            test (count $positionals) $argv[1] $argv[2] && return 0 || return 1
-          else
-            echo "_fpm_fish_query: num_of_positionals: $argv[1]: unknown operator" >&2
-            return 1
-          end
-        case '*'
-          echo "_fpm_fish_query: num_of_positionals: too many arguments" >&2
-          return 1
-      end
     case 'option_is'
       set -l options
       set -l values
@@ -204,7 +195,7 @@ function _fpm_fish_query
       end
 
       if test (count $values) -eq 0
-        echo "_fpm_fish_query: missing values" >&2
+        echo '_fpm__fish_query: missing values' >&2
         return 1
       end
 
@@ -223,8 +214,17 @@ function _fpm_fish_query
   end
 end
 
-set -l prog "fpm"
-set -l query "_fpm_fish_query"
+function _fpm___-t
+  printf '%s\n' \
+    apk cpan deb dir empty freebsd gem npm osxpkg p5p pacman pear pkgin pleaserun \
+    puppet python rpm sh snap solaris tar virtualenv zip
+end
+
+set -l prog 'fpm'
+set -l query '_fpm__fish_query'
+
+# Delete existing completions
+complete -c $prog -e
 
 # Generally disable file completion
 complete -c $prog -x
@@ -246,9 +246,9 @@ set -l C011 "$query '$opts' option_is -t --output-type -s --input-type -- snap"
 set -l C012 "$query '$opts' option_is -t --output-type -s --input-type -- pacman"
 set -l C013 "$query '$opts' option_is -t --output-type -s --input-type -- pleaserun"
 set -l C014 "$query '$opts' option_is -t --output-type -s --input-type -- virtualenv"
-set -l C015 "$query '$opts' num_of_positionals -ge 0"
-complete -c $prog -s t -l output-type -d 'the type of package you want to create (deb, rpm, solaris, etc)' -x -a 'apk cpan deb dir empty freebsd gem npm osxpkg p5p pacman pear pkgin pleaserun puppet python rpm sh snap solaris tar virtualenv zip'
-complete -c $prog -s s -l input-type -d 'the package type to use as input (gem, rpm, python, etc)' -x -a 'apk cpan deb dir empty freebsd gem npm osxpkg p5p pacman pear pkgin pleaserun puppet python rpm sh snap solaris tar virtualenv zip'
+set -l C015 "test (__fish_number_of_cmd_args_wo_opts) -ge 1"
+complete -c $prog -s t -l output-type -d 'the type of package you want to create (deb, rpm, solaris, etc)' -x -a '(_fpm___-t)'
+complete -c $prog -s s -l input-type -d 'the package type to use as input (gem, rpm, python, etc)' -x -a '(_fpm___-t)'
 complete -c $prog -s C -l chdir -d 'Change directory to here before searching for files' -x -a '(__fish_complete_directories)'
 complete -c $prog -l prefix -d "A path to prefix files with when building the target package. This may not be necessary for all input packages. For example, the 'gem' type will prefix with your gem directory automatically." -x
 complete -c $prog -s p -l package -d 'The package file path to output.' -x

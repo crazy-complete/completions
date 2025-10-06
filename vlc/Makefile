@@ -8,7 +8,7 @@ all: bash fish zsh
 
 bash: vlc.json
 	mkdir -p generated/bash
-	$(CRAZY_COMPLETE) -o generated/bash/_vlc bash vlc.json
+	$(CRAZY_COMPLETE) -o generated/bash/vlc bash vlc.json
 
 fish: vlc.json
 	mkdir -p generated/fish
@@ -16,7 +16,7 @@ fish: vlc.json
 
 zsh: vlc.json
 	mkdir -p generated/zsh
-	$(CRAZY_COMPLETE) -o generated/zsh/vlc zsh vlc.json
+	$(CRAZY_COMPLETE) -o generated/zsh/_vlc zsh vlc.json
 	$(CRAZY_COMPLETE) --zsh-compdef=False -o generated/zsh/vlc.sourceable zsh vlc.json
 
 # =============================================================================
